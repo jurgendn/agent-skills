@@ -1,0 +1,14 @@
+{
+  "evals": [
+    {
+      "name": "vague-ai-request",
+      "prompt": "Our bank wants to use AI to improve customer service, but the problem is vague. Help me frame it into something researchable and pilotable.",
+      "expected_behavior": "Preserves ambiguity, identifies stakeholders/workflows/decision points, creates falsifiable hypotheses, separates business and technical metrics, and produces literature search directions."
+    },
+    {
+      "name": "unclear-risk-ops-problem",
+      "prompt": "Risk operations says case handling is inefficient. I don't know whether this is prediction, prioritization, workflow mining, or document AI. Frame the problem.",
+      "expected_behavior": "Classifies possible problem shapes, maps stakeholders, surfaces missing data and decision points, and recommends next clarification steps before solutioning."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # agent-skills
 
-A focused collection of agent skills for research, paper writing, PhD applications, and implementation-heavy coding work.
+A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, and implementation-heavy coding work.
 
 ## Skill catalog
 
@@ -56,6 +56,14 @@ A focused collection of agent skills for research, paper writing, PhD applicatio
 - `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
 - `research-skills/applications-and-career/recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
 - `research-skills/applications-and-career/phd-application-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
+
+### Industrial R&D
+
+- `industrial-rnd/industry-problem-framing` — convert vague industry problems into researchable, pilotable R&D problem statements.
+- `industrial-rnd/publication-grounded-solution-design` — design solution directions grounded in prior successful cases, publications, and transfer assumptions.
+- `industrial-rnd/pilot-and-evaluation-design` — design practical pilots, baselines, metrics, guardrails, and go/no-go criteria.
+- `industrial-rnd/banking/banking-use-case-discovery` — discover and prioritize banking/fintech AI and R&D use cases.
+- `industrial-rnd/banking/banking-ai-literature-mapper` — map banking AI publications, cases, benchmarks, methods, and evaluation patterns.
 
 ### Coding support
 
