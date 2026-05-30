@@ -1,0 +1,23 @@
+{
+  "skill_name": "artifact-release-packager",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're releasing code for a paper with Table 1 main results, Figure 2 scaling curves, and a trained checkpoint. The dataset license prevents redistribution. Plan the artifact package and what the README must explain.",
+      "expected_output": "An artifact release plan with release promise, claim-to-artifact map, required contents, smoke test, full reproduction path, and licensing concerns.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our repo has train.py, eval.py, configs, and notebooks, but no expected outputs or smoke test. What do we need before artifact evaluation?",
+      "expected_output": "A packaging audit that identifies missing smoke tests, expected outputs, reproduction mapping, and reviewer path.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to release model checkpoints and generated samples for a paper. Help me check safety, licensing, and how to map them to paper claims.",
+      "expected_output": "A release plan that includes safety/licensing checks and maps artifacts to paper claims.",
+      "files": []
+    }
+  ]
+}

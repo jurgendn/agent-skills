@@ -1,0 +1,23 @@
+{
+  "skill_name": "paper-argument-planner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have results for a paper: our small retrieval model beats a larger baseline on biomedical QA when the query contains rare terminology, but loses on general QA. We also have an ablation showing terminology-aware negative sampling matters. Help me structure the paper argument and decide what claims we can safely make.",
+      "expected_output": "A paper argument plan with thesis, claim hierarchy, section plan, figure/table plan, weak spots, and next actions.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My draft has a method section and five experiment tables, but reviewers of an earlier version said the contribution was unclear. The method is basically contrastive pretraining with a curriculum. Can you find the argument spine and tell me what each section should prove?",
+      "expected_output": "A structured argument spine that narrows the contribution and maps sections and evidence to claims.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I want to turn this workshop project into a full paper. We have one strong benchmark result, one failed transfer result, and some qualitative examples. What is the honest paper story?",
+      "expected_output": "A calibrated paper narrative that separates main, supporting, scope, and speculative claims.",
+      "files": []
+    }
+  ]
+}
