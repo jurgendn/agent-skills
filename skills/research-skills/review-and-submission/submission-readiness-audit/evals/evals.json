@@ -1,0 +1,23 @@
+{
+  "skill_name": "submission-readiness-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm submitting tomorrow. Audit my paper checklist from these notes: abstract claims state-of-the-art, Table 1 only has 3 datasets, limitations section is missing, appendix has hyperparameters but no seed details, and Figure 2 is not referenced in the text.",
+      "expected_output": "A submission readiness audit with verdict, blockers, major/minor issues, claim-evidence consistency, and final action list.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Before camera-ready, I need to check consistency: the intro says 20% improvement, results table says 18.7 average, conclusion says broadly applicable, and experiments are only on English datasets. What should I fix?",
+      "expected_output": "An audit that flags numerical inconsistency and overbroad claims with concrete fixes.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Act as a final pre-submit reviewer for an anonymous ML conference paper. What categories of issues should I check if I can only spend two hours?",
+      "expected_output": "A prioritized final checklist focused on blockers and major preventable reviewer objections.",
+      "files": []
+    }
+  ]
+}

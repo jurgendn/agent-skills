@@ -1,0 +1,23 @@
+{
+  "skill_name": "reviewer-response-strategist",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Reviewer 1 says our novelty over prior contrastive learning papers is unclear. Reviewer 2 likes the idea but asks for a missing baseline. Reviewer 3 says the results may not generalize beyond one dataset. We have 5 days for rebuttal. Help me prioritize the response.",
+      "expected_output": "A reviewer response plan with concern triage, priorities, response moves, experiments/analyses to prioritize, and draft bullets.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We got reviews back. One reviewer misunderstood our method as using test labels during retrieval, which is false, but the paper explanation may be confusing. Draft a calm response strategy and revision checklist.",
+      "expected_output": "A strategy that classifies the issue as misunderstanding/clarity, corrects it without blaming the reviewer, and proposes revisions.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "The reviewer is right that our ablation is weak. We can run one extra experiment or add a limitation paragraph, but not both. How should we decide and phrase the response?",
+      "expected_output": "A prioritized rebuttal plan weighing evidence, concession, and scope narrowing under limited time.",
+      "files": []
+    }
+  ]
+}
