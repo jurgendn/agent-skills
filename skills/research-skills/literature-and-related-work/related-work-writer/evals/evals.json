@@ -1,0 +1,23 @@
+{
+  "skill_name": "related-work-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have notes on three groups of papers for a draft: retrieval-augmented QA systems, biomedical entity linking, and contrastive representation learning. Write a related work section that positions my method as terminology-aware retrieval training without claiming nobody has done biomedical retrieval before.",
+      "expected_output": "A related work draft grouped by conceptual role, with fair contrasts and citation-gap notes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "This related work paragraph is just a list of citations. Help me reorganize it thematically and explain how to contrast our approach with prior prompt optimization and RAG evaluation papers.",
+      "expected_output": "A related work audit and rewrite plan that avoids citation laundry-list structure.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Given a literature map with columns: paper, method family, benchmark, limitation, and relevance to us, turn it into a Related Work outline with paragraph jobs and novelty-risk warnings.",
+      "expected_output": "A source-grounded related work outline with paragraph roles and calibrated novelty cautions.",
+      "files": []
+    }
+  ]
+}

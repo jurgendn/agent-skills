@@ -1,0 +1,23 @@
+{
+  "skill_name": "figure-table-planner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have main accuracy numbers across 6 datasets, an ablation over 4 components, a scaling curve over training data size, and 20 qualitative failures. What should be in the main paper vs appendix, and what should each caption say?",
+      "expected_output": "A claim-to-artifact map, main-paper sequence, appendix plan, caption drafts, and visual/statistical risks.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I can't decide whether my benchmark comparison should be a giant table or several plots. The claim is that our method is better mostly in low-resource settings, not universally. Plan the figures and tables.",
+      "expected_output": "A figure/table plan that chooses artifact types based on the low-resource claim and avoids overclaiming.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this evidence plan: Figure 1 method diagram, Table 1 all benchmark results, Table 2 ablations, Figure 2 t-SNE embeddings, Figure 3 three cherry-picked examples. What should I cut or change?",
+      "expected_output": "An audit identifying decorative or risky artifacts and recommending a stronger evidence sequence.",
+      "files": []
+    }
+  ]
+}
