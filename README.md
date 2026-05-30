@@ -52,6 +52,10 @@ A focused collection of agent skills for research, paper writing, PhD applicatio
 ### Applications and career
 
 - `research-skills/applications-and-career/sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
+- `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master’s, fellowship, internship, RA, and lab applications.
+- `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
+- `research-skills/applications-and-career/recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
+- `research-skills/applications-and-career/phd-application-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
 
 ### Coding support
 
