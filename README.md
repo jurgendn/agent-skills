@@ -61,6 +61,8 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/applications-and-career/sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
 - `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
 - `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
+- `research-skills/applications-and-career/professor-research-direction-mapper` — define a professor's recent and trending research direction for fit notes, SOPs, and outreach.
+- `research-skills/applications-and-career/professor-cold-email-drafter` — draft, critique, and revise concise cold emails to professors and PIs.
 - `research-skills/applications-and-career/recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
 - `research-skills/applications-and-career/phd-application-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
 - `research-skills/applications-and-career/phd-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
