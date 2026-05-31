@@ -1,7 +1,6 @@
 ---
 name: experiment-design
-description: Design a minimal, decision-relevant experiment with fair baselines, explicit controls, and measurable success criteria. Use before large-scale implementation or expensive training.
-when_to_use: Use before benchmarking, hyperparameter sweeps, large-model training, or whenever a research claim requires rigorous empirical validation.
+description: Design a minimal, decision-relevant experiment with fair baselines, explicit controls, and measurable success criteria. Use before large-scale implementation or expensive training — including before benchmarking, hyperparameter sweeps, large-model training, or whenever a research claim requires rigorous empirical validation.
 ---
 
 # Experiment Design
