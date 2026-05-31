@@ -1,7 +1,7 @@
 {
   "name": "@jurgendn/agent-skills",
   "version": "1.0.0",
-  "description": "Agent skills for research, industrial R&D, paper writing, and coding support",
+  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, language learning, and coding support",
   "bin": {
     "agent-skills": "./cli.js"
   },
