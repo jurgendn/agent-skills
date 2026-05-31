@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "agent-skills",
   "packageName": "@jurgendn/agent-skills",
-  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, and coding support.",
+  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, language learning, and coding support.",
   "source": "git@github:jurgendn/agent-skills",
   "defaultBranch": "main",
   "skillsRoot": "skills",
@@ -92,6 +92,42 @@
       "description": "Write or audit a README for a research repository."
     },
     {
+      "name": "ielts-learning-planner",
+      "path": "skills/language-learning/ielts-learning-planner",
+      "category": "language-learning",
+      "description": "Build a personalised IELTS study plan with weekly schedules, drills, and progress milestones."
+    },
+    {
+      "name": "ielts-reading-strategies",
+      "path": "skills/language-learning/ielts-reading-strategies",
+      "category": "language-learning",
+      "description": "Teach, practise, and give feedback on IELTS Academic or General Training Reading strategies."
+    },
+    {
+      "name": "ielts-speaking-coach",
+      "path": "skills/language-learning/ielts-speaking-coach",
+      "category": "language-learning",
+      "description": "Simulate, score, and give feedback on IELTS Speaking tests across Parts 1, 2, and 3."
+    },
+    {
+      "name": "ielts-vocabulary-builder",
+      "path": "skills/language-learning/ielts-vocabulary-builder",
+      "category": "language-learning",
+      "description": "Build, drill, and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading."
+    },
+    {
+      "name": "ielts-writing-task1",
+      "path": "skills/language-learning/ielts-writing-task1",
+      "category": "language-learning",
+      "description": "Draft, analyse, score, and improve IELTS Academic Writing Task 1 responses."
+    },
+    {
+      "name": "ielts-writing-task2",
+      "path": "skills/language-learning/ielts-writing-task2",
+      "category": "language-learning",
+      "description": "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays."
+    },
+    {
       "name": "academic-cv-builder",
       "path": "skills/research-skills/applications-and-career/academic-cv-builder",
       "category": "research-skills/applications-and-career",
@@ -140,6 +176,12 @@
       "description": "Plan and audit research artifact releases for papers."
     },
     {
+      "name": "phd-motivation-keeper",
+      "path": "skills/research-skills/applications-and-career/phd-motivation-keeper",
+      "category": "research-skills/applications-and-career",
+      "description": "Help PhD applicants or students recover motivation and rebuild momentum after setbacks."
+    },
+    {
       "name": "reproducibility-audit",
       "path": "skills/research-skills/artifact-and-reproducibility/reproducibility-audit",
       "category": "research-skills/artifact-and-reproducibility",
@@ -186,6 +228,12 @@
       "path": "skills/research-skills/experiment-design-and-analysis/experiment-design",
       "category": "research-skills/experiment-design-and-analysis",
       "description": "Design minimal decision-relevant experiments with fair baselines and measurable success criteria."
+    },
+    {
+      "name": "statistical-testing-guide",
+      "path": "skills/research-skills/experiment-design-and-analysis/statistical-testing-guide",
+      "category": "research-skills/experiment-design-and-analysis",
+      "description": "Choose statistical tests, compute effect sizes, plan power, and report statistics correctly."
     },
     {
       "name": "hypothesis-and-ablation-planner",
@@ -248,16 +296,40 @@
       "description": "Produce an implementable PyTorch or Lightning training recipe."
     },
     {
+      "name": "jax-training-recipe",
+      "path": "skills/research-skills/implementation-support/jax-training-recipe",
+      "category": "research-skills/implementation-support",
+      "description": "Produce an implementable JAX, Flax, and Optax training recipe."
+    },
+    {
       "name": "related-work-writer",
       "path": "skills/research-skills/literature-and-related-work/related-work-writer",
       "category": "research-skills/literature-and-related-work",
       "description": "Write or revise a Related Work section from a source-grounded literature map."
     },
     {
+      "name": "citation-auditor",
+      "path": "skills/research-skills/literature-and-related-work/citation-auditor",
+      "category": "research-skills/literature-and-related-work",
+      "description": "Audit citations for existence, attribution, and claim-to-source accuracy."
+    },
+    {
       "name": "literature-triangulation",
       "path": "skills/research-skills/literature-triangulation",
       "category": "research-skills/literature-and-related-work",
       "description": "Build a source-grounded map of a research topic by comparing papers, benchmarks, code, and disagreements."
+    },
+    {
+      "name": "abstract-and-intro-writer",
+      "path": "skills/research-skills/paper-writing/abstract-and-intro-writer",
+      "category": "research-skills/paper-writing",
+      "description": "Draft or revise the abstract and introduction of a research paper."
+    },
+    {
+      "name": "method-section-writer",
+      "path": "skills/research-skills/paper-writing/method-section-writer",
+      "category": "research-skills/paper-writing",
+      "description": "Draft or revise the method section of a research paper with consistent notation and motivation."
     },
     {
       "name": "figure-table-planner",
@@ -278,6 +350,12 @@
       "description": "Turn verified research findings into calibrated scientific writing."
     },
     {
+      "name": "research-talk-planner",
+      "path": "skills/research-skills/paper-writing/research-talk-planner",
+      "category": "research-skills/paper-writing",
+      "description": "Plan and structure a research talk from a paper, results, or research agenda."
+    },
+    {
       "name": "reviewer-response-strategist",
       "path": "skills/research-skills/review-and-submission/reviewer-response-strategist",
       "category": "research-skills/review-and-submission",
@@ -288,6 +366,12 @@
       "path": "skills/research-skills/review-and-submission/submission-readiness-audit",
       "category": "research-skills/review-and-submission",
       "description": "Audit a paper, appendix, or submission package before deadline."
+    },
+    {
+      "name": "venue-targeting",
+      "path": "skills/research-skills/review-and-submission/venue-targeting",
+      "category": "research-skills/review-and-submission",
+      "description": "Select and prioritize publication venues and plan resubmission strategy after rejection."
     },
     {
       "name": "theorem-and-claim-audit",

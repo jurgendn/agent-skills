@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-This repository is for authoring and collecting agent skills focused on research workflows, industrial R&D, paper writing, PhD applications, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, industry problem framing, solution design, pilot evaluation, implementation, reproducibility, paper writing, reviewer response, artifact release, and research-oriented applications.
+This repository is for authoring and collecting agent skills focused on research workflows, industrial R&D, paper writing, PhD applications, language test preparation, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, industry problem framing, solution design, pilot evaluation, implementation, reproducibility, paper writing, reviewer response, artifact release, research-oriented applications, IELTS preparation, and coding support.
 
-Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, or meta-discovery skills should not be added unless they directly support research, industrial R&D, paper production, PhD applications, or coding-heavy research work.
+Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, or meta-discovery skills should not be added unless they directly support research, industrial R&D, paper production, PhD applications, language test preparation, or coding-heavy research work.
 
 ## Structure
 
@@ -72,7 +72,7 @@ Use this taxonomy when adding or reorganizing skills:
 
 ## Commands
 
-There is currently no package manifest, build system, linter, or test runner in this repository.
+There is a minimal `package.json` for installing or unlinking skills. There is no build system, linter, or test runner in this repository.
 
 Useful checks for now:
 
