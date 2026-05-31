@@ -24,6 +24,7 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/industrial-rnd/` contains skills for ambiguous industry problem framing, publication-grounded solution design, banking/fintech use-case discovery, and practical pilot/evaluation planning.
 - `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
+- `skills/language-learning/` contains language test preparation skills (IELTS writing, speaking, etc.).
 - `skills/research-codebase/` and similar top-level skills are allowed when they support the whole research codebase rather than one paper stage.
 - `templates/skill-template/` is for reusable starter material when creating new skills.
 - `experiments/` is for shell scripts or prompt variants used to test skill behavior.
@@ -54,6 +55,7 @@ Use this taxonomy when adding or reorganizing skills:
 9. Applications and career
 10. Industrial R&D
 11. Coding support
+12. Language learning
 
 ## Skill authoring conventions
 
