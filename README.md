@@ -12,12 +12,14 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 - `research-skills/literature-triangulation` — build source-grounded maps of a research area.
 - `research-skills/literature-and-related-work/related-work-writer` — turn an existing source map into Related Work prose.
+- `research-skills/literature-and-related-work/citation-auditor` — verify citations are real, claims match what cited papers actually say, and no references are hallucinated or misattributed.
 
 ### Experiment design and analysis
 
 - `research-skills/experiment-design-and-analysis/experiment-design` — design minimal, decision-relevant experiments.
 - `research-skills/experiment-design-and-analysis/hypothesis-and-ablation-planner` — isolate mechanisms with targeted ablations.
 - `research-skills/experiment-design-and-analysis/model-eval-error-analysis` — inspect model failures beyond aggregate metrics.
+- `research-skills/experiment-design-and-analysis/statistical-testing-guide` — choose the right test, compute effect sizes, plan seed counts, and report statistics correctly.
 - `research-skills/experiment-design-and-analysis/deep-learning-experimentation/*` — specialist diagnostics for data pipelines, training runs, scaling, probes, hyperparameters, and experiment traces.
 - `research-skills/experiment-design-and-analysis/llm-systems-eval/*` — specialist evaluation support for LLM systems, agents, RAG, judges, prompts, latency, and failure taxonomies.
 
@@ -26,6 +28,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-codebase` — structure research code for fast hypothesis testing and command-to-result traceability.
 - `research-codebase-readme-writer` — write research READMEs focused on reproducibility and paper claims.
 - `research-skills/implementation-support/pytorch-training-recipe` — turn a paper idea into an implementable PyTorch training recipe.
+- `research-skills/implementation-support/jax-training-recipe` — turn a paper idea into an implementable JAX/Flax/Optax training recipe.
 
 ### Theory and claims
 
@@ -36,13 +39,17 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 ### Paper writing
 
 - `research-skills/paper-writing/paper-argument-planner` — plan the central thesis, contribution framing, and claim-to-evidence spine.
+- `research-skills/paper-writing/abstract-and-intro-writer` — draft or revise the abstract and introduction as a matched pair.
+- `research-skills/paper-writing/method-section-writer` — draft or revise the method section with consistent notation, motivation-first structure, and correct level of detail.
 - `research-skills/results-writeup` — write calibrated Results, Experiments, Discussion, lab notes, and technical reports from verified findings.
 - `research-skills/paper-writing/figure-table-planner` — plan figures, tables, captions, and main-vs-appendix evidence.
+- `research-skills/paper-writing/research-talk-planner` — structure a conference talk, seminar, or job talk from a paper or set of results.
 
 ### Review and submission
 
 - `research-skills/review-and-submission/reviewer-response-strategist` — plan rebuttals, concessions, response structure, and revision priorities.
 - `research-skills/review-and-submission/submission-readiness-audit` — run a final pre-submission risk audit.
+- `research-skills/review-and-submission/venue-targeting` — select and prioritize publication venues; plan resubmission strategy after rejection.
 
 ### Artifact and reproducibility
 
@@ -52,10 +59,11 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 ### Applications and career
 
 - `research-skills/applications-and-career/sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
-- `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master’s, fellowship, internship, RA, and lab applications.
+- `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
 - `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
 - `research-skills/applications-and-career/recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
 - `research-skills/applications-and-career/phd-application-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
+- `research-skills/applications-and-career/phd-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 
 ### Industrial R&D
 

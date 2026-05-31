@@ -13,14 +13,14 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/` contains individual skills. Each skill should live in its own directory and include a `SKILL.md` file.
 - `skills/research-skills/` contains research lifecycle, paper-writing, application, and artifact skills.
 - `skills/research-skills/idea-and-positioning/` contains early-stage research framing skills.
-- `skills/research-skills/literature-and-related-work/` contains Related Work writing skills.
-- `skills/research-skills/experiment-design-and-analysis/` contains experiment, evaluation, ML, and LLM-systems evaluation skills.
-- `skills/research-skills/implementation-support/` contains implementation recipes for research experiments.
+- `skills/research-skills/literature-and-related-work/` contains literature mapping, Related Work writing, and citation verification skills.
+- `skills/research-skills/experiment-design-and-analysis/` contains experiment design, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
+- `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
 - `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, and theory-heavy skills.
-- `skills/research-skills/paper-writing/` contains paper narrative and presentation skills.
-- `skills/research-skills/review-and-submission/` contains reviewer-response and submission-readiness skills.
+- `skills/research-skills/paper-writing/` contains paper narrative, section writing, and presentation skills (abstract, intro, method, figures, talk planning).
+- `skills/research-skills/review-and-submission/` contains reviewer-response, submission-readiness, and venue-targeting skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.
-- `skills/research-skills/applications-and-career/` contains PhD application and research-career writing skills.
+- `skills/research-skills/applications-and-career/` contains PhD application writing, career support, and motivation skills.
 - `skills/industrial-rnd/` contains skills for ambiguous industry problem framing, publication-grounded solution design, banking/fintech use-case discovery, and practical pilot/evaluation planning.
 - `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
@@ -58,7 +58,7 @@ Use this taxonomy when adding or reorganizing skills:
 ## Skill authoring conventions
 
 - Keep one skill focused on one clear capability.
-- Put activation guidance in the frontmatter `description`; agents use this to decide when to load the skill.
+- Put activation guidance in the frontmatter `description`; agents use this to decide when to load the skill. Do not use a separate `when_to_use` frontmatter key — it is not read by agents. Merge all triggering guidance into `description`.
 - Make descriptions specific and slightly pushy about when to use the skill, including common user phrasings.
 - Prefer procedural guidance: when to use the skill, when not to use it, the process to follow, and the expected output format.
 - When two skills overlap, disambiguate in the frontmatter description and body. For example, field mapping belongs to `literature-triangulation`, while polished Related Work prose belongs to `related-work-writer`.
