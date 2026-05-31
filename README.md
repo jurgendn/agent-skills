@@ -1,6 +1,6 @@
 # agent-skills
 
-A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, and implementation-heavy coding work.
+A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, language learning, and implementation-heavy coding work.
 
 ## Skill catalog
 
@@ -85,8 +85,21 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `coding-support/python-performance-optimization` — Python profiling and performance guidance.
 - `coding-support/python-testing-patterns` — Python testing guidance.
 
+### Language learning
+
+- `language-learning/ielts-writing-task1` — draft, analyse, score, and improve IELTS Academic Writing Task 1 reports.
+- `language-learning/ielts-writing-task2` — draft, analyse, score, and improve IELTS Writing Task 2 essays.
+- `language-learning/ielts-speaking-coach` — simulate, score, and improve IELTS Speaking Parts 1–3.
+- `language-learning/ielts-reading-strategies` — teach and practise IELTS Reading strategies and question types.
+- `language-learning/ielts-vocabulary-builder` — build and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading.
+- `language-learning/ielts-learning-planner` — build personalised IELTS study plans and progress routines.
+
+### Skill authoring
+
+- `skill-creator` — create, improve, and evaluate agent skills.
+
 ## Repository policy
 
-This repository prioritizes skills that support research, paper writing, PhD applications, reproducibility, and research implementation. Generic or low-priority skills should be removed rather than archived when they dilute that purpose.
+This repository prioritizes skills that support research, paper writing, PhD applications, language learning, reproducibility, and research implementation. Generic or low-priority skills should be removed rather than archived when they dilute that purpose.
 
 Keep skills narrow and activation-oriented. When two skills overlap, their frontmatter descriptions should explain which one should trigger.
