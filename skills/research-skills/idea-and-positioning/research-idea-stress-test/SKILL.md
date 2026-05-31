@@ -1,7 +1,6 @@
 ---
 name: research-idea-stress-test
-description: Stress-test a research idea before major investment. Use to expose hidden assumptions, weak novelty, confounders, and the cheapest decisive experiment.
-when_to_use: Use before starting a project, writing a proposal, scaling experiments, or committing major compute/resources.
+description: Stress-test a research idea before major investment. Use to expose hidden assumptions, weak novelty, confounders, and the cheapest decisive experiment. Use before starting a project, writing a proposal, scaling experiments, or committing major compute/resources.
 ---
 
 # Research Idea Stress Test

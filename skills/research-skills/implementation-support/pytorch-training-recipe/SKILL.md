@@ -1,7 +1,6 @@
 ---
 name: pytorch-training-recipe
-description: Produce an implementable PyTorch or PyTorch Lightning training recipe with dataset handling, optimization, logging, checkpointing, and debugging checks. Use when turning a paper idea into runnable training code.
-when_to_use: Use for new experiments, reproductions, fine-tuning, scaling recipes, and debugging unstable training.
+description: Produce an implementable PyTorch or PyTorch Lightning training recipe with dataset handling, optimization, logging, checkpointing, and debugging checks. Use when turning a paper idea into runnable training code — including new experiments, reproductions, fine-tuning setups, scaling recipes, and debugging unstable training.
 ---
 
 # PyTorch Training Recipe
