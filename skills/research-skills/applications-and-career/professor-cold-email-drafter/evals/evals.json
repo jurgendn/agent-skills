@@ -1,0 +1,23 @@
+{
+  "skill_name": "professor-cold-email-drafter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft a cold email to Professor Chen asking if they are taking PhD students next cycle. I work on uncertainty estimation for tabular ML in banking, and their recent papers are on trustworthy ML and calibrated prediction for high-stakes decisions. Keep it concise and not too flattering.",
+      "expected_output": "Provides specific subject lines and a 120-220 word email with professor-specific hook, applicant fit bridge, clear PhD availability ask, and concise tone.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you rewrite this rough email? 'Dear prof, I love your research and want to join your lab. I have many experiences in AI and finance. Please tell me if you have positions. I attach my CV.' Make it sound serious for a prospective PhD applicant, but don't invent professor papers.",
+      "expected_output": "Critiques generic risks, rewrites with placeholders for missing professor-specific evidence rather than fabricating details, and gives guidance on what information to add.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I emailed a PI 12 days ago about an RA opportunity and got no response. Write a polite follow-up under 100 words. Context: I asked about a summer RA role related to LLM evaluation, included my CV, and I have a deadline next week for another offer.",
+      "expected_output": "Creates a short same-thread follow-up that restates context, mentions deadline without pressure, and keeps the ask low-friction.",
+      "files": []
+    }
+  ]
+}
