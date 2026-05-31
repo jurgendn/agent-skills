@@ -1,0 +1,14 @@
+{
+  "evals": [
+    {
+      "name": "ambiguous-banking-ops-solution",
+      "prompt": "We have a vague banking operations problem: too many manual reviews and business wants to use AI. Brainstorm publication-grounded solution directions and draft a method plus evaluation plan.",
+      "expected_behavior": "Frames the problem, asks or states missing details, searches by problem shape, proposes 3-5 literature-grounded solution candidates, and includes baselines/evaluation rather than generic AI ideas."
+    },
+    {
+      "name": "paper-backed-llm-proposal",
+      "prompt": "I need an internal R&D proposal for using LLMs to help relationship managers answer policy and product questions. It must be based on prior successful cases and publications if possible.",
+      "expected_behavior": "Grounds the proposal in retrieval, grounded generation, human evaluation, and enterprise assistant precedent; separates literature evidence from transfer assumptions; proposes a pilot and guardrails."
+    }
+  ]
+}

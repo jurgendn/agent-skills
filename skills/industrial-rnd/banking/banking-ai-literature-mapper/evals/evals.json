@@ -1,0 +1,14 @@
+{
+  "evals": [
+    {
+      "name": "credit-risk-literature-map",
+      "prompt": "Map the literature for improving credit early-warning models in a bank. I need papers, successful cases, benchmarks, and evaluation patterns.",
+      "expected_behavior": "Classifies the problem as banking plus temporal/tabular/survival or early warning, separates banking and adjacent-domain sources, evaluates evidence quality, and highlights out-of-time validation and leakage risks."
+    },
+    {
+      "name": "mule-account-literature-map",
+      "prompt": "Find publication-grounded methods for mule account or fraud-ring detection in banking transaction networks.",
+      "expected_behavior": "Maps graph anomaly/fraud detection literature, banking transfer assumptions, datasets/benchmarks, precision@k under review capacity, adversarial drift, and explainability caveats."
+    }
+  ]
+}

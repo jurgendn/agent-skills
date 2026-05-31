@@ -1,0 +1,14 @@
+{
+  "evals": [
+    {
+      "name": "banking-rnd-portfolio",
+      "prompt": "I'm in banking R&D and need to brainstorm high-impact AI use cases for the next quarter. Cover risk, operations, customer, and productivity.",
+      "expected_behavior": "Produces a prioritized portfolio with use-case cards, scores impact/data/feasibility/risk/precedent, and recommends quick pilot, R&D candidate, strategic bet, and data-foundation need."
+    },
+    {
+      "name": "aml-use-case-discovery",
+      "prompt": "Our AML team has too many alerts and low investigator productivity. Discover possible R&D use cases without jumping straight to a model.",
+      "expected_behavior": "Starts from workflow pain, maps alert triage/case prioritization/entity resolution/typology mining opportunities, flags regulatory risks, and suggests literature search directions."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "evals": [
+    {
+      "name": "fraud-shadow-pilot",
+      "prompt": "We have a candidate fraud detection model and want to pilot it safely before production. Design the pilot and evaluation.",
+      "expected_behavior": "Defines the pilot decision, recommends offline/backtest/shadow or human-assisted mode, includes baselines, precision@capacity or cost metrics, leakage controls, guardrails, and go/no-go thresholds."
+    },
+    {
+      "name": "document-ai-poc",
+      "prompt": "Design a PoC evaluation for document AI that extracts fields from loan documents and routes low-confidence cases to humans.",
+      "expected_behavior": "Specifies scope, baselines, field-level metrics, human correction time, hallucination/error guardrails, sampling, stress tests, and decision criteria."
+    }
+  ]
+}

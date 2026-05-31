@@ -1,0 +1,23 @@
+{
+  "skill_name": "phd-application-package-auditor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit my PhD application package. I have a CV, SOP outline, target schools, and three possible recommenders. My profile is mostly ML systems projects with one NLP research project, but my SOP says I want to do AI safety. What are the biggest risks?",
+      "expected_output": "A holistic package audit that identifies narrative inconsistency, evidence gaps, recommender/program-fit risks, and priority fixes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have two weeks before deadlines. Across my CV, SOP draft, research statement, professor fit notes, and recommendation letters, tell me what to fix first and what to stop worrying about.",
+      "expected_output": "A deadline-aware readiness report with package inventory, high-impact fixes, next fixes, and nice-to-have polish items.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Check whether my application narrative is consistent: my CV emphasizes robotics projects, my SOP emphasizes representation learning, my faculty list is mostly HCI professors, and one recommender only knows me from a course.",
+      "expected_output": "A cross-document coherence audit that flags conflicting research identity, weak fit evidence, recommender risk, and concrete alignment fixes.",
+      "files": []
+    }
+  ]
+}
