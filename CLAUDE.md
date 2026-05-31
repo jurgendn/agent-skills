@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-This repository is for authoring and collecting agent skills focused on research workflows, paper writing, PhD applications, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, experiment design, implementation, evaluation, reproducibility, paper writing, reviewer response, artifact release, and research-oriented applications.
+This repository is for authoring and collecting agent skills focused on research workflows, industrial R&D, paper writing, PhD applications, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, industry problem framing, solution design, pilot evaluation, implementation, reproducibility, paper writing, reviewer response, artifact release, and research-oriented applications.
 
-Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, or meta-discovery skills should not be added unless they directly support research, paper production, PhD applications, or coding-heavy research work.
+Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, or meta-discovery skills should not be added unless they directly support research, industrial R&D, paper production, PhD applications, or coding-heavy research work.
 
 ## Structure
 
@@ -21,6 +21,8 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/review-and-submission/` contains reviewer-response and submission-readiness skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.
 - `skills/research-skills/applications-and-career/` contains PhD application and research-career writing skills.
+- `skills/industrial-rnd/` contains skills for ambiguous industry problem framing, publication-grounded solution design, banking/fintech use-case discovery, and practical pilot/evaluation planning.
+- `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
 - `skills/research-codebase/` and similar top-level skills are allowed when they support the whole research codebase rather than one paper stage.
 - `templates/skill-template/` is for reusable starter material when creating new skills.
@@ -50,7 +52,8 @@ Use this taxonomy when adding or reorganizing skills:
 7. Review and submission
 8. Artifact and reproducibility
 9. Applications and career
-10. Coding support
+10. Industrial R&D
+11. Coding support
 
 ## Skill authoring conventions
 

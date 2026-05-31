@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "name": "agent-skills",
+  "packageName": "@jurgendn/agent-skills",
+  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, and coding support.",
+  "source": "git@github:jurgendn/agent-skills",
+  "defaultBranch": "main",
+  "skillsRoot": "skills",
+  "skills": [
+    {
+      "name": "code-simplify",
+      "path": "skills/coding-support/code-simplify",
+      "category": "coding-support",
+      "description": "Simplify over-engineered research and implementation code."
+    },
+    {
+      "name": "context7-mcp",
+      "path": "skills/coding-support/context7-mcp",
+      "category": "coding-support",
+      "description": "Use Context7 for library, framework, and API reference support."
+    },
+    {
+      "name": "debugging-strategies",
+      "path": "skills/coding-support/debugging-strategies",
+      "category": "coding-support",
+      "description": "Apply systematic debugging, profiling, and root cause analysis."
+    },
+    {
+      "name": "python-code-style",
+      "path": "skills/coding-support/python-code-style",
+      "category": "coding-support",
+      "description": "Guide Python style, linting, naming, and documentation conventions."
+    },
+    {
+      "name": "python-design-patterns",
+      "path": "skills/coding-support/python-design-patterns",
+      "category": "coding-support",
+      "description": "Guide Python design patterns, refactoring, and architecture decisions."
+    },
+    {
+      "name": "python-performance-optimization",
+      "path": "skills/coding-support/python-performance-optimization",
+      "category": "coding-support",
+      "description": "Profile and optimize Python performance bottlenecks."
+    },
+    {
+      "name": "python-testing-patterns",
+      "path": "skills/coding-support/python-testing-patterns",
+      "category": "coding-support",
+      "description": "Design and implement Python tests with pytest and fixtures."
+    },
+    {
+      "name": "industry-problem-framing",
+      "path": "skills/industrial-rnd/industry-problem-framing",
+      "category": "industrial-rnd",
+      "description": "Convert vague industry problems into researchable, pilotable R&D problem statements."
+    },
+    {
+      "name": "publication-grounded-solution-design",
+      "path": "skills/industrial-rnd/publication-grounded-solution-design",
+      "category": "industrial-rnd",
+      "description": "Design industry solution directions grounded in prior successful cases, publications, and transfer assumptions."
+    },
+    {
+      "name": "pilot-and-evaluation-design",
+      "path": "skills/industrial-rnd/pilot-and-evaluation-design",
+      "category": "industrial-rnd",
+      "description": "Design practical pilots, baselines, metrics, guardrails, and go/no-go criteria."
+    },
+    {
+      "name": "banking-ai-literature-mapper",
+      "path": "skills/industrial-rnd/banking/banking-ai-literature-mapper",
+      "category": "industrial-rnd/banking",
+      "description": "Map banking AI publications, cases, benchmarks, methods, and evaluation patterns."
+    },
+    {
+      "name": "banking-use-case-discovery",
+      "path": "skills/industrial-rnd/banking/banking-use-case-discovery",
+      "category": "industrial-rnd/banking",
+      "description": "Discover and prioritize banking and fintech AI/R&D use cases."
+    },
+    {
+      "name": "research-codebase",
+      "path": "skills/research-codebase",
+      "category": "research-codebase",
+      "description": "Structure and maintain a research codebase for fast hypothesis testing."
+    },
+    {
+      "name": "research-codebase-readme-writer",
+      "path": "skills/research-codebase-readme-writer",
+      "category": "research-codebase",
+      "description": "Write or audit a README for a research repository."
+    },
+    {
+      "name": "academic-cv-builder",
+      "path": "skills/research-skills/applications-and-career/academic-cv-builder",
+      "category": "research-skills/applications-and-career",
+      "description": "Build and audit academic CVs for PhD, research, fellowship, internship, and RA applications."
+    },
+    {
+      "name": "phd-application-package-auditor",
+      "path": "skills/research-skills/applications-and-career/phd-application-package-auditor",
+      "category": "research-skills/applications-and-career",
+      "description": "Audit a full PhD application package for coherence, missing evidence, risks, and priorities."
+    },
+    {
+      "name": "phd-program-fit-mapper",
+      "path": "skills/research-skills/applications-and-career/phd-program-fit-mapper",
+      "category": "research-skills/applications-and-career",
+      "description": "Map applicant interests to PhD programs, faculty, labs, and school-specific fit evidence."
+    },
+    {
+      "name": "recommendation-letter-strategist",
+      "path": "skills/research-skills/applications-and-career/recommendation-letter-strategist",
+      "category": "research-skills/applications-and-career",
+      "description": "Choose recommenders, plan letter strategy, draft requests, and prepare recommender packets."
+    },
+    {
+      "name": "sop-writer",
+      "path": "skills/research-skills/applications-and-career/sop-writer",
+      "category": "research-skills/applications-and-career",
+      "description": "Write, review, score, and iterate Statements of Purpose and PhD application essays."
+    },
+    {
+      "name": "artifact-release-packager",
+      "path": "skills/research-skills/artifact-and-reproducibility/artifact-release-packager",
+      "category": "research-skills/artifact-and-reproducibility",
+      "description": "Plan and audit research artifact releases for papers."
+    },
+    {
+      "name": "reproducibility-audit",
+      "path": "skills/research-skills/artifact-and-reproducibility/reproducibility-audit",
+      "category": "research-skills/artifact-and-reproducibility",
+      "description": "Audit whether research results can be reproduced from available code, data, configs, and documentation."
+    },
+    {
+      "name": "data-pipeline-auditor",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/data-pipeline-auditor",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Audit preprocessing, splits, leakage, augmentation, labels, and distribution mismatch."
+    },
+    {
+      "name": "experiment-trace-summarizer",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/experiment-trace-summarizer",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Turn messy logs, notebooks, and run metadata into clear research updates and next actions."
+    },
+    {
+      "name": "hyperparameter-triage",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/hyperparameter-triage",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Prioritize hyperparameters that matter for the current failure mode or objective."
+    },
+    {
+      "name": "representation-probe-designer",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/representation-probe-designer",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Design probes and diagnostics for learned model representations."
+    },
+    {
+      "name": "scaling-law-tracker",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/scaling-law-tracker",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Track performance changes with data, model size, batch size, or compute."
+    },
+    {
+      "name": "training-run-forensics",
+      "path": "skills/research-skills/experiment-design-and-analysis/deep-learning-experimentation/training-run-forensics",
+      "category": "research-skills/experiment-design-and-analysis/deep-learning-experimentation",
+      "description": "Diagnose unstable, divergent, plateaued, or underperforming training runs."
+    },
+    {
+      "name": "experiment-design",
+      "path": "skills/research-skills/experiment-design-and-analysis/experiment-design",
+      "category": "research-skills/experiment-design-and-analysis",
+      "description": "Design minimal decision-relevant experiments with fair baselines and measurable success criteria."
+    },
+    {
+      "name": "hypothesis-and-ablation-planner",
+      "path": "skills/research-skills/experiment-design-and-analysis/hypothesis-and-ablation-planner",
+      "category": "research-skills/experiment-design-and-analysis",
+      "description": "Design ablations that isolate causal mechanisms and alternative explanations."
+    },
+    {
+      "name": "eval-suite-designer",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/eval-suite-designer",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Design task-specific evaluation suites with clear failure modes, metrics, and decision criteria."
+    },
+    {
+      "name": "failure-taxonomist",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/failure-taxonomist",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Cluster model failures into actionable categories."
+    },
+    {
+      "name": "judge-reliability-checker",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/judge-reliability-checker",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Audit LLM-as-judge setups for bias, prompt sensitivity, variance, and disagreement with human criteria."
+    },
+    {
+      "name": "latency-quality-tradeoff-optimizer",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/latency-quality-tradeoff-optimizer",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Compare model, decoding, caching, and routing choices against quality, latency, and cost."
+    },
+    {
+      "name": "prompt-policy-ablator",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/prompt-policy-ablator",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Design controlled comparisons for prompts, routing, tools, and system policies."
+    },
+    {
+      "name": "rag-diagnostics-analyst",
+      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/rag-diagnostics-analyst",
+      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
+      "description": "Diagnose retrieval, context selection, grounding, and generation failures in RAG systems."
+    },
+    {
+      "name": "model-eval-error-analysis",
+      "path": "skills/research-skills/experiment-design-and-analysis/model-eval-error-analysis",
+      "category": "research-skills/experiment-design-and-analysis",
+      "description": "Evaluate models rigorously and inspect where they fail."
+    },
+    {
+      "name": "research-idea-stress-test",
+      "path": "skills/research-skills/idea-and-positioning/research-idea-stress-test",
+      "category": "research-skills/idea-and-positioning",
+      "description": "Stress-test a research idea before major investment."
+    },
+    {
+      "name": "pytorch-training-recipe",
+      "path": "skills/research-skills/implementation-support/pytorch-training-recipe",
+      "category": "research-skills/implementation-support",
+      "description": "Produce an implementable PyTorch or Lightning training recipe."
+    },
+    {
+      "name": "related-work-writer",
+      "path": "skills/research-skills/literature-and-related-work/related-work-writer",
+      "category": "research-skills/literature-and-related-work",
+      "description": "Write or revise a Related Work section from a source-grounded literature map."
+    },
+    {
+      "name": "literature-triangulation",
+      "path": "skills/research-skills/literature-triangulation",
+      "category": "research-skills/literature-and-related-work",
+      "description": "Build a source-grounded map of a research topic by comparing papers, benchmarks, code, and disagreements."
+    },
+    {
+      "name": "figure-table-planner",
+      "path": "skills/research-skills/paper-writing/figure-table-planner",
+      "category": "research-skills/paper-writing",
+      "description": "Plan and audit figures, tables, captions, and visual evidence for a research paper."
+    },
+    {
+      "name": "paper-argument-planner",
+      "path": "skills/research-skills/paper-writing/paper-argument-planner",
+      "category": "research-skills/paper-writing",
+      "description": "Plan the argument of a research paper from ideas, drafts, results, or notes."
+    },
+    {
+      "name": "results-writeup",
+      "path": "skills/research-skills/results-writeup",
+      "category": "research-skills/paper-writing",
+      "description": "Turn verified research findings into calibrated scientific writing."
+    },
+    {
+      "name": "reviewer-response-strategist",
+      "path": "skills/research-skills/review-and-submission/reviewer-response-strategist",
+      "category": "research-skills/review-and-submission",
+      "description": "Plan rebuttals, reviewer responses, and revision strategies."
+    },
+    {
+      "name": "submission-readiness-audit",
+      "path": "skills/research-skills/review-and-submission/submission-readiness-audit",
+      "category": "research-skills/review-and-submission",
+      "description": "Audit a paper, appendix, or submission package before deadline."
+    },
+    {
+      "name": "theorem-and-claim-audit",
+      "path": "skills/research-skills/theory-and-claims/theorem-and-claim-audit",
+      "category": "research-skills/theory-and-claims",
+      "description": "Pressure-test mathematical arguments and ML paper claims."
+    },
+    {
+      "name": "assumption-extractor",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/assumption-extractor",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Extract explicit and hidden assumptions from proofs, models, and empirical arguments."
+    },
+    {
+      "name": "counterexample-hunter",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/counterexample-hunter",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Search for edge cases and constructions that break claims or weaken theorems."
+    },
+    {
+      "name": "derivation-auditor",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/derivation-auditor",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Check algebra, calculus, probability, linear algebra, and asymptotic derivation steps."
+    },
+    {
+      "name": "formalism-translator",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/formalism-translator",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Translate ideas across optimization, probability, information theory, dynamical systems, graph theory, and statistics."
+    },
+    {
+      "name": "paper-to-theorem-distiller",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/paper-to-theorem-distiller",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Distill dense theory papers into definitions, claims, proof strategy, and reusable techniques."
+    },
+    {
+      "name": "proof-sketcher",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/proof-sketcher",
+      "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
+      "description": "Convert informal mathematical ideas into theorem, lemma, or proof scaffolds."
+    },
+    {
+      "name": "theory-to-toy-cases",
+      "path": "skills/research-skills/theory-and-claims/theory-to-toy-cases",
+      "category": "research-skills/theory-and-claims",
+      "description": "Turn abstract math or ML ideas into minimal examples, counterexamples, sanity checks, and simulations."
+    },
+    {
+      "name": "skill-creator",
+      "path": "skills/skill-creator",
+      "category": "skill-authoring",
+      "description": "Create, improve, and evaluate agent skills."
+    }
+  ]
+}
