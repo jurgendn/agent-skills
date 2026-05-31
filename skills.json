@@ -110,6 +110,18 @@
       "description": "Map applicant interests to PhD programs, faculty, labs, and school-specific fit evidence."
     },
     {
+      "name": "professor-research-direction-mapper",
+      "path": "skills/research-skills/applications-and-career/professor-research-direction-mapper",
+      "category": "research-skills/applications-and-career",
+      "description": "Define a professor's recent and trending research direction for fit notes, SOPs, and outreach."
+    },
+    {
+      "name": "professor-cold-email-drafter",
+      "path": "skills/research-skills/applications-and-career/professor-cold-email-drafter",
+      "category": "research-skills/applications-and-career",
+      "description": "Draft, critique, and revise concise cold emails to professors and PIs."
+    },
+    {
       "name": "recommendation-letter-strategist",
       "path": "skills/research-skills/applications-and-career/recommendation-letter-strategist",
       "category": "research-skills/applications-and-career",
