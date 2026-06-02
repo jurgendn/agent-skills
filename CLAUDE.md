@@ -16,11 +16,11 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/literature-and-related-work/` contains literature mapping, Related Work writing, and citation verification skills.
 - `skills/research-skills/experiment-design-and-analysis/` contains experiment design, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
 - `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
-- `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, and theory-heavy skills.
+- `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, theory-heavy, and paper-gap-finding skills.
 - `skills/research-skills/paper-writing/` contains paper narrative, section writing, and presentation skills (abstract, intro, method, figures, talk planning).
 - `skills/research-skills/review-and-submission/` contains reviewer-response, submission-readiness, and venue-targeting skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.
-- `skills/research-skills/applications-and-career/` contains PhD application writing, career support, and motivation skills.
+- `skills/research-skills/applications-and-career/` contains academic-career profile ingestion, PhD application writing, career support, and motivation skills.
 - `skills/industrial-rnd/` contains skills for ambiguous industry problem framing, publication-grounded solution design, banking/fintech use-case discovery, and practical pilot/evaluation planning.
 - `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
