@@ -128,6 +128,12 @@
       "description": "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays."
     },
     {
+      "name": "applicant-profile-reader",
+      "path": "skills/research-skills/applications-and-career/applicant-profile-reader",
+      "category": "research-skills/applications-and-career",
+      "description": "Read academic-career applicant profile files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits."
+    },
+    {
       "name": "academic-cv-builder",
       "path": "skills/research-skills/applications-and-career/academic-cv-builder",
       "category": "research-skills/applications-and-career",

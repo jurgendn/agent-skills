@@ -59,6 +59,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 ### Applications and career
 
+- `research-skills/applications-and-career/applicant-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.
 - `research-skills/applications-and-career/sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
 - `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
 - `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
