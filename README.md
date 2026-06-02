@@ -32,6 +32,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 ### Theory and claims
 
+- `research-skills/theory-and-claims/gap-finder` — surface publishable theoretical gaps in papers, including hidden assumptions, loose bounds, missing guarantees, and uncovered settings.
 - `research-skills/theory-and-claims/theorem-and-claim-audit` — pressure-test paper claims and mathematical arguments.
 - `research-skills/theory-and-claims/theory-to-toy-cases` — turn abstract ideas into minimal examples and sanity checks.
 - `research-skills/theory-and-claims/theory-heavy-math-ml/*` — specialist support for assumptions, counterexamples, derivations, formalism translation, theorem distillation, and proof sketches.

@@ -374,6 +374,12 @@
       "description": "Select and prioritize publication venues and plan resubmission strategy after rejection."
     },
     {
+      "name": "gap-finder",
+      "path": "skills/research-skills/theory-and-claims/gap-finder",
+      "category": "research-skills/theory-and-claims",
+      "description": "Surface publishable theoretical gaps in research papers, including hidden assumptions, loose bounds, missing guarantees, and uncovered settings."
+    },
+    {
       "name": "theorem-and-claim-audit",
       "path": "skills/research-skills/theory-and-claims/theorem-and-claim-audit",
       "category": "research-skills/theory-and-claims",
