@@ -17,7 +17,7 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/experiment-design-and-analysis/` contains experiment design, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
 - `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
 - `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, theory-heavy, and paper-gap-finding skills.
-- `skills/research-skills/paper-writing/` contains paper narrative, section writing, and presentation skills (abstract, intro, method, figures, talk planning).
+- `skills/research-skills/paper-writing/` contains paper narrative, section writing, discussion-report synthesis, and presentation skills (abstract, intro, method, figures, talk planning).
 - `skills/research-skills/review-and-submission/` contains reviewer-response, submission-readiness, and venue-targeting skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.
 - `skills/research-skills/applications-and-career/` contains academic-career profile ingestion, PhD application writing, career support, and motivation skills.

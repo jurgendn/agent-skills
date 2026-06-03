@@ -338,6 +338,12 @@
       "description": "Draft or revise the method section of a research paper with consistent notation and motivation."
     },
     {
+      "name": "discussion-report-synthesizer",
+      "path": "skills/research-skills/paper-writing/discussion-report-synthesizer",
+      "category": "research-skills/paper-writing",
+      "description": "Synthesize fragmented academic conversations into cohesive, structured markdown reports."
+    },
+    {
       "name": "figure-table-planner",
       "path": "skills/research-skills/paper-writing/figure-table-planner",
       "category": "research-skills/paper-writing",
