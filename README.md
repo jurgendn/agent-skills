@@ -42,6 +42,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/paper-writing/paper-argument-planner` — plan the central thesis, contribution framing, and claim-to-evidence spine.
 - `research-skills/paper-writing/abstract-and-intro-writer` — draft or revise the abstract and introduction as a matched pair.
 - `research-skills/paper-writing/method-section-writer` — draft or revise the method section with consistent notation, motivation-first structure, and correct level of detail.
+- `research-skills/paper-writing/discussion-report-synthesizer` — synthesize fragmented academic conversations into cohesive markdown reports.
 - `research-skills/results-writeup` — write calibrated Results, Experiments, Discussion, lab notes, and technical reports from verified findings.
 - `research-skills/paper-writing/figure-table-planner` — plan figures, tables, captions, and main-vs-appendix evidence.
 - `research-skills/paper-writing/research-talk-planner` — structure a conference talk, seminar, or job talk from a paper or set of results.
