@@ -1,6 +1,6 @@
 ---
 name: ielts-writing-task2
-description: Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays (250-word minimum). Use this skill when the user shares a Task 2 prompt, wants a model essay, needs band-score feedback on their own essay, or asks about essay structure, argument development, thesis writing, or common Task 2 mistakes. Covers all Task 2 types: opinion/agree-disagree, discuss-both-views, advantages-disadvantages, problem-solution, two-part questions. Also use when the user asks about Task 2 vocabulary, paraphrasing, or how to avoid common errors. Task 2 carries more weight than Task 1 in the overall Writing band score.
+description: "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays (250-word minimum). Use this skill when the user shares a Task 2 prompt, wants a model essay, needs band-score feedback on their own essay, or asks about essay structure, argument development, thesis writing, or common Task 2 mistakes. Covers all Task 2 types: opinion/agree-disagree, discuss-both-views, advantages-disadvantages, problem-solution, two-part questions. Also use when the user asks about Task 2 vocabulary, paraphrasing, or how to avoid common errors. Task 2 carries more weight than Task 1 in the overall Writing band score."
 ---
 
 # IELTS Writing Task 2 Coach
