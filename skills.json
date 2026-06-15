@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "agent-skills",
   "packageName": "@jurgendn/agent-skills",
-  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, language learning, and coding support.",
+  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, and coding support.",
   "source": "git@github:jurgendn/agent-skills",
   "defaultBranch": "main",
   "skillsRoot": "skills",
@@ -386,6 +386,12 @@
       "description": "Select and prioritize publication venues and plan resubmission strategy after rejection."
     },
     {
+      "name": "professor-mentor-technical-teaching",
+      "path": "skills/research-skills/technical-teaching/professor-mentor-technical-teaching",
+      "category": "research-skills/technical-teaching",
+      "description": "Explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment."
+    },
+    {
       "name": "gap-finder",
       "path": "skills/research-skills/theory-and-claims/gap-finder",
       "category": "research-skills/theory-and-claims",
@@ -438,6 +444,30 @@
       "path": "skills/research-skills/theory-and-claims/theory-to-toy-cases",
       "category": "research-skills/theory-and-claims",
       "description": "Turn abstract math or ML ideas into minimal examples, counterexamples, sanity checks, and simulations."
+    },
+    {
+      "name": "slide-design-principles",
+      "path": "skills/presentation/slide-design-principles",
+      "category": "presentation",
+      "description": "Shared slide-spec schema and design rules for clear, focused, well-structured decks."
+    },
+    {
+      "name": "beamer-academic-deck",
+      "path": "skills/presentation/beamer-academic-deck",
+      "category": "presentation",
+      "description": "Build compile-ready LaTeX Beamer decks for academic talks, seminars, conferences, defenses, and lectures."
+    },
+    {
+      "name": "beamer-proposal-report-deck",
+      "path": "skills/presentation/beamer-proposal-report-deck",
+      "category": "presentation",
+      "description": "Build compile-ready LaTeX Beamer decks for research proposals, progress reports, milestone reviews, and final reports."
+    },
+    {
+      "name": "business-report-deck",
+      "path": "skills/presentation/business-report-deck",
+      "category": "presentation",
+      "description": "Build PowerPoint or Canva business report decks for executives, managers, clients, pilots, and stakeholder updates."
     },
     {
       "name": "skill-creator",

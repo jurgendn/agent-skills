@@ -1,0 +1,19 @@
+{
+  "evals": [
+    {
+      "name": "tool-agnostic-slide-too-busy",
+      "prompt": "Here's one of my slides — it has a paragraph of text, three charts, and a table. Is it too busy? How should I fix it?",
+      "expected_behavior": "Triggers slide-design-principles (not a format builder). Diagnoses density/one-signal violation, rewrites the title as a claim, splits the slide, and points to the specific rules applied — without emitting .tex or .pptx."
+    },
+    {
+      "name": "what-goes-on-this-slide",
+      "prompt": "I have my results but I don't know what should actually go on the results slide. Help me decide what to show vs say.",
+      "expected_behavior": "Produces a slide-spec block (message, body, visual provenance, notes), separating on-slide evidence from speaker notes. Stays tool-agnostic; does not assume Beamer or PowerPoint."
+    },
+    {
+      "name": "not-deck-generation",
+      "prompt": "Generate the full Beamer .tex for my 20-minute conference talk.",
+      "expected_behavior": "Defers to beamer-academic-deck for artifact generation rather than handling it here; slide-design-principles only supplies the spec schema and rules."
+    }
+  ]
+}

@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-This repository is for authoring and collecting agent skills focused on research workflows, industrial R&D, paper writing, PhD applications, language test preparation, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, industry problem framing, solution design, pilot evaluation, implementation, reproducibility, paper writing, reviewer response, artifact release, research-oriented applications, IELTS preparation, and coding support.
+This repository is for authoring and collecting agent skills focused on research workflows, industrial R&D, paper writing, PhD applications, language test preparation, presentation/deck building, and implementation-heavy coding work. Skills should help agents support research ideation, literature grounding, industry problem framing, solution design, pilot evaluation, implementation, reproducibility, paper writing, reviewer response, artifact release, research-oriented applications, IELTS preparation, slide/deck production, and coding support.
 
-Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, or meta-discovery skills should not be added unless they directly support research, industrial R&D, paper production, PhD applications, language test preparation, or coding-heavy research work.
+Generic coding-support skills are allowed when they materially support research implementation. Generic README, architecture, slide, or meta-discovery skills should not be added unless they directly support research, industrial R&D, paper production, PhD applications, language test preparation, presentation/deck building, or coding-heavy research work.
 
 ## Structure
 
@@ -17,12 +17,14 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/experiment-design-and-analysis/` contains experiment design, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
 - `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
 - `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, theory-heavy, and paper-gap-finding skills.
+- `skills/research-skills/technical-teaching/` contains professor-style technical teaching skills for explaining, deriving, comparing, implementing, and critically analyzing advanced quantitative concepts.
 - `skills/research-skills/paper-writing/` contains paper narrative, section writing, discussion-report synthesis, and presentation skills (abstract, intro, method, figures, talk planning).
 - `skills/research-skills/review-and-submission/` contains reviewer-response, submission-readiness, and venue-targeting skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.
 - `skills/research-skills/applications-and-career/` contains academic-career profile ingestion, PhD application writing, career support, and motivation skills.
 - `skills/industrial-rnd/` contains skills for ambiguous industry problem framing, publication-grounded solution design, banking/fintech use-case discovery, and practical pilot/evaluation planning.
 - `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
+- `skills/presentation/` contains slide/deck *building* skills that render an approved per-slide spec into an artifact: `slide-design-principles` (shared spec schema + design rules), `beamer-academic-deck` (Beamer for seminar/conference/lecture talks), `beamer-proposal-report-deck` (Beamer for proposals and progress/final reports), and `business-report-deck` (PowerPoint/Canva industrial/executive reports). These are downstream of `research-talk-planner`, which plans a talk's narrative and pacing but does not produce slides.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
 - `skills/language-learning/` contains language test preparation skills (IELTS writing, speaking, etc.).
 - `skills/research-codebase/` and similar top-level skills are allowed when they support the whole research codebase rather than one paper stage.
@@ -49,13 +51,15 @@ Use this taxonomy when adding or reorganizing skills:
 3. Experiment design and analysis
 4. Implementation support
 5. Theory and claims
-6. Paper writing
-7. Review and submission
-8. Artifact and reproducibility
-9. Applications and career
-10. Industrial R&D
-11. Coding support
-12. Language learning
+6. Technical teaching
+7. Paper writing
+8. Review and submission
+9. Artifact and reproducibility
+10. Applications and career
+11. Industrial R&D
+12. Coding support
+13. Language learning
+14. Presentation and slides
 
 ## Skill authoring conventions
 

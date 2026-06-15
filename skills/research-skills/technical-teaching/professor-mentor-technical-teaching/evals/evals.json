@@ -1,0 +1,23 @@
+{
+  "skill_name": "professor-mentor-technical-teaching",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Explain why the MDCT is used in audio codecs instead of just taking independent FFT blocks. I want intuition first, then the math, then where it fails.",
+      "expected_output": "A professor-style explanation that motivates blocking artifacts, introduces overlap-add and time-domain aliasing cancellation, connects the math to codec implementation, and critiques limitations.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Walk me through why Adam often trains deep nets faster than vanilla SGD, but also why people still care about SGD for generalization.",
+      "expected_output": "A structured explanation covering optimization pressure, adaptive moments, assumptions, update equations, implementation details, limitations, and historical/practical comparison with SGD.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Is graph Laplacian regularization actually a good idea for semi-supervised learning? Explain the intuition, formal objective, failure modes, and what later methods changed.",
+      "expected_output": "A critical teaching response that explains smoothness assumptions, gives a formal objective, discusses implementation and scalability, identifies fragile regimes, and situates later graph/neural methods.",
+      "files": []
+    }
+  ]
+}

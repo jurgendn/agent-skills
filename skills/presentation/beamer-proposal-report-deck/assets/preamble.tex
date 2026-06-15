@@ -1,0 +1,63 @@
+% ---------------------------------------------------------------------------
+% Beamer preamble for proposal / report decks (beamer-proposal-report-deck)
+% Extends the academic preamble with Gantt charts, status macros, and table
+% styling for milestones, deliverables, risks, and budgets.
+% Compiles with pdflatex or lualatex.
+% ---------------------------------------------------------------------------
+\documentclass[aspectratio=169,10pt]{beamer}
+
+% --- Theme -----------------------------------------------------------------
+\usetheme{metropolis}
+\metroset{numbering=fraction, progressbar=foot, block=fill}
+% Fallback: \usetheme{default}\usecolortheme{seahorse}
+%           \setbeamertemplate{navigation symbols}{}
+
+% --- Fonts, math, tables, figures ------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage{booktabs, array}
+\usepackage{graphicx}
+\graphicspath{{figures/}{./}}
+
+% --- Diagrams & Gantt ------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+\usepackage{pgfgantt}   % timeline / Gantt charts
+
+% --- Color (one accent) + colorblind-safe status colors --------------------
+\definecolor{accent}{HTML}{1F6FEB}
+\definecolor{okgreen}{HTML}{1A7F37}
+\definecolor{warnamber}{HTML}{9A6700}
+\definecolor{riskred}{HTML}{CF222E}
+\setbeamercolor{frametitle}{bg=accent}
+\newcommand{\emphc}[1]{\textcolor{accent}{#1}}
+
+% --- Status macros: symbol + color (never color alone) ---------------------
+\newcommand{\done}{\textcolor{okgreen}{\textbf{\checkmark\ done}}}
+\newcommand{\ontrack}{\textcolor{warnamber}{\textbf{\textonehalf\ on track}}}
+\newcommand{\atrisk}{\textcolor{riskred}{\textbf{!\ at risk}}}
+
+% --- Speaker notes (uncomment to show) -------------------------------------
+% \setbeameroption{show notes}
+
+% --- Figure placeholder ----------------------------------------------------
+\newcommand{\figplaceholder}[2][0.7\linewidth]{%
+  \fbox{\parbox[c][0.45\textheight][c]{#1}{\centering\ttfamily TODO figure:\\ #2}}}
+
+% --- Title metadata --------------------------------------------------------
+\title{TODO: Proposal / Report title}
+\subtitle{TODO: proposal defense / progress review / final report}
+\author{TODO: Author}
+\institute{TODO: Affiliation}
+\date{TODO: Date}
+
+% ---------------------------------------------------------------------------
+% Example Gantt (delete or adapt):
+% \begin{ganttchart}[hgrid, vgrid, bar/.style={fill=accent}]{1}{12}
+%   \gantttitle{Year 1}{12} \\ \gantttitlelist{1,...,12}{1} \\
+%   \ganttbar{WP1: Data}{1}{4} \\
+%   \ganttbar{WP2: Method}{3}{8} \\
+%   \ganttmilestone{M1: prototype}{4}
+% \end{ganttchart}
+% ---------------------------------------------------------------------------

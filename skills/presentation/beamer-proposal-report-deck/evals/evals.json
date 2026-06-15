@@ -1,0 +1,19 @@
+{
+  "evals": [
+    {
+      "name": "proposal-defense-deck",
+      "prompt": "Make a Beamer deck for my grant proposal: objectives, methodology, timeline, milestones, budget, and risks.",
+      "expected_behavior": "Triggers beamer-proposal-report-deck. Uses the proposal spine (significance, gap, objectives as testable aims, approach, preliminary results, Gantt timeline, dated milestones, risks→mitigations, budget). Spec first, then .tex with pgfgantt and booktabs tables; full budget/work-package detail in a backup appendix."
+    },
+    {
+      "name": "progress-report-deck",
+      "prompt": "I need a mid-term progress report deck in LaTeX showing what we promised vs. what we delivered, including which milestones slipped.",
+      "expected_behavior": "Triggers beamer-proposal-report-deck in report mode: recap of objectives, progress-vs-plan status table with done/on-track/at-risk macros, honest milestone status, deviations and why, updated risks, revised timeline. Does not hide slippage."
+    },
+    {
+      "name": "disambig-vs-academic-talk",
+      "prompt": "Turn my accepted paper into Beamer slides for the conference presentation.",
+      "expected_behavior": "Defers to beamer-academic-deck (single-paper contribution talk), not the proposal/report spine."
+    }
+  ]
+}

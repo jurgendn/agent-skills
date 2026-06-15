@@ -1,0 +1,51 @@
+% ---------------------------------------------------------------------------
+% Beamer preamble for academic talks / lectures (beamer-academic-deck)
+% Compiles with pdflatex or lualatex. metropolis is recommended; if it is not
+% installed, comment out the metropolis lines and uncomment the fallback block.
+% ---------------------------------------------------------------------------
+\documentclass[aspectratio=169,10pt]{beamer}
+
+% --- Theme: metropolis (clean, low-chrome) ---------------------------------
+\usetheme{metropolis}
+\metroset{numbering=fraction, progressbar=foot, block=fill}
+% --- Fallback if metropolis is unavailable ---------------------------------
+% \usetheme{default}
+% \usecolortheme{seahorse}
+% \setbeamertemplate{navigation symbols}{}
+
+% --- Fonts & encoding ------------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% --- Math ------------------------------------------------------------------
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+
+% --- Tables & figures ------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{figures/}{./}}   % drop figure files in ./figures/
+
+% --- Diagrams --------------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, fit, backgrounds}
+% \usepackage{pgfplots} \pgfplotsset{compat=1.18}  % uncomment for plots
+
+% --- Color: one accent for emphasis, everything else neutral ---------------
+\definecolor{accent}{HTML}{1F6FEB}
+\setbeamercolor{frametitle}{bg=accent}
+\newcommand{\emphc}[1]{\textcolor{accent}{#1}}
+
+% --- Speaker notes: uncomment to render notes alongside slides -------------
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+
+% --- Placeholder box for figures not yet supplied --------------------------
+\newcommand{\figplaceholder}[2][0.7\linewidth]{%
+  \fbox{\parbox[c][0.45\textheight][c]{#1}{\centering\ttfamily TODO figure:\\ #2}}}
+
+% --- Title metadata (edit per talk) ----------------------------------------
+\title{TODO: Talk title}
+\subtitle{TODO: one-line takeaway or research vision (optional)}
+\author{TODO: Author}
+\institute{TODO: Affiliation}
+\date{TODO: Venue \& date}
