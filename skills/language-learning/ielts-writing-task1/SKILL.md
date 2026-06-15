@@ -1,6 +1,6 @@
 ---
 name: ielts-writing-task1
-description: Draft, analyse, score, and improve IELTS Academic Writing Task 1 responses (150-word minimum reports on graphs, charts, tables, diagrams, maps, or processes). Use this skill when the user shares a Task 1 prompt, wants a model answer, needs band-score feedback on their own response, or asks how to describe trends, compare data, or structure an overview. Also use when the user asks about Task 1 vocabulary, grammar for describing data, or common Task 1 mistakes. Covers all visual types: line graph, bar chart, pie chart, table, map, process diagram, multiple charts.
+description: "Draft, analyse, score, and improve IELTS Academic Writing Task 1 responses (150-word minimum reports on graphs, charts, tables, diagrams, maps, or processes). Use this skill when the user shares a Task 1 prompt, wants a model answer, needs band-score feedback on their own response, or asks how to describe trends, compare data, or structure an overview. Also use when the user asks about Task 1 vocabulary, grammar for describing data, or common Task 1 mistakes. Covers all visual types: line graph, bar chart, pie chart, table, map, process diagram, multiple charts."
 ---
 
 # IELTS Writing Task 1 Coach
