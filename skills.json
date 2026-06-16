@@ -236,6 +236,12 @@
       "description": "Design minimal decision-relevant experiments with fair baselines and measurable success criteria."
     },
     {
+      "name": "benchmark-and-baseline-selector",
+      "path": "skills/research-skills/experiment-design-and-analysis/benchmark-and-baseline-selector",
+      "category": "research-skills/experiment-design-and-analysis",
+      "description": "Select the minimal and suggested baselines and benchmarks needed to support a research claim."
+    },
+    {
       "name": "statistical-testing-guide",
       "path": "skills/research-skills/experiment-design-and-analysis/statistical-testing-guide",
       "category": "research-skills/experiment-design-and-analysis",
@@ -294,6 +300,12 @@
       "path": "skills/research-skills/idea-and-positioning/research-idea-stress-test",
       "category": "research-skills/idea-and-positioning",
       "description": "Stress-test a research idea before major investment."
+    },
+    {
+      "name": "paper-idea-and-scope-brainstormer",
+      "path": "skills/research-skills/idea-and-positioning/paper-idea-and-scope-brainstormer",
+      "category": "research-skills/idea-and-positioning",
+      "description": "Brainstorm a research idea and scope what a new paper should cover, upstream of stress-testing and argument planning."
     },
     {
       "name": "pytorch-training-recipe",

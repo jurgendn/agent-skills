@@ -14,7 +14,7 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/` contains research lifecycle, paper-writing, application, and artifact skills.
 - `skills/research-skills/idea-and-positioning/` contains early-stage research framing skills.
 - `skills/research-skills/literature-and-related-work/` contains literature mapping, Related Work writing, and citation verification skills.
-- `skills/research-skills/experiment-design-and-analysis/` contains experiment design, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
+- `skills/research-skills/experiment-design-and-analysis/` contains experiment design, benchmark/baseline selection, statistical testing, evaluation, ML, and LLM-systems evaluation skills.
 - `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
 - `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, theory-heavy, and paper-gap-finding skills.
 - `skills/research-skills/technical-teaching/` contains professor-style technical teaching skills for explaining, deriving, comparing, implementing, and critically analyzing advanced quantitative concepts.

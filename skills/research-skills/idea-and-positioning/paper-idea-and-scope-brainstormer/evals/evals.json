@@ -1,0 +1,36 @@
+{
+  "skill": "paper-idea-and-scope-brainstormer",
+  "description": "Triggering and output-quality prompts for brainstorming a research idea and scoping what a new paper should cover.",
+  "cases": [
+    {
+      "prompt": "I have a rough idea about using contrastive learning for time-series anomaly detection. Help me figure out what the paper should actually be about.",
+      "should_trigger": true,
+      "expects": ["diverges into 3-5 distinct framings", "converges on one central contribution", "produces a Paper Scoping Brief with in-scope vs deferred"]
+    },
+    {
+      "prompt": "I think I have two contributions here. Is this one paper or two?",
+      "should_trigger": true,
+      "expects": ["checks salami-slicing vs overstuffing", "gives a verdict + which is first if split", "draws in-scope / deferred boundary"]
+    },
+    {
+      "prompt": "What should I include in this paper and what should I leave out?",
+      "should_trigger": true,
+      "expects": ["explicit in-scope and deferred lists", "coverage checklist (claims to evidence)", "delegates per-claim benchmarks to benchmark-and-baseline-selector"]
+    },
+    {
+      "prompt": "I have an idea but I don't really know how to frame it for a paper.",
+      "should_trigger": true,
+      "expects": ["asks for required context first if the seed/field/motivation is thin", "does NOT invent a direction from nothing", "batches the questions"]
+    },
+    {
+      "prompt": "I've decided on my method. Help me vet whether it's actually novel and worth pursuing.",
+      "should_trigger": false,
+      "expects": ["defer to research-idea-stress-test"]
+    },
+    {
+      "prompt": "My contribution is fixed. Help me structure the sections and the argument of the paper.",
+      "should_trigger": false,
+      "expects": ["defer to paper-argument-planner"]
+    }
+  ]
+}
