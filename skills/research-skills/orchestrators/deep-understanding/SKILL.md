@@ -1,6 +1,7 @@
 ---
 name: deep-understanding
-description: Orchestrate depth-first mastery of ONE specific object the user already has basic familiarity with — a single paper, method, algorithm, theorem, derivation, or result — until they can re-derive it, criticize it, and find where it breaks. Use whenever the user says "I want to really understand X", "help me understand this paper deeply", "I get the gist but not the mechanism", "walk me all the way through this method", "I want to be able to defend/criticize this", or "tear this apart so I actually get it". This is a ROUTER that sequences existing singleton skills; it does not teach directly. Use learn-new-topic instead when the user is new to a whole area and needs breadth-first onboarding. Use idea-to-proof when the goal is to formalize the user's OWN idea into a claim and proof rather than master an existing object.
+description: >-
+  Orchestrate depth-first mastery of ONE specific object the user already has basic familiarity with — a single paper, method, algorithm, theorem, derivation, or result — until they can re-derive it, criticize it, and find where it breaks. Use whenever the user says "I want to really understand X", "help me understand this paper deeply", "I get the gist but not the mechanism", "walk me all the way through this method", "I want to be able to defend/criticize this", or "tear this apart so I actually get it". This is a ROUTER that sequences existing singleton skills; it does not teach directly. Use learn-new-topic instead when the user is new to a whole area and needs breadth-first onboarding. Use idea-to-proof when the goal is to formalize the user's OWN idea into a claim and proof rather than master an existing object.
 ---
 
 # Deep Understanding (Orchestrator)

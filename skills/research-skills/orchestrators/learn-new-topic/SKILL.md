@@ -1,6 +1,7 @@
 ---
 name: learn-new-topic
-description: Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use whenever the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or hands over a topic they have no prior grounding in. This is a ROUTER: it sequences existing singleton skills, it does not teach directly. Use deep-understanding instead when the user already knows the basics and wants rigorous mastery of ONE specific thing (a paper, a derivation, a single method). Use idea-to-proof when the goal is to formalize a research idea into a claim and proof, not to learn an existing topic.
+description: >-
+  Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use whenever the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or hands over a topic they have no prior grounding in. This is a ROUTER: it sequences existing singleton skills, it does not teach directly. Use deep-understanding instead when the user already knows the basics and wants rigorous mastery of ONE specific thing (a paper, a derivation, a single method). Use idea-to-proof when the goal is to formalize a research idea into a claim and proof, not to learn an existing topic.
 ---
 
 # Learn a New Topic (Orchestrator)
