@@ -1,0 +1,41 @@
+{
+  "skill": "benchmark-and-baseline-selector",
+  "description": "Triggering and output-quality prompts for recommending minimal vs suggested baselines/benchmarks for a claim.",
+  "cases": [
+    {
+      "prompt": "I'm proposing a new attention variant that I think is more compute-efficient than standard attention. What should I compare against?",
+      "should_trigger": true,
+      "expects": ["minimal vs suggested split", "trivial lower bound + strong incumbent + self-ablation", "a cost/efficiency axis, not accuracy alone"]
+    },
+    {
+      "prompt": "My method gets better few-shot accuracy. What's the minimal set of experiments to make this convincing?",
+      "should_trigger": true,
+      "expects": ["classifies as sample-efficiency claim", "learning-curve / data-budget protocol", "minimal benchmark = one with the right protocol"]
+    },
+    {
+      "prompt": "I claim my retrieval reranker generalizes across domains. Which benchmarks do I need?",
+      "should_trigger": true,
+      "expects": ["generalization/transfer claim", "minimal = in-domain, suggested = second domain / OOD split", "flags cherry-picking"]
+    },
+    {
+      "prompt": "Is comparing only to the original 2018 baseline enough for my paper?",
+      "should_trigger": true,
+      "expects": ["flags outdated/weak baseline anti-pattern", "requires closest current prior method", "requires self-ablation"]
+    },
+    {
+      "prompt": "I have a new idea and want to know what baselines to use.",
+      "should_trigger": true,
+      "expects": ["does NOT invent a plan", "asks for required context first: precise claim, field/task, the novel component, metric", "batches the questions concisely"]
+    },
+    {
+      "prompt": "Help me design the actual training run, controls, and stopping criteria for this experiment.",
+      "should_trigger": false,
+      "expects": ["defer to experiment-design"]
+    },
+    {
+      "prompt": "There's no existing benchmark for my task — help me build an eval set.",
+      "should_trigger": false,
+      "expects": ["defer to eval-suite-designer"]
+    }
+  ]
+}
