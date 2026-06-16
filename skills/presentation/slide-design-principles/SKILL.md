@@ -1,6 +1,7 @@
 ---
 name: slide-design-principles
-description: Shared reference for building any slide deck — the slide-spec schema and the design rules (one-signal-per-slide, claim-titles, visual hierarchy, density limits, figure adaptation, color/contrast) that the format-specific deck builders reuse. Use this skill when the user wants general slide-design feedback not tied to a tool ("is this slide too busy", "how do I make this slide clearer", "what should go on this slide", "fix the visual hierarchy"), or load it as the foundation before beamer-academic-deck, beamer-proposal-report-deck, or business-report-deck. This skill defines the per-slide spec those builders fill in; it does not emit .tex or .pptx itself.
+description: >-
+  Shared reference for building any slide deck — the slide-spec schema and the design rules (one-signal-per-slide, claim-titles, visual hierarchy, density limits, figure adaptation, color/contrast) that the format-specific deck builders reuse. Use this skill when the user wants general slide-design feedback not tied to a tool ("is this slide too busy", "how do I make this slide clearer", "what should go on this slide", "fix the visual hierarchy"), or load it as the foundation before beamer-academic-deck, beamer-proposal-report-deck, or business-report-deck. This skill defines the per-slide spec those builders fill in; it does not emit .tex or .pptx itself.
 ---
 
 # Slide Design Principles

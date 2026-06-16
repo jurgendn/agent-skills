@@ -1,6 +1,7 @@
 ---
 name: recommendation-letter-strategist
-description: Plan PhD and research-application recommendation letters: choose recommenders, assess letter strength and risk, draft request or reminder emails, and prepare recommender packets. Use this skill whenever the user asks who should write their letters, whether a recommender is strong enough, how to ask for a recommendation, what materials to send, or how to coordinate letters for PhD programs, fellowships, research internships, RA roles, or lab applications.
+description: >-
+  Plan PhD and research-application recommendation letters: choose recommenders, assess letter strength and risk, draft request or reminder emails, and prepare recommender packets. Use this skill whenever the user asks who should write their letters, whether a recommender is strong enough, how to ask for a recommendation, what materials to send, or how to coordinate letters for PhD programs, fellowships, research internships, RA roles, or lab applications.
 ---
 
 # Recommendation Letter Strategist
