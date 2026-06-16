@@ -1,6 +1,7 @@
 ---
 name: ielts-speaking-coach
-description: Simulate, score, and give feedback on IELTS Speaking tests (Parts 1, 2, and 3). Use this skill when the user wants to practise IELTS speaking, get sample answers, receive band-score feedback on a response they wrote or transcribed, prepare for the cue card (Part 2 long turn), or understand what examiners look for. Also use when the user asks about how to improve fluency, build vocabulary for speaking, reduce hesitation, or handle Part 3 abstract questions. Covers all four speaking criteria: Fluency and Coherence, Lexical Resource, Grammatical Range and Accuracy, Pronunciation.
+description: >-
+  Simulate, score, and give feedback on IELTS Speaking tests (Parts 1, 2, and 3). Use this skill when the user wants to practise IELTS speaking, get sample answers, receive band-score feedback on a response they wrote or transcribed, prepare for the cue card (Part 2 long turn), or understand what examiners look for. Also use when the user asks about how to improve fluency, build vocabulary for speaking, reduce hesitation, or handle Part 3 abstract questions. Covers all four speaking criteria: Fluency and Coherence, Lexical Resource, Grammatical Range and Accuracy, Pronunciation.
 ---
 
 # IELTS Speaking Coach

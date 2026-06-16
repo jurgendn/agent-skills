@@ -1,6 +1,7 @@
 ---
 name: beamer-academic-deck
-description: Build a compile-ready LaTeX Beamer deck for an academic talk — conference presentation, seminar/colloquium, invited talk, job talk, thesis defense, or a lecture. Use whenever the user wants actual Beamer code for a presentation: "make me Beamer slides", "turn this paper/section into Beamer", "write the .tex for my conference talk", "I need slides for my seminar", "build lecture slides in Beamer", "generate a Beamer deck from these results". Works in two phases — first a per-slide spec, then compile-ready .tex. For deciding the talk's narrative, pacing, and what to cut, use research-talk-planner first (this skill renders that plan into Beamer). For proposals/progress reports in Beamer use beamer-proposal-report-deck; for PowerPoint/Canva business decks use business-report-deck.
+description: >-
+  Build a compile-ready LaTeX Beamer deck for an academic talk — conference presentation, seminar/colloquium, invited talk, job talk, thesis defense, or a lecture. Use whenever the user wants actual Beamer code for a presentation: "make me Beamer slides", "turn this paper/section into Beamer", "write the .tex for my conference talk", "I need slides for my seminar", "build lecture slides in Beamer", "generate a Beamer deck from these results". Works in two phases — first a per-slide spec, then compile-ready .tex. For deciding the talk's narrative, pacing, and what to cut, use research-talk-planner first (this skill renders that plan into Beamer). For proposals/progress reports in Beamer use beamer-proposal-report-deck; for PowerPoint/Canva business decks use business-report-deck.
 ---
 
 # Beamer Academic Deck

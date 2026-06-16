@@ -1,6 +1,7 @@
 ---
 name: beamer-proposal-report-deck
-description: Build a compile-ready LaTeX Beamer deck for a research proposal or a research report — grant/PhD/project proposal defenses, thesis-proposal talks, progress/milestone reviews, mid-term/final project reports, and committee or funder updates. Use when the user wants Beamer slides organized around objectives, work packages, timeline/Gantt, milestones, deliverables, budget, risks, and progress-vs-plan rather than a single paper's contribution: "Beamer slides for my proposal defense", "progress report deck in LaTeX", "milestone review slides", "PhD proposal presentation", "project final report in Beamer". Two phases: slide-spec, then .tex. For a single paper's results talk use beamer-academic-deck; for PowerPoint/Canva executive reports use business-report-deck; for narrative/pacing of a talk use research-talk-planner.
+description: >-
+  Build a compile-ready LaTeX Beamer deck for a research proposal or a research report — grant/PhD/project proposal defenses, thesis-proposal talks, progress/milestone reviews, mid-term/final project reports, and committee or funder updates. Use when the user wants Beamer slides organized around objectives, work packages, timeline/Gantt, milestones, deliverables, budget, risks, and progress-vs-plan rather than a single paper's contribution: "Beamer slides for my proposal defense", "progress report deck in LaTeX", "milestone review slides", "PhD proposal presentation", "project final report in Beamer". Two phases: slide-spec, then .tex. For a single paper's results talk use beamer-academic-deck; for PowerPoint/Canva executive reports use business-report-deck; for narrative/pacing of a talk use research-talk-planner.
 ---
 
 # Beamer Proposal / Report Deck

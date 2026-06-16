@@ -1,6 +1,7 @@
 ---
 name: statistical-testing-guide
-description: Choose the right statistical test, compute effect sizes, design power analyses, and report statistics correctly in ML and AI research papers. Use whenever the user asks how to compare two models statistically, whether results are significant, how many seeds to run, how to report variance, which test to use for non-normal data, how to handle multiple comparisons, or how to answer a reviewer challenging statistical validity. Also use when planning an evaluation and needing to decide the number of seeds/trials before running, or when results are borderline and the user needs to know if they can claim significance. Prevents the most common statistical mistakes in ML papers: reporting only means without variance, choosing seeds post-hoc, and conflating statistical significance with practical significance.
+description: >-
+  Choose the right statistical test, compute effect sizes, design power analyses, and report statistics correctly in ML and AI research papers. Use whenever the user asks how to compare two models statistically, whether results are significant, how many seeds to run, how to report variance, which test to use for non-normal data, how to handle multiple comparisons, or how to answer a reviewer challenging statistical validity. Also use when planning an evaluation and needing to decide the number of seeds/trials before running, or when results are borderline and the user needs to know if they can claim significance. Prevents the most common statistical mistakes in ML papers: reporting only means without variance, choosing seeds post-hoc, and conflating statistical significance with practical significance.
 ---
 
 # Statistical Testing Guide
