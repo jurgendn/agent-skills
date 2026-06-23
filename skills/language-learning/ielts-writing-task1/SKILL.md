@@ -26,6 +26,8 @@ Task 1 is a 20-minute, minimum-150-word academic report. It is not an essay — 
 
 Scores are averaged equally across four criteria. Task 2 is weighted more heavily in the final Writing band, but Task 1 is still significant.
 
+> Full band-by-band reference (bands 5–9, all four criteria, Task 1/Task 2/Speaking) with links to the official IELTS descriptors: [`../references/ielts-band-descriptors.md`](../references/ielts-band-descriptors.md). Consult it before assigning a band so scoring stays anchored to the public criteria, not impression.
+
 ### Task Achievement (TA)
 
 | Band | Descriptor |

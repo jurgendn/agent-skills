@@ -1,0 +1,29 @@
+{
+  "evals": [
+    {
+      "name": "paper-to-beamer-conference",
+      "prompt": "Turn this paper into a Beamer deck for a 15-minute conference talk. Give me the actual .tex.",
+      "expected_behavior": "Triggers deck-beamer-academic. First produces a per-slide spec with claim-titles and ~1 slide/min pacing, confirms, then emits compile-ready .tex using the metropolis preamble with marked figure placeholders and \\note speaker notes."
+    },
+    {
+      "name": "lecture-slides",
+      "prompt": "I'm teaching a 75-minute lecture on diffusion models. Build me Beamer slides with worked examples.",
+      "expected_behavior": "Triggers deck-beamer-academic in lecture mode: section recaps, worked examples, larger fonts, tolerable redundancy; spec first, then .tex."
+    },
+    {
+      "name": "disambig-vs-talk-planner",
+      "prompt": "How long should each section of my conference talk be and what should I cut?",
+      "expected_behavior": "Defers to research-talk-planner (narrative/pacing/what-to-cut), not deck-beamer-academic, since no Beamer artifact is requested yet."
+    },
+    {
+      "name": "disambig-vs-proposal",
+      "prompt": "Build Beamer slides for my PhD proposal defense with a timeline and milestones.",
+      "expected_behavior": "Defers to deck-beamer-proposal-report (plan-of-work spine: objectives, Gantt, milestones, risks), not deck-beamer-academic."
+    },
+    {
+      "name": "content-reasoning-method-slides",
+      "prompt": "Build lecture slides in Beamer explaining the MDCT and why audio codecs use it.",
+      "expected_behavior": "Triggers deck-beamer-academic (lecture mode) and reasons about content with professor-mentor-technical-teaching: names the pressure (blocking artifacts vs. compactness), puts intuition before the transform equations, earns each equation, and carries the fundamental tradeoff. Compresses to one signal per slide with depth in \\note/backup — does NOT expand the eight-stage teaching arc into eight dense slides."
+    }
+  ]
+}

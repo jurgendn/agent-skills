@@ -35,7 +35,7 @@
     {
       "prompt": "There's no existing benchmark for my task — help me build an eval set.",
       "should_trigger": false,
-      "expects": ["defer to eval-suite-designer"]
+      "expects": ["defer to experiment-design"]
     }
   ]
 }

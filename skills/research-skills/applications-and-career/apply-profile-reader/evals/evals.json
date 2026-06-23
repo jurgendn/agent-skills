@@ -1,0 +1,23 @@
+{
+  "skill_name": "apply-profile-reader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a folder called ./application_materials with my CV, a rough SOP, project notes, and a target-school list. Read it and build a reusable academic profile I can use for PhD SOPs and professor emails.",
+      "expected_output": "A source-grounded applicant profile with source inventory, applicant snapshot, research identity, evidence inventory, narrative options, downstream use notes, and prioritized missing information.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you read my academic background from these files before we work on my CV? I have a resume, transcript notes, GitHub project summaries, and a list of recommenders. I want to know what evidence is strongest for research applications.",
+      "expected_output": "A structured academic-career evidence inventory that separates facts from interpretation, identifies strongest research-readiness signals, and flags missing details before CV work.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm applying to research master's and maybe PhD programs later. Please read my profile notes and tell me what story my materials currently support, what programs/faculty direction would fit, and what information is missing.",
+      "expected_output": "A profile synthesis with research narrative options, target-program fit clues, constraints, downstream use guidance, and high-priority follow-up questions.",
+      "files": []
+    }
+  ]
+}

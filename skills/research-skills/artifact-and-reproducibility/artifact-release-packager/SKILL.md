@@ -18,8 +18,7 @@ A paper artifact is not just a GitHub repository. It is the set of materials tha
 ## Do not use this when
 
 - The user wants to verify an existing result end-to-end. Use `reproducibility-audit`.
-- The user wants a general README only. Use `research-codebase-readme-writer`.
-- The user wants to simplify the codebase before release. Use `code-simplify` or `research-codebase`.
+- The user wants to structure, document, or simplify the codebase before release. Use `research-codebase`.
 
 ## Workflow
 

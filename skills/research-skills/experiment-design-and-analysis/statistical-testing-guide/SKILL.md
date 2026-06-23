@@ -12,6 +12,25 @@ The most common mistake in ML papers is not misapplying a test — it is skippin
 
 ---
 
+## Compute it with the bundled script
+
+Once you know the comparison structure (next section), don't hand-derive the scipy calls — run `scripts/stats.py`, which encodes the test-selection logic, effect sizes, and reporting template below so the numbers are correct and reproducible.
+
+```bash
+# Compare two methods across seeds (auto-selects t-test / Wilcoxon / Mann-Whitney),
+# with effect size, bootstrap CI, permutation cross-check, and a copy-paste sentence:
+python scripts/stats.py compare --a 0.843 0.851 0.838 0.847 0.840 \
+                                --b 0.812 0.805 0.820 0.808 0.815 --paired --metric F1
+
+python scripts/stats.py correct --pvalues 0.01 0.04 0.03 0.20 --method holm   # multiple comparisons
+python scripts/stats.py power   --d 0.5 --n 5                                  # seeds / detectable effect
+python scripts/stats.py selftest                                              # verify the install
+```
+
+Use the workflow below to decide *what* to compute and how to read it; use the script to actually compute it. The script's report mirrors the "Output format" template at the end of this skill.
+
+---
+
 ## Workflow
 
 ### 1. Decide what you are comparing
