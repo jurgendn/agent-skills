@@ -1,6 +1,6 @@
 ---
 name: benchmark-and-baseline-selector
-description: Given a research proposal, claim, method, or result, recommend the baselines and benchmarks needed to support it — split into a MINIMAL set (necessary for credibility, skipping any risks rejection) and a SUGGESTED set (complementary, strengthens external validity). Use whenever the user proposes something and asks "what should I compare against", "what baselines do I need", "which benchmarks support this claim", "is this enough to be convincing", "what's the minimal experiment set", "what would a reviewer demand", or shares a method/idea and wants the comparison plan. Default to running this on any proposal so claims are backed by the right evidence. Always check first whether the input is sufficient (precise claim, field, the novel component, metric); if not, request the missing context before recommending rather than guessing. Use experiment-design to design the run itself, hypothesis-and-ablation-planner for internal ablations, and eval-suite-designer when no benchmark exists and one must be built.
+description: Given a research proposal, claim, method, or result, recommend the baselines and benchmarks needed to support it — split into a MINIMAL set (necessary for credibility, skipping any risks rejection) and a SUGGESTED set (complementary, strengthens external validity). Use whenever the user proposes something and asks "what should I compare against", "what baselines do I need", "which benchmarks support this claim", "is this enough to be convincing", "what's the minimal experiment set", "what would a reviewer demand", or shares a method/idea and wants the comparison plan. Default to running this on any proposal so claims are backed by the right evidence. Always check first whether the input is sufficient (precise claim, field, the novel component, metric); if not, request the missing context before recommending rather than guessing. Use experiment-design to design the run itself (or to design a measurement when no benchmark exists), and hypothesis-and-ablation-planner for internal ablations.
 ---
 
 # Benchmark and Baseline Selector
@@ -131,6 +131,6 @@ Keep it scannable. Lead with the Minimal set — that is the answer to "what do 
 
 - Designing the experiment run, controls, or success thresholds → `experiment-design`.
 - Internal ablations to isolate a mechanism within one method → `hypothesis-and-ablation-planner`.
-- No suitable benchmark exists and one must be constructed → `eval-suite-designer`.
+- No suitable benchmark exists and a measurement must be designed from scratch → `experiment-design`.
 - Interpreting results / error analysis after running → `model-eval-error-analysis`.
 - Significance testing of the resulting numbers → `statistical-testing-guide`.

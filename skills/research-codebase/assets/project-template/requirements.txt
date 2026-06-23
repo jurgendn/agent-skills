@@ -1,0 +1,4 @@
+# Pin versions before a conference submission so the repo reproduces.
+numpy
+# torch
+# scipy

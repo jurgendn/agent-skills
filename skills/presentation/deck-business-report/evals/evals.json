@@ -1,0 +1,19 @@
+{
+  "evals": [
+    {
+      "name": "pilot-results-pptx",
+      "prompt": "Build a PowerPoint for the leadership review of our fraud-detection pilot. Lead with the recommendation and the business impact.",
+      "expected_behavior": "Triggers deck-business-report. Answer-first spine: title, then an executive-summary slide (recommendation + reasons + ask), claim-titles as business outcomes, model metrics translated into time/cost/FTE, mandatory risks and next-steps slides, technical depth in appendix. Produces a slides.json and generates deck.pptx via scripts/build_pptx.py with speaker notes."
+    },
+    {
+      "name": "canva-client-deck",
+      "prompt": "I want a Canva deck for a client report on our analytics findings.",
+      "expected_behavior": "Triggers deck-business-report Canva path: import-ready per-slide content + exact chart data + a design spec (template style, hex colors, font pairing, layouts). Offers to also generate a .pptx for Canva import as the fast branded route."
+    },
+    {
+      "name": "disambig-vs-beamer",
+      "prompt": "Make me Beamer slides for my seminar talk.",
+      "expected_behavior": "Defers to deck-beamer-academic (LaTeX academic audience), not deck-business-report."
+    }
+  ]
+}

@@ -21,12 +21,10 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/experiment-design-and-analysis/model-eval-error-analysis` — inspect model failures beyond aggregate metrics.
 - `research-skills/experiment-design-and-analysis/statistical-testing-guide` — choose the right test, compute effect sizes, plan seed counts, and report statistics correctly.
 - `research-skills/experiment-design-and-analysis/deep-learning-experimentation/*` — specialist diagnostics for data pipelines, training runs, scaling, probes, hyperparameters, and experiment traces.
-- `research-skills/experiment-design-and-analysis/llm-systems-eval/*` — specialist evaluation support for LLM systems, agents, RAG, judges, prompts, latency, and failure taxonomies.
 
 ### Implementation support
 
 - `research-codebase` — structure research code for fast hypothesis testing and command-to-result traceability.
-- `research-codebase-readme-writer` — write research READMEs focused on reproducibility and paper claims.
 - `research-skills/implementation-support/pytorch-training-recipe` — turn a paper idea into an implementable PyTorch training recipe.
 - `research-skills/implementation-support/jax-training-recipe` — turn a paper idea into an implementable JAX/Flax/Optax training recipe.
 
@@ -60,15 +58,15 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 ### Applications and career
 
-- `research-skills/applications-and-career/applicant-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.
-- `research-skills/applications-and-career/sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
-- `research-skills/applications-and-career/academic-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
-- `research-skills/applications-and-career/phd-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
-- `research-skills/applications-and-career/professor-research-direction-mapper` — define a professor's recent and trending research direction for fit notes, SOPs, and outreach.
-- `research-skills/applications-and-career/professor-cold-email-drafter` — draft, critique, and revise concise cold emails to professors and PIs.
-- `research-skills/applications-and-career/recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
-- `research-skills/applications-and-career/phd-application-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
-- `research-skills/applications-and-career/phd-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
+- `research-skills/applications-and-career/apply-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.
+- `research-skills/applications-and-career/apply-sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.
+- `research-skills/applications-and-career/apply-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
+- `research-skills/applications-and-career/apply-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
+- `research-skills/applications-and-career/apply-research-direction-mapper` — define a professor's recent and trending research direction for fit notes, SOPs, and outreach.
+- `research-skills/applications-and-career/apply-cold-email-drafter` — draft, critique, and revise concise cold emails to professors and PIs.
+- `research-skills/applications-and-career/apply-recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
+- `research-skills/applications-and-career/apply-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
+- `research-skills/applications-and-career/apply-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 
 ### Industrial R&D
 
@@ -80,9 +78,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 ### Coding support
 
-- `coding-support/context7-mcp` — library/API reference support during implementation.
 - `coding-support/debugging-strategies` — systematic debugging support.
-- `coding-support/code-simplify` — simplify over-engineered code.
 - `coding-support/python-code-style` — Python style and linting guidance.
 - `coding-support/python-design-patterns` — Python design/refactoring guidance.
 - `coding-support/python-performance-optimization` — Python profiling and performance guidance.

@@ -47,6 +47,14 @@ project/
 
 That's it. Don't add folders you don't have content for yet.
 
+**Starter skeleton.** `assets/project-template/` is this exact layout as copyable files — `train.py` (with `set_seed` and an if-statement model selector), `evaluate.py`, `sanity_check.py`, `models/rwgp.py`, `experiments/baseline.sh`, `results/README.md`, `.gitignore`, and `requirements.txt`. When starting a new project, copy it in and delete what you don't yet need — it is a starting point to **subtract** from, not a frame to fill:
+
+```bash
+cp -r assets/project-template/ ~/my-new-paper && cd ~/my-new-paper
+```
+
+Treat it as scaffolding-on-demand: the skill's whole philosophy is to add structure only when the pain justifies it, so prune aggressively.
+
 **Naming files in `models/`**: name each file after what the method *is*, not what iteration it is. `rwgp_overlap.py`, not `model_v2.py`. Git tracks versions — the filename should tell you what the method does.
 
 ---

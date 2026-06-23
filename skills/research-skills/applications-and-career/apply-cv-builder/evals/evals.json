@@ -1,0 +1,23 @@
+{
+  "skill_name": "apply-cv-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm applying to CS PhD programs next cycle. My current resume is industry-style: education, two software internships, one ML research assistant project, a class project on transformers, and a poster at my university symposium. Turn this into an academic CV structure and tell me what information I need to add.",
+      "expected_output": "An academic CV structure, research-oriented reframing guidance, missing-information checklist, and prioritized fixes for PhD admissions.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Rewrite these bullets for a PhD application CV: 'Worked on dataset cleaning for medical images. Helped train model. Made plots for paper.' I want them to sound precise but not exaggerated.",
+      "expected_output": "Rewritten research-experience bullets that preserve uncertainty, request missing specifics, and avoid overstating contribution.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Please review my academic CV for a research master's application. I have no publications, but I have two substantial research projects, teaching assistant experience, and a GitHub repo. What weak spots will admissions committees notice?",
+      "expected_output": "A CV audit focused on research-readiness signal, section ordering, missing evidence, and practical priority fixes.",
+      "files": []
+    }
+  ]
+}

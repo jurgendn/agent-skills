@@ -26,6 +26,8 @@ Task 2 is a 40-minute, minimum-250-word academic essay. The candidate must respo
 
 Scores are averaged equally across four criteria. Task 2 is weighted more heavily than Task 1 in the overall Writing band.
 
+> Full band-by-band reference (bands 5–9, all four criteria, Task 1/Task 2/Speaking) with links to the official IELTS descriptors: [`../references/ielts-band-descriptors.md`](../references/ielts-band-descriptors.md). Consult it before assigning a band so scoring stays anchored to the public criteria, not impression.
+
 ### Task Response (TR)
 
 | Band | Descriptor |

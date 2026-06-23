@@ -1,0 +1,6 @@
+# outputs/ is regenerable — keep it out of git. results/ IS tracked.
+outputs/
+__pycache__/
+*.pyc
+data/raw/
+data/processed/

@@ -8,18 +8,6 @@
   "skillsRoot": "skills",
   "skills": [
     {
-      "name": "code-simplify",
-      "path": "skills/coding-support/code-simplify",
-      "category": "coding-support",
-      "description": "Simplify over-engineered research and implementation code."
-    },
-    {
-      "name": "context7-mcp",
-      "path": "skills/coding-support/context7-mcp",
-      "category": "coding-support",
-      "description": "Use Context7 for library, framework, and API reference support."
-    },
-    {
       "name": "debugging-strategies",
       "path": "skills/coding-support/debugging-strategies",
       "category": "coding-support",
@@ -86,12 +74,6 @@
       "description": "Structure and maintain a research codebase for fast hypothesis testing."
     },
     {
-      "name": "research-codebase-readme-writer",
-      "path": "skills/research-codebase-readme-writer",
-      "category": "research-codebase",
-      "description": "Write or audit a README for a research repository."
-    },
-    {
       "name": "ielts-learning-planner",
       "path": "skills/language-learning/ielts-learning-planner",
       "category": "language-learning",
@@ -128,50 +110,50 @@
       "description": "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays."
     },
     {
-      "name": "applicant-profile-reader",
-      "path": "skills/research-skills/applications-and-career/applicant-profile-reader",
+      "name": "apply-profile-reader",
+      "path": "skills/research-skills/applications-and-career/apply-profile-reader",
       "category": "research-skills/applications-and-career",
       "description": "Read academic-career applicant profile files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits."
     },
     {
-      "name": "academic-cv-builder",
-      "path": "skills/research-skills/applications-and-career/academic-cv-builder",
+      "name": "apply-cv-builder",
+      "path": "skills/research-skills/applications-and-career/apply-cv-builder",
       "category": "research-skills/applications-and-career",
       "description": "Build and audit academic CVs for PhD, research, fellowship, internship, and RA applications."
     },
     {
-      "name": "phd-application-package-auditor",
-      "path": "skills/research-skills/applications-and-career/phd-application-package-auditor",
+      "name": "apply-package-auditor",
+      "path": "skills/research-skills/applications-and-career/apply-package-auditor",
       "category": "research-skills/applications-and-career",
       "description": "Audit a full PhD application package for coherence, missing evidence, risks, and priorities."
     },
     {
-      "name": "phd-program-fit-mapper",
-      "path": "skills/research-skills/applications-and-career/phd-program-fit-mapper",
+      "name": "apply-program-fit-mapper",
+      "path": "skills/research-skills/applications-and-career/apply-program-fit-mapper",
       "category": "research-skills/applications-and-career",
       "description": "Map applicant interests to PhD programs, faculty, labs, and school-specific fit evidence."
     },
     {
-      "name": "professor-research-direction-mapper",
-      "path": "skills/research-skills/applications-and-career/professor-research-direction-mapper",
+      "name": "apply-research-direction-mapper",
+      "path": "skills/research-skills/applications-and-career/apply-research-direction-mapper",
       "category": "research-skills/applications-and-career",
       "description": "Define a professor's recent and trending research direction for fit notes, SOPs, and outreach."
     },
     {
-      "name": "professor-cold-email-drafter",
-      "path": "skills/research-skills/applications-and-career/professor-cold-email-drafter",
+      "name": "apply-cold-email-drafter",
+      "path": "skills/research-skills/applications-and-career/apply-cold-email-drafter",
       "category": "research-skills/applications-and-career",
       "description": "Draft, critique, and revise concise cold emails to professors and PIs."
     },
     {
-      "name": "recommendation-letter-strategist",
-      "path": "skills/research-skills/applications-and-career/recommendation-letter-strategist",
+      "name": "apply-recommendation-letter-strategist",
+      "path": "skills/research-skills/applications-and-career/apply-recommendation-letter-strategist",
       "category": "research-skills/applications-and-career",
       "description": "Choose recommenders, plan letter strategy, draft requests, and prepare recommender packets."
     },
     {
-      "name": "sop-writer",
-      "path": "skills/research-skills/applications-and-career/sop-writer",
+      "name": "apply-sop-writer",
+      "path": "skills/research-skills/applications-and-career/apply-sop-writer",
       "category": "research-skills/applications-and-career",
       "description": "Write, review, score, and iterate Statements of Purpose and PhD application essays."
     },
@@ -182,8 +164,8 @@
       "description": "Plan and audit research artifact releases for papers."
     },
     {
-      "name": "phd-motivation-keeper",
-      "path": "skills/research-skills/applications-and-career/phd-motivation-keeper",
+      "name": "apply-motivation-keeper",
+      "path": "skills/research-skills/applications-and-career/apply-motivation-keeper",
       "category": "research-skills/applications-and-career",
       "description": "Help PhD applicants or students recover motivation and rebuild momentum after setbacks."
     },
@@ -252,42 +234,6 @@
       "path": "skills/research-skills/experiment-design-and-analysis/hypothesis-and-ablation-planner",
       "category": "research-skills/experiment-design-and-analysis",
       "description": "Design ablations that isolate causal mechanisms and alternative explanations."
-    },
-    {
-      "name": "eval-suite-designer",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/eval-suite-designer",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Design task-specific evaluation suites with clear failure modes, metrics, and decision criteria."
-    },
-    {
-      "name": "failure-taxonomist",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/failure-taxonomist",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Cluster model failures into actionable categories."
-    },
-    {
-      "name": "judge-reliability-checker",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/judge-reliability-checker",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Audit LLM-as-judge setups for bias, prompt sensitivity, variance, and disagreement with human criteria."
-    },
-    {
-      "name": "latency-quality-tradeoff-optimizer",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/latency-quality-tradeoff-optimizer",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Compare model, decoding, caching, and routing choices against quality, latency, and cost."
-    },
-    {
-      "name": "prompt-policy-ablator",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/prompt-policy-ablator",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Design controlled comparisons for prompts, routing, tools, and system policies."
-    },
-    {
-      "name": "rag-diagnostics-analyst",
-      "path": "skills/research-skills/experiment-design-and-analysis/llm-systems-eval/rag-diagnostics-analyst",
-      "category": "research-skills/experiment-design-and-analysis/llm-systems-eval",
-      "description": "Diagnose retrieval, context selection, grounding, and generation failures in RAG systems."
     },
     {
       "name": "model-eval-error-analysis",
@@ -416,38 +362,38 @@
       "description": "Pressure-test mathematical arguments and ML paper claims."
     },
     {
-      "name": "assumption-extractor",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/assumption-extractor",
+      "name": "theory-assumption-extractor",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-assumption-extractor",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Extract explicit and hidden assumptions from proofs, models, and empirical arguments."
     },
     {
-      "name": "counterexample-hunter",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/counterexample-hunter",
+      "name": "theory-counterexample-hunter",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-counterexample-hunter",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Search for edge cases and constructions that break claims or weaken theorems."
     },
     {
-      "name": "derivation-auditor",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/derivation-auditor",
+      "name": "theory-derivation-auditor",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-derivation-auditor",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Check algebra, calculus, probability, linear algebra, and asymptotic derivation steps."
     },
     {
-      "name": "formalism-translator",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/formalism-translator",
+      "name": "theory-formalism-translator",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-formalism-translator",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Translate ideas across optimization, probability, information theory, dynamical systems, graph theory, and statistics."
     },
     {
-      "name": "paper-to-theorem-distiller",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/paper-to-theorem-distiller",
+      "name": "theory-paper-to-theorem-distiller",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-paper-to-theorem-distiller",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Distill dense theory papers into definitions, claims, proof strategy, and reusable techniques."
     },
     {
-      "name": "proof-sketcher",
-      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/proof-sketcher",
+      "name": "theory-proof-sketcher",
+      "path": "skills/research-skills/theory-and-claims/theory-heavy-math-ml/theory-proof-sketcher",
       "category": "research-skills/theory-and-claims/theory-heavy-math-ml",
       "description": "Convert informal mathematical ideas into theorem, lemma, or proof scaffolds."
     },
@@ -458,26 +404,56 @@
       "description": "Turn abstract math or ML ideas into minimal examples, counterexamples, sanity checks, and simulations."
     },
     {
-      "name": "slide-design-principles",
-      "path": "skills/presentation/slide-design-principles",
+      "name": "flow-learn-new-topic",
+      "path": "skills/research-skills/orchestrators/flow-learn-new-topic",
+      "category": "research-skills/orchestrators",
+      "description": "Orchestrate breadth-first onboarding into an unfamiliar research area by sequencing singleton research skills."
+    },
+    {
+      "name": "flow-deep-understanding",
+      "path": "skills/research-skills/orchestrators/flow-deep-understanding",
+      "category": "research-skills/orchestrators",
+      "description": "Orchestrate depth-first mastery of one paper, method, or theorem by sequencing singleton research skills."
+    },
+    {
+      "name": "flow-idea-to-proof",
+      "path": "skills/research-skills/orchestrators/flow-idea-to-proof",
+      "category": "research-skills/orchestrators",
+      "description": "Orchestrate a raw idea into a formal claim and defensible proof design by sequencing singleton research skills."
+    },
+    {
+      "name": "flow-paper-lifecycle",
+      "path": "skills/research-skills/orchestrators/flow-paper-lifecycle",
+      "category": "research-skills/orchestrators",
+      "description": "Orchestrate the full paper lifecycle from idea to experiments, writing, submission, rebuttal, and artifact release."
+    },
+    {
+      "name": "flow-phd-application",
+      "path": "skills/research-skills/orchestrators/flow-phd-application",
+      "category": "research-skills/orchestrators",
+      "description": "Orchestrate the PhD application process from profile to CV, fit, SOP, recommenders, outreach, and package audit."
+    },
+    {
+      "name": "deck-design-principles",
+      "path": "skills/presentation/deck-design-principles",
       "category": "presentation",
       "description": "Shared slide-spec schema and design rules for clear, focused, well-structured decks."
     },
     {
-      "name": "beamer-academic-deck",
-      "path": "skills/presentation/beamer-academic-deck",
+      "name": "deck-beamer-academic",
+      "path": "skills/presentation/deck-beamer-academic",
       "category": "presentation",
       "description": "Build compile-ready LaTeX Beamer decks for academic talks, seminars, conferences, defenses, and lectures."
     },
     {
-      "name": "beamer-proposal-report-deck",
-      "path": "skills/presentation/beamer-proposal-report-deck",
+      "name": "deck-beamer-proposal-report",
+      "path": "skills/presentation/deck-beamer-proposal-report",
       "category": "presentation",
       "description": "Build compile-ready LaTeX Beamer decks for research proposals, progress reports, milestone reviews, and final reports."
     },
     {
-      "name": "business-report-deck",
-      "path": "skills/presentation/business-report-deck",
+      "name": "deck-business-report",
+      "path": "skills/presentation/deck-business-report",
       "category": "presentation",
       "description": "Build PowerPoint or Canva business report decks for executives, managers, clients, pilots, and stakeholder updates."
     },
