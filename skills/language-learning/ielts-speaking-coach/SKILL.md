@@ -36,7 +36,7 @@ The IELTS Speaking test is a 11–14 minute face-to-face interview in three part
 
 All four criteria are weighted equally. The overall Speaking band is the average, rounded to the nearest 0.5.
 
-> Full band-by-band reference (bands 5–9, all four Speaking criteria, plus Writing) with links to the official IELTS descriptors: [`../references/ielts-band-descriptors.md`](../references/ielts-band-descriptors.md). Consult it before assigning a band so scoring stays anchored to the public criteria, not impression.
+> Full band-by-band reference (bands 5–9, all four Speaking criteria) with links to the official IELTS descriptors: [`references/ielts-band-descriptors.md`](references/ielts-band-descriptors.md). Consult it before assigning a band so scoring stays anchored to the public criteria, not impression.
 
 ### Fluency and Coherence (FC)
 

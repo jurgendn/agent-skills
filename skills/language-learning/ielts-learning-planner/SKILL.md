@@ -57,7 +57,7 @@ Progress is rarely linear — Reading and Listening tend to respond faster than 
 
 The four skills (Listening, Reading, Writing, Speaking) are averaged and rounded to the nearest 0.5. A gain in any single skill lifts the overall band.
 
-> To set realistic per-skill targets and explain what each band requires, use the shared band-descriptor reference: [`../references/ielts-band-descriptors.md`](../references/ielts-band-descriptors.md) (bands 5–9 across the Writing and Speaking criteria, with links to the official IELTS descriptors).
+> To set realistic per-skill targets and explain what each band requires, use the band-descriptor reference: [`references/ielts-band-descriptors.md`](references/ielts-band-descriptors.md) (bands 5–9 across the Writing and Speaking criteria, with links to the official IELTS descriptors).
 
 **Triage logic:**
 
