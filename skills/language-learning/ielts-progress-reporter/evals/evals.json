@@ -1,0 +1,23 @@
+{
+  "skill_name": "ielts-progress-reporter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Can you summarise how my IELTS writing is going overall? All my marked feedback is in the feedback/ folder of my practice vault. I just want a snapshot of where I stand and what to work on.",
+      "expected_output": "A cumulative progress report: coverage counts, per-criterion band averages, top recurring error tags, any revision gains, and a short top-3 priorities list. Written to a dated file under _dashboard/ plus a brief chat summary. Numbers should match the aggregation script, not be eyeballed.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write me a monthly progress report for just my Task 2 essays. I want to see whether my bands are actually trending up month over month or just bouncing around.",
+      "expected_output": "A period (monthly) report filtered to task 2, with a per-month trend table (overall + criteria), an honest read on direction including a small-sample caveat if applicable, recurring errors, and priorities. Written to a dated _dashboard/ file.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Which mistakes keep coming up in my IELTS writing? Point yourself at my feedback files and tell me what to stop doing.",
+      "expected_output": "An error-focused progress report leaning on the error_frequency aggregation: the 2-3 most persistent error tags named with what they signal, linked to errors/ notes where useful, plus concrete priorities. Should still produce the dated report file and not re-mark any drafts.",
+      "files": []
+    }
+  ]
+}

@@ -27,7 +27,7 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/industrial-rnd/banking/` contains banking and fintech domain-specialized industrial R&D skills.
 - `skills/presentation/` contains slide/deck *building* skills that render an approved per-slide spec into an artifact: `deck-design-principles` (shared spec schema + design rules), `deck-beamer-academic` (Beamer for seminar/conference/lecture talks), `deck-beamer-proposal-report` (Beamer for proposals and progress/final reports), and `deck-business-report` (PowerPoint/Canva industrial/executive reports). These are downstream of `research-talk-planner`, which plans a talk's narrative and pacing but does not produce slides.
 - `skills/coding-support/` contains coding support skills retained because the user does substantial coding.
-- `skills/language-learning/` contains language test preparation skills (IELTS writing, speaking, etc.).
+- `skills/language-learning/` contains language test preparation skills (IELTS writing, speaking, etc.), including `ielts-progress-reporter`, which aggregates a practice vault's marked `feedback/*.md` files into periodic progress reports (band trends, recurring errors, revision gains) rather than marking individual drafts.
 - `skills/research-codebase/` and similar top-level skills are allowed when they support the whole research codebase rather than one paper stage.
 - `templates/skill-template/` is for reusable starter material when creating new skills.
 - `experiments/` is for shell scripts or prompt variants used to test skill behavior.
