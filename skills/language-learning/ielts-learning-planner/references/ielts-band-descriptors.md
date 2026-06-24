@@ -1,9 +1,8 @@
 # IELTS Band Descriptors (reference)
 
-Shared scoring reference for the IELTS skills (`ielts-writing-task1`,
-`ielts-writing-task2`, `ielts-speaking-coach`, and `ielts-learning-planner`).
-Read the relevant section **before** assigning a band so scoring stays anchored
-to the public criteria rather than to a remembered impression.
+Scoring reference for `ielts-learning-planner` — used to set realistic
+per-skill targets and explain what each band requires across Writing and
+Speaking.
 
 > **Status & attribution.** This is a faithful *paraphrase* of the publicly
 > released IELTS band descriptors, condensed to bands 5–9 (the range most
@@ -17,7 +16,8 @@ to the public criteria rather than to a remembered impression.
 
 Each task is scored on **four equally weighted criteria (25% each)**; the four
 band scores are averaged (Writing Task 2 is weighted roughly twice Task 1 in the
-overall Writing band). Half bands are awarded.
+overall Writing band). The overall band is the average of the four skills
+(Listening, Reading, Writing, Speaking), rounded to the nearest 0.5.
 
 ---
 
@@ -57,7 +57,7 @@ Criteria: **Task Achievement · Coherence & Cohesion · Lexical Resource · Gram
 
 ## Writing Task 2 (essay)
 
-Same criteria as Task 1 **except** Task Achievement becomes **Task Response** (the essay must answer the question fully and sustain a clear position). Coherence & Cohesion, Lexical Resource, and Grammatical Range & Accuracy use the same band logic as above.
+Same criteria as Task 1 **except** Task Achievement becomes **Task Response** (the essay must answer the question fully and sustain a clear position). Coherence & Cohesion, Lexical Resource, and Grammatical Range & Accuracy use the same band logic as Task 1 above.
 
 ### Task Response
 - **9** — Fully addresses all parts of the task; presents a fully developed position with relevant, well-supported, well-extended ideas.
@@ -104,9 +104,9 @@ Criteria: **Fluency & Coherence · Lexical Resource · Grammatical Range & Accur
 
 ---
 
-## How to score (apply consistently)
+## How to use these for target-setting
 
-1. Score **each of the four criteria independently** — don't let one strong dimension inflate the others.
-2. For a criterion, find the band whose description the response **best fits as a whole**; if it sits between two, award the half band.
-3. Average the four (round to the nearest half band). State the four sub-scores, not just the overall — the breakdown is where actionable feedback lives.
-4. Tie every band you give to **specific evidence** in the response (quote the phrase, the error, the missing overview), then name the single highest-leverage move to the next band.
+1. Identify the candidate's current per-skill bands and the gap to each target.
+2. For each lagging criterion, read the band **above** the current one — the difference in wording is the concrete behaviour to train toward.
+3. Prioritise the skill/criterion where one band of improvement most lifts the rounded overall average.
+4. Translate each target band into observable practice goals (e.g. "Task 2 → band 7" means *clear position throughout + all parts addressed*).

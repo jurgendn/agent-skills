@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "agent-skills",
   "packageName": "@jurgendn/agent-skills",
-  "description": "Agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, and coding support.",
+  "description": "Self-contained agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, and coding support. Each skill is standalone with no shared resources between skills.",
   "source": "git@github:jurgendn/agent-skills",
   "defaultBranch": "main",
   "skillsRoot": "skills",
