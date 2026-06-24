@@ -1,0 +1,79 @@
+# AGENTS.md — PhD Application: <CYCLE / YEAR>
+
+Orientation for any agent operating on this PhD/research-application vault. This
+file is the map and the rules; the application craft lives in the installed
+`apply-*` skills this file routes to. The vault tracks one application cycle
+across many schools.
+
+## What this vault is
+
+A workspace for assembling and tracking a research-application package: a
+reusable profile, an academic CV, per-school fit notes and SOPs, outreach
+emails, recommender coordination, and a deadline tracker. It optimises for
+*reusing one strong profile across many schools* without losing track of
+per-school deadlines and tailoring.
+
+## Layout
+
+```text
+profile/          # raw inputs: CV/resume, transcripts, research statements,
+                  # project writeups, publication list, GitHub summary
+cv/               # academic CV drafts (the polished artifact)
+sop/              # per-school SOP drafts
+fit-notes/        # per-school / per-professor fit evidence
+emails/           # cold emails and follow-ups to professors
+recommenders/     # recommender list, request emails, packets
+references/       # application-components-checklist, sop-structure
+_dashboard/       # schools-tracker (deadlines + per-school status)
+```
+
+## Filename conventions
+
+```text
+sop/          sop-{school}.md            # sop-mit.md
+fit-notes/    fit-{school}.md            # fit-mit.md
+emails/       email-{prof}-{school}.md   # email-jordan-mit.md
+recommenders/ rec-{name}.md             # rec-smith.md
+```
+
+Use a short stable slug per school (`mit`, `cmu`, `ethz`) and reuse it across all
+folders so a school's materials sort together.
+
+## Routing
+
+| Folder | Skill to use |
+|---|---|
+| `profile/` | `apply-profile-reader` — run this **first** to build the reusable structured profile |
+| `cv/` | `apply-cv-builder` |
+| `fit-notes/` | `apply-program-fit-mapper`, `apply-research-direction-mapper` |
+| `sop/` | `apply-sop-writer` |
+| `emails/` | `apply-cold-email-drafter` |
+| `recommenders/` | `apply-recommendation-letter-strategist` |
+| pre-submission | `apply-package-auditor` |
+| feeling stuck | `apply-motivation-keeper` |
+
+Use `flow-phd-application` to orchestrate the whole sequence (profile → CV → fit
+→ SOP → recommenders → outreach → audit) when unsure what comes next.
+
+## Default actions
+
+- **Starting the cycle:** run `apply-profile-reader` over `profile/` to produce
+  the reusable profile; everything else draws from it.
+- **Adding a school:** create its row in `_dashboard/schools-tracker.md`, then
+  `fit-notes/fit-{school}.md` (`apply-program-fit-mapper`), then
+  `sop/sop-{school}.md` (`apply-sop-writer`) tailored to that fit.
+- **Before any submission:** run `apply-package-auditor` across the school's
+  materials for coherence and missing evidence; only then mark it ready.
+
+## Rules
+
+- **One profile, many tailorings.** Don't rewrite your story per school; reuse
+  the profile and adjust the *fit* and emphasis. Inconsistent claims across SOPs
+  are a red flag — `apply-package-auditor` checks for this.
+- **Every fit claim is evidenced.** A "fit" with a professor must cite specific
+  recent work/lab direction (`apply-research-direction-mapper`), not a vague
+  topic match.
+- **Deadlines are the master clock.** Keep `_dashboard/schools-tracker.md`
+  current; prioritise by deadline, not by enthusiasm.
+- **Recommenders need lead time.** Track ask/sent/received per recommender in
+  `recommenders/`; chase early, not the week before.

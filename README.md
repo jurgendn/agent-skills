@@ -1,6 +1,6 @@
 # agent-skills
 
-A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, language learning, and implementation-heavy coding work.
+A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, implementation-heavy coding work, and structured project setup.
 
 ## Skill catalog
 
@@ -68,6 +68,16 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/applications-and-career/apply-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
 - `research-skills/applications-and-career/apply-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 
+### Orchestrators
+
+Lightweight routers that sequence the singleton research skills into a guided workflow with stage gates; they decide *what next* and delegate the work to the singletons.
+
+- `research-skills/orchestrators/flow-learn-new-topic` — breadth-first onboarding into an unfamiliar research area.
+- `research-skills/orchestrators/flow-deep-understanding` — depth-first mastery of one paper, method, or theorem.
+- `research-skills/orchestrators/flow-idea-to-proof` — raw idea → formal claim → defensible proof design.
+- `research-skills/orchestrators/flow-paper-lifecycle` — idea → experiments → writing → submission → rebuttal → artifact release.
+- `research-skills/orchestrators/flow-phd-application` — profile → CV → fit → SOP → recommenders → outreach → package audit.
+
 ### Industrial R&D
 
 - `industrial-rnd/industry-problem-framing` — convert vague industry problems into researchable, pilotable R&D problem statements.
@@ -92,6 +102,18 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `language-learning/ielts-reading-strategies` — teach and practise IELTS Reading strategies and question types.
 - `language-learning/ielts-vocabulary-builder` — build and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading.
 - `language-learning/ielts-learning-planner` — build personalised IELTS study plans and progress routines.
+- `language-learning/ielts-progress-reporter` — aggregate a practice vault's marked `feedback/*.md` files into periodic progress reports (band trends, recurring errors, revision gains).
+
+### Presentation and slides
+
+- `presentation/deck-design-principles` — shared slide-spec schema and design rules (one-signal-per-slide, claim-titles, hierarchy, density) reused by the format-specific builders.
+- `presentation/deck-beamer-academic` — compile-ready LaTeX Beamer decks for academic talks, seminars, conferences, defenses, and lectures.
+- `presentation/deck-beamer-proposal-report` — compile-ready LaTeX Beamer decks for research proposals, progress reports, milestone reviews, and final reports.
+- `presentation/deck-business-report` — PowerPoint/Canva business report decks for executives, managers, clients, pilots, and stakeholder updates.
+
+### Project setup
+
+- `init-workspace` — scaffold a structured Obsidian-style workspace for a chosen work type (`ielts`, `paper`, `phd-application`, `talk`, `theory`, `learn-a-topic`): folder tree + an operating-manual `AGENTS.md` that routes work to the relevant skills + workspace-local `references/` + a Dataview dashboard. Confirms type and target directory first; merges (never overwrites) on re-run.
 
 ### Skill authoring
 
