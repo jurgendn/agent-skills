@@ -110,6 +110,12 @@
       "description": "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays."
     },
     {
+      "name": "ielts-progress-reporter",
+      "path": "skills/language-learning/ielts-progress-reporter",
+      "category": "language-learning",
+      "description": "Aggregate marked IELTS Writing feedback files into periodic progress reports of band trends, recurring errors, and revision gains."
+    },
+    {
       "name": "apply-profile-reader",
       "path": "skills/research-skills/applications-and-career/apply-profile-reader",
       "category": "research-skills/applications-and-career",
