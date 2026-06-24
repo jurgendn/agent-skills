@@ -464,6 +464,12 @@
       "description": "Build PowerPoint or Canva business report decks for executives, managers, clients, pilots, and stakeholder updates."
     },
     {
+      "name": "init-workspace",
+      "path": "skills/init-workspace",
+      "category": "project-setup",
+      "description": "Initialize a structured Obsidian-style workspace (folder tree + heavy AGENTS.md + seeded references + Dataview dashboard) for learning a topic, IELTS practice, a paper, a PhD application, a talk, or a theory/proof project."
+    },
+    {
       "name": "skill-creator",
       "path": "skills/skill-creator",
       "category": "skill-authoring",
