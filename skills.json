@@ -467,7 +467,7 @@
       "name": "init-workspace",
       "path": "skills/init-workspace",
       "category": "project-setup",
-      "description": "Initialize a structured Obsidian-style workspace (folder tree + heavy AGENTS.md + seeded references + Dataview dashboard) for learning a topic, IELTS practice, a paper, a PhD application, a talk, or a theory/proof project."
+      "description": "Initialize a structured Obsidian-style workspace (folder tree + heavy AGENTS.md + seeded references + Dataview dashboard) for learning a topic, IELTS practice, a paper, a PhD application, a talk, or a theory/proof project. Each template's AGENTS.md carries Obsidian formatting rules so the notes the agent later authors render correctly (valid YAML frontmatter, quoted wikilinks, no raw pipes in table cells)."
     },
     {
       "name": "skill-creator",
