@@ -8,7 +8,9 @@ half-remembered assertions.
 
 1. **Every claim in `summaries/` or `map/` links to a `sources/` note.** Use
    `[[sources/src-001-...|Vaswani et al.]]` inline. No link → it's an open
-   question, not a fact.
+   question, not a fact. **Inside a table cell, drop the `|alias`** and write the
+   bare `[[sources/src-001-...]]` (or escape the pipe as `\|`) — an unescaped `|`
+   is read as a column separator and corrupts the table.
 2. **Quote or locate.** When a claim is precise (a number, a bound, a definition),
    note *where* in the source it lives, so it can be checked.
 3. **Separate source from interpretation.** In a reading note, keep "what the

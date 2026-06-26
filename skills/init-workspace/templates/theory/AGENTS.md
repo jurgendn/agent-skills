@@ -97,3 +97,20 @@ Use `flow-idea-to-proof` to orchestrate the sequence (idea → claim → assumpt
   (`common-pitfalls.md`).
 - **Notation is fixed once** in `definitions/` and `references/notation.md`; don't
   let symbols drift between claims.
+
+## Obsidian formatting rules
+
+Two silent failures: the file saves fine but renders broken in Obsidian. Follow
+these whenever you write a note here.
+
+- **Frontmatter must be valid YAML and start on line 1** — nothing before the
+  opening `---`, not a title or even a blank line, and no `#` heading above it.
+- **Quote wikilinks in frontmatter.** A bare `related: [[other-note]]` is invalid
+  YAML and makes Obsidian render the whole block as raw text. Use a quoted list
+  on one line: `related: ["[[other-note]]", "[[a-summary]]"]`.
+- **Never put a raw `|` in a table cell.** The pipe is the column separator, so an
+  aliased wikilink `[[a-note|label]]` splits the cell and corrupts the table
+  (stray `label]]` leaks into a phantom column). In a table use an unaliased link
+  `[[a-note]]` or escape the pipe as `\|`. Aliased links are fine in prose — just
+  never inside a table. Also avoid an unescaped `|` in inline math inside a
+  table; write `\mid` or escape it.
