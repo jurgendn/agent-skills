@@ -269,7 +269,7 @@ on structure, overview, and selection only, and state explicitly:
 
 ## Obsidian formatting rules
 
-Two silent failures: the file saves fine but renders broken in Obsidian. Follow
+A few silent failures: the file saves fine but renders broken in Obsidian. Follow
 these whenever you write a note here.
 
 - **Frontmatter must be valid YAML and start on line 1** — nothing before the
@@ -282,5 +282,18 @@ these whenever you write a note here.
   (stray `label]]` leaks into a phantom column). In a table use an unaliased link
   `[[a-note]]` or escape the pipe as `\|`. Aliased links are fine in prose — just
   never inside a table.
+- **Inline math in a table must not contain a bare `|` either, and `\|` does not
+  fix it.** The table parser splits the cell on `|` first, so `$d \ll |V|$`
+  fragments into phantom columns. And `\|` is the wrong repair: inside `$...$` it
+  renders as the norm symbol `‖`, silently changing the meaning. Use the LaTeX
+  command for the bar you mean — cardinality / absolute value `|V|` →
+  `$\lvert V\rvert$`, norm `\|x\|` → `$\lVert x\rVert$`, conditional `P(u|v)` →
+  `$P(u \mid v)$`.
+- **A bare `$` in prose can open math mode.** A second `$` later on the same line
+  — a price like `$30k … $45k`, "raise $5M" — makes everything between the two
+  render as italicised math. Escape literal dollar signs: `\$30k`.
+- **`#` without a trailing space is a tag, not a heading.** `#Results`, `#1`, or a
+  mid-line `#` (e.g. `C#`) silently becomes a tag. Write `# Heading` with a space,
+  or escape it as `\#`.
 
 Never fake or infer a number you cannot see.
