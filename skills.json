@@ -356,6 +356,12 @@
       "description": "Explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment."
     },
     {
+      "name": "concept-exercise-generator",
+      "path": "skills/research-skills/technical-teaching/concept-exercise-generator",
+      "category": "research-skills/technical-teaching",
+      "description": "Generate a graded easy-to-advanced exercise set with separated solutions to verify understanding of a topic, method, derivation, or paper."
+    },
+    {
       "name": "gap-finder",
       "path": "skills/research-skills/theory-and-claims/gap-finder",
       "category": "research-skills/theory-and-claims",

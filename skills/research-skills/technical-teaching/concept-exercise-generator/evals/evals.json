@@ -1,0 +1,27 @@
+{
+  "skill": "concept-exercise-generator",
+  "description": "Triggering and output-quality probes for graded exercise generation with separated solutions.",
+  "should_trigger": [
+    "Give me exercises on backpropagation, easy to hard, with solutions so I can check myself.",
+    "Quiz me on the EM algorithm — I want to know if I actually understand it.",
+    "I just finished reading the LoRA paper. Test whether I really got it.",
+    "Make me practice problems on measure-theoretic probability, from basic to advanced, and keep the answers separate.",
+    "How do I check if I understood diffusion models? Some problems would help.",
+    "I'm learning PPO. Build a self-check that goes from definitions up to deriving the objective."
+  ],
+  "should_not_trigger": [
+    "Teach me how attention works from scratch.",
+    "What baselines and benchmarks do I need for my new method?",
+    "Help me design an ablation study for my paper.",
+    "Walk me through a learning path for reinforcement learning — I'm brand new.",
+    "Write the intro section of my paper."
+  ],
+  "output_checks": [
+    "Produces two separate artifacts: exercises.md (problems only) and solutions.md (answers + rubric).",
+    "Problems are tagged by difficulty tier (1-4) and concept.",
+    "The set spans tiers and includes at least one Tier 3+ problem.",
+    "Each solution includes answer, why, a pass rubric, a common-wrong-turn note, and a revisit pointer.",
+    "States the gate rule that understanding is verified only when Tier 3+ passes unaided.",
+    "Exercises are grounded in the learner's actual source material, not invented facts."
+  ]
+}
