@@ -17,7 +17,7 @@ Generic coding-support skills are allowed when they materially support research 
 - `skills/research-skills/experiment-design-and-analysis/` contains experiment design, benchmark/baseline selection, statistical testing, evaluation, and deep-learning experimentation skills.
 - `skills/research-skills/implementation-support/` contains implementation recipes for research experiments (PyTorch, JAX, etc.).
 - `skills/research-skills/theory-and-claims/` contains theorem, claim, proof, theory-heavy, and paper-gap-finding skills.
-- `skills/research-skills/technical-teaching/` contains professor-style technical teaching skills for explaining, deriving, comparing, implementing, and critically analyzing advanced quantitative concepts.
+- `skills/research-skills/technical-teaching/` contains professor-style technical teaching skills for explaining, deriving, comparing, implementing, and critically analyzing advanced quantitative concepts. It also contains `concept-exercise-generator`, which produces a graded easy-to-advanced exercise set (emitted as a separate `exercises.md` plus `solutions.md` with self-check rubrics) to *verify* understanding rather than teach it; the learning orchestrators (e.g. `flow-learn-new-topic`) hand off to it at each stage's exit gate.
 - `skills/research-skills/paper-writing/` contains paper narrative, section writing, discussion-report synthesis, and presentation skills (abstract, intro, method, figures, talk planning).
 - `skills/research-skills/review-and-submission/` contains reviewer-response, submission-readiness, and venue-targeting skills.
 - `skills/research-skills/artifact-and-reproducibility/` contains reproducibility and artifact release skills.

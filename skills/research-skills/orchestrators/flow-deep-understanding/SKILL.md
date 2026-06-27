@@ -1,7 +1,7 @@
 ---
 name: flow-deep-understanding
 description: >-
-  Orchestrate depth-first mastery of ONE specific object the user already has basic familiarity with — a single paper, method, algorithm, theorem, derivation, or result — until they can re-derive it, criticize it, and find where it breaks. Use whenever the user says "I want to really understand X", "help me understand this paper deeply", "I get the gist but not the mechanism", "walk me all the way through this method", "I want to be able to defend/criticize this", or "tear this apart so I actually get it". This is a ROUTER that sequences existing singleton skills; it does not teach directly. Use flow-learn-new-topic instead when the user is new to a whole area and needs breadth-first onboarding. Use flow-idea-to-proof when the goal is to formalize the user's OWN idea into a claim and proof rather than master an existing object.
+  Orchestrate depth-first mastery of ONE specific object the user already has basic familiarity with — a single paper, method, algorithm, theorem, derivation, or result — until they can re-derive it, criticize it, and find where it breaks. Use whenever the user says "I want to really understand X", "help me understand this paper deeply", "I get the gist but not the mechanism", "walk me all the way through this method", "I want to be able to defend/criticize this", or "tear this apart so I actually get it". Each stage is verified with a graded exercise checkpoint (handed off to concept-exercise-generator), weighted toward the harder analyze/derive/break tiers since the user already half-knows the object, so they self-test real mastery before advancing instead of nodding along. This is a ROUTER that sequences existing singleton skills; it does not teach directly. Use flow-learn-new-topic instead when the user is new to a whole area and needs breadth-first onboarding. Use flow-idea-to-proof when the goal is to formalize the user's OWN idea into a claim and proof rather than master an existing object.
 ---
 
 # Deep Understanding (Orchestrator)
@@ -29,25 +29,32 @@ Run in order, but **enter at the user's fuzzy edge** — don't re-teach what the
 Reconstruct the reasoning → Surface assumptions → Verify the mechanism → Stress-test → Re-derive & criticize
 ```
 
+**Gates are verified, not assumed.** Each exit gate is checked with an *exercise checkpoint*: hand off to `concept-exercise-generator` to produce a short graded set (solutions in a separate file) for that stage. Because this is mastery, not onboarding, the checkpoints skew to Tier 3–4 (analyze / derive / construct a counterexample) — a stage passes only when the user clears those *unaided*. Skip a checkpoint only when the user is demonstrably already past that stage's fuzzy edge.
+
 ### Stage 1 — Reconstruct the reasoning → `professor-mentor-technical-teaching`
 Hand off to rebuild the object the way a mentor would: why it exists, the single insight that makes it work, the formalism, the implementation, the limitations. This is the spine of understanding.
 **Exit gate:** the user can state *what pressure the object responds to* and the core mechanism in their own words.
+**Checkpoint:** a Tier 3 set (why this object exists rather than the obvious alternative; what the core insight buys).
 
 ### Stage 2 — Surface assumptions → `theory-assumption-extractor`
 Hand off to extract every explicit and hidden premise: which are logically necessary, which are conveniences, and where the argument actually rests. You can't claim to understand something whose load-bearing assumptions you can't list.
 **Exit gate:** the user has an explicit assumption inventory, tagged necessary vs convenience.
+**Checkpoint:** a Tier 3 set (which assumption is load-bearing; what changes in the conclusion if a given premise is dropped).
 
 ### Stage 3 — Verify the mechanism → `theory-derivation-auditor` (and/or `theory-to-toy-cases`)
 If there's a derivation, hand off to check it line by line. If it's a method/algorithm, ground it with `theory-to-toy-cases` so the mechanism becomes something the user can actually compute on a minimal example.
 **Exit gate:** the user has either traced the derivation step by step or run the smallest worked example end to end.
+**Checkpoint:** a Tier 2 + Tier 4 set (compute a fresh toy case unaided; re-derive one nontrivial step without the reference).
 
 ### Stage 4 — Stress-test → `theory-counterexample-hunter`
 Hand off to attack the object: edge cases, pathological inputs, the regime where each assumption breaks. Understanding includes knowing the boundaries.
 **Exit gate:** the user can name at least one concrete regime where the object fails and *why*.
+**Checkpoint:** a Tier 4 set (construct an input/regime that breaks the object and explain which assumption it violates).
 
 ### Stage 5 — Re-derive & criticize (you, lightly)
 Have the user re-derive or re-explain the object cold, then articulate its fundamental (un-removable) tradeoff. This is the test that the previous stages took. If they stumble, route back to the stage that covers the gap.
 **Exit gate:** the user can reproduce the object unaided and state its fundamental limitation.
+**Checkpoint:** this stage *is* the capstone test — formalize it as a Tier 4 set (re-derive the object cold; state the un-removable tradeoff) via `concept-exercise-generator` if the user wants a scored final check.
 
 ## Optional Branches
 
@@ -62,3 +69,4 @@ Have the user re-derive or re-explain the object cold, then articulate its funda
 - **One object only.** If scope creeps to a family of methods, that's a **flow-learn-new-topic** job.
 - **The re-derivation in stage 5 is the real test.** Passing earlier gates by nodding along doesn't count — make them reproduce it.
 - **Loop back, don't bulldoze.** A failed gate sends the user back to the relevant stage, not forward.
+- **Verify gates with Tier 3+ checks.** Confirm each gate with a `concept-exercise-generator` checkpoint skewed to analyze/derive/break problems; advance only when the user clears them unaided. Generate the exercises there — never inline them here.
