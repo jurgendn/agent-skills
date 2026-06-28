@@ -68,6 +68,13 @@ these whenever you write a note here.
 - **Quote wikilinks in frontmatter.** A bare `related: [[other-note]]` is invalid
   YAML and makes Obsidian render the whole block as raw text. Use a quoted list
   on one line: `related: ["[[other-note]]", "[[a-summary]]"]`.
+- **Quote any frontmatter value that contains a colon** (and values starting with
+  `[`, `{`, `#`, `@`, `` ` ``, `!`, `&`, `*`, `>`, `|`, or a quote). A colon-space
+  inside an unquoted value — most often a paper title with a subtitle,
+  `title: Stochastic Blockmodels: First Steps` — makes YAML read it as a nested
+  key, so the whole block fails to parse and renders as raw text. Wrap the value
+  in double quotes: `title: "Stochastic Blockmodels: First Steps"`. The same goes
+  for `authors`, `aliases`, or any field whose value has a `:` in it.
 - **Never put a raw `|` in a table cell.** The pipe is the column separator, so an
   aliased wikilink `[[a-note|label]]` splits the cell and corrupts the table
   (stray `label]]` leaks into a phantom column). In a table use an unaliased link
