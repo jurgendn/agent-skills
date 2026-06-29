@@ -20,6 +20,12 @@ agents instead of varying with each one's defaults.
   the source material does not support.
 - **Mark uncertainty honestly.** Don't overstate findings for rhetorical effect;
   if a result is preliminary, say so on the slide and in `script.md`.
+- **Check inputs before running a skill; ask for what's missing.** Each skill/stage
+  draws from specific folders (see *Layout*) — `narrative/` holds the talk plan the
+  deck is built from, `figures/` the visuals. Before building slides, confirm the
+  narrative and source material exist; if a required input is empty or missing,
+  **stop and ask the user to add it (or say where it lives) — do not proceed on an
+  empty folder or fabricate the content.**
 
 ## What this vault is
 

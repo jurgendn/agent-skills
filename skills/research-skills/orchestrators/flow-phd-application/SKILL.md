@@ -29,6 +29,12 @@ Run in order; **enter at the applicant's actual stage** and resume from the last
 → 7 Audit the package
 ```
 
+**Conditional route (not in the linear order):** for a graded scorecard, a
+cross-border **eligibility** verdict, or **scholarship**-mission fit
+(VEF/DAAD/Fulbright/Erasmus/MSCA), hand to `apply-dossier-evaluator` — see Router
+Rules. Check eligibility *early* (before stage 4) when a degree-equivalence
+question exists, since an "ineligible as-is" verdict reshapes the whole plan.
+
 ### Stage 1 — Read the profile → `apply-profile-reader`
 Ingest CV, transcripts, research statements, project writeups, publication list, GitHub, target-school materials into one reusable structured profile. **Everything downstream reads from this** — do it first.
 **Gate:** a structured profile exists capturing background, research experience, and targets.
@@ -56,6 +62,7 @@ Where appropriate, draft concise cold emails to prospective advisors, converting
 ### Stage 7 — Audit the package → `apply-package-auditor`
 Check the assembled package for completeness, internal consistency (CV ↔ SOP ↔ letters tell one coherent story), and per-program requirements before submission.
 **Gate:** the package passes a consistency-and-completeness audit for each target program.
+For a *scored* read of the same package — per-dimension 1–5, tier, and the highest-leverage gap — also run the conditional route `apply-dossier-evaluator` (the auditor checks coherence; the evaluator assigns numbers).
 
 ## Router Rules
 
@@ -65,3 +72,4 @@ Check the assembled package for completeness, internal consistency (CV ↔ SOP �
 - **Resume, don't restart.** Enter at the applicant's real stage; reuse the profile across cycles and schools.
 - **Per-school, not one-size.** Stages 3–7 vary by target program; the audit (7) is per-program.
 - **Motivation underneath.** If the "why" is unstable, route to `apply-motivation-keeper` before or alongside the package work.
+- **Score, eligibility & scholarships → `apply-dossier-evaluator`.** Conditional, not a linear stage: route here when the user wants a graded scorecard, a cross-border eligibility verdict (e.g. a 4-year BSc against a master's-required EU PhD — check *early*, before stage 4), or scholarship-mission fit (VEF/DAAD/Fulbright/Erasmus/MSCA). Re-score before stage 7 to surface the highest-leverage gaps. Always verify cutoffs/limits/deadlines against the live official call.

@@ -66,6 +66,7 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/applications-and-career/apply-cold-email-drafter` — draft, critique, and revise concise cold emails to professors and PIs.
 - `research-skills/applications-and-career/apply-recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
 - `research-skills/applications-and-career/apply-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
+- `research-skills/applications-and-career/apply-dossier-evaluator` — score a further-education dossier (PhD, master's, scholarship, internship) on a reproducible 11-dimension rubric, with eligibility and scholarship-program (VEF/DAAD/Fulbright/Erasmus/MSCA) fit.
 - `research-skills/applications-and-career/apply-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 
 ### Orchestrators

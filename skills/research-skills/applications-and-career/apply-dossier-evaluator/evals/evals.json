@@ -1,0 +1,29 @@
+{
+  "skill_name": "apply-dossier-evaluator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Score my PhD application dossier on a fixed rubric and tell me how competitive I am. I have a CV with one first-author ICML workshop paper, an SOP, a transcript, and two recommenders. Give me a per-dimension scorecard and a tier.",
+      "expected_output": "A graded scorecard: target classified as Research PhD, 1-5 scores across the 11 dimensions anchored to the rubric, publications rated by venue tier (not counted), a weighted total mapped to a tier, and the highest-leverage fix.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate me for the VEF scholarship. I'm a Vietnamese final-year student with a strong GPA and a research project. How strong is my profile and what am I missing?",
+      "expected_output": "Target classified as Scholarship/Fellowship; weights mission-fit and leadership/return-home highest; consults external-programs.md for VEF's stable logic; flags any reused-generic-SOP risk as Critical; and emits a live-verification checklist for VEF's current CV/SOP length limits and deadlines rather than quoting cached numbers.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I have a 4-year Vietnamese bachelor's degree and want to apply to a PhD in Germany that lists a master's as required. Am I eligible, and how does that affect my chances?",
+      "expected_output": "Treats eligibility as a gate (Dimension 1), reasons with degree-equivalence.md (Bologna cycles, ENIC-NARIC) that a 4-year BSc is typically first-cycle and may not satisfy a master's-required EU PhD, returns Conditional/Ineligible-as-is with a remediation path, and instructs verifying against the specific program and the destination ENIC-NARIC centre.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Rate my publications for a PhD application: 5 papers total, but they're workshop and arXiv. How should a committee read this?",
+      "expected_output": "Rates by venue quality using venue-quality.md (CORE/CSRankings tiers) rather than raw count, explains that workshop/non-archival output is supporting not lead evidence, and scores Dimension 4 accordingly instead of rewarding the count.",
+      "files": []
+    }
+  ]
+}

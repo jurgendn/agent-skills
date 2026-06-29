@@ -21,6 +21,7 @@ A strong application package is coherent across documents. The CV supplies evide
 - The user wants to build or rewrite an academic CV. Use `apply-cv-builder`.
 - The user wants to choose faculty or programs from scratch. Use `apply-program-fit-mapper`.
 - The user wants recommender emails or letter strategy only. Use `apply-recommendation-letter-strategist`.
+- The user wants a numeric/anchored score, tier, eligibility verdict, or scholarship-mission fit rather than a qualitative readiness report. Use `apply-dossier-evaluator`.
 - The user has only one document and wants detailed editing of that document.
 
 ## Workflow

@@ -134,6 +134,12 @@
       "description": "Audit a full PhD application package for coherence, missing evidence, risks, and priorities."
     },
     {
+      "name": "apply-dossier-evaluator",
+      "path": "skills/research-skills/applications-and-career/apply-dossier-evaluator",
+      "category": "research-skills/applications-and-career",
+      "description": "Score a further-education dossier (PhD, master's, scholarship, internship) on a reproducible rubric, with eligibility and scholarship-program fit."
+    },
+    {
       "name": "apply-program-fit-mapper",
       "path": "skills/research-skills/applications-and-career/apply-program-fit-mapper",
       "category": "research-skills/applications-and-career",
