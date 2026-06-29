@@ -6,6 +6,33 @@ file routes to. The vault tracks claims from informal idea to proved (or
 refuted) statement, with a paper trail of assumptions, counterexamples, and toy
 cases.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins, so the vault behaves the same across
+agents instead of varying with each one's defaults.
+
+- **This is theory work, not coding.** Produce claims, proofs, counterexamples,
+  and toy cases. Write code only for a `toy-cases/` sanity check the user asks
+  for — never as the default response.
+- **Work in four stages, not one pass.** For any non-trivial result, run the
+  pipeline in `agents/`: **researcher → reviewer → verifier → writer**.
+  1. *Researcher* (`agents/researcher.md`) — gather the relevant definitions,
+     prior results, and assumptions from `definitions/`, `claims/`, and
+     `references/`.
+  2. *Reviewer* (`agents/reviewer.md`) — attack the claim: hunt counterexamples,
+     surface hidden/weaker-than-stated assumptions, find the hand-wavy step.
+  3. *Verifier* (`agents/verifier.md`) — audit every derivation step; downgrade
+     anything not yet established (off-by-epsilon, non-uniform bounds).
+  4. *Writer* (`agents/writer.md`) — only now write the proof/claim into its folder.
+- **Synthesis is source-grounded.** Every non-trivial step cites a definition, a
+  prior result, or a `references/` technique. A step with no justification is not
+  proved.
+- **Mark uncertainty explicitly.** Separate what is proved from what is conjectured
+  or hand-wavy. Tag unproved steps as `(gap)` / `#unverified`, and say what would
+  close or refute them. A claim stays `conjecture` until the reviewer and verifier
+  stages pass.
+
 ## What this vault is
 
 A workspace for developing mathematical/theoretical results. Each claim is a
@@ -22,6 +49,7 @@ proofs/           # proof sketches → full proofs, one per claim
 counterexamples/  # constructions that break or bound a claim
 toy-cases/        # minimal examples, simulations, sanity checks
 references/       # proof-techniques, common-pitfalls, notation
+agents/           # research pipeline: researcher → reviewer → verifier → writer
 _dashboard/       # claims-status
 ```
 
@@ -79,8 +107,10 @@ Use `flow-idea-to-proof` to orchestrate the sequence (idea → claim → assumpt
 
 - **New idea:** create `claims/claim-{NNN}-…md` (`conjecture`), state it
   formally, list explicit + hidden assumptions (`theory-assumption-extractor`).
-- **Developing a proof:** sketch in `proofs/proof-{NNN}…md`; audit every
-  non-trivial step with `theory-derivation-auditor` before trusting it.
+- **Developing a proof:** run the four-stage pipeline from the *Operating
+  contract* (`agents/`) — ground in `definitions/` + `references/`, hunt
+  counterexamples, audit every non-trivial step (use `theory-derivation-auditor`
+  as the verifier stage), then write to `proofs/proof-{NNN}…md`.
 - **Before claiming `proved`:** stress-test with `theory-counterexample-hunter`
   and a `toy-cases/` sanity check; run `theorem-and-claim-audit`.
 - **Update `_dashboard/claims-status.md`** whenever a claim's status changes.
@@ -97,6 +127,9 @@ Use `flow-idea-to-proof` to orchestrate the sequence (idea → claim → assumpt
   (`common-pitfalls.md`).
 - **Notation is fixed once** in `definitions/` and `references/notation.md`; don't
   let symbols drift between claims.
+- **Every step is justified and uncertainty is marked** (see *Operating
+  contract*): no unjustified proof step, and gaps are tagged `(gap)` /
+  `#unverified` rather than asserted as proved.
 
 ## Obsidian formatting rules
 

@@ -4,6 +4,17 @@ Orientation for any agent operating on this IELTS practice vault. This file is
 the map and the rules; it does **not** contain marking knowledge. Read the
 relevant IELTS skill and band-reference material before scoring.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins.
+
+- **This is IELTS marking/practice work, not coding.** Do **not** write code.
+- **Never fabricate.** Do not invent a band, a figure value, or an example you
+  cannot see in the attempt file. Mark only what the draft (and any provided
+  figure data) actually contains; when something needed for scoring is missing,
+  say so explicitly rather than guessing (see the Task 1 data-accuracy rule).
+
 ## What this vault is
 
 A practice loop for IELTS Writing. Each attempt is a self-contained Markdown

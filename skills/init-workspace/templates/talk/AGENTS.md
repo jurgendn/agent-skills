@@ -6,6 +6,21 @@ installed skills this file routes to. The vault separates *what you'll say*
 (narrative) from *what's on screen* (slides) so the story is decided before any
 slide is built.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins, so the vault behaves the same across
+agents instead of varying with each one's defaults.
+
+- **This is talk-building work, not coding.** Produce narrative, slide specs, and
+  decks. Do **not** write code unless the user explicitly asks.
+- **Slides are source-grounded.** Every claim, number, or figure on a slide traces
+  to the underlying paper, result, or `figures/` source — a talk presents existing
+  evidence, it does not generate new claims. Do not put a result on a slide that
+  the source material does not support.
+- **Mark uncertainty honestly.** Don't overstate findings for rhetorical effect;
+  if a result is preliminary, say so on the slide and in `script.md`.
+
 ## What this vault is
 
 A workspace for one talk — conference, seminar, job talk, defense, lecture, or an
