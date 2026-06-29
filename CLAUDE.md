@@ -78,6 +78,7 @@ Use this taxonomy when adding or reorganizing skills:
 - Add `evals/evals.json` for new skills when realistic test prompts will help evaluate triggering or output quality.
 - Avoid broad scaffolding until there is real content for it.
 - Remove low-priority or redundant skills instead of archiving them, unless they support the user's research, PhD application, or coding workflows.
+- Do not vendor a `skill-creator` skill into this repo. Creating, editing, and evaluating skills uses Claude Code's built-in skill-creator, which ships the full eval/benchmark tooling; a repo-local clone only duplicates the `name`, shadows the built-in, and goes stale (a prior clone carried only `SKILL.md` while referencing scripts/agents/references it did not include).
 
 ## Commands
 

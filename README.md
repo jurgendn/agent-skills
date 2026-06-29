@@ -116,10 +116,6 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 
 - `init-workspace` — scaffold a structured Obsidian-style workspace for a chosen work type (`ielts`, `paper`, `phd-application`, `talk`, `theory`, `learn-a-topic`): folder tree + an operating-manual `AGENTS.md` that routes work to the relevant skills + workspace-local `references/` + a Dataview dashboard. Confirms type and target directory first; merges (never overwrites) on re-run.
 
-### Skill authoring
-
-- `skill-creator` — create, improve, and evaluate agent skills.
-
 ## Repository policy
 
 This repository prioritizes skills that support research, paper writing, PhD applications, language learning, reproducibility, and research implementation. Generic or low-priority skills should be removed rather than archived when they dilute that purpose.
