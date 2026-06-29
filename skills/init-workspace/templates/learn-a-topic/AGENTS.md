@@ -5,6 +5,32 @@ and the rules; the teaching and literature-mapping live in the installed skills
 this file routes to. The vault supports breadth-first onboarding into an
 unfamiliar area, with every claim traceable to a source.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins, so the vault behaves the same across
+agents instead of varying with each one's defaults.
+
+- **This is learning/synthesis work, not coding.** Produce source notes,
+  summaries, a concept map, and exercises. Do **not** write code unless the user
+  explicitly asks (an `exercises/` re-derivation may use it when requested).
+- **Work in four stages, not one pass.** For any non-trivial summary or map, run
+  the pipeline in `agents/`: **researcher → reviewer → verifier → writer**.
+  1. *Researcher* (`agents/researcher.md`) — read the actual `sources/` and
+     `notes/`; collect only what they support.
+  2. *Reviewer* (`agents/reviewer.md`) — check the draft summary for claims that
+     outrun the sources, missing caveats, or conflated ideas.
+  3. *Verifier* (`agents/verifier.md`) — anchor every claim to a `sources/` note
+     per `references/source-grounding-rules.md`; demote unsupported claims to
+     `open-questions.md`.
+  4. *Writer* (`agents/writer.md`) — only now write the `summaries/` or `map/` note.
+- **Synthesis is source-grounded.** Follow `references/source-grounding-rules.md`:
+  nothing in `summaries/` or `map/` is asserted without a link to a `sources/`
+  note that supports it.
+- **Mark uncertainty explicitly.** Record your grasp honestly (`confidence:` in
+  source frontmatter); tag anything you believe but cannot source as an entry in
+  `open-questions.md`, not as fact.
+
 ## What this vault is
 
 A workspace for learning a new topic well enough to summarise it, use it, and
@@ -24,6 +50,7 @@ exercises/        # practice problems, self-tests, re-derivations
 open-questions.md # running list of unknowns and confusions
 glossary.md       # terms, defined as they appear
 references/       # study-method, source-grounding-rules
+agents/           # research pipeline: researcher → reviewer → verifier → writer
 _dashboard/       # topic-map (coverage + confidence by subtopic)
 ```
 
@@ -76,8 +103,10 @@ confidence: medium     # low | medium | high (your grasp of it)
 
 - **Adding a source:** create `sources/src-{NNN}-…md` with frontmatter, then a
   reading note in `notes/` of the same name.
-- **Synthesising:** write/extend `summaries/<subtopic>.md` *across* sources;
-  every claim links to the `sources/` note it came from.
+- **Synthesising:** run the four-stage pipeline from the *Operating contract*
+  (`agents/`) — read the sources, review the draft for over-reach, verify every
+  claim links to a `sources/` note, then write/extend `summaries/<subtopic>.md`
+  *across* sources.
 - **As you go:** add new terms to `glossary.md` and unknowns to
   `open-questions.md`; update `_dashboard/topic-map.md` confidence.
 - **To check understanding:** create an exercise in `exercises/` and try to

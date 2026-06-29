@@ -5,6 +5,23 @@ file is the map and the rules; the application craft lives in the installed
 `apply-*` skills this file routes to. The vault tracks one application cycle
 across many schools.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins, so the vault behaves the same across
+agents instead of varying with each one's defaults.
+
+- **This is application-writing work, not coding.** Produce profile notes, CV,
+  SOPs, fit notes, and emails. Do **not** write code.
+- **Every claim is grounded — never fabricate.** Facts about your record (papers,
+  grades, roles) come from `profile/`; facts about a professor or program (recent
+  work, lab direction) must cite a real, checkable source. Do not invent a
+  publication, a professor's interest, or a program detail — a fabricated fit claim
+  is worse than a missing one.
+- **Mark uncertainty honestly.** If a fit angle or a professor's current focus is
+  inferred rather than confirmed, flag it as tentative in `fit-notes/` rather than
+  asserting it in an SOP or email.
+
 ## What this vault is
 
 A workspace for assembling and tracking a research-application package: a

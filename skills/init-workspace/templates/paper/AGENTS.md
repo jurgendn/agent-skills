@@ -8,6 +8,32 @@ installed research skills this file routes to. This vault holds the **paper**
 `research-codebase` skill in a separate code repo, and keep only experiment
 *notes* here.
 
+## Operating contract
+
+Read this before doing any work in this vault. Where a rule here conflicts with
+your own default behavior, this file wins. This makes the vault behave the same
+across agents instead of varying with each one's defaults.
+
+- **This is research work, not coding.** Produce research artifacts — notes,
+  synthesis, drafts, claims. Do **not** write code, scripts, or notebooks unless
+  the user explicitly asks. `data/` holds pointers; experiment code lives in a
+  separate repo.
+- **Work in four stages, not one pass.** For any non-trivial artifact, run the
+  pipeline defined in `agents/`: **researcher → reviewer → verifier → writer**.
+  1. *Researcher* (`agents/researcher.md`) — gather and ground evidence in
+     `related-work/`, `experiments/`, `figures/`, and `references/`.
+  2. *Reviewer* (`agents/reviewer.md`) — critique the draft: weak baselines,
+     missing ablations, claims that outrun the evidence.
+  3. *Verifier* (`agents/verifier.md`) — anchor every claim to a source; remove
+     or downgrade anything you cannot ground.
+  4. *Writer* (`agents/writer.md`) — only now write the artifact into its folder.
+- **Synthesis is source-grounded.** Every factual claim links to a source (a
+  `related-work/` note, an `experiments/` note, a `figures/` id, or a
+  `references/` file). A claim with no source is not done.
+- **Mark uncertainty explicitly.** Separate established results from inference.
+  Tag anything not directly source-backed as `(inference)` or `#unverified`, and
+  say what evidence would settle it. Never present speculation as fact.
+
 ## What this vault is
 
 A single research paper tracked from idea to submission and artifact release.
@@ -26,6 +52,7 @@ drafts/           # section drafts: abstract, intro, method, results, discussion
 data/             # POINTERS to datasets (paths, URLs, licences) — not raw data
 submission/       # venue choice, checklist, cover letter, rebuttal
 references/       # venue-conventions, notation-and-citation-style, repro-checklist
+agents/           # research pipeline: researcher → reviewer → verifier → writer
 _dashboard/       # experiment-index, draft-status
 ```
 
@@ -90,9 +117,11 @@ comes next.
 - **Given a new result:** create `experiments/exp-{NNN}-…md`, fill the
   frontmatter, write the *Reading* tying it back to the paper's claim, and
   update `_dashboard/experiment-index.md`.
-- **Asked to draft/revise a section:** use the matching writer skill from the
-  routing table and save to `drafts/<section>.md`; never write a section from
-  scratch without first checking `ideas/` for the agreed spine.
+- **Asked to draft/revise a section:** run the four-stage pipeline from the
+  *Operating contract* (`agents/`): ground in `ideas/` + `experiments/`, critique,
+  verify every claim against a source, then write to `drafts/<section>.md`. Use
+  the matching writer skill from the routing table as the writer stage. Never
+  draft a section before checking `ideas/` for the agreed spine.
 - **Before submission:** run `submission-readiness-audit` and `citation-auditor`;
   record the venue + checklist state in `submission/`.
 
@@ -107,6 +136,9 @@ comes next.
   across all drafts; don't let `\citep`/`\citet` or symbol use drift per section.
 - **Reproducibility is tracked as you go**, not bolted on at the end — keep
   `references/reproducibility-checklist.md` current per experiment.
+- **Every claim is source-grounded and uncertainty is marked** (see *Operating
+  contract*): no unsourced factual claim, and inference is tagged `(inference)` /
+  `#unverified` rather than stated as fact.
 
 ## Obsidian formatting rules
 

@@ -43,6 +43,23 @@ installed `ielts-*` skills already carry the band descriptors and feedback
 aggregation, so the vault doesn't duplicate them. Every other template seeds its
 own `references/` so the workspace is self-contained.
 
+### Shared research agents
+
+The four research-pipeline agents — `researcher → reviewer → verifier → writer` —
+are identical across templates, so they live once at `templates/_shared/agents/`
+(the single source of truth) rather than being duplicated per template. They are
+generalized and agent-portable: they describe each stage's job, integrity rules,
+and output contract without binding to a particular runtime's tools. At scaffold
+time they are copied into the vault at `<vault>/agents/`, so the workspace stays
+self-contained and portable.
+
+Only the **full-pipeline** templates get the `agents/` folder: `paper`, `theory`,
+and `learn-a-topic`. Their `AGENTS.md` *Operating contract* references the four
+stages as the default for any non-trivial research artifact. The `talk`,
+`phd-application`, and `ielts` templates use a **lighter grounding-only contract**
+(no-code + source-grounded + mark-uncertainty, without the four named stages), so
+they do **not** receive the `agents/` folder.
+
 ## Procedure
 
 1. **Determine the type.** Match the user's intent to one menu entry. If it's
@@ -56,11 +73,22 @@ own `references/` so the workspace is self-contained.
 4. **Create the folder tree.** Make every folder in the Layout, adding a
    `.gitkeep` to any that starts empty.
 5. **Copy the seeded files.** Copy the template's `AGENTS.md`, `references/`,
-   and `_dashboard/` into the target (see *Merge rules*).
-6. **Fill the one-line title.** Replace the project-title placeholder at the top
+   and `_dashboard/` into the target (see *Merge rules*). For the full-pipeline
+   templates only (`paper`, `theory`, `learn-a-topic`), also copy
+   `templates/_shared/agents/` into `<vault>/agents/` so the research pipeline
+   travels with the vault. `talk`, `phd-application`, and `ielts` use the lighter
+   grounding-only contract and get no `agents/` folder.
+6. **Write the entry-file stub.** Write `<vault>/CLAUDE.md` containing exactly
+   one line, `@AGENTS.md`. This makes the operating contract auto-load on Claude
+   Code (which reads `CLAUDE.md` and follows `@` imports) while staying inert for
+   agents that read `AGENTS.md` natively (Codex, etc.) — so `AGENTS.md` remains
+   the single source of truth and the vault behaves the same on every runtime. Do
+   this for every template, including `ielts`. (See *Merge rules* — never clobber
+   an existing `CLAUDE.md`.)
+7. **Fill the one-line title.** Replace the project-title placeholder at the top
    of the copied `AGENTS.md` with the user's project name if they gave one;
    otherwise leave the placeholder.
-7. **Report.** List what was created and name the first skill to run (the table
+8. **Report.** List what was created and name the first skill to run (the table
    above), so the user knows the next move.
 
 ## Merge rules
@@ -69,10 +97,13 @@ Re-running on an existing directory is safe: **merge, never overwrite.**
 
 - Create missing folders; leave existing ones untouched.
 - Copy a seeded file only if no file of that name already exists at the
-  destination. Never clobber an existing `AGENTS.md`, reference, dashboard, or
-  any content file — those may hold the user's work.
+  destination. Never clobber an existing `AGENTS.md`, reference, dashboard,
+  `agents/` file, or any content file — those may hold the user's work or edits.
 - If `AGENTS.md` already exists, do not replace it; report that the workspace
   already has one and stop touching it.
+- If `CLAUDE.md` already exists, do not replace it — the user may have their own
+  imports or memory there. If it does not already pull in `AGENTS.md`, report
+  that so the user can add `@AGENTS.md` themselves.
 
 ## Notes
 
