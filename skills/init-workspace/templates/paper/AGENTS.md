@@ -33,6 +33,13 @@ across agents instead of varying with each one's defaults.
 - **Mark uncertainty explicitly.** Separate established results from inference.
   Tag anything not directly source-backed as `(inference)` or `#unverified`, and
   say what evidence would settle it. Never present speculation as fact.
+- **Check inputs before running a skill; ask for what's missing.** Each skill/stage
+  draws from specific folders (see *Layout*) — `ideas/` for the spine,
+  `related-work/` for literature, `experiments/` for results, `figures/` for
+  visuals. Before running one, confirm its input folder(s) actually contain the
+  needed notes; if a required input is empty or missing, **stop and ask the user to
+  add it (or say where it lives) — do not proceed on an empty folder or fabricate
+  the input.**
 
 ## What this vault is
 

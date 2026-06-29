@@ -21,6 +21,13 @@ agents instead of varying with each one's defaults.
 - **Mark uncertainty honestly.** If a fit angle or a professor's current focus is
   inferred rather than confirmed, flag it as tentative in `fit-notes/` rather than
   asserting it in an SOP or email.
+- **Check inputs before running a skill; ask for what's missing.** Each skill draws
+  from specific folders (see *Routing*). `profile/` is the root source and must be
+  populated first. Before running a skill, confirm its input folder(s) actually
+  contain the needed documents; if a required input is empty or missing, **stop and
+  ask the user to add it (or say where it lives) — do not proceed on an empty folder
+  or fabricate the input.** (e.g. `apply-dossier-evaluator` needs a populated
+  `profile/` plus the drafted `cv/` and `sop/` it is scoring.)
 
 ## What this vault is
 
@@ -66,7 +73,8 @@ folders so a school's materials sort together.
 | `sop/` | `apply-sop-writer` |
 | `emails/` | `apply-cold-email-drafter` |
 | `recommenders/` | `apply-recommendation-letter-strategist` |
-| pre-submission | `apply-package-auditor` |
+| pre-submission (coherence) | `apply-package-auditor` |
+| scoring / scholarship / eligibility | `apply-dossier-evaluator` |
 | feeling stuck | `apply-motivation-keeper` |
 
 Use `flow-phd-application` to orchestrate the whole sequence (profile → CV → fit
@@ -81,6 +89,10 @@ Use `flow-phd-application` to orchestrate the whole sequence (profile → CV →
   `sop/sop-{school}.md` (`apply-sop-writer`) tailored to that fit.
 - **Before any submission:** run `apply-package-auditor` across the school's
   materials for coherence and missing evidence; only then mark it ready.
+- **Scoring or scholarships:** when you want a graded scorecard, an eligibility
+  verdict (e.g. a 4-year BSc against a master's-required EU PhD), or scholarship
+  mission fit (VEF/DAAD/Fulbright/Erasmus/MSCA), run `apply-dossier-evaluator`.
+  Verify every cutoff, length limit, and deadline against the live official call.
 
 ## Rules
 

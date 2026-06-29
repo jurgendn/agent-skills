@@ -30,6 +30,12 @@ agents instead of varying with each one's defaults.
 - **Mark uncertainty explicitly.** Record your grasp honestly (`confidence:` in
   source frontmatter); tag anything you believe but cannot source as an entry in
   `open-questions.md`, not as fact.
+- **Check inputs before running a skill; ask for what's missing.** Each skill/stage
+  draws from specific folders (see *Layout*) — `sources/` is the root: synthesis,
+  maps, and exercises all build on populated source notes. Before running one,
+  confirm its input folder(s) actually contain the needed notes; if a required
+  input is empty or missing, **stop and ask the user to add the source (or say
+  where it lives) — do not proceed on an empty folder or fabricate the input.**
 
 ## What this vault is
 
