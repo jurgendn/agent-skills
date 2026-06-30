@@ -4,39 +4,53 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 
 ## Install
 
-This repository keeps skills nested by topic, but installation unnests them into flat skill directories. For example, `skills/research-skills/technical-teaching/knowledge-debt-audit/` installs as `knowledge-debt-audit`.
+The wrapper scripts in `scripts/` install skills via the official `skills` CLI. This repository keeps skills nested by topic, but installation unnests them into flat skill directories. For example, `skills/research-skills/technical-teaching/knowledge-debt-audit/` installs as `knowledge-debt-audit`.
 
-Linux/macOS:
+**Prerequisite:** Node.js — the scripts call `npx` and exit with an error if it is not found.
+
+Install all skills:
 
 ```bash
+# Linux/macOS
 ./scripts/install.sh
 ```
 
-Windows PowerShell:
-
 ```powershell
+# Windows PowerShell
 .\scripts\install.ps1
 ```
 
-Windows Command Prompt:
-
 ```bat
+:: Windows Command Prompt (forwards arguments to install.ps1)
 scripts\install.bat
 ```
 
-Install one skill:
+Install a single skill (or a glob):
 
 ```bash
 ./scripts/install.sh --skill ielts-writing-task2
 ```
 
-The installers call the official skills CLI with nested discovery enabled:
+```powershell
+.\scripts\install.ps1 -Skill ielts-writing-task2
+```
+
+### Options
+
+| Purpose | `install.sh` | `install.ps1` / `install.bat` |
+| --- | --- | --- |
+| Skill name or glob to install (default `*`) | `--skill NAME` | `-Skill NAME` |
+| Install from a different repository URL | `--repo URL` | `-Repo URL` |
+| Disable nested skill discovery | `--no-full-depth` | `-NoFullDepth` |
+| Show help | `-h`, `--help` | — |
+
+By default the installers call the skills CLI with nested discovery enabled:
 
 ```bash
 npx skills add https://github.com/jurgendn/agent-skills.git --skill '*' --full-depth
 ```
 
-Use `--no-full-depth` only if you intentionally do not want nested skill discovery.
+Pass the no-full-depth flag only if you intentionally do not want nested skill discovery.
 
 ## Skill catalog
 
