@@ -266,6 +266,12 @@
       "description": "Brainstorm a research idea and scope what a new paper should cover, upstream of stress-testing and argument planning."
     },
     {
+      "name": "cross-domain-analogy-finder",
+      "path": "skills/research-skills/idea-and-positioning/cross-domain-analogy-finder",
+      "category": "research-skills/idea-and-positioning",
+      "description": "Find a concept's structural twin in a distant field to borrow a portable solution (offense) or check whether an idea already exists (defense), with a four-way verification gate and prior-art grounding."
+    },
+    {
       "name": "pytorch-training-recipe",
       "path": "skills/research-skills/implementation-support/pytorch-training-recipe",
       "category": "research-skills/implementation-support",
@@ -366,6 +372,12 @@
       "path": "skills/research-skills/technical-teaching/concept-exercise-generator",
       "category": "research-skills/technical-teaching",
       "description": "Generate a graded easy-to-advanced exercise set with separated solutions to verify understanding of a topic, method, derivation, or paper."
+    },
+    {
+      "name": "knowledge-debt-audit",
+      "path": "skills/research-skills/technical-teaching/knowledge-debt-audit",
+      "category": "research-skills/technical-teaching",
+      "description": "Detect AI-produced results the user cannot regenerate unaided and probe understanding of the load-bearing step before they build on it, calling toxic knowledge debt early."
     },
     {
       "name": "gap-finder",

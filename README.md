@@ -2,11 +2,49 @@
 
 A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, implementation-heavy coding work, and structured project setup.
 
+## Install
+
+This repository keeps skills nested by topic, but installation unnests them into flat skill directories. For example, `skills/research-skills/technical-teaching/knowledge-debt-audit/` installs as `knowledge-debt-audit`.
+
+Linux/macOS:
+
+```bash
+./scripts/install.sh
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\install.ps1
+```
+
+Windows Command Prompt:
+
+```bat
+scripts\install.bat
+```
+
+Install one skill:
+
+```bash
+./scripts/install.sh --skill ielts-writing-task2
+```
+
+The installers call the official skills CLI with nested discovery enabled:
+
+```bash
+npx skills add https://github.com/jurgendn/agent-skills.git --skill '*' --full-depth
+```
+
+Use `--no-full-depth` only if you intentionally do not want nested skill discovery.
+
 ## Skill catalog
 
 ### Idea and positioning
 
 - `research-skills/idea-and-positioning/research-idea-stress-test` — stress-test novelty, assumptions, confounders, and cheap decisive experiments.
+- `research-skills/idea-and-positioning/paper-idea-and-scope-brainstormer` — brainstorm a research idea and scope what a new paper should cover.
+- `research-skills/idea-and-positioning/cross-domain-analogy-finder` — find a concept's structural twin in a distant field to borrow a portable solution (offense) or check whether the idea already exists under another name (defense), gated by a four-way classifier and an import-a-result test.
 
 ### Literature and related work
 
@@ -34,6 +72,12 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - `research-skills/theory-and-claims/theorem-and-claim-audit` — pressure-test paper claims and mathematical arguments.
 - `research-skills/theory-and-claims/theory-to-toy-cases` — turn abstract ideas into minimal examples and sanity checks.
 - `research-skills/theory-and-claims/theory-heavy-math-ml/*` — specialist support for assumptions, counterexamples, derivations, formalism translation, theorem distillation, and proof sketches.
+
+### Technical teaching
+
+- `research-skills/technical-teaching/professor-mentor-technical-teaching` — explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment.
+- `research-skills/technical-teaching/concept-exercise-generator` — generate a graded easy-to-advanced exercise set with separated solutions to verify understanding.
+- `research-skills/technical-teaching/knowledge-debt-audit` — at the moment of building on an AI-produced result, probe whether the user actually understands the load-bearing step, and call toxic knowledge debt before it compounds.
 
 ### Paper writing
 
