@@ -219,3 +219,14 @@ __marimo__/
 
 # Claude
 .claude
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini

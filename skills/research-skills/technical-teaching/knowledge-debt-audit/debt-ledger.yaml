@@ -1,0 +1,54 @@
+# debt-ledger.yaml
+#
+# The accreting account for knowledge-debt-audit. Runtime state; this is what the
+# PERIODIC mode reports over. Each entry records something borrowed from an AI and
+# whether the loan has been repaid.
+#
+# Fields:
+#   borrowed   - the result/step taken from the assistant
+#   domain     - where it sits
+#   class      - strategic | toxic   (strategic = never need to regenerate;
+#                                      toxic = load-bearing, will face an exposure moment)
+#   status     - carried        (strategic, intentionally not internalized)
+#              | probed-passed  (toxic, but understanding verified)
+#              | outstanding    (toxic, NOT yet repaid — the dangerous bucket)
+#   repaid     - true/false (only meaningful for toxic)
+#   note       - optional: the exposure moment that would call it
+#
+# Rule: only toxic+outstanding entries are debt that matters. Strategic entries are
+# logged for the statement of account, never probed. Keep the ledger honest — the
+# temptation is to mark things "probed-passed" on a fluent answer. Don't.
+
+ledger:
+  - borrowed: "Schrödinger-bridge identity for the entropic-OT term in RWOT-DCD"
+    domain: dynamic community detection / optimal transport
+    class: toxic
+    status: outstanding
+    repaid: false
+    note: >
+      A reviewer WILL ask why the entropic-OT cost equals a static Schrödinger
+      bridge for THIS exact cost. Must be able to regenerate the identity cold,
+      not cite it from a chat. Repay before building the paper on it.
+
+  - borrowed: "Adiabatic 1/gap^2 runtime scaling as analog for walk-length calibration"
+    domain: quantum annealing -> spectral graph methods
+    class: toxic
+    status: outstanding
+    repaid: false
+    note: >
+      Whether the exponent is 1/lambda or 1/lambda^2 changes the calibration claim.
+      Borrowed as a lead; not yet derived for the discrete-snapshot setting.
+
+  - borrowed: "GitHub trees API + raw.githubusercontent curl syntax"
+    domain: tooling
+    class: strategic
+    status: carried
+    repaid: false
+    note: "Will never need to regenerate unaided. Correct to borrow forever."
+
+  - borrowed: "WeasyPrint CSS for the md-to-pdf page-number footer"
+    domain: tooling / document rendering
+    class: strategic
+    status: carried
+    repaid: false
+    note: "Peripheral. Carrying this is efficiency, not debt that matters."

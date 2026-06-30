@@ -1,0 +1,69 @@
+# skeleton-store.yaml
+#
+# The accreting concept<->skeleton index for cross-domain-analogy-finder.
+# Two node types (skeleton, concept) and one edge type (instantiates).
+# Siblings (= analogies) are co-children of a skeleton, DERIVED by walking the
+# graph, never stored.
+#
+# Rules:
+#   - A concept with no `carries` is just a label. Do not file it. (This enforces
+#     the import-a-result test at WRITE time.)
+#   - Every `carries` is sourced or stamped `unverified`. The store never launders
+#     a confabulated result into a fact.
+#   - `delta` is the jackpot field: when a concept ALMOST fits, the misfit is the
+#     open problem, captured the moment it is noticed -> gap-finder.
+#   - Build emergent, never global. This file grows one verified run at a time.
+#
+# Health diagnostic: a skeleton's instance count grades its abstraction.
+#   ~dozens of instances across unrelated domains -> abstracted too SHALLOW (hub).
+#   exactly one instance                          -> too DEEP, or genuinely new.
+#   a handful from DISTANT domains                -> the sweet spot.
+
+skeletons:
+  - id: operator-relaxation
+    signature:
+      objects:   states of a system (nodes, configurations)
+      operator:  linear stochastic operator (transition matrix / generator)
+      invariant: spectral gap (lambda) — rate of relaxation to the dominant eigenmode
+      dynamics:  iterate the operator -> converge to a stationary distribution
+    level: mid          # not "linear algebra", not "PageRank"
+    broader: [linear-dynamical-system]
+    narrower: []
+
+  - id: local-greedy-ascent
+    signature:
+      objects:   points in a search space with a scalar objective
+      operator:  perturb-and-keep-if-better
+      invariant: monotone improvement toward a local optimum
+      dynamics:  step locally along an estimated ascent direction
+    level: mid
+    broader: [iterative-optimization]
+    narrower: []
+
+concepts:
+  - name: PageRank
+    domain: web / information retrieval
+    instantiates: operator-relaxation
+    carries: power iteration; personalized teleport -> closed-form PPR
+    provenance: Page & Brin 1998
+
+  - name: SIR epidemic on a network
+    domain: epidemiology
+    instantiates: operator-relaxation
+    carries: epidemic threshold ~ 1 / lambda_max(adjacency)
+    provenance: unverified
+    delta: >
+      dynamics are NONLINEAR — the operator framing is loose here. The misfit
+      between linear relaxation and nonlinear contagion is itself a question.
+
+  - name: Perturb & Observe (MPPT, power electronics)
+    domain: energy systems
+    instantiates: local-greedy-ascent
+    carries: step-size / direction heuristics from the MPPT literature
+    provenance: unverified  # ground via literature-triangulation before asserting
+
+  - name: Hill Climbing
+    domain: optimization / AI
+    instantiates: local-greedy-ascent
+    carries: escape strategies (restarts, momentum, simulated annealing as relaxation)
+    provenance: unverified
