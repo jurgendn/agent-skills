@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-to-code",
+  "evals": [
+    {
+      "id": 0,
+      "name": "linear-attention-directional-test",
+      "prompt": "I found a paper on arXiv proposing 'linear attention': replace softmax attention with phi(q) (phi(k)^T v) where phi(x) = elu(x)+1, normalized by phi(q) (phi(k)^T 1). They claim quality comparable to softmax attention on autoregressive language modeling while being O(n) in sequence length. No code was released. Can you implement this in PyTorch and check whether the quality claim actually holds up against regular softmax attention on a small task? I don't need full-scale results, I just want to know if it works.",
+      "expected_output": "Single-file minimal PyTorch implementation with both linear and softmax attention behind a flag, notation->tensor mapping, assumptions ledger, staged gates actually executed (shapes/gradients, tiny-batch overfit, directional comparison), explicit verdict.",
+      "files": [],
+      "assertions": [
+        "Both attention variants (linear and softmax) live in the same minimal script behind a switch, trained under identical settings",
+        "Code was actually executed: report contains real numbers from real runs, not hypothetical results",
+        "Capacity gate ran: tiny-batch overfit check performed before the method-vs-baseline comparison",
+        "Explicit verdict stated (works / does not reproduce / inconclusive) with directional reasoning at toy scale",
+        "Underspecified details are documented as explicit assumptions (e.g. normalization details, LR policy at toy scale, causal masking form)",
+        "Implementation is minimal: no config framework, no Lightning, hyperparameters visible at top of file"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "hidden-state-penalty-regularizer",
+      "prompt": "theres this paper that adds a temporal smoothness penalty lambda * ||h_t - h_{t-1}||^2 on the hidden states of a GRU during training. claims it improves generalization on small sequence classification datasets. authors never released code and never say what lambda they used. i just want to know if it actually beats a plain GRU baseline before i build on it",
+      "expected_output": "Minimal GRU + penalty implementation vs plain GRU baseline, lambda treated as a high-sensitivity ledger assumption with a small sweep, gates executed, directional verdict with honest treatment of the unspecified lambda.",
+      "files": [],
+      "assertions": [
+        "Unspecified lambda is treated as a high-sensitivity unknown: swept over values or explicitly flagged, not silently fixed to one value",
+        "Plain GRU baseline trained under conditions identical to the penalized model",
+        "Capacity gate ran (tiny-batch overfit) before drawing conclusions",
+        "Seed variance handled: multiple seeds, or the small-effect risk is explicitly acknowledged in the verdict",
+        "Code was actually executed and the verdict cites the observed numbers"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "load-bearing-gap-flagging",
+      "prompt": "I'm trying to reproduce a paper on 'difficulty-weighted training'. Each training sample's loss is weighted by w_i = exp(-s_i / T) where s_i is the sample's 'difficulty score' and T is a temperature. The central claim is that this weighting beats uniform weighting on noisy-label image classification. The problem: the paper never defines how the difficulty score s_i is computed. There's no code release. Implement it so I can check if the claim holds.",
+      "expected_output": "The undefined difficulty score is recognized as a load-bearing gap: surfaced prominently to the user with candidate definitions (e.g. per-sample loss, gradient norm, margin) rather than silently picking one; if implemented, candidates are behind flags and the verdict is conditioned on the choice.",
+      "files": [],
+      "assertions": [
+        "The undefined difficulty score is identified as a load-bearing gap and prominently surfaced (the question that would be asked of the user is stated)",
+        "Candidate definitions of the difficulty score are enumerated with a basis (e.g. per-sample loss, gradient norm, margin)",
+        "If implemented, candidate definitions sit behind flags and the verdict is conditioned on the choice - no silent single guess presented as 'the' method",
+        "Report never claims or implies the paper specified how s_i is computed"
+      ]
+    }
+  ]
+}

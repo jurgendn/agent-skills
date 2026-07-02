@@ -79,6 +79,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 - `research-codebase` — structure research code for fast hypothesis testing and command-to-result traceability.
 - `research-skills/implementation-support/pytorch-training-recipe` — turn a paper idea into an implementable PyTorch training recipe.
 - `research-skills/implementation-support/jax-training-recipe` — turn a paper idea into an implementable JAX/Flax/Optax training recipe.
+- `research-skills/implementation-support/paper-to-code` — reproduce a paper with no released code in minimal PyTorch and verify the method works via staged gates.
 
 ### Theory and claims
 
@@ -106,6 +107,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 ### Review and submission
 
 - `research-skills/review-and-submission/reviewer-response-strategist` — plan rebuttals, concessions, response structure, and revision priorities.
+- `research-skills/review-and-submission/peer-review-writer` — write a peer review of someone else's paper: evidenced weaknesses, calibrated scores, constructive questions.
 - `research-skills/review-and-submission/submission-readiness-audit` — run a final pre-submission risk audit.
 - `research-skills/review-and-submission/venue-targeting` — select and prioritize publication venues; plan resubmission strategy after rejection.
 
