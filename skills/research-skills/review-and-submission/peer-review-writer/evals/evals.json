@@ -1,0 +1,47 @@
+{
+  "skill_name": "peer-review-writer",
+  "evals": [
+    {
+      "id": 0,
+      "name": "review-from-rough-notes",
+      "prompt": "I'm reviewing for ICML. The paper proposes 'GradMix', a data augmentation that mixes gradients of pairs of samples instead of inputs (like mixup but in gradient space): g_tilde = beta*g_i + (1-beta)*g_j, beta ~ Beta(alpha, alpha). Claims +1.2% on CIFAR-100 and +0.8% on ImageNet-100 over mixup, and provides a convergence proof. My rough notes: (1) the convergence proof (Thm 1) assumes bounded gradients but this is never stated as an assumption, it just appears mid-proof; (2) they compare against mixup and cutmix but not against manifold mixup, which is the closest method conceptually; (3) all results are single-seed, no error bars; (4) the ImageNet-100 gain is within what I'd expect from seed variance; (5) the method doubles backward-pass cost and this is only mentioned in the appendix; (6) writing is clear, figures are good. I think it's borderline leaning reject but I'm not sure. Help me write the review - it's due Friday. The form has Summary, Strengths, Weaknesses, Questions, Limitations, and a 1-10 score with confidence 1-5.",
+      "expected_output": "Structured review using the venue form, weaknesses triaged by severity with evidence references, questions tied to score-moving weaknesses, score consistent with stated weaknesses and with what a rebuttal could fix, strengths genuinely evidenced.",
+      "files": [],
+      "assertions": [
+        "Review uses exactly the requested form sections: Summary, Strengths, Weaknesses, Questions, Limitations, score 1-10 with confidence 1-5",
+        "Summary is neutral and demonstrates understanding - contains no evaluative language",
+        "Weaknesses are triaged by severity, with single-seed results + seed-variance-sized gains foregrounded as the major issue",
+        "Each major weakness says why it matters for the claims and what would resolve it (fixable vs fatal is clear)",
+        "The bounded-gradient proof issue is framed as a fixable request to state the assumption, not an accusation that the proof is wrong",
+        "Questions are answerable and tied to weaknesses whose resolution could move the score",
+        "Score is consistent with the stated weaknesses and the user's borderline-leaning-reject judgment, and states what rebuttal answer would raise it"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "emergency-review-six-hours",
+      "prompt": "emergency review situation: the AC just assigned me an extra paper, review due in like 6 hours and I have a deadline of my own. It's a NeurIPS submission on a new optimizer called 'AdaSNR' that scales the learning rate per-parameter by a signal-to-noise ratio of recent gradients. I've read the intro and skimmed the experiments: they show wall-clock and step-count wins over AdamW on 5 vision tasks and 2 small LM tasks, there's a regret bound in section 4 I have NOT checked, and appendix experiments I haven't looked at. One thing that bugged me: baseline learning rates come from 'a coarse grid' that is coarser than the grid they used for their own method (their words, appendix B). What can I honestly write in 6 hours?",
+      "expected_output": "Compressed emergency-review process: prioritized reading plan on the central claim, the baseline-tuning asymmetry surfaced as the key weakness, unverified parts (regret bound, appendix) honestly declared in confidence/limitations rather than bluffed.",
+      "files": [],
+      "assertions": [
+        "Provides a time-boxed prioritized reading plan focused on the central claim (optimizer beats AdamW fairly)",
+        "The baseline-tuning asymmetry (coarser LR grid for baselines than for their own method) is surfaced as the key experimental weakness",
+        "Unverified parts (regret bound, appendix experiments) are honestly declared in confidence/limitations rather than bluffed as checked",
+        "A usable draft review or near-complete skeleton is produced, not just advice"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "no-judgment-extraction",
+      "prompt": "I got assigned a paper to review for a journal. Here's the abstract: 'We propose FreqPrune, a structured pruning method that removes convolutional filters based on the frequency-domain energy of their kernels. On CIFAR-10 and ImageNet, FreqPrune achieves 60% FLOP reduction with under 1% accuracy drop, outperforming magnitude and Taylor-expansion pruning.' Write the review for me.",
+      "expected_output": "Does NOT fabricate a full review from an abstract alone: asks for the manuscript/user's reading and notes, or provides a review scaffold plus the questions to answer while reading - it must not invent specific evidence (tables, proofs, experimental details) it has never seen.",
+      "files": [],
+      "assertions": [
+        "No specific evidence is fabricated: no invented tables, section numbers, experimental details, or proof issues beyond what the abstract states",
+        "Asks the user for the manuscript and/or their own reading notes before a real review can be written",
+        "Provides constructive interim help: a reading checklist, claim-evidence questions to answer, or a review scaffold",
+        "No final recommendation or score is assigned to a paper that has not been read"
+      ]
+    }
+  ]
+}

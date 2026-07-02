@@ -284,6 +284,12 @@
       "description": "Produce an implementable JAX, Flax, and Optax training recipe."
     },
     {
+      "name": "paper-to-code",
+      "path": "skills/research-skills/implementation-support/paper-to-code",
+      "category": "research-skills/implementation-support",
+      "description": "Reproduce a paper's method in minimal, direct PyTorch when no official code is available; staged verification gates and an assumptions ledger decide whether the method works as claimed."
+    },
+    {
       "name": "related-work-writer",
       "path": "skills/research-skills/literature-and-related-work/related-work-writer",
       "category": "research-skills/literature-and-related-work",
@@ -348,6 +354,12 @@
       "path": "skills/research-skills/review-and-submission/reviewer-response-strategist",
       "category": "research-skills/review-and-submission",
       "description": "Plan rebuttals, reviewer responses, and revision strategies."
+    },
+    {
+      "name": "peer-review-writer",
+      "path": "skills/research-skills/review-and-submission/peer-review-writer",
+      "category": "research-skills/review-and-submission",
+      "description": "Write a peer review of someone else's paper for a venue: structured summary, evidenced strengths and weaknesses, calibrated scores, and constructive questions."
     },
     {
       "name": "submission-readiness-audit",
