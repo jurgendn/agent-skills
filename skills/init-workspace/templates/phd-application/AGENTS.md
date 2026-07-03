@@ -18,9 +18,17 @@ agents instead of varying with each one's defaults.
   work, lab direction) must cite a real, checkable source. Do not invent a
   publication, a professor's interest, or a program detail — a fabricated fit claim
   is worse than a missing one.
+- **Ground from the source, not from memory.** When a claim needs backing, open
+  the note, file, or URL and read it — don't answer from recall because a fact
+  "seems well known." If the source isn't in front of you, fetch it or mark the
+  claim unverified.
 - **Mark uncertainty honestly.** If a fit angle or a professor's current focus is
   inferred rather than confirmed, flag it as tentative in `fit-notes/` rather than
   asserting it in an SOP or email.
+- **Report what you actually did, not what you intended.** Before marking a step,
+  section, or check done, point to the artifact or source that shows it. If a step
+  was skipped or a result is unverified, say so plainly — never present intended,
+  plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill draws
   from specific folders (see *Routing*). `profile/` is the root source and must be
   populated first. Before running a skill, confirm its input folder(s) actually

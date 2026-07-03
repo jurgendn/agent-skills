@@ -30,6 +30,10 @@ agents instead of varying with each one's defaults.
 - **Mark uncertainty explicitly.** Record your grasp honestly (`confidence:` in
   source frontmatter); tag anything you believe but cannot source as an entry in
   `open-questions.md`, not as fact.
+- **Report what you actually did, not what you intended.** Before marking a step,
+  section, or check done, point to the artifact or source that shows it. If a step
+  was skipped or a result is unverified, say so plainly — never present intended,
+  plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill/stage
   draws from specific folders (see *Layout*) — `sources/` is the root: synthesis,
   maps, and exercises all build on populated source notes. Before running one,
