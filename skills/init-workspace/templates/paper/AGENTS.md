@@ -33,6 +33,10 @@ across agents instead of varying with each one's defaults.
 - **Mark uncertainty explicitly.** Separate established results from inference.
   Tag anything not directly source-backed as `(inference)` or `#unverified`, and
   say what evidence would settle it. Never present speculation as fact.
+- **Report what you actually did, not what you intended.** Before marking a step,
+  section, or check done, point to the artifact or source that shows it. If a step
+  was skipped or a result is unverified, say so plainly — never present intended,
+  plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill/stage
   draws from specific folders (see *Layout*) — `ideas/` for the spine,
   `related-work/` for literature, `experiments/` for results, `figures/` for

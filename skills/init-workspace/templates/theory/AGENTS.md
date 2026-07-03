@@ -32,6 +32,10 @@ agents instead of varying with each one's defaults.
   or hand-wavy. Tag unproved steps as `(gap)` / `#unverified`, and say what would
   close or refute them. A claim stays `conjecture` until the reviewer and verifier
   stages pass.
+- **Report what you actually did, not what you intended.** Before marking a step,
+  section, or check done, point to the artifact or source that shows it. If a step
+  was skipped or a result is unverified, say so plainly — never present intended,
+  plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill/stage
   draws from specific folders (see *Layout*) — `claims/` and `definitions/` for the
   statement and notation, `proofs/` for the argument under audit. Before running

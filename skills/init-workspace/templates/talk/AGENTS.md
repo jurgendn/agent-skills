@@ -18,8 +18,16 @@ agents instead of varying with each one's defaults.
   to the underlying paper, result, or `figures/` source — a talk presents existing
   evidence, it does not generate new claims. Do not put a result on a slide that
   the source material does not support.
+- **Ground from the source, not from memory.** When a claim needs backing, open
+  the note, file, or URL and read it — don't answer from recall because a fact
+  "seems well known." If the source isn't in front of you, fetch it or mark the
+  claim unverified.
 - **Mark uncertainty honestly.** Don't overstate findings for rhetorical effect;
   if a result is preliminary, say so on the slide and in `script.md`.
+- **Report what you actually did, not what you intended.** Before marking a step,
+  section, or check done, point to the artifact or source that shows it. If a step
+  was skipped or a result is unverified, say so plainly — never present intended,
+  plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill/stage
   draws from specific folders (see *Layout*) — `narrative/` holds the talk plan the
   deck is built from, `figures/` the visuals. Before building slides, confirm the
