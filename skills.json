@@ -14,6 +14,12 @@
       "description": "Apply systematic debugging, profiling, and root cause analysis."
     },
     {
+      "name": "prompting-claude-models",
+      "path": "skills/coding-support/prompting-claude-models",
+      "category": "coding-support",
+      "description": "Design prompts, system prompts, and agent scaffolding for Claude-backed features; ground volatile model-specific behavior in the live Anthropic docs."
+    },
+    {
       "name": "python-code-style",
       "path": "skills/coding-support/python-code-style",
       "category": "coding-support",

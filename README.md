@@ -150,6 +150,7 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 ### Coding support
 
 - `coding-support/debugging-strategies` — systematic debugging support.
+- `coding-support/prompting-claude-models` — prompt/system-prompt/agent design for Claude-backed features; grounds volatile model-specific behavior in the live Anthropic docs.
 - `coding-support/python-code-style` — Python style and linting guidance.
 - `coding-support/python-design-patterns` — Python design/refactoring guidance.
 - `coding-support/python-performance-optimization` — Python profiling and performance guidance.
