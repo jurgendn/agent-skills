@@ -1,0 +1,23 @@
+{
+  "skill_name": "survey-paper-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to write a survey paper on retrieval-augmented generation for scientific literature review. I have about 80 papers and several existing surveys. Help me design the taxonomy, structure, figures, and future-directions section.",
+      "expected_output": "A survey paper plan with a clear contribution, source-base audit, taxonomy, section outline, figure/table plan, future-directions plan, and coverage risks.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My survey draft is just one paragraph per paper. Can you reorganize it into a real tutorial-style survey for junior researchers?",
+      "expected_output": "A revision plan that replaces paper-by-paper summaries with conceptual sections, tutorial flow, comparison artifacts, and synthesis risks.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Should this be a Related Work section or a standalone survey? I have a method paper, but the literature around evaluation protocols is a mess.",
+      "expected_output": "A routing decision that distinguishes related-work needs from standalone survey contribution, with conditions under which survey-paper-writer vs related-work-writer should be used.",
+      "files": []
+    }
+  ]
+}

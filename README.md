@@ -64,6 +64,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 - `research-skills/literature-triangulation` — build source-grounded maps of a research area.
 - `research-skills/literature-and-related-work/related-work-writer` — turn an existing source map into Related Work prose.
+- `research-skills/literature-and-related-work/survey-paper-writer` — plan, draft, and revise standalone survey, tutorial, review, and perspective papers.
 - `research-skills/literature-and-related-work/citation-auditor` — verify citations are real, claims match what cited papers actually say, and no references are hallucinated or misattributed.
 
 ### Experiment design and analysis
@@ -107,7 +108,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 ### Review and submission
 
 - `research-skills/review-and-submission/reviewer-response-strategist` — plan rebuttals, concessions, response structure, and revision priorities.
-- `research-skills/review-and-submission/peer-review-writer` — write a peer review of someone else's paper: evidenced weaknesses, calibrated scores, constructive questions.
+- `research-skills/review-and-submission/peer-review-writer` — write a peer review of someone else's paper: evidenced weaknesses, calibrated scores, constructive questions; also PC-member / area-chair process (bidding, COI, subreviewers, discussion).
 - `research-skills/review-and-submission/submission-readiness-audit` — run a final pre-submission risk audit.
 - `research-skills/review-and-submission/venue-targeting` — select and prioritize publication venues; plan resubmission strategy after rejection.
 

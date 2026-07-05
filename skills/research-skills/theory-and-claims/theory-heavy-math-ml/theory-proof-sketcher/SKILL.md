@@ -1,7 +1,6 @@
 ---
 name: theory-proof-sketcher
-description: Convert an informal mathematical idea into a precise theorem, lemma, or proof scaffold with explicit assumptions, dependency structure, and clearly marked gaps.
-when_to_use: Use when developing a new proof, formalizing intuition, planning a theorem structure, or evaluating whether an argument is actually complete.
+description: Convert an informal mathematical idea into a precise theorem, lemma, or proof scaffold with explicit assumptions, dependency structure, and clearly marked gaps. Use when developing a new proof, formalizing intuition, planning a theorem structure, or evaluating whether an argument is actually complete.
 ---
 # Proof Sketcher
 Turn intuition into a checkable proof scaffold before attempting full formalization.
@@ -233,4 +232,3 @@ Rules
 * Do not claim a result is “obvious” without stating why.
 * Do not compress multiple logical steps into one sentence.
 * Keep the scaffold minimal but structurally rigorous.
-

@@ -1,7 +1,6 @@
 ---
 name: theory-formalism-translator
-description: Translate an idea across optimization, probability, information theory, dynamical systems, graph theory, and statistics language. Use to determine whether different fields are expressing the same structure under different notation.
-when_to_use: Use for interdisciplinary theory work, reframing a problem into a more tractable formalism, connecting literatures, or discovering alternative analytical tools.
+description: Translate an idea across optimization, probability, information theory, dynamical systems, graph theory, and statistics language. Use for interdisciplinary theory work, reframing a problem into a more tractable formalism, connecting literatures, discovering alternative analytical tools, or determining whether different fields express the same structure under different notation.
 ---
 
 # Formalism Translator

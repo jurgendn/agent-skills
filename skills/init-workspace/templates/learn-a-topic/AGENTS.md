@@ -57,6 +57,7 @@ notes/            # reading notes per source (mirrors sources/ filenames)
 summaries/        # synthesised summaries per subtopic (across sources)
 map/              # concept / landscape map of the area
 exercises/        # practice problems, self-tests, re-derivations
+search-log.md     # queries, tool/recommender trails, inclusion/exclusion rationale
 open-questions.md # running list of unknowns and confusions
 glossary.md       # terms, defined as they appear
 references/       # study-method, source-grounding-rules
@@ -88,6 +89,7 @@ authors: Holland, Laskey, Leinhardt
 year: 1983
 type: paper            # paper | book | talk | post | course
 subtopic: graph-generative-models
+role: canonical        # seed | canonical | survey | dissenting | tool-suggested | background
 status: read           # queued | reading | read
 confidence: medium     # low | medium | high (your grasp of it)
 ---
@@ -96,6 +98,9 @@ confidence: medium     # low | medium | high (your grasp of it)
 ...
 
 ## Key claims (with where to find them)
+...
+
+## Why this source is in the vault
 ...
 ```
 
@@ -112,7 +117,10 @@ confidence: medium     # low | medium | high (your grasp of it)
 ## Default actions
 
 - **Adding a source:** create `sources/src-{NNN}-…md` with frontmatter, then a
-  reading note in `notes/` of the same name.
+  reading note in `notes/` of the same name. Record in `search-log.md` how the
+  source was found and why it belongs: keyword search, citation trail, survey
+  pointer, recommendation system, LLM suggestion, advisor suggestion, or
+  deliberate dissenting/counterexample source.
 - **Synthesising:** run the four-stage pipeline from the *Operating contract*
   (`agents/`) — read the sources, review the draft for over-reach, verify every
   claim links to a `sources/` note, then write/extend `summaries/<subtopic>.md`
@@ -131,6 +139,10 @@ confidence: medium     # low | medium | high (your grasp of it)
   revisit, not a failure. The dashboard surfaces weak spots.
 - **Keep the glossary and open-questions live** — they are the cheapest measure
   of progress.
+- **Keep the search trail visible.** Do not let semantic search, recommender
+  systems, or LLM-suggested reading lists silently define the field. Log the
+  queries and tool suggestions you used, then deliberately add at least one
+  source from outside the dominant recommended cluster when mapping a new area.
 - **Synthesise, don't collect.** A pile of reading notes isn't understanding;
   the value is in `summaries/` and `map/` that connect sources.
 

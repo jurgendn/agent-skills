@@ -1,7 +1,6 @@
 ---
 name: theory-to-toy-cases
-description: Turn abstract math or ML ideas into minimal examples, counterexamples, sanity checks, and tiny simulations. Use when a concept is too abstract or a claim needs intuition or falsification.
-when_to_use: Use for theorem intuition, debugging derivations, constructing stress tests, or converting a research idea into small checkable cases.
+description: Turn abstract math or ML ideas into minimal examples, counterexamples, sanity checks, and tiny simulations. Use for theorem intuition, debugging derivations, constructing stress tests, converting a research idea into small checkable cases, or when a concept is too abstract or a claim needs intuition or falsification.
 ---
 
 # Theory to Toy Cases
@@ -42,3 +41,4 @@ Return:
 - Cases
 - What each case shows
 - Implication for the full research question
+- What the toy cases cannot establish

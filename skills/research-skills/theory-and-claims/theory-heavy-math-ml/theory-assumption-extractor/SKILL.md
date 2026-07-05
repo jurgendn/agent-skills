@@ -1,7 +1,6 @@
 ---
 name: theory-assumption-extractor
-description: Extract explicit and hidden assumptions from a proof, model, or empirical argument. Use to determine which premises are logically necessary, which are proof conveniences, and where the argument actually breaks.
-when_to_use: Use for theorem reading, paper review, proposal critique, debugging proofs, or whenever a conclusion appears stronger than the stated setup.
+description: Extract explicit and hidden assumptions from a proof, model, or empirical argument. Use for theorem reading, paper review, proposal critique, debugging proofs, conclusions that appear stronger than the stated setup, or determining which premises are logically necessary, proof conveniences, and where the argument breaks.
 ---
 
 # Assumption Extractor

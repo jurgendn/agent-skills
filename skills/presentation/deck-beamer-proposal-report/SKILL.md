@@ -54,7 +54,7 @@ Spine:
 - Audience and slot length; institutional/funder Beamer template if mandated.
 
 ### 2. Build the slide-spec
-Use the relevant spine above as the skeleton, then produce per-slide spec blocks (`deck-design-principles`). Genre-specific guidance:
+Use the relevant spine above as the skeleton, then produce per-slide spec blocks (`deck-design-principles`). For the *persuasion* craft behind a proposal deck — framing it as a sell not an info dump, the hourglass, the three proposal figure archetypes (butterfly / family-portrait / before-after), and density discipline — see `references/proposal-persuasion-craft.md` (grounded in Knapen et al., 2025, arXiv:2504.01645). Genre-specific guidance:
 
 - **Objectives** get claim-titles framed as outcomes, not topics.
 - **Timeline** → one Gantt slide (TikZ `pgfgantt`), not a wall of dates.

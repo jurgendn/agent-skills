@@ -302,6 +302,12 @@
       "description": "Write or revise a Related Work section from a source-grounded literature map."
     },
     {
+      "name": "survey-paper-writer",
+      "path": "skills/research-skills/literature-and-related-work/survey-paper-writer",
+      "category": "research-skills/literature-and-related-work",
+      "description": "Plan, draft, and revise standalone survey, tutorial, review, and perspective papers whose main contribution is synthesis."
+    },
+    {
       "name": "citation-auditor",
       "path": "skills/research-skills/literature-and-related-work/citation-auditor",
       "category": "research-skills/literature-and-related-work",
@@ -365,7 +371,7 @@
       "name": "peer-review-writer",
       "path": "skills/research-skills/review-and-submission/peer-review-writer",
       "category": "research-skills/review-and-submission",
-      "description": "Write a peer review of someone else's paper for a venue: structured summary, evidenced strengths and weaknesses, calibrated scores, and constructive questions."
+      "description": "Write a peer review of someone else's paper for a venue: structured summary, evidenced strengths and weaknesses, calibrated scores, and constructive questions; also covers serving on a program committee or as area chair (bidding, COI, subreviewer management, discussion)."
     },
     {
       "name": "submission-readiness-audit",

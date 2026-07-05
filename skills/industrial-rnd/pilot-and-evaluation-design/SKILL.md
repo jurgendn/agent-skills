@@ -81,6 +81,8 @@ Examples:
 - recommendation: uplift, conversion, churn, opt-out, fairness by segment;
 - LLM support: answer groundedness, escalation rate, handling time, human acceptance, policy violation rate.
 
+When the pilot pairs a metric with qualitative signals (interviews, adoption feedback, human review), design that combination *intentionally* rather than running two strands and stapling them together. `references/mixed-methods-integration.md` covers when mixing is worth it (methodological rationale, novel integrated insight), which design type fits (exploratory/explanatory sequential, convergent parallel, embedded), and the antipatterns to avoid (sample contamination, lost opportunity, integration failure) — grounded in Storey et al. (2025), arXiv:2404.06011.
+
 ### 5. Prevent invalid conclusions
 
 Check for:
