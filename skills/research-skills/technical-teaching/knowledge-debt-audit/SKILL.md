@@ -176,6 +176,12 @@ catch.
   Grounds the inversion.
 - **Cognitive offloading / Google effect** (Sparrow et al.) — outsourcing to an external
   store lowers internal retention. The literal mechanism of knowledge debt.
+- **Metacognition and uncertainty communication** — useful AI assistance must expose
+  what the user knows, guesses, and cannot yet regenerate; calibrated uncertainty is
+  part of repayment, not a cosmetic hedge.
+- **Feynman-style learning** — explaining a concept simply is useful only when paired
+  with adversarial probes for mechanisms, assumptions, and boundaries; fluent summary
+  alone is not evidence of ownership.
 
 # Hand-offs
 

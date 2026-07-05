@@ -1,7 +1,7 @@
 ---
 name: flow-learn-new-topic
 description: >-
-  Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use whenever the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or hands over a topic they have no prior grounding in. Each stage is verified with a graded easy-to-advanced exercise checkpoint (handed off to concept-exercise-generator) so the user can self-test whether they actually understood before moving on, rather than the orchestrator just asserting they did. This is a ROUTER: it sequences existing singleton skills, it does not teach directly. Use flow-deep-understanding instead when the user already knows the basics and wants rigorous mastery of ONE specific thing (a paper, a derivation, a single method). Use flow-idea-to-proof when the goal is to formalize a research idea into a claim and proof, not to learn an existing topic.
+  Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use when the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or gives a topic they have no grounding in. Routes through singleton skills with graded exercise checkpoints. Use flow-deep-understanding when the user already knows the basics and wants mastery of ONE specific thing; use flow-idea-to-proof to formalize the user's own research idea.
 ---
 
 # Learn a New Topic (Orchestrator)

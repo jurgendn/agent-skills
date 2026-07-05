@@ -40,6 +40,8 @@ Deprioritize: blog posts, Twitter threads, YouTube talks, review aggregators. Th
 
 **Search strategy.** Run multiple queries, not one — different terms surface different parts of the literature. For a method: search the method name, the problem it solves, the benchmark it's evaluated on, and the names of the most-cited authors. For a claim: search the claim directly plus potential counter-evidence ("X fails when", "limitations of X", "X replication"). Note which queries returned nothing useful — that absence is information.
 
+When the user is **entering a new area** rather than checking a narrow claim, use `references/research-immersion-strategy.md`. It covers exploratory vs. systematic review, disciplinary-bubble escape, survey/recommender/LLM pitfalls, and breadth-depth control for fast fields.
+
 **Following citation trails.** The most important paper in a chain is often not the most recent one. If five papers all cite Paper A as the source of a key result, go to Paper A and verify the result directly. Citation telephone — where Paper E's characterization of Paper A is subtly different from what Paper A actually says — is extremely common.
 
 ### 3. Read purposefully, not completely

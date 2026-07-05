@@ -36,6 +36,13 @@ Identify:
 
 If the user has not provided the prompt or word limit, ask for it or make assumptions explicit.
 
+When the essay is (or contains) a forward-looking **research plan** or a fellowship
+proposal, `references/proposal-and-research-plan-craft.md` covers proposal-specific
+craft: the research-statement-vs-plan distinction, the hourglass structure, the four
+highest-leverage parts (title / abstract / opening / conclusion), word-level
+discipline (kill "unique"/"I believe", avoid negativity bias), and the resubmission
+mindset. Grounded in Knapen et al. (2025), arXiv:2504.01645.
+
 ### 2. Build the research narrative
 
 A strong SOP usually answers:

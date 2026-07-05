@@ -1,7 +1,6 @@
 ---
 name: theorem-and-claim-audit
-description: Pressure-test mathematical arguments and ML paper claims. Use to find hidden assumptions, skipped proof steps, invalid generalization, weak empirical support, and overclaimed conclusions.
-when_to_use: Use for theorem sketches, proof outlines, derivations, ML paper claims, reviewer-mode critique, and whenever a result looks cleaner or stronger than expected.
+description: Pressure-test mathematical arguments and ML paper claims. Use for theorem sketches, proof outlines, derivations, ML paper claims, reviewer-mode critique, hidden assumptions, skipped proof steps, invalid generalization, weak empirical support, overclaimed conclusions, or whenever a result looks cleaner or stronger than expected.
 ---
 
 # Theorem and Claim Audit

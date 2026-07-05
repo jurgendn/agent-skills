@@ -1,7 +1,6 @@
 ---
 name: hypothesis-and-ablation-planner
-description: Design ablations that isolate causal mechanisms instead of producing decorative tables. Use to determine which component matters, why it matters, and whether alternative explanations remain plausible.
-when_to_use: Use during paper preparation, benchmark analysis, reviewer response, or whenever multiple mechanisms could explain the observed gain.
+description: Design ablations that isolate causal mechanisms instead of producing decorative tables. Use during paper preparation, benchmark analysis, reviewer response, or whenever multiple mechanisms could explain an observed gain and the user needs to determine which component matters, why it matters, and whether alternative explanations remain plausible.
 ---
 
 # Hypothesis and Ablation Planner

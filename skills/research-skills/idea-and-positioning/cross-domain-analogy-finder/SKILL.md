@@ -1,6 +1,7 @@
 ---
 name: cross-domain-analogy-finder
-description: Find a concept's structural twin in a distant field — to borrow a solution, or to check whether the idea already exists under another name. Use when stuck on a problem and wanting to widen the search ("has anyone solved this shape of problem", "find precedent in another field", "what field has this same structure", "I'm stuck, where else does this appear"), or when checking novelty before investing ("is my idea actually new", "has this been solved elsewhere", "am I reinventing something"). Two modes — OFFENSE borrows a portable solution from a far domain; DEFENSE checks whether your idea already exists. This is high-variance foraging: use it when genuinely stuck or vetting novelty, NOT as a daily driver. Grounds prior-art claims through literature-triangulation; hands the residual mismatch to gap-finder. Do NOT use for finding papers or precedent inside your own field or surveying an area (literature-triangulation), or stress-testing one chosen idea (research-idea-stress-test).
+description: >-
+  Find a concept's structural twin in a distant field — to borrow a solution, or to check whether the idea already exists under another name. Use when stuck on a problem and wanting to widen the search ("has anyone solved this shape of problem", "find precedent in another field", "what field has this same structure", "I'm stuck, where else does this appear"), or when checking novelty before investing ("is my idea actually new", "has this been solved elsewhere", "am I reinventing something"). Two modes — OFFENSE borrows a portable solution from a far domain; DEFENSE checks whether your idea already exists. This is high-variance foraging: use it when genuinely stuck or vetting novelty, NOT as a daily driver. Grounds prior-art claims through literature-triangulation; hands the residual mismatch to gap-finder. Do NOT use for finding papers or precedent inside your own field or surveying an area (literature-triangulation), or stress-testing one chosen idea (research-idea-stress-test).
 ---
 
 # Cross-Domain Analogy Finder
@@ -99,6 +100,12 @@ none of which say "spectral gap," all of which *are* it.
 Use the skeleton store (§5) as a retrieval prior. **The store proposes; it never
 verifies.** The moment a stored edge stands in for evidence, you launder a
 surface-match as real.
+
+For methodology inspiration retrieval (MIR-style search), treat prior methods as
+candidate solution patterns, not citations to paste. Prefer papers connected by
+methodological lineage or reusable operators over papers that merely share topical
+keywords. Then still run the four-way gate below: inspiration is a lead until a
+specific theorem, algorithm, bound, or proof technique transfers.
 
 ## 3. Classify each hit — the four-way gate
 

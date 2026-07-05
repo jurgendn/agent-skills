@@ -1,6 +1,7 @@
 ---
 name: peer-review-writer
-description: Write a peer review of someone else's paper for a conference or journal — structured summary, evidenced strengths and weaknesses, calibrated scores, and constructive questions. Use whenever the user is the REVIEWER: "I have to review this paper", "help me write a review for NeurIPS/ICML/ACL/a journal", "is this weakness worth rejecting over", "how do I phrase this criticism", "draft my review from these notes", "what score should I give", or they share a manuscript they were assigned. Also use for meta-reviews and emergency reviews. Do NOT use when the user is the AUTHOR: responding to reviews of their own paper is reviewer-response-strategist, pre-submission self-auditing is submission-readiness-audit, and mining a paper for research openings for their own work is gap-finder.
+description: >-
+  Write a peer review of someone else's paper for a conference or journal — structured summary, evidenced strengths and weaknesses, calibrated scores, and constructive questions. Use whenever the user is the REVIEWER: "I have to review this paper", "help me write a review for NeurIPS/ICML/ACL/a journal", "is this weakness worth rejecting over", "how do I phrase this criticism", "draft my review from these notes", "what score should I give", or they share a manuscript they were assigned. Also use for meta-reviews, emergency reviews, and for serving on a program committee or as area chair — "I'm on the PC for X", "how does bidding/COI work", "how do I manage subreviewers", "I'm an area chair, how do I run the discussion". Do NOT use when the user is the AUTHOR: responding to reviews of their own paper is reviewer-response-strategist, pre-submission self-auditing is submission-readiness-audit, and mining a paper for research openings for their own work is gap-finder.
 ---
 
 # Peer Review Writer
@@ -27,6 +28,8 @@ Ask (or infer from the prompt) before drafting: the venue and its review form (s
 ### 2. Read for the claim–evidence map
 
 Guide a two-pass read. Pass one (15 min): abstract, intro, figures, tables, conclusion — extract the paper's central claims and the contribution type (new method / new theory / new benchmark / new finding). Pass two: for each claim, locate the evidence offered and rate it: **supported / partially supported / unsupported / contradicted by the paper's own results**. This map is the skeleton of the entire review; every strength and weakness should trace back to a row in it.
+
+For early-career reviewers who need help calibrating stance, fairness, and what a real referee report should contain, use `references/early-career-referee-primer.md` (grounded in Ntampaka et al., 2022, arXiv:2205.14270). It is especially useful when the user is unsure whether they are being too harsh, too lenient, or too formulaic.
 
 ### 3. Assess along the four standard axes
 
@@ -71,7 +74,11 @@ weaknesses; state explicitly what rebuttal answer would raise it.]
 
 ### 6. Calibrate the score
 
-Anchor to the venue's scale semantics, not gut feeling: reserve the extremes; a sound-but-incremental paper is typically borderline, not reject; unsupported central claims cap the score regardless of polish. Cross-check consistency: the score must follow from the stated weaknesses — a review listing only minor issues cannot justify a reject, and confidence should reflect actual expertise overlap (it is fine, and better for the AC, to mark low confidence outside one's area).
+Anchor to the venue's scale semantics, not gut feeling: a sound-but-incremental paper is typically borderline, not reject; unsupported central claims cap the score regardless of polish. Cross-check consistency: the score must follow from the stated weaknesses — a review listing only minor issues cannot justify a reject, and confidence should reflect actual expertise overlap (it is fine, and better for the AC, to mark low confidence outside one's area).
+
+Two calibration facts from the PC side that reviewers routinely get wrong:
+- **The accept/reject border is not the middle score — it's usually "weak accept".** A merely-average score is a soft reject at a selective venue; a paper often needs at least one genuinely enthusiastic champion to get in. Don't mistake "I don't object" for "accept."
+- **Don't cluster around the mean — use the range.** Scores tend to bunch up; a clear strong or weak score is *more* useful to the AC than a hedge. If you love it or dislike it, say so decisively (you can revise after discussion). Judge the paper on whether its central contribution is worth the community's attention, not on flaw-count: a novel, useful idea can merit acceptance despite typos and sloppy references, while flawless execution of a boring result stays boring.
 
 Before finalizing, run the fairness pass: would you consider this review fair and useful if you received it on your own paper?
 
@@ -80,3 +87,4 @@ Before finalizing, run the fairness pass: would you consider this review fair an
 - **Emergency review (hours, not days):** compress to pass-one reading + claim–evidence map on the central claim only; say honestly in confidence/limitations what was not checked (appendix proofs, supplementary experiments).
 - **Meta-review / AC summary:** synthesize the reviews' points of agreement and disagreement, weigh them by evidence rather than by count or confidence scores, state the decision rationale in terms of the strongest surviving argument, and list what the camera-ready must fix.
 - **Rebuttal-phase update:** re-score against what the rebuttal actually resolved; acknowledge answered points explicitly rather than going silent or moving the goalposts to new weaknesses.
+- **Serving on a program committee (PC member / area chair):** when the user isn't writing a single review but is *responsible for a pile* of submissions — bidding, conflicts of interest, deciding what to review vs. delegate, managing subreviewers, driving discussion, and reaching decisions — use `references/pc-member-guide.md`. It covers the full PC timeline and mechanics (grounded in Dulek et al., 2021, arXiv:2105.02773). The per-review craft in the main workflow still applies to each paper the user reviews personally.

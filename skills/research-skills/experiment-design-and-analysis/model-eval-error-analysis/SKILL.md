@@ -1,12 +1,20 @@
 ---
 name: model-eval-error-analysis
-description: Evaluate a model rigorously and inspect where it fails. Use when benchmark numbers alone are insufficient and you need slices, failure categories, and explanations.
-when_to_use: Use after training, during comparison to baselines, for LLM/system evaluations, or when results look noisy or suspiciously clean.
+description: Evaluate a model rigorously and inspect where it fails. Use after training, during comparison to baselines, for LLM/system evaluations, noisy or suspiciously clean results, or whenever benchmark numbers alone are insufficient and the user needs slices, failure categories, and explanations.
 ---
 
 # Model Eval Error Analysis
 
 Do not stop at one headline metric.
+
+## Intake
+
+Collect:
+- task, dataset, split, metric, and baseline;
+- model outputs or failure examples if available;
+- aggregate numbers with seeds/uncertainty;
+- deployment or paper claim the evaluation must support;
+- known risky slices.
 
 ## Workflow
 

@@ -1,6 +1,6 @@
 ---
 name: related-work-writer
-description: Write or revise a Related Work section from a source-grounded literature map, annotated bibliography, paper list, or draft. Use this skill whenever the user asks to write related work, position a paper against prior work, organize citations into themes, explain how their work differs from baselines or prior methods, avoid citation laundry lists, or calibrate novelty claims. This skill assumes the user has sources or a literature map; if they need to discover and verify the literature first, use literature-triangulation before this skill.
+description: Write or revise a Related Work section from a source-grounded literature map, annotated bibliography, paper list, or draft. Use this skill whenever the user asks to write related work inside an original research paper, position a paper against prior work, organize citations into themes, explain how their work differs from baselines or prior methods, avoid citation laundry lists, or calibrate novelty claims. This skill assumes the user has sources or a literature map; if they need to discover and verify the literature first, use literature-triangulation before this skill. If the user wants to write a standalone survey, tutorial, review, or perspective paper whose main contribution is the synthesis itself, use survey-paper-writer instead.
 ---
 
 # Related Work Writer
@@ -18,6 +18,7 @@ Related work is not a bibliography in paragraph form. It is the part of the pape
 ## Do not use this when
 
 - The literature has not been gathered or checked. Use `literature-triangulation` first.
+- The user is writing a standalone survey, tutorial, review, or perspective paper. Use `survey-paper-writer`.
 - The user needs the whole paper argument. Use `paper-argument-planner`.
 - The user only needs BibTeX formatting or citation cleanup.
 

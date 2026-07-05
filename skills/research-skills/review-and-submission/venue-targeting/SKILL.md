@@ -150,7 +150,8 @@ After a rejection, before resubmitting:
 1. **Read the reviews.** Identify the strongest objection — not the harshest, the most substantive.
 2. **Decide: fix or reframe.** Some papers need more experiments; others need a different framing for a different community.
 3. **Consider venue change.** If three reviewers at NeurIPS thought the paper "lacks theoretical depth," consider ICML with a stronger theory framing, or JMLR for a long-form treatment.
-4. **Never bare-resubmit.** A paper that goes in unchanged will fail for the same reasons.
+4. **Reframe deliberately when the community changes** — don't just fix the technical objections. Writing norms (framing, jargon, quantitative-evidence density, canonical citations, structure) vary by community, and a paper that reads as an outsider's gets discounted for "fit" reasons no reviewer states outright. When redirecting to a different community, work through `references/cross-community-writing-norms.md`: rewrite the **introduction first** (it carries the framing and is what interdisciplinary authors nearly always rewrite), then retune jargon, evidence density, and canonical citations to the target. Don't trust a one-shot LLM "reframe for venue X" pass — LLMs homogenize writing across communities rather than adapting to the target; steer with the checklist and do a human fit pass.
+5. **Never bare-resubmit.** A paper that goes in unchanged will fail for the same reasons.
 
 Common resubmission paths:
 - Rejected from NeurIPS → revise → ICLR (same cycle if timing allows)
