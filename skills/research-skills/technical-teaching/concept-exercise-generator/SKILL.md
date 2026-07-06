@@ -30,7 +30,7 @@ If the source material is missing, ask for it or pull it from the upstream teach
 
 ## The Difficulty Ladder
 
-Four tiers, easy → advanced. Full detail, verbs, and per-domain templates are in `references/difficulty-ladder.md` and `references/exercise-templates.md`. The short form:
+Four tiers, easy → advanced. Full detail, verbs, and per-domain templates are in `references/difficulty-ladder.md` and `references/exercise-templates.md`. For multiple-choice distractors and intuitive-trap problems, use `references/assessment-design-principles.md`. The short form:
 
 | Tier | Name | Tests | Example verbs |
 |------|------|-------|---------------|
@@ -45,7 +45,7 @@ A learner who only clears Tiers 1–2 can recite and run the method but does not
 
 1. **Scope** — confirm concept(s), source material, level, and budget (above).
 2. **Pick the spread** — choose how many problems per tier from the budget and depth target. Defaults in `references/difficulty-ladder.md`. Center the ladder on the learner's level but always reach one tier above it.
-3. **Write the problems** — one concept per problem, unambiguous, answerable from the source material. Tag each with `[Tier N · concept]`. Use the per-domain templates (conceptual, mathematical/derivation, coding, analysis/critique) in `references/exercise-templates.md`.
+3. **Write the problems** — one concept per problem, unambiguous, answerable from the source material. Tag each with `[Tier N · concept]`. Use the per-domain templates (conceptual, mathematical/derivation, coding, analysis/critique) in `references/exercise-templates.md`. If you use multiple choice, every distractor must encode a known misconception and diagnose which wrong model the learner holds; never use random wrong answers. When the topic has an attractive intuitive-but-wrong shortcut, include one CRT-style verification problem that forces deliberate checking.
 4. **Write the solutions separately** — for each problem: the answer, the worked reasoning, a **self-check rubric** ("you've got it if…", "common wrong turns"), and a **revisit pointer** naming what to restudy on a miss. Format in `references/solution-and-rubric-format.md`.
 5. **Emit two files** — never interleave problems and solutions:
    - `exercises.md` — problems only, numbered, tier-tagged, with an instruction header.

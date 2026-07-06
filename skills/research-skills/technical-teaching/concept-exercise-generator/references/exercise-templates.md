@@ -9,12 +9,16 @@ Fill these in with the learner's actual source material. Each template lists sha
 - **T3:** "Why does ___ exist instead of just using ___?" / "Under what condition does ___ stop working, and why?" / "Compare ___ and ___: what does each buy you?"
 - **T4:** "Describe a real situation where ___ would mislead you, and what you'd use instead." / "Critique this claim about ___." / "Extend ___ to handle case ___."
 
+For multiple choice, use only misconception-coded distractors. Each wrong option must diagnose a plausible wrong mental model; if you cannot name the misconception, do not use the option.
+
 ## Mathematical / derivation topics
 
 - **T1:** "State the definition / theorem / identity." / "Name the conditions under which it holds."
 - **T2:** "Evaluate ___ for these specific values." / "Apply the formula to this case and simplify."
 - **T3:** "Which hypothesis of the theorem fails for this input, and what breaks?" / "Why is the bound this and not tighter?" / "Explain the role of term ___ in the expression."
 - **T4:** "Derive ___ from first principles." / "Construct a counterexample showing the assumption is necessary." / "Generalize the result to ___ and state where the proof changes."
+
+When the topic has a tempting shortcut, add a CRT-style problem: make the intuitive answer attractive, then require a verification step that exposes the error.
 
 ## Coding / implementation topics
 

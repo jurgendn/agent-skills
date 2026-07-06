@@ -395,13 +395,13 @@
       "name": "concept-exercise-generator",
       "path": "skills/research-skills/technical-teaching/concept-exercise-generator",
       "category": "research-skills/technical-teaching",
-      "description": "Generate a graded easy-to-advanced exercise set with separated solutions to verify understanding of a topic, method, derivation, or paper."
+      "description": "Generate a graded easy-to-advanced exercise set with separated solutions to verify understanding of a topic, method, derivation, or paper; multiple-choice items use misconception-coded distractors and intuitive-trap items force deliberate verification."
     },
     {
       "name": "knowledge-debt-audit",
       "path": "skills/research-skills/technical-teaching/knowledge-debt-audit",
       "category": "research-skills/technical-teaching",
-      "description": "Detect AI-produced results the user cannot regenerate unaided and probe understanding of the load-bearing step before they build on it, calling toxic knowledge debt early."
+      "description": "Detect AI-produced results the user cannot regenerate unaided and run one no-lookback metacognitive probe of the load-bearing step before they build on it, using justification, anticipation, or violation probes to call toxic knowledge debt early."
     },
     {
       "name": "gap-finder",
