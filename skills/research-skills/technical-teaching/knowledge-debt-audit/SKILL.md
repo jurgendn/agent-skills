@@ -66,30 +66,34 @@ build Y on it" where X is load-bearing and was produced by the assistant.
 
 ---
 
-# The four probe angles
+# Probe construction
 
 Mimicry is *good* at restating. Asking someone to explain a concept back catches
 nothing — it rewards the exact failure mode. Probe from the angles fluency cannot
 fake, and probe the **load-bearing step only**: one sharp, generative, no-lookback
-question. Pick the angle that fits the material.
+question.
+
+Before writing the probe, read `references/metacognition-foundations.md` and use its
+rate → generate → re-rate loop, no-lookback rule, three probe types, and grading rule.
+Never issue a generic probe ("explain your understanding of X"). Every probe must be
+one of the three taxonomy types — justification, anticipation, or violation — targeted
+at the load-bearing step.
+
+Keep the ONE-probe constraint. Do not turn the gate into an interrogation; the point
+is one sharp, opportunity-cost-aware circuit breaker, not a quiz session.
 
 Because the borrows here are almost always *research* borrows, prefer the
 research-native form of each angle — it is sharper, and (see grading) it gives the
 grader something checkable instead of prose to judge.
 
-1. **Transfer.** Change the surface, keep the structure. Research form: "does this
-   theorem survive the assumption your setting actually violates?" Mimicry is glued
-   to the original surface; understanding is portable.
-2. **The load-bearing why.** Not "what is it" but "*why* must this step hold — what
-   breaks without it?" Understanding knows which step is structural and which is
+1. **Justification.** Not "what is it" but "*why* must this step follow from the
+   previous one?" Understanding knows which step is structural and which is
    incidental.
-3. **The boundary.** "When does this *fail*?" Research form: "name the regime where
-   this published result stops holding." (This is the gap-finder move, pointed
-   inward.) Mimicry has no edges — it learned a flat fact, not a fenced result.
-4. **The perturbation.** "I will state it slightly wrong — catch it." Flip an
-   inequality, swap a quantifier, normalize by degree instead of √degree — the exact
-   bug class that silently invalidates a GNN result. Understanding has an
-   error-detector; mimicry nods along.
+2. **Anticipation.** "Without looking, what must the next step accomplish?" Mimicry
+   can recite the next line; understanding can name the job that line must do.
+3. **Violation.** "If this assumption is dropped, which step fails first?" Prefer
+   this for proofs and derivations; it tests dependency structure, not surface
+   sequence.
 
 **Demand a checkable answer, not a fluent one — this closes the grader's own
 illusion.** An LLM grades by fluency and is structurally prone to passing an answer
@@ -144,7 +148,7 @@ For a reactive firing:
 
 1. **The borrow** — the specific result being built on, and that it came from the AI.
 2. **Classification** — strategic (→ stay silent, done) or toxic.
-3. **Probe** — the one load-bearing question, angle chosen.
+3. **Probe** — the one load-bearing question, probe type chosen.
 4. **Verdict** — pass / fail / understands-differently, graded honestly.
 5. **Repayment** (if toxic + fail) — the concrete action: re-derive step N unaided,
    or the inversion. Route by repayment type: targeted practice →
@@ -155,7 +159,7 @@ For a reactive firing:
 For a periodic audit: the ledger as a statement — strategic carried, toxic repaid,
 toxic outstanding — newest first, with the outstanding items flagged for repayment.
 
-Keep it to two buckets, four probes, one ledger. No severity scores, no ornate
+Keep it to two buckets, three probe types, one ledger. No severity scores, no ornate
 rubric. The moment this skill gets elaborate it becomes the brainrot it exists to
 catch.
 
@@ -165,6 +169,7 @@ catch.
 
 - `debt-ledger.yaml` — the accreting account (runtime state; powers the periodic mode).
 - `debt-taxonomy.md` — worked strategic-vs-toxic examples; the classifier's ground truth.
+- `references/metacognition-foundations.md` — decision rules for constructing and grading the single metacognitive probe.
 
 # References (ground via literature-triangulation — do NOT assert from memory)
 

@@ -92,8 +92,8 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 ### Technical teaching
 
 - `research-skills/technical-teaching/professor-mentor-technical-teaching` — explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment.
-- `research-skills/technical-teaching/concept-exercise-generator` — generate a graded easy-to-advanced exercise set with separated solutions to verify understanding.
-- `research-skills/technical-teaching/knowledge-debt-audit` — at the moment of building on an AI-produced result, probe whether the user actually understands the load-bearing step, and call toxic knowledge debt before it compounds.
+- `research-skills/technical-teaching/concept-exercise-generator` — generate a graded easy-to-advanced exercise set with separated solutions to verify understanding, using misconception-coded distractors and intuitive-trap verification items when appropriate.
+- `research-skills/technical-teaching/knowledge-debt-audit` — at the moment of building on an AI-produced result, run one no-lookback justification, anticipation, or violation probe on the load-bearing step, and call toxic knowledge debt before it compounds.
 
 ### Paper writing
 
