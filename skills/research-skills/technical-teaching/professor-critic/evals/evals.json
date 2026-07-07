@@ -1,0 +1,29 @@
+{
+  "skill_name": "professor-critic",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's the results paragraph from my DIAL EDA section. My co-author Ngoc Chi Le's name goes on this paper and she's strict about overclaiming — read it the way she would and be brutal, I'd rather you reject it now than have her do it. [paste paragraph]. The bar is: would she sign off on it as-is, or send it back?",
+      "expected_output": "Refuses to grade blind only if reader/bar were missing; here reader (co-author Ngoc Chi Le) and bar (sign-off vs send-back) are given, so it proceeds. Verdict first (ACCEPT/MAJOR REVISION/REJECT as the co-author). FATAL/MAJOR items each point to a specific overclaim or unsupported line and say how she'd see it. Minors capped at 3. Blames the paragraph not the author. Ends with the one fix that flips the verdict.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Cold email to Prof. Wei Jin about a PhD spot. Read it as a busy professor triaging a full inbox before lunch — will they actually reply, or delete it? Don't be nice. [paste email]",
+      "expected_output": "Proceeds (reader = busy professor triaging inbox; bar = reply vs delete). Verdict first as that reader. FATAL = anything that gets it deleted (generic, too long, no specific fit, a bad ask). Every FATAL/MAJOR checkable and tied to how the triaging reader sees it. Harshness calibrated to a low-patience reader. One highest-leverage fix.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Can you check this proof step from my RWOT-DCD draft? Ha Duong is going to read it at the whiteboard and stop me the second a line doesn't follow. Here's the step. Tell me if it holds.",
+      "expected_output": "Proceeds (reader = Ha Duong at whiteboard; bar = does the line follow). Verdict first. FATAL if a step doesn't follow, tied to the exact line. Distinguishes wrong from merely-different. If a step may have a counterexample, hands off to theory-counterexample-hunter. Does not invent nitpicks to look rigorous.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I've got a rough half-page of my intro, still figuring out the argument. Can you help me tear it apart?",
+      "expected_output": "Recognizes this as mid-draft / thinking-stage work AND that no named reader or acceptance bar was given. Does NOT return a REJECT verdict. Either asks for the named reader and bar, or declines the verdict and offers shaping help / points to a co-solver or teaching route instead.",
+      "files": []
+    }
+  ]
+}

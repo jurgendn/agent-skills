@@ -117,7 +117,7 @@ What this means for the paper's claim, and what to run next.
 | `drafts/abstract.md`, `intro.md` | `abstract-and-intro-writer` for isolated abstract/intro work |
 | `drafts/method.md` | `method-section-writer` |
 | `drafts/results.md` | `results-writeup` |
-| `submission/` | `venue-targeting`, `submission-readiness-audit`, `reviewer-response-strategist` |
+| `submission/` | `venue-targeting`, `submission-readiness-audit`, `professor-critic` (adversarial Reviewer-2 pass on the draft), `reviewer-response-strategist` |
 | artifact release | `artifact-release-packager`, `reproducibility-audit` |
 | the code itself | `research-codebase` (separate repo) |
 
@@ -140,7 +140,9 @@ comes next.
   the matching writer skill from the routing table as the writer stage. Never
   draft a section before checking `ideas/` for the agreed spine.
 - **Before submission:** run `submission-readiness-audit` and `citation-auditor`;
-  record the venue + checklist state in `submission/`.
+  then run an adversarial reviewer pass with `professor-critic` (reader: "Reviewer 2
+  at the target venue"; bar: accept/major-revision/reject) and resolve any FATAL
+  before submitting. Record the venue + checklist state in `submission/`.
 
 ## Rules
 
