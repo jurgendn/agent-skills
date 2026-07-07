@@ -326,6 +326,12 @@
       "description": "Draft or revise the abstract and introduction of a research paper."
     },
     {
+      "name": "paper-writer",
+      "path": "skills/research-skills/paper-writing/paper-writer",
+      "category": "research-skills/paper-writing",
+      "description": "Guide the writing phase of a research paper from contribution sentence to draft handoff with phase gates and evidence flags."
+    },
+    {
       "name": "method-section-writer",
       "path": "skills/research-skills/paper-writing/method-section-writer",
       "category": "research-skills/paper-writing",
