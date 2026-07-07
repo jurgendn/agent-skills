@@ -1,6 +1,20 @@
 ---
 name: professor-critic
-description: Critique a FINISHED artifact the way the specific person who will judge it actually would — a strict-professor teardown with a verdict, not encouragement. Use when the user has something done and wants to know if it survives contact with its real reader: "tear this apart", "would a reviewer reject this", "be brutal, don't be nice", "how will my advisor read this proof step", "will a professor reply to this cold email", "grade this like an admissions committee", "poke holes in my abstract". Requires a named reader and an acceptance bar; refuses to grade blind. Distinct from peer-review-writer (there the user is the REVIEWER of someone ELSE's paper; here it is the user's OWN artifact); from submission-readiness-audit (a paper-only, whole-paper author checklist, not a named-reader verdict on any artifact); and from knowledge-debt-audit (which probes the user's UNDERSTANDING, not the artifact). Do NOT use on mid-draft or thinking-stage work — a REJECT verdict on something unfinished only demoralizes.
+description: >-
+  Critique a FINISHED artifact the way the specific person who will judge it
+  actually would — a strict-professor teardown with a verdict, not
+  encouragement. Use when the user has something done and wants to know if it
+  survives contact with its real reader: "tear this apart", "would a reviewer
+  reject this", "be brutal, don't be nice", "how will my advisor read this proof
+  step", "will a professor reply to this cold email", "grade this like an
+  admissions committee", "poke holes in my abstract". Requires a named reader
+  and an acceptance bar; refuses to grade blind. Distinct from
+  peer-review-writer (there the user is the REVIEWER of someone ELSE's paper;
+  here it is the user's OWN artifact); from submission-readiness-audit (a
+  paper-only, whole-paper author checklist, not a named-reader verdict on any
+  artifact); and from knowledge-debt-audit (which probes the user's
+  UNDERSTANDING, not the artifact). Do NOT use on mid-draft or thinking-stage
+  work — a REJECT verdict on something unfinished only demoralizes.
 ---
 
 # Professor Critic
