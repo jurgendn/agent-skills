@@ -42,6 +42,22 @@
         "Provides constructive interim help: a reading checklist, claim-evidence questions to answer, or a review scaffold",
         "No final recommendation or score is assigned to a paper that has not been read"
       ]
+    },
+    {
+      "id": 3,
+      "name": "openreview-era-review-calibration",
+      "prompt": "I'm reviewing an ICLR paper on an LLM benchmark. My rough notes: the benchmark could be useful, but the novelty section only says prior work is 'limited' without naming the closest benchmark; the evaluation uses only accuracy even though the paper claims robustness and calibration; no data license is mentioned; the authors included code but no seeds or generation configs; I used an LLM locally to help organize my notes. Help me turn this into a review with questions and a score/confidence.",
+      "expected_output": "Uses OpenReview-era reviewer norms: depersonalized and constructive tone, specific novelty/baseline questions, claim-metric mismatch, reproducibility/data attribution/ethics checks, LLM-use responsibility/disclosure caution, score and confidence tied to checked evidence.",
+      "files": [],
+      "assertions": [
+        "Review language critiques the paper/work rather than author intent or competence",
+        "Novelty concern asks for named closest prior benchmarks rather than making a vague not-novel claim",
+        "Flags the mismatch between robustness/calibration claims and accuracy-only evaluation",
+        "Treats missing seeds/configs and data license as reviewer-visible reproducibility/data-attribution risks",
+        "Mentions that LLM-assisted review text remains the reviewer's responsibility and should be disclosed if the venue asks",
+        "Questions are actionable and tied to concerns that could affect the score",
+        "Score and confidence are calibrated to the evidence checked, not just the number of listed issues"
+      ]
     }
   ]
 }

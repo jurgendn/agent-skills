@@ -62,7 +62,7 @@ figures/          # figure sources + caption drafts (the visual evidence)
 drafts/           # section drafts: abstract, intro, method, results, discussion
 data/             # POINTERS to datasets (paths, URLs, licences) — not raw data
 submission/       # venue choice, checklist, cover letter, rebuttal
-references/       # venue-conventions, notation-and-citation-style, repro-checklist
+references/       # venue-conventions, reviewer-risk-checklist, notation/citation, repro-checklist
 agents/           # research pipeline: researcher → reviewer → verifier → writer
 _dashboard/       # experiment-index, draft-status
 ```
@@ -140,9 +140,11 @@ comes next.
   the matching writer skill from the routing table as the writer stage. Never
   draft a section before checking `ideas/` for the agreed spine.
 - **Before submission:** run `submission-readiness-audit` and `citation-auditor`;
-  then run an adversarial reviewer pass with `professor-critic` (reader: "Reviewer 2
-  at the target venue"; bar: accept/major-revision/reject) and resolve any FATAL
-  before submitting. Record the venue + checklist state in `submission/`.
+  use `references/reviewer-risk-checklist.md` to catch OpenReview-era reviewer
+  objections; then run an adversarial reviewer pass with `professor-critic`
+  (reader: "Reviewer 2 at the target venue"; bar: accept/major-revision/reject)
+  and resolve any FATAL before submitting. Record the venue + checklist state in
+  `submission/`.
 
 ## Rules
 
@@ -155,6 +157,10 @@ comes next.
   across all drafts; don't let `\citep`/`\citet` or symbol use drift per section.
 - **Reproducibility is tracked as you go**, not bolted on at the end — keep
   `references/reproducibility-checklist.md` current per experiment.
+- **Reviewer risk is tracked before submission.** Use
+  `references/reviewer-risk-checklist.md` to check claim support, novelty,
+  baselines, reproducibility, limitations/ethics, data attribution, and rebuttal
+  readiness before the final audit.
 - **Every claim is source-grounded and uncertainty is marked** (see *Operating
   contract*): no unsourced factual claim, and inference is tagged `(inference)` /
   `#unverified` rather than stated as fact.
