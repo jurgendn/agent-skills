@@ -49,6 +49,7 @@ Convert interests into searchable research themes; shortlist programs and identi
 
 ### Stage 4 — Write the SOP → `apply-sop-writer`
 Draft/critique the Statement of Purpose, connecting prior work → future direction → program fit, using the stage-3 fit notes per school.
+*Optional reader's-eye pass:* once a draft exists, hand it to `professor-critic` with the named reader "an admissions reader skimming 200 SOPs" and the bar "shortlist / discard" — a verdict the author-side drafter doesn't give.
 **Gate:** an SOP whose research narrative and program-fit paragraphs are grounded in the fit map, not generic.
 
 ### Stage 5 — Plan recommenders → `apply-recommendation-letter-strategist`
@@ -57,6 +58,7 @@ Decide who should write, what each letter should emphasize, and assemble the rec
 
 ### Stage 6 — Professor outreach → `apply-cold-email-drafter`
 Where appropriate, draft concise cold emails to prospective advisors, converting stage-3 fit notes into specific, non-generic outreach.
+*Optional reader's-eye pass:* before sending, hand the email to `professor-critic` with the named reader "a busy PI triaging a full inbox" and the bar "reply / delete" — it predicts whether the email actually earns a response.
 **Gate:** outreach emails drafted and tied to real fit evidence (skip if the programs don't expect pre-application contact).
 
 ### Stage 7 — Audit the package → `apply-package-auditor`

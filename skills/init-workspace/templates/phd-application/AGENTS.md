@@ -78,8 +78,8 @@ folders so a school's materials sort together.
 | `profile/` | `apply-profile-reader` — run this **first** to build the reusable structured profile |
 | `cv/` | `apply-cv-builder` |
 | `fit-notes/` | `apply-program-fit-mapper`, `apply-research-direction-mapper` |
-| `sop/` | `apply-sop-writer` |
-| `emails/` | `apply-cold-email-drafter` |
+| `sop/` | `apply-sop-writer`; then `professor-critic` for a reader's-eye verdict (reader: "admissions reader skimming 200 SOPs"; bar: shortlist/discard) |
+| `emails/` | `apply-cold-email-drafter`; then `professor-critic` before sending (reader: "busy PI triaging a full inbox"; bar: reply/delete) |
 | `recommenders/` | `apply-recommendation-letter-strategist` |
 | pre-submission (coherence) | `apply-package-auditor` |
 | scoring / scholarship / eligibility | `apply-dossier-evaluator` |

@@ -410,6 +410,12 @@
       "description": "Detect AI-produced results the user cannot regenerate unaided and run one no-lookback metacognitive probe of the load-bearing step before they build on it, using justification, anticipation, or violation probes to call toxic knowledge debt early."
     },
     {
+      "name": "professor-critic",
+      "path": "skills/research-skills/technical-teaching/professor-critic",
+      "category": "research-skills/technical-teaching",
+      "description": "Critique a finished artifact the way its specific named reader would, returning a verdict-first strict-professor teardown with a FATAL/MAJOR/MINOR severity ladder rather than encouragement. Requires a named reader and acceptance bar and refuses to grade blind or to judge mid-draft work. Distinct from peer-review-writer (user reviews someone else's paper), submission-readiness-audit (paper-only author checklist), and knowledge-debt-audit (probes the user's understanding, not the artifact)."
+    },
+    {
       "name": "gap-finder",
       "path": "skills/research-skills/theory-and-claims/gap-finder",
       "category": "research-skills/theory-and-claims",

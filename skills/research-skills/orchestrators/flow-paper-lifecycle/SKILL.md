@@ -75,9 +75,9 @@ Use `paper-writer` as the writing-phase coach: structure the full draft, enforce
 Verify references exist, claims match sources, nothing is hallucinated or misattributed.
 **Gate:** bibliography and inline citations are verified.
 
-### Stage 12 — Submission readiness → `submission-readiness-audit`
-Check completeness, formatting, claims-vs-evidence, reproducibility statements against venue requirements.
-**Gate:** the draft passes a pre-submission audit.
+### Stage 12 — Submission readiness → `submission-readiness-audit` (+ `professor-critic`)
+Check completeness, formatting, claims-vs-evidence, reproducibility statements against venue requirements. Then run the *adversarial* pass the checklist can't do: hand the draft to `professor-critic` with the named reader "Reviewer 2 at the target venue who works on the competing method" and the bar "accept / major-revision / reject" — a verdict-first teardown that surfaces the FATAL objection *before* the real reviewer does. (`submission-readiness-audit` checks the paper against requirements; `professor-critic` simulates the hostile reader. Not `peer-review-writer` — that is for reviewing *others'* papers.)
+**Gate:** the draft passes the pre-submission audit **and** survives an adversarial reviewer pass with no unaddressed FATAL.
 
 ### Stage 13 — Target a venue → `venue-targeting`
 Match the paper to a venue and tune framing/scope to its norms (can also inform earlier stages if run sooner).
