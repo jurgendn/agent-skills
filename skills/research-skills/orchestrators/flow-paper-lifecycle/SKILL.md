@@ -76,7 +76,7 @@ Verify references exist, claims match sources, nothing is hallucinated or misatt
 **Gate:** bibliography and inline citations are verified.
 
 ### Stage 12 — Submission readiness → `submission-readiness-audit` (+ `professor-critic`)
-Check completeness, formatting, claims-vs-evidence, reproducibility statements against venue requirements. Then run the *adversarial* pass the checklist can't do: hand the draft to `professor-critic` with the named reader "Reviewer 2 at the target venue who works on the competing method" and the bar "accept / major-revision / reject" — a verdict-first teardown that surfaces the FATAL objection *before* the real reviewer does. (`submission-readiness-audit` checks the paper against requirements; `professor-critic` simulates the hostile reader. Not `peer-review-writer` — that is for reviewing *others'* papers.)
+Check completeness, formatting, claims-vs-evidence, reproducibility statements against venue requirements. For OpenReview-era ML/NLP/CV/AI venues, make the audit explicitly cover reviewer-visible risks: unsupported claims, vague novelty, missing named baselines, reproducibility gaps, limitations/ethics issues, data attribution, and citation reliability. Then run the *adversarial* pass the checklist can't do: hand the draft to `professor-critic` with the named reader "Reviewer 2 at the target venue who works on the competing method" and the bar "accept / major-revision / reject" — a verdict-first teardown that surfaces the FATAL objection *before* the real reviewer does. (`submission-readiness-audit` checks the paper against requirements; `professor-critic` simulates the hostile reader. Not `peer-review-writer` — that is for reviewing *others'* papers.)
 **Gate:** the draft passes the pre-submission audit **and** survives an adversarial reviewer pass with no unaddressed FATAL.
 
 ### Stage 13 — Target a venue → `venue-targeting`
@@ -84,7 +84,7 @@ Match the paper to a venue and tune framing/scope to its norms (can also inform 
 **Gate:** a target venue chosen and the paper framed for it.
 
 ### Stage 14 — Rebuttal → `reviewer-response-strategist`
-After reviews, plan the response strategy and any additional experiments.
+After reviews, plan the response strategy and any additional experiments. For OpenReview-style discussion periods, answer the load-bearing concerns, acknowledge resolved points, update claims or experiments when evidence changes, and avoid moving the goalposts.
 **Gate:** a response plan addressing each reviewer's load-bearing concern.
 
 ### Stage 15 — Release artifacts → `artifact-release-packager` (+ `reproducibility-audit`)
@@ -98,4 +98,5 @@ Decide what to release and package it; audit that results actually reproduce.
 - **Hard gate before stage 10.** No section-writing until the argument/spine (stage 9) is stable — drafting on an unstable contribution wastes the most time.
 - **Loop backward freely.** Weak results (7) can send the project back to design (4) or even reframe (2). Going backward is normal, not failure.
 - **Venue can move earlier.** If the deadline is fixed, run stage 13 up front so its norms shape scope and baselines.
+- **Reviewing someone else's paper is a different route.** If the user is acting as a reviewer, hand off to `peer-review-writer`; for OpenReview-era venues it should use `references/openreview-era-reviewing.md`.
 - **Stop at the user's goal.** Not every project needs stages 13–15 in one pass.

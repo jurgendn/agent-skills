@@ -31,6 +31,8 @@ Guide a two-pass read. Pass one (15 min): abstract, intro, figures, tables, conc
 
 For early-career reviewers who need help calibrating stance, fairness, and what a real referee report should contain, use `references/early-career-referee-primer.md` (grounded in Ntampaka et al., 2022, arXiv:2205.14270). It is especially useful when the user is unsure whether they are being too harsh, too lenient, or too formulaic.
 
+For OpenReview-era ML/NLP/CV/AI venues such as ICLR, NeurIPS, CVPR, AAAI, ACL/ARR, or ICML-like conferences, use `references/openreview-era-reviewing.md` to calibrate review tone, specificity, LLM/confidentiality policy, ethics/limitations checks, rebuttal questions, and score/confidence behavior. Always check the live venue guide when the user names a current venue.
+
 ### 3. Assess along the four standard axes
 
 - **Soundness:** do the methods/proofs/experiments actually support the claims? Check the classics: missing or weak baselines, no variance/seeds, test-set decisions, claims broader than the evidence (tested on 3 datasets, claimed "general"), proofs with unstated assumptions.

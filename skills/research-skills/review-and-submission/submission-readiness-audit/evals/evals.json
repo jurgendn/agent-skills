@@ -18,6 +18,12 @@
       "prompt": "Act as a final pre-submit reviewer for an anonymous ML conference paper. What categories of issues should I check if I can only spend two hours?",
       "expected_output": "A prioritized final checklist focused on blockers and major preventable reviewer objections.",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We're submitting to NeurIPS/ICLR-style review. Pre-submit audit from these notes: abstract says 'robust and calibrated across domains'; experiments report only average accuracy on two in-domain datasets; related work does not compare to the closest benchmark paper; code is linked but no seeds, configs, or data license are documented; limitations and ethics sections are placeholders. What should block submission?",
+      "expected_output": "An OpenReview-era reviewer-risk audit that prioritizes unsupported robustness/calibration claims, vague novelty/closest-prior-work gap, missing reproducibility details, data/license attribution, and empty limitations/ethics as blockers or major issues with concrete fixes.",
+      "files": []
     }
   ]
 }

@@ -36,6 +36,8 @@ Record:
 
 If the venue is unknown, run a general research-paper audit and mark venue-specific items as unknown.
 
+For ML/NLP/CV/AI submissions, add an OpenReview-era reviewer-risk pass: check for the objections reviewers are explicitly asked to surface at venues such as ICLR, NeurIPS, CVPR, AAAI, and ACL/ARR. In particular, audit unsupported central claims, vague novelty, unnamed missing baselines, weak reproducibility, missing limitations/ethics discussion, data/code/model attribution gaps, hallucinated or misattributed citations, and questions the authors would struggle to answer during rebuttal.
+
 ### 2. Audit claims against evidence
 
 For abstract, introduction, results, discussion, and conclusion:
