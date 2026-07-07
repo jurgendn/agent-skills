@@ -97,6 +97,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 ### Paper writing
 
+- `research-skills/paper-writing/paper-writer` — guide the writing phase of a research paper from contribution sentence to draft handoff with phase gates, evidence flags, math-prose hygiene, and venue logistics.
 - `research-skills/paper-writing/paper-argument-planner` — plan the central thesis, contribution framing, and claim-to-evidence spine.
 - `research-skills/paper-writing/abstract-and-intro-writer` — draft or revise the abstract and introduction as a matched pair.
 - `research-skills/paper-writing/method-section-writer` — draft or revise the method section with consistent notation, motivation-first structure, and correct level of detail.

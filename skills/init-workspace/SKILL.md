@@ -33,7 +33,7 @@ workspace/vault/project for …".
 |---|---|---|
 | `learn-a-topic` | Breadth-first onboarding into an unfamiliar area | `flow-learn-new-topic` |
 | `ielts` | IELTS Writing practice loop (attempts → feedback → progress) | `ielts-learning-planner` |
-| `paper` | One research paper, idea → submission → artifact | `paper-argument-planner` |
+| `paper` | One research paper, idea → submission → artifact | `flow-paper-lifecycle` |
 | `phd-application` | A full PhD/research application cycle | `flow-phd-application` |
 | `talk` | A talk/presentation, narrative → slides | `research-talk-planner` |
 | `theory` | A theory/proof project, claim → proof → stress-test | `flow-idea-to-proof` |

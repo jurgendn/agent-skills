@@ -113,7 +113,8 @@ What this means for the paper's claim, and what to run next.
 | `related-work/` | `literature-triangulation` (map) → `related-work-writer` (prose); `citation-auditor` to verify |
 | `experiments/` | `experiment-design`, `benchmark-and-baseline-selector`, `hypothesis-and-ablation-planner`, `statistical-testing-guide`, `model-eval-error-analysis` |
 | `figures/` | `figure-table-planner` |
-| `drafts/abstract.md`, `intro.md` | `abstract-and-intro-writer` |
+| `drafts/` full-paper drafting | `paper-writer` (coordinates the writing phase and delegates section specialists) |
+| `drafts/abstract.md`, `intro.md` | `abstract-and-intro-writer` for isolated abstract/intro work |
 | `drafts/method.md` | `method-section-writer` |
 | `drafts/results.md` | `results-writeup` |
 | `submission/` | `venue-targeting`, `submission-readiness-audit`, `reviewer-response-strategist` |
@@ -128,7 +129,12 @@ comes next.
 - **Given a new result:** create `experiments/exp-{NNN}-…md`, fill the
   frontmatter, write the *Reading* tying it back to the paper's claim, and
   update `_dashboard/experiment-index.md`.
-- **Asked to draft/revise a section:** run the four-stage pipeline from the
+- **Asked to draft/revise the paper or multiple sections:** run the four-stage
+  pipeline from the *Operating contract* (`agents/`): ground in `ideas/` +
+  `related-work/` + `experiments/` + `figures/`, critique, verify every claim
+  against a source, then use `paper-writer` to coordinate the writing phase and
+  write to `drafts/`.
+- **Asked to draft/revise one narrow section:** run the four-stage pipeline from the
   *Operating contract* (`agents/`): ground in `ideas/` + `experiments/`, critique,
   verify every claim against a source, then write to `drafts/<section>.md`. Use
   the matching writer skill from the routing table as the writer stage. Never

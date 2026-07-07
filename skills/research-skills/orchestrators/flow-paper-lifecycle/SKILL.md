@@ -67,8 +67,8 @@ Decide what's a plot vs table, design ablation tables, make captions self-contai
 Lock the paper spine — the throughline from problem to contribution — before drafting prose.
 **Gate:** a stable spine exists; the contribution is fixed. **Do not write sections before this gate.**
 
-### Stage 10 — Write sections → `abstract-and-intro-writer`, `method-section-writer`, `related-work-writer`, `results-writeup`
-Draft section by section against the spine. Abstract+intro as a pair; Related Work from the stage-3 map.
+### Stage 10 — Write sections → `paper-writer` (+ section singletons as needed)
+Use `paper-writer` as the writing-phase coach: structure the full draft, enforce section gates, keep math prose consistent, and coordinate handoffs. Within that phase, delegate narrow section work to `abstract-and-intro-writer`, `method-section-writer`, `related-work-writer`, and `results-writeup` as needed. Abstract+intro remain a pair; Related Work must come from the stage-3 map.
 **Gate:** a complete draft whose sections all serve the spine.
 
 ### Stage 11 — Audit citations → `citation-auditor`
