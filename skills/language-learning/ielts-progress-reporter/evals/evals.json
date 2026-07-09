@@ -18,6 +18,12 @@
       "prompt": "Which mistakes keep coming up in my IELTS writing? Point yourself at my feedback files and tell me what to stop doing.",
       "expected_output": "An error-focused progress report leaning on the error_frequency aggregation: the 2-3 most persistent error tags named with what they signal, linked to errors/ notes where useful, plus concrete priorities. Should still produce the dated report file and not re-mark any drafts.",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Give me my monthly IELTS writing progress review. Do not let the newest essay erase older mistakes I may have forgotten.",
+      "expected_output": "A monthly report that reads or creates _dashboard/ielts-reprobe-ledger.yaml, surfaces exactly one oldest-due old-error re-probe before the priorities, uses a fresh production cue not found in that error's probe history, and reports how many other re-probes remain due. It should still compute bands and frequencies with the aggregation script.",
+      "files": []
     }
   ]
 }

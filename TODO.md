@@ -14,7 +14,19 @@ Backlog for the agent-skills ecosystem. Source: learning-to-learn audit handoff
   RWOT-DCD proof step (reader: Ha Duong at whiteboard; bar: does the line follow).
   Blocked on: user supplying an artifact.
 
-## Done this session (2026-07-07)
+## Done this session (2026-07-09)
+
+- [x] Added spaced, variable-cue re-probes to `knowledge-debt-audit` and old-error
+  spacing to `ielts-progress-reporter`.
+- [x] Built and registered `naive-student`; wired it into knowledge-debt repayment,
+  `flow-learn-new-topic`, and `flow-deep-understanding`.
+- [x] Built and registered `whiteboard-peer`; wired it into `flow-idea-to-proof` and
+  `flow-deep-understanding`.
+- [x] Added the weekly lemma-autopsy mode to `gap-finder`.
+- [x] Added `LEARNING-TO-LEARN-PRACTICE.md`, mapping verified evidence to the IELTS
+  vault and measure-theory roadmap.
+
+## Done previously (2026-07-07)
 
 - [x] Authored `professor-critic` in `skills/research-skills/technical-teaching/` —
   the strict-professor *grading* instrument (finished artifact + named reader +
@@ -31,25 +43,25 @@ The metacognitive layer in `technical-teaching/` is a role family. Professor rol
 now staffed; these two close the gaps. Both belong in `technical-teaching/`; update
 all three registries and keep the CLAUDE.md layer-boundary paragraph in sync.
 
-- [ ] **`naive-student`** — learning-by-teaching / protégé effect. User explains a
+- [x] **`naive-student`** — learning-by-teaching / protégé effect. User explains a
   concept; the student asks honestly-naive but structurally-pointed questions, gets
   confused precisely where the explanation is underspecified (confusion *earned* from
   the actual words, never scripted), never fakes comprehension (anti-sycophancy), and
   ends with a "what I think you said" playback whose errors localize the gaps. Also the
   debt-repayment route `knowledge-debt-audit` should hand off to ("repay by teaching").
-  - [ ] After building: wire into `flow-learn-new-topic` / `flow-deep-understanding`
+  - [x] After building: wire into `flow-learn-new-topic` / `flow-deep-understanding`
     exits and add the `knowledge-debt-audit` → `naive-student` repayment hand-off.
-- [ ] **`whiteboard-peer`** — idea-stage co-solver for the unfinished middle.
+- [x] **`whiteboard-peer`** — idea-stage co-solver for the unfinished middle.
   Contributes its own partial, possibly-wrong attempts and commits to positions;
   *mandated to disagree* (sociocognitive conflict, not comfort-matching); hard rule
   against sliding into full-solution assistant mode; fires before any artifact exists
   (complement, not overlap, to `professor-critic`).
-  - [ ] After building: wire into `flow-idea-to-proof` (idea stage) and
+  - [x] After building: wire into `flow-idea-to-proof` (idea stage) and
     `flow-deep-understanding`.
 
 ## Extensions to existing skills
 
-- [ ] **Spaced re-probe for `knowledge-debt-audit`** (handoff Item 2 — highest effect
+- [x] **Spaced re-probe for `knowledge-debt-audit`** (handoff Item 2 — highest effect
   size). Ledger-level change, not a new skill: add `due_date` + `interval_stage`
   columns to `debt-ledger.yaml`; a debt marked repaid schedules re-probes at expanding
   intervals (~1w → ~1m → ~3m); **variable-cue rule** — never reuse a probe verbatim,
@@ -60,12 +72,12 @@ all three registries and keep the CLAUDE.md layer-boundary paragraph in sync.
 
 ## Protocols / lighter items
 
-- [ ] **Lemma-autopsy habit** (handoff Item 5) — one referee-style teardown per week:
+- [x] **Lemma-autopsy habit** (handoff Item 5) — one referee-style teardown per week:
   take a lemma from an in-scope paper (spectral graph theory / community detection /
   GNN theory), find the step that breaks under a weakened hypothesis *before* reading
   the authors' discussion. Trains other-directed diagnosis. Could live as a recurring
   protocol inside `gap-finder` rather than a new skill.
-- [ ] **Evidence → practice one-pager** (handoff Item 6) — distill Dunlosky 2013 +
+- [x] **Evidence → practice one-pager** (handoff Item 6) — distill Dunlosky 2013 +
   Carpenter 2022 onto two concrete systems: (a) IELTS vault (already retrieval-based;
   add the spacing schedule); (b) measure-theory roadmap (productive-failure protocol:
   attempt each theorem before reading its proof; interleave earlier material — modes

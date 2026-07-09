@@ -1,0 +1,4 @@
+interface:
+  display_name: "Whiteboard Peer"
+  short_description: "Co-solve unfinished research ideas honestly"
+  default_prompt: "Use $whiteboard-peer to work through this unfinished idea with me without taking over the solution."

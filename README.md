@@ -2,6 +2,17 @@
 
 A focused collection of agent skills for research, industrial R&D, paper writing, PhD applications, language learning, presentation and slides, implementation-heavy coding work, and structured project setup.
 
+## Start here
+
+- Never used agent skills before? Follow the
+  [five-minute first-skill walkthrough](GUIDE.md#your-first-skill-in-five-minutes).
+- Already comfortable with installation? Continue through the
+  [beginner guide](GUIDE.md) for design philosophy, role boundaries, and useful
+  end-to-end flows.
+- Interested in the learning system? Read
+  [Learning-to-Learn: Evidence → Practice](LEARNING-TO-LEARN-PRACTICE.md).
+- Looking for one specific skill? Jump to the [skill catalog](#skill-catalog).
+
 ## Install
 
 The wrapper scripts in `scripts/` install skills via the official `skills` CLI. This repository keeps skills nested by topic, but installation unnests them into flat skill directories. For example, `skills/research-skills/technical-teaching/knowledge-debt-audit/` installs as `knowledge-debt-audit`.
@@ -84,7 +95,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 ### Theory and claims
 
-- `research-skills/theory-and-claims/gap-finder` — surface publishable theoretical gaps in papers, including hidden assumptions, loose bounds, missing guarantees, and uncovered settings.
+- `research-skills/theory-and-claims/gap-finder` — surface publishable theoretical gaps in papers and run a weekly lemma autopsy that weakens one hypothesis before consulting the authors' discussion.
 - `research-skills/theory-and-claims/theorem-and-claim-audit` — pressure-test paper claims and mathematical arguments.
 - `research-skills/theory-and-claims/theory-to-toy-cases` — turn abstract ideas into minimal examples and sanity checks.
 - `research-skills/theory-and-claims/theory-heavy-math-ml/*` — specialist support for assumptions, counterexamples, derivations, formalism translation, theorem distillation, and proof sketches.
@@ -93,8 +104,10 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 - `research-skills/technical-teaching/professor-mentor-technical-teaching` — explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment.
 - `research-skills/technical-teaching/concept-exercise-generator` — generate a graded easy-to-advanced exercise set with separated solutions to verify understanding, using misconception-coded distractors and intuitive-trap verification items when appropriate.
-- `research-skills/technical-teaching/knowledge-debt-audit` — at the moment of building on an AI-produced result, run one no-lookback justification, anticipation, or violation probe on the load-bearing step, and call toxic knowledge debt before it compounds.
+- `research-skills/technical-teaching/knowledge-debt-audit` — call toxic AI-assisted knowledge debt before it compounds, then schedule variable-cue re-probes at expanding intervals after repayment.
 - `research-skills/technical-teaching/professor-critic` — critique a finished artifact the way its specific named reader would, returning a verdict-first (ACCEPT/MAJOR REVISION/REJECT) teardown with a FATAL/MAJOR/MINOR severity ladder; requires a named reader and acceptance bar, refuses to grade blind or judge mid-draft work.
+- `research-skills/technical-teaching/naive-student` — let the user teach an honest novice whose earned confusion and fallible playback expose underspecified dependencies without silently repairing them.
+- `research-skills/technical-teaching/whiteboard-peer` — co-solve unfinished research ideas with one committed partial attempt and mandatory counterpressure per turn, while refusing to take over the full solution.
 
 ### Paper writing
 

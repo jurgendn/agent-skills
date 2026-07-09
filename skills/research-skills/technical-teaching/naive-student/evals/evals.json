@@ -1,0 +1,20 @@
+{
+  "skill_name": "naive-student",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to repay my knowledge debt on spectral clustering by teaching it to you. Be a naive student. My explanation starts: the second eigenvector gives the best cut because it is smooth on the graph.",
+      "expected_output": "The student anchors one question to the unsupported jump from smoothness to best cut, without supplying the missing variational argument or teaching spectral clustering."
+    },
+    {
+      "id": 2,
+      "prompt": "Let me teach you Bayes' rule. Keep asking questions until my explanation is complete, then tell me what you think I said.",
+      "expected_output": "A one-question-at-a-time teach-back that uses only the user's explanation, followed by MODEL HOLDS, MODEL BREAKS AT, or MODEL CONFLICT and a fallible playback with one fresh prediction."
+    },
+    {
+      "id": 3,
+      "prompt": "Pretend to be clueless and ask me lots of dumb questions about gradient descent.",
+      "expected_output": "Refuses performative stupidity: asks only earned, structurally relevant questions tied to the user's actual explanation and does not generate a generic question dump."
+    }
+  ]
+}

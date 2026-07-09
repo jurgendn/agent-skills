@@ -1,6 +1,6 @@
 ---
 name: gap-finder
-description: Read a research paper and surface publishable theoretical gaps — unstated assumptions, loose bounds, missing guarantees, unjustified heuristics, and settings the theory doesn't cover. Trigger whenever the user shares a paper and wants to find weaknesses, gaps, or open problems. Trigger phrases include "find gaps in this paper", "what's weak about this", "where could I improve on this", "what assumptions are they hiding", "poke holes in this", "what's not proven here", "where's the theoretical gap", "analyze this for weaknesses", or any request to critically read a paper to identify research opportunities. Also trigger on "I want to extend X" or "is there room to improve this" about a method or paper. Do NOT use for literature surveys (literature-triangulation), stress-testing own conjectures (theory-counterexample-hunter), or finding papers (applied-paper-search).
+description: Read a research paper and surface publishable theoretical gaps — unstated assumptions, loose bounds, missing guarantees, unjustified heuristics, and settings the theory does not cover. Trigger whenever the user shares a paper and asks to find weaknesses, gaps, open problems, hidden assumptions, or room to extend it. Also trigger on "lemma autopsy", "weekly referee exercise", or requests to weaken one hypothesis in a lemma and locate the first proof step that breaks before reading the authors' discussion. Do NOT use for literature surveys (literature-triangulation), stress-testing the user's own conjecture (theory-counterexample-hunter), writing a peer review (peer-review-writer), or finding papers.
 ---
 
 # Gap Finder
@@ -8,6 +8,70 @@ description: Read a research paper and surface publishable theoretical gaps — 
 Read a paper. Find where the theory is thin.
 
 The goal is not to "critique" the paper in a reviewer sense. The goal is to find **publishable theoretical gaps** — places where a mathematician could contribute something new. A gap is valuable when: (1) the method works empirically but lacks theoretical justification, (2) the theory exists but under assumptions that don't match practice, or (3) a natural generalization is left open.
+
+## Mode selection
+
+- **Full gap scan:** run Steps 1–5 below.
+- **Weekly lemma autopsy:** run the compact protocol below on exactly one lemma.
+
+## Weekly lemma autopsy
+
+Use one in-scope lemma from spectral graph theory, community detection, GNN theory,
+or the user's current area. The habit is one teardown per week, not an exhaustive
+paper review.
+
+Do not read the authors' limitations, discussion, or commentary on the lemma before
+the attack. Reading the theorem statement and proof is allowed; the point is to make
+an independent diagnosis before borrowing theirs.
+
+1. **Freeze the lemma.** Copy its exact conclusion and hypotheses. Name the proof's
+   dependency chain in at most five steps.
+2. **Weaken one hypothesis.** Make one precise change only: connected → possibly
+   disconnected, positive gap → nonnegative gap, independent → weakly dependent, or
+   another mathematically explicit weakening.
+3. **Predict the first break.** Before calculating, commit to the exact proof line
+   expected to fail.
+4. **Attack it.** Construct the smallest graph, distribution, matrix, or parameter
+   regime that exercises the weakened hypothesis. Distinguish:
+   - proof step fails but claim may survive;
+   - claim is false, with a counterexample;
+   - weakening is harmless and the lemma can likely be strengthened.
+5. **Only now compare.** Read the authors' discussion or appendix and record whether
+   they saw the same boundary. Their diagnosis does not overwrite the independent
+   one.
+6. **Log the next habit.** Record the paper, lemma, weakening, first failed step,
+   witness, verdict, and next due week.
+
+Lead with one verdict:
+
+- **BREAKS — CLAIM FALSE**
+- **BREAKS — PROOF ONLY**
+- **SURVIVES — HYPOTHESIS LOOKS WEAKENABLE**
+- **INCONCLUSIVE — NAME THE MISSING TEST**
+
+Then report the weakened hypothesis, first failed line, smallest witness, and
+author-comparison. One autopsy should produce one concrete diagnostic, not a list of
+possible limitations.
+
+### Autopsy failure modes
+
+- **Post-hoc laundering:** reading the authors' limitation first and restating it as
+  an independent finding.
+- **Vague weakening:** saying an assumption is "strong" without changing it
+  formally.
+- **Proof/claim collapse:** treating a broken proof line as proof that the theorem is
+  false.
+- **Oversized witness:** reaching for a simulation before trying the smallest exact
+  case.
+- **Scope tourism:** choosing a lemma unrelated to the user's live research merely
+  because it is easy to attack.
+
+### When NOT to use lemma-autopsy mode
+
+- The target is the user's own conjecture → `theory-counterexample-hunter`.
+- The user needs a formal line-by-line proof check → `theory-derivation-auditor`.
+- The goal is a venue review rather than diagnosis practice → `peer-review-writer`.
+- The paper has no proof or dependency-structured claim.
 
 ## The two failure modes
 
@@ -120,3 +184,11 @@ Briefly note what the paper *does* prove well — both for fairness and so the u
 - Check the appendix and supplementary material before reporting a gap. Many papers address limitations there.
 - If the paper cites a companion paper or technical report for proofs, note that the gap might be closed there — but flag it as "unverified" unless you can check.
 - Be concrete. "The assumptions are strong" is not a gap. "Assumption 3 requires bounded spectral gap, but Barabási-Albert graphs have unbounded spectral gap, so the theory doesn't cover the most common synthetic benchmark" is a gap.
+
+## Hand-offs
+
+- Turn a suspected failure into a systematic counterexample search →
+  `theory-counterexample-hunter`
+- Audit the exact algebraic or analytic step → `theory-derivation-auditor`
+- Develop a surviving extension into a formal theorem → `flow-idea-to-proof`
+- Write a venue-facing review of the paper → `peer-review-writer`
