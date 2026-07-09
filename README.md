@@ -9,8 +9,8 @@ A focused collection of agent skills for research, industrial R&D, paper writing
 - Already comfortable with installation? Continue through the
   [beginner guide](GUIDE.md) for design philosophy, role boundaries, and useful
   end-to-end flows.
-- Interested in the learning system? Read
-  [Learning-to-Learn: Evidence → Practice](LEARNING-TO-LEARN-PRACTICE.md).
+- Want the rationale behind the skill boundaries? Read
+  [DESIGN-PHILOSOPHY.md](DESIGN-PHILOSOPHY.md).
 - Looking for one specific skill? Jump to the [skill catalog](#skill-catalog).
 
 ## Install

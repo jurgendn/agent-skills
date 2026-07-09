@@ -271,14 +271,15 @@ teach-back, or graded exercises. “This makes sense” is not an exit gate.
 
 Finishing work and owning the reasoning are different outcomes.
 `knowledge-debt-audit` interrupts when an AI-produced step becomes load-bearing,
-then schedules variable-cue re-probes after repayment. The broader learning system
-is described in
-[LEARNING-TO-LEARN-PRACTICE.md](LEARNING-TO-LEARN-PRACTICE.md).
+then schedules variable-cue re-probes after repayment.
 
 ### Criticism targets artifacts, not people
 
 Audits and reviews may be strict, but issues must be checkable. The artifact can
 overclaim, omit an assumption, or fail a reader's bar; the author is not the defect.
+
+For the longer rationale and references behind these design choices, see
+[DESIGN-PHILOSOPHY.md](DESIGN-PHILOSOPHY.md).
 
 ## Useful flows
 
