@@ -23,8 +23,9 @@ Backlog for the agent-skills ecosystem. Source: learning-to-learn audit handoff
 - [x] Built and registered `whiteboard-peer`; wired it into `flow-idea-to-proof` and
   `flow-deep-understanding`.
 - [x] Added the weekly lemma-autopsy mode to `gap-finder`.
-- [x] Added `LEARNING-TO-LEARN-PRACTICE.md`, mapping verified evidence to the IELTS
-  vault and measure-theory roadmap.
+- [x] Moved the learning-principles rationale and references into
+  `DESIGN-PHILOSOPHY.md`, covering retrieval, spacing, interleaving, and
+  productive-failure practice.
 
 ## Done previously (2026-07-07)
 
