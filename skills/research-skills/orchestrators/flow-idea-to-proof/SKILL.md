@@ -26,8 +26,16 @@ If the user actually wants empirical validation rather than a proof, route to `r
 Run in order. **Enter wherever the idea already is** — a user with a crisp claim skips stage 1.
 
 ```text
-Stress-test the idea → Extract what must be true → State the formal claim → Sketch the proof → Audit & attack → (handoff to write-up)
+Whiteboard the hunch → Stress-test → Extract premises → State the claim → Sketch → Audit
 ```
+
+### Stage 0 — Whiteboard the hunch → `whiteboard-peer`
+When the idea is still an unfinished intuition, hand it to an opinionated peer before
+formal evaluation. Require one committed position, one partial attempt, and one real
+disagreement. The peer must leave a load-bearing step to the user rather than
+producing a finished solution.
+**Exit gate:** there is a candidate mechanism, a contested premise, and a concrete
+next test. Skip this stage when the user already supplies a crisp claim.
 
 ### Stage 1 — Stress-test the idea → `research-idea-stress-test`
 Hand off to expose hidden assumptions, fake novelty, and confounders, and to find the cheapest test of whether the idea is even worth formalizing. Don't design a proof for a claim that dies to a cheap attack.

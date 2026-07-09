@@ -26,7 +26,7 @@ If the user names a whole area rather than one object, route to **flow-learn-new
 Run in order, but **enter at the user's fuzzy edge** — don't re-teach what they already hold.
 
 ```text
-Reconstruct the reasoning → Surface assumptions → Verify the mechanism → Stress-test → Re-derive & criticize
+Reconstruct → Surface assumptions → Verify mechanism → Stress-test → Teach cold
 ```
 
 **Gates are verified, not assumed.** Each exit gate is checked with an *exercise checkpoint*: hand off to `concept-exercise-generator` to produce a short graded set (solutions in a separate file) for that stage. Because this is mastery, not onboarding, the checkpoints skew to Tier 3–4 (analyze / derive / construct a counterexample) — a stage passes only when the user clears those *unaided*. Skip a checkpoint only when the user is demonstrably already past that stage's fuzzy edge.
@@ -51,8 +51,11 @@ Hand off to attack the object: edge cases, pathological inputs, the regime where
 **Exit gate:** the user can name at least one concrete regime where the object fails and *why*.
 **Checkpoint:** a Tier 4 set (construct an input/regime that breaks the object and explain which assumption it violates).
 
-### Stage 5 — Re-derive & criticize (you, lightly)
-Have the user re-derive or re-explain the object cold, then articulate its fundamental (un-removable) tradeoff. This is the test that the previous stages took. If they stumble, route back to the stage that covers the gap.
+### Stage 5 — Re-derive & teach cold → `naive-student`
+Have the user re-derive and teach the object cold to an honest novice, then articulate
+its fundamental (un-removable) tradeoff. The student's playback localizes any gap
+without silently repairing it. If the playback breaks, route back to the stage that
+covers the missing dependency.
 **Exit gate:** the user can reproduce the object unaided and state its fundamental limitation.
 **Checkpoint:** this stage *is* the capstone test — formalize it as a Tier 4 set (re-derive the object cold; state the un-removable tradeoff) via `concept-exercise-generator` if the user wants a scored final check.
 
@@ -61,6 +64,8 @@ Have the user re-derive or re-explain the object cold, then articulate its funda
 - Notation is the obstacle, or another formalism would clarify → `theory-formalism-translator`.
 - The object is a dense paper and step 1 needs its formal core extracted first → `theory-paper-to-theorem-distiller`.
 - Understanding has matured into wanting to *improve* the object → hand off to **gap-finder**, then **flow-idea-to-proof**.
+- The user has a partial extension and needs a co-solver who will disagree without
+  taking over → `whiteboard-peer`.
 
 ## Router Rules
 

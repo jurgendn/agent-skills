@@ -407,7 +407,7 @@
       "name": "knowledge-debt-audit",
       "path": "skills/research-skills/technical-teaching/knowledge-debt-audit",
       "category": "research-skills/technical-teaching",
-      "description": "Detect AI-produced results the user cannot regenerate unaided and run one no-lookback metacognitive probe of the load-bearing step before they build on it, using justification, anticipation, or violation probes to call toxic knowledge debt early."
+      "description": "Detect AI-produced results the user cannot regenerate unaided, probe the load-bearing step before they build on it, and schedule variable-cue re-probes after repayment."
     },
     {
       "name": "professor-critic",
@@ -416,10 +416,22 @@
       "description": "Critique a finished artifact the way its specific named reader would, returning a verdict-first strict-professor teardown with a FATAL/MAJOR/MINOR severity ladder rather than encouragement. Requires a named reader and acceptance bar and refuses to grade blind or to judge mid-draft work. Distinct from peer-review-writer (user reviews someone else's paper), submission-readiness-audit (paper-only author checklist), and knowledge-debt-audit (probes the user's understanding, not the artifact)."
     },
     {
+      "name": "naive-student",
+      "path": "skills/research-skills/technical-teaching/naive-student",
+      "category": "research-skills/technical-teaching",
+      "description": "Become an honest novice while the user teaches a concept, asking only earned questions and ending with a fallible playback that localizes missing dependencies."
+    },
+    {
+      "name": "whiteboard-peer",
+      "path": "skills/research-skills/technical-teaching/whiteboard-peer",
+      "category": "research-skills/technical-teaching",
+      "description": "Co-solve unfinished research ideas with committed partial attempts and productive disagreement while refusing to provide the complete solution."
+    },
+    {
       "name": "gap-finder",
       "path": "skills/research-skills/theory-and-claims/gap-finder",
       "category": "research-skills/theory-and-claims",
-      "description": "Surface publishable theoretical gaps in research papers, including hidden assumptions, loose bounds, missing guarantees, and uncovered settings."
+      "description": "Surface publishable theoretical gaps in research papers and run weekly lemma autopsies by weakening one hypothesis before consulting the authors' discussion."
     },
     {
       "name": "theorem-and-claim-audit",

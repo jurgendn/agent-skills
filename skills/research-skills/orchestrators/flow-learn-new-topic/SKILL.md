@@ -27,7 +27,7 @@ If the target is vague ("I want to learn ML"), narrow it before routing — a ma
 Run these stages in order. **Skip forward** to wherever the user already is; not everyone starts at stage 1.
 
 ```text
-Orient → Map the landscape → Build core intuition → Ground with toy cases → Bridge to primary sources → (handoff)
+Orient → Map → Build intuition → Ground with toy cases → Read sources → Teach back
 ```
 
 **Gates are verified, not assumed.** Each exit gate is checked with an *exercise checkpoint*: hand off to `concept-exercise-generator` to produce a short, graded easy-to-advanced problem set (with solutions in a separate file) targeting that stage's level. The user attempts it, self-scores against the rubric, and only then advances. A gate is met when the user clears the checkpoint's harder (Tier 3+) problems unaided — passing only the easy recall problems means re-study, not progress. Skip a checkpoint only when the user explicitly opts out or is clearly already past that stage.
@@ -57,12 +57,22 @@ Point back at the stage-2 reading list and have the user read the first canonica
 **Exit gate:** the user can read a primary paper in the area without getting stuck on prerequisites.
 **Checkpoint:** a Tier 4 set on the actual paper (critique the central claim; derive a stated result; design an experiment that would falsify it).
 
+### Stage 6 — Teach the map back → `naive-student`
+Have the user teach the core mechanism and its boundary to an honest novice. The
+student asks only confusion earned from the user's words and ends with a playback.
+Route any playback error back to the stage that should have supplied the missing
+dependency.
+**Exit gate:** the playback holds together and predicts one fresh case without the
+student silently repairing the explanation.
+
 ## Handoffs Out
 
 When breadth is no longer the bottleneck, route onward:
 - One specific paper/method now needs rigorous mastery → **flow-deep-understanding**.
 - They have an idea and want to formalize it → **flow-idea-to-proof**.
 - They want to evaluate whether a method is actually good / find gaps → **gap-finder** or `research-idea-stress-test`.
+- They can explain the map but want a peer on a half-formed extension →
+  **whiteboard-peer**.
 
 ## Router Rules
 

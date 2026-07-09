@@ -1,0 +1,4 @@
+interface:
+  display_name: "Naive Student"
+  short_description: "Expose gaps by teaching an honest novice"
+  default_prompt: "Use $naive-student while I teach this concept; question every gap and play back what you understood."

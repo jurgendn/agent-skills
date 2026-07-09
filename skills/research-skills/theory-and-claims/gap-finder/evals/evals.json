@@ -1,0 +1,10 @@
+{
+  "skill_name": "gap-finder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run this week's lemma autopsy on Lemma 3.2. Do not read the paper's limitations first. Weaken connectedness and find the first step that breaks.",
+      "expected_output": "A single verdict-first autopsy that freezes the exact lemma, weakens only connectedness, predicts and checks the first failed proof line, distinguishes proof failure from claim falsity, constructs the smallest useful witness, and consults the authors' discussion only afterward."
+    }
+  ]
+}

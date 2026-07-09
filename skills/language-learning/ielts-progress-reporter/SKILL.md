@@ -1,6 +1,6 @@
 ---
 name: ielts-progress-reporter
-description: Read the marked IELTS Writing feedback files in a practice vault and summarise them into a periodic progress report — band trends per criterion, recurring error patterns, revision gains, and what to focus on next. Use this skill whenever the user asks to "summarise my IELTS progress", "how am I doing", "write a progress report", "track my band scores over time", "what errors keep coming up", "are my essays improving", "monthly/weekly writing report", or points Claude at a feedback/ folder or _dashboard and wants an aggregate view rather than marking one essay. This skill reads existing feedback files; it does NOT mark new drafts — for that use ielts-writing-task1 or ielts-writing-task2. It aggregates and interprets scores already recorded; it never invents bands for unmarked attempts.
+description: Read marked IELTS Writing feedback in a practice vault and produce a periodic progress report with band trends, recurring errors, revision gains, next priorities, and spaced re-probes of older errors. Use whenever the user asks to "summarise my IELTS progress", "how am I doing", "write a progress report", "track my band scores over time", "what errors keep coming up", "are my essays improving", "review an old error", or requests a monthly/weekly writing report. Also use when the user answers a re-probe recorded in `_dashboard/ielts-reprobe-ledger.yaml`. Read existing feedback; do NOT mark new drafts — use ielts-writing-task1 or ielts-writing-task2. Never invent bands for unmarked attempts and never let recent errors crowd older due errors out of review.
 ---
 
 # IELTS Progress Reporter
@@ -68,13 +68,21 @@ Useful flags: `--feedback-dir <PATH>` (if `feedback/` is not under the vault roo
 
 The JSON gives you: coverage counts, per-criterion averages (`criterion1` is the unified TA/TR line), `error_frequency` (most common first), `revision_deltas` (band change from first to latest version of each multi-version prompt), and — in period mode — the same broken out per `periods[]` bucket.
 
-### Step 4 — Compose the report
+### Step 4 — Surface one spaced old-error re-probe
+
+Read `references/spaced-error-reprobes.md` and maintain
+`_dashboard/ielts-reprobe-ledger.yaml`. Seed it from recorded feedback when absent.
+If any re-probe is overdue, include exactly one — oldest due first — before selecting
+priorities. Do not replace it with a more recent error merely because the recent one
+appears more often.
+
+### Step 5 — Compose the report
 
 Turn the JSON into the template below. The script owns the numbers; your job is the interpretation — naming the weakest criterion, the trend direction, the most persistent errors, and the priorities. Round displayed bands to half-bands the way IELTS does (`6.25` average → describe as "around 6", not a fake half-band the candidate could never receive). Be honest: if there are only two or three attempts, say the trend is not yet meaningful rather than over-reading noise.
 
 For Task 1 attempts, respect the vault's data-accuracy rule: the bands already reflect whatever was assessable, so report them as recorded and do not re-litigate data accuracy here.
 
-### Step 5 — Write the report to the vault
+### Step 6 — Write the report to the vault
 
 Write to `_dashboard/` as a **dated** file so history is preserved — e.g. `_dashboard/progress-2026-06-24.md` (cumulative) or `_dashboard/progress-2026-06.md` (monthly). Do not overwrite an existing dated report; if the exact filename exists, append a short suffix or confirm with the user. The vault's living `_dashboard/writing-progress.md` (if present) is Dataview-driven — leave it alone unless the user explicitly asks you to update it.
 
@@ -124,6 +132,13 @@ Name the 2–3 most persistent tags and what they signal. Link to the vault's er
 
 Did revising actually move the score? One sentence.
 
+## Old error due now       <!-- only when a re-probe is overdue -->
+**Error:** <tag>
+**Fresh cue:** <one new sentence or micro-task>
+
+Answer without opening the old correction. Require production or correction plus a
+brief reason; recognition and rule naming do not pass.
+
 ## Top 3 priorities for the next stretch
 1. ...
 2. ...
@@ -131,3 +146,9 @@ Did revising actually move the score? One sentence.
 ```
 
 Priorities should follow from the data: the weakest criterion, the most frequent error tag, and whichever skill is flat or declining. Keep them concrete and few — a report that lists ten things to fix gets ignored.
+
+## Hand-offs
+
+- Mark a new draft → `ielts-writing-task1` or `ielts-writing-task2`
+- Turn the report into a schedule → `ielts-learning-planner`
+- Build targeted vocabulary practice → `ielts-vocabulary-builder`

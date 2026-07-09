@@ -1,6 +1,6 @@
 ---
 name: knowledge-debt-audit
-description: Detect when AI assistance has produced output you cannot regenerate yourself, and call the loan before the debt compounds. "Get the work done" is not "I understand it" — every AI-assisted result you build on carries an invisible balance that surfaces when you are least prepared (a qual exam, an advisor whiteboard, a reviewer asking why). Trigger when the user is about to BUILD ON an AI-produced result ("before I extend this", "am I understanding this or just getting it done", "check whether I really get this"), or wants a standing audit ("what am I in debt for", "what could I not rebuild alone"). Two modes — REACTIVE (circuit breaker at the borrow moment) is the spine; PERIODIC (statement of account across sessions) is the add-on. Probes UNDERSTANDING of the load-bearing step, never RECALL of incidentals. Do NOT use to generate practice (concept-exercise-generator) or to teach a concept fresh (professor-mentor-technical-teaching).
+description: Detect when AI assistance has produced output you cannot regenerate yourself, call the loan before it compounds, and re-probe repaid debt on a spaced, variable-cue schedule. "Get the work done" is not "I understand it." Trigger when the user is about to BUILD ON an AI-produced result ("before I extend this", "am I understanding this or just getting it done", "check whether I really get this"), wants a standing audit ("what am I in debt for", "what could I not rebuild alone"), or starts a session or periodic review in a workspace with `debt-ledger.yaml`. Two modes — REACTIVE (circuit breaker at the borrow moment) and PERIODIC (statement of account plus due re-probes). Probe UNDERSTANDING of the load-bearing step, never RECALL of incidentals. Do NOT use to generate practice (concept-exercise-generator) or teach a concept fresh (professor-mentor-technical-teaching).
 ---
 
 # Knowledge Debt Audit
@@ -59,10 +59,12 @@ might need this someday" is not. If you cannot name the exposure, lean strategic
 # The trigger: the borrow moment
 
 The debt is incurred at one specific instant — when the user takes an AI-produced
-result and moves to **extend it as if it were owned capital.** That is the firing
-point. Not a timer, not a random interrupt (mechanically impossible and undesirable
-— it would punish genuine depth). The detectable signal: "now that we have X, let's
-build Y on it" where X is load-bearing and was produced by the assistant.
+result and moves to **extend it as if it were owned capital.** That is the initial
+firing point. The detectable signal: "now that we have X, let's build Y on it" where
+X is load-bearing and was produced by the assistant.
+
+After a toxic debt is repaid, the ledger schedules deliberate re-probes. These are
+not random interruptions: PERIODIC mode surfaces them when due.
 
 ---
 
@@ -104,6 +106,47 @@ assessment of the user's prose. Research material almost always allows this; use
 
 ---
 
+# Spaced re-probes and variable cues
+
+Passing once closes the immediate loan; it does not prove durable ownership. Schedule
+each repaid toxic debt through `debt-ledger.yaml`:
+
+- stage 1: due 7 days after repayment;
+- stage 2: due 30 days after passing stage 1;
+- stage 3 and later: due 90 days after the previous pass.
+
+`interval_stage` is the stage of the **next** re-probe. Stage 0 means no re-probe is
+scheduled. Use ISO dates and calculate the next date from the day the user passes,
+not from the old due date.
+
+Never reuse a probe verbatim. Before writing one, inspect that entry's
+`probe_history`. Choose the cue angle from the stage, cycling every four stages:
+
+1. **transfer** — apply the dependency in a structurally different case;
+2. **boundary** — identify the weakest condition or a near-boundary case;
+3. **perturbation** — change one input or assumption and derive what changes first;
+4. **load-bearing-why** — reconstruct why the central step is necessary.
+
+Then instantiate the angle as one of the existing probe types: justification,
+anticipation, or violation. The angle varies the retrieval cue; the taxonomy still
+defines what the probe tests. Require a new concrete instance or derivation, not a
+paraphrase of the previous answer.
+
+After every attempt, append the date, stage, angle, exact prompt, and verdict to
+`probe_history`.
+
+- **Pass / understands-differently:** keep `repaid: true`, increment
+  `interval_stage`, set `status: probed-passed`, and schedule its next due date.
+- **Fail:** set `status: outstanding` and `repaid: false`; retain the failed stage
+  and due date so PERIODIC mode keeps it visible. After successful repayment,
+  set `status: probed-passed`, increment the stage, and schedule the next re-probe.
+- **Strategic debt:** keep `due_date: null`, `interval_stage: 0`, and never probe it.
+
+Do not soften a re-probe because the item was previously passed. A repeated fluent
+answer without a fresh checkable inference fails.
+
+---
+
 # Grading discipline
 
 - **Refuse fluent-but-empty.** "Yeah, because of the spectral properties" is a
@@ -135,10 +178,13 @@ is not.
 
 - **REACTIVE (spine).** The circuit breaker. Watches for the borrow moment, classifies
   the debt, and on toxic debt runs one probe — or the inversion. This is the default.
-- **PERIODIC (add-on).** The statement of account. On request, pull conversation
-  history (past-chat search) and tally the accumulated balance: what has been
-  borrowed, what is strategic, what is toxic-and-outstanding. A reporting view over
-  the ledger, not a new mechanism.
+- **PERIODIC (add-on).** At session start when the workspace contains the ledger,
+  read it before continuing with new load-bearing research work. Also run this check
+  at the start of every requested periodic review. Surface toxic outstanding entries
+  and toxic repaid entries whose `due_date` is today or earlier. Run at most one
+  overdue re-probe per turn, oldest due first; keep the rest visible in the queue.
+  Then use past-chat search, when available, to reconcile borrows missing from the
+  ledger.
 
 ---
 
@@ -154,10 +200,16 @@ For a reactive firing:
    or the inversion. Route by repayment type: targeted practice →
    `concept-exercise-generator`; rebuild the result from source →
    `theory-paper-to-theorem-distiller`; re-derive with guidance →
-   `professor-mentor-technical-teaching`.
+   `professor-mentor-technical-teaching`; repay by teaching →
+   `naive-student`, then return its playback here for certification.
 
-For a periodic audit: the ledger as a statement — strategic carried, toxic repaid,
-toxic outstanding — newest first, with the outstanding items flagged for repayment.
+When grading the response, put **Verdict** first. Do not bury a fail beneath
+explanation or encouragement.
+
+For a periodic audit, lead with **DUE NOW**: oldest overdue re-probe and the count
+still queued. Then show the statement — toxic outstanding, toxic repaid/scheduled,
+and strategic carried — newest first. If nothing is due, say so explicitly and show
+the next scheduled date.
 
 Keep it to two buckets, three probe types, one ledger. No severity scores, no ornate
 rubric. The moment this skill gets elaborate it becomes the brainrot it exists to
@@ -192,3 +244,4 @@ catch.
 
 - Want practice to repay the debt → `concept-exercise-generator`
 - Want the concept taught fresh → `professor-mentor-technical-teaching`
+- Want to repay by teaching an honest novice → `naive-student`

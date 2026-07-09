@@ -14,10 +14,20 @@
 #              | outstanding    (toxic, NOT yet repaid — the dangerous bucket)
 #   repaid     - true/false (only meaningful for toxic)
 #   note       - optional: the exposure moment that would call it
+#   due_date   - ISO date for the next re-probe; null when none is scheduled
+#   interval_stage
+#              - stage of the NEXT re-probe: 0 = unscheduled, 1 = +7 days,
+#                2 = +30 days, 3+ = +90 days
+#   probe_history
+#              - prior attempts, each with date, stage, angle, exact prompt,
+#                and verdict; inspect before writing a re-probe
 #
 # Rule: only toxic+outstanding entries are debt that matters. Strategic entries are
-# logged for the statement of account, never probed. Keep the ledger honest — the
-# temptation is to mark things "probed-passed" on a fluent answer. Don't.
+# logged for the statement of account, never probed. Repaid toxic entries remain
+# scheduled for re-probe. Cue angle cycles by stage:
+# transfer -> boundary -> perturbation -> load-bearing-why -> repeat.
+# Keep the ledger honest — the temptation is to mark things "probed-passed" on a
+# fluent answer. Don't.
 
 ledger:
   - borrowed: "Schrödinger-bridge identity for the entropic-OT term in RWOT-DCD"
@@ -25,6 +35,9 @@ ledger:
     class: toxic
     status: outstanding
     repaid: false
+    due_date: null
+    interval_stage: 0
+    probe_history: []
     note: >
       A reviewer WILL ask why the entropic-OT cost equals a static Schrödinger
       bridge for THIS exact cost. Must be able to regenerate the identity cold,
@@ -35,6 +48,9 @@ ledger:
     class: toxic
     status: outstanding
     repaid: false
+    due_date: null
+    interval_stage: 0
+    probe_history: []
     note: >
       Whether the exponent is 1/lambda or 1/lambda^2 changes the calibration claim.
       Borrowed as a lead; not yet derived for the discrete-snapshot setting.
@@ -44,6 +60,9 @@ ledger:
     class: strategic
     status: carried
     repaid: false
+    due_date: null
+    interval_stage: 0
+    probe_history: []
     note: "Will never need to regenerate unaided. Correct to borrow forever."
 
   - borrowed: "WeasyPrint CSS for the md-to-pdf page-number footer"
@@ -51,4 +70,7 @@ ledger:
     class: strategic
     status: carried
     repaid: false
+    due_date: null
+    interval_stage: 0
+    probe_history: []
     note: "Peripheral. Carrying this is efficiency, not debt that matters."

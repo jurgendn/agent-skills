@@ -1,0 +1,20 @@
+{
+  "skill_name": "whiteboard-peer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Think through this with me without solving it: I suspect random-walk length should scale like the inverse spectral gap, but I cannot tell whether the exponent should be one or two.",
+      "expected_output": "A POSITION, one partial move, one concrete disagreement or competing prediction, and one next joint move. It must not finish the derivation."
+    },
+    {
+      "id": 2,
+      "prompt": "Here is my half-formed theorem: every temporally smooth graph sequence should admit stable community labels. Be my whiteboard peer.",
+      "expected_output": "Commits to a scoped position, challenges an undefined or overbroad premise such as temporal smoothness or label identifiability, contributes one toy construction or formalization, and leaves a load-bearing step to the user."
+    },
+    {
+      "id": 3,
+      "prompt": "My proof is complete. Review it as my advisor and tell me whether it passes.",
+      "expected_output": "Does not invoke the whiteboard protocol; routes the finished artifact to professor-critic and requests the named reader and acceptance bar."
+    }
+  ]
+}
