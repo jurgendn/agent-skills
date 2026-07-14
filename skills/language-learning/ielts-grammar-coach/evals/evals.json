@@ -1,0 +1,35 @@
+{
+  "skill_name": "ielts-grammar-coach",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My IELTS grammar is stuck at 6. Can you give me a GRA band and tell me exactly what's holding it down? \"Yesterday I go to store and buy two apple. He don't like the coffee so we drink tea instead.\"",
+      "expected_output": "A GRA band estimate (X/9) anchored to the descriptors, split into Range (which complex structures appear/are missing) and Accuracy (error-free-sentence density), plus a 'to reach 7' note. Coded diagnosis, not a silent rewrite: errors tagged (TENSE, NUM, SVA, ART) with Vietnamese-L1 notes, an upgraded complex-but-correct version, systematic errors logged to the ledger. Only GRA is scored, not the other three criteria.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "What grammar mistakes do I keep making in my IELTS practice? Point me at the pattern.",
+      "expected_output": "Reads error-ledger.yaml, reports the highest-frequency systematic error codes with what each signals for GRA (systematic errors cap at band 7), surfaces at most one due spaced re-probe with a fresh production cue, and gives concrete priorities.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I keep getting articles wrong. Give me some practice.",
+      "expected_output": "Interactive drill by default: poses one [ART] problem at a time, waits for the user's written answer, holds the correction until they attempt it, then gives the rule (+L1 note) and the next item. Items are laddered easy->hard and require production (not multiple-choice); at least one drawn from the user's own past article errors if available. Offers the two-file offline set (drills.md + separate drills-solutions.md) only if the user wants a larger set. Passes/fails logged to the ledger.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Can you just fix the grammar in this email so I can send it? It's not for IELTS. [longer paragraph]",
+      "expected_output": "General mode: recognizes it's not IELTS, omits the band block. Long text + explicit fix request triggers the clean-pass exception: corrected version plus a compact Sentence|Code|Rule table, flags recurring vs new codes, still names rules for systematic errors, updates the ledger. No self-correction loop forced on every sentence.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Score the Grammatical Range and Accuracy of my Task 2 essay and help me raise it. [essay]",
+      "expected_output": "GRA-only band with Range/Accuracy breakdown and a to-next-band note; mandatory upgrade step showing complex-but-correct rewrites of weak sentences; frames the 6->7 jump around error-free-sentence density. Hands off to ielts-writing-task2 for a full four-criteria band rather than scoring the whole task here.",
+      "files": []
+    }
+  ]
+}

@@ -181,6 +181,7 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 - `language-learning/ielts-vocabulary-builder` — build and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading.
 - `language-learning/ielts-learning-planner` — build personalised IELTS study plans and progress routines.
 - `language-learning/ielts-progress-reporter` — aggregate a practice vault's marked `feedback/*.md` files into periodic progress reports (band trends, recurring errors, revision gains).
+- `language-learning/ielts-grammar-coach` — estimate an IELTS **Grammatical Range & Accuracy** band, then diagnose and durably fix the recurring errors holding it down via coded corrective feedback, Vietnamese-L1 contrastive diagnosis, a persistent error ledger with spaced re-probes, and targeted drills; also a general-English (no-band) mode. Isolates GRA — for a whole-task band across all four criteria use `ielts-writing-task2` / `ielts-speaking-coach`.
 
 ### Presentation and slides
 

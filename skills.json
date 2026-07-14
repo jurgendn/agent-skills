@@ -122,6 +122,12 @@
       "description": "Aggregate marked IELTS Writing feedback files into periodic progress reports of band trends, recurring errors, and revision gains."
     },
     {
+      "name": "ielts-grammar-coach",
+      "path": "skills/language-learning/ielts-grammar-coach",
+      "category": "language-learning",
+      "description": "Estimate an IELTS Grammatical Range & Accuracy (GRA) band, then diagnose and durably fix the recurring errors holding it down via coded corrective feedback, Vietnamese-L1 contrastive diagnosis, a persistent error ledger with spaced re-probes, and targeted drills; also a general-English no-band mode. Isolates GRA (use ielts-writing-task2/ielts-speaking-coach for a whole-task band across all four criteria)."
+    },
+    {
       "name": "apply-profile-reader",
       "path": "skills/research-skills/applications-and-career/apply-profile-reader",
       "category": "research-skills/applications-and-career",

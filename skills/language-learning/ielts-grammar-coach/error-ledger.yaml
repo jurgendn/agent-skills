@@ -1,0 +1,45 @@
+# error-ledger.yaml — seed template for grammar-coach
+#
+# Runtime state. Copy this to the workspace root on first use and accrete over time.
+# Only SYSTEMATIC errors (consistent rule-gaps) go here — never one-off slips.
+# Keyed by the error CODE from references/error-taxonomy.md so a recurring mistake
+# is tracked across sessions rather than re-diagnosed each time.
+#
+# Fields per error:
+#   code            - the taxonomy code (ART, NUM, SVA, TENSE, ASP, VF, MOD, PREP,
+#                     WO, WF, WC, PRON, CONJ, PUNC)
+#   label           - short human name
+#   frequency       - how many times this systematic error has appeared
+#   status          - active     (recurring, needs work)
+#                   | improving  (self-corrected sometimes, not yet reliable)
+#                   | resolved   (self-corrected unaided across several sessions)
+#   first_seen      - ISO date the gap was first logged
+#   last_seen       - ISO date of the most recent occurrence
+#   example         - one representative erroneous sentence (reword real ones)
+#   l1_note         - the Vietnamese-transfer explanation, if applicable
+#   # --- spaced re-probe schedule (see references/practice-and-reprobe.md) ---
+#   due_date        - ISO date of the next re-probe; null when none scheduled
+#   interval_stage  - 0 unscheduled | 1 = +7d | 2 = +30d | 3+ = +90d
+#   probe_history   - list of {date, stage, angle, prompt, verdict}; read before
+#                     writing a re-probe so cues never repeat
+#
+# Rule: seed re-probes only for the highest-frequency systematic errors. Run at most
+# one re-probe per session. Require production (write/correct + reason) to pass.
+# Don't mark 'resolved' on a single fluent answer — require unaided passes over time.
+
+errors: []
+
+# Example of a populated entry (delete once you have real data):
+#
+# errors:
+#   - code: SVA
+#     label: subject–verb agreement (3rd-person -s)
+#     frequency: 4
+#     status: active
+#     first_seen: 2026-07-14
+#     last_seen: 2026-07-14
+#     example: "He go to the office every morning."
+#     l1_note: "Vietnamese verbs don't inflect for the subject, so -s has no L1 anchor."
+#     due_date: 2026-07-21
+#     interval_stage: 1
+#     probe_history: []
