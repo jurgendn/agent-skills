@@ -19,6 +19,8 @@ This skill is **interactive and Socratic by default** (the user chose to be walk
 - **Follow the real crack, not your script.** The phases below are your private map. The user's answers decide which branch you actually walk.
 - **Earn it, then land it.** After the user sees the weak link (or after ~3–5 exchanges, or the moment they ask "just tell me"), stop probing and deliver the verdict card. Respect their time.
 - **Be domain-neutral in method, domain-specific in the break.** Same inference check; in math the break is a counterexample/witness, in an essay it's a case the argument can't handle, in a causal claim it's a confound.
+- **Make the user construct the counterexample.** This is the load-bearing move, not a nice-to-have. Your own judgment of an argument is the least reliable input in the room; the user testing whether the premises can hold while the claim fails is the actual verification. Push the construction to them whenever they can carry it.
+- **A fallacy name is a hypothesis, not a finding.** Naming the flaw ("that's affirming the consequent") is guesswork and often wrong. Do not assert the label. Instead reconstruct the implicit step it depends on and test *that* with a case. The break survives; the name is disposable.
 
 ---
 
@@ -38,7 +40,15 @@ Reflect the reconstruction back: *"So the claim is C, resting on P1 and P2, and 
 
 The question is never "is the claim true?" — it's **"does the support establish the claim?"** A true conclusion can have a broken argument. Probe the *link*.
 
-First, silently classify the inference so you know what "valid" even means here:
+There are only **three places to attack any argument** — this is your complete search space, so make sure you've considered each before settling:
+
+1. **A premise is false or unwarranted** — the support itself doesn't hold.
+2. **The conclusion fails on external grounds** — even granting the premises, a known fact or case contradicts the claim.
+3. **The link doesn't carry** — the premises could all be true and the conclusion still not follow.
+
+The skill privileges (3), because that's the one people miss and the one "the conclusion is correct" can't rescue. But name all three to yourself so you don't tunnel on the link when the real problem is a smuggled premise.
+
+Then classify the inference so you know what "valid" even means here — and note that only **deductive** arguments are graded pass/fail; the other three are graded by *strength of support*, so don't declare a reasonable inductive or causal argument "invalid" just because it isn't a guarantee:
 
 - **Deductive** — premises are meant to *guarantee* the conclusion. Break it by finding a case where premises hold but the conclusion fails.
 - **Inductive / statistical** — evidence is meant to make it *probable*. Probe sample size, representativeness, base rates, cherry-picking.
@@ -60,7 +70,18 @@ Then ask the question that tests *this* inference. A menu to draw from (pick one
 | Weak/cherry-picked evidence | "How many cases, and how were they chosen?" |
 | False dichotomy | "Is it really only those two options?" |
 
-The single most useful move across all domains: **ask the user to construct the counterexample themselves.** "Can you find a situation where all your premises hold but the claim fails?" If they can't and try honestly, the argument is probably sound. If they find one fast, they just did the audit.
+The table above catalogs *failure modes*. When the argument fits a recognizable **scheme**, a faster route is to run that scheme's standard critical questions — these are pre-validated and more precise than an improvised probe. Match the argument to one and ask its questions until one bites:
+
+| Argument scheme | Critical questions (ask until one lands) |
+|---|---|
+| **Expert opinion** ("an authority says X") | Is the source a genuine expert in *this* domain? Did they actually assert X? Are they biased or funded? Do other experts agree? |
+| **Cause to effect** ("X produced Y") | Could a third factor cause both? Could the direction run Y→X? Is the correlation strong and consistent? Is there a mechanism? |
+| **Analogy** ("A works, and B is like A") | Is the *shared* feature the one doing the work? What's the disanalogy that matters here? |
+| **Sign / correlation** ("X, therefore Y — they go together") | Is the association reliable, or could X occur without Y? |
+| **Popular opinion** ("everyone accepts X") | Does wide acceptance track truth here, or just familiarity? Who dissents, and why? |
+| **Slippery slope** ("X leads to Z") | Is each step actually likely, or just possible? Where does the chain realistically stop? |
+
+The single most useful move across all domains, when the user can carry it: **have them construct the counterexample themselves.** "Can you find a situation where all your premises hold but the claim fails?" If they try honestly and can't, the argument is probably sound. If they find one fast, they just did the audit.
 
 ---
 
@@ -74,16 +95,23 @@ CLAIM
 
 INFERENCE TYPE
   Deductive | Inductive | Causal | Analogical (— and what "valid" requires for that type).
+  Deductive is graded pass/fail; the other three are graded by strength of support.
 
 VERDICT
-  One of:
+  For a DEDUCTIVE argument, one of:
   - Valid / sound — the support establishes the claim.
   - Valid only if you grant X — holds, but leans on an unstated assumption; name X.
-  - Inconclusive — support is relevant but too weak to establish it; say what's missing.
-  - Invalid — the conclusion does not follow; name the specific break (fallacy or counterexample).
+  - Invalid — the conclusion does not follow; give the counterexample (premises hold, claim fails).
+  For an INDUCTIVE / CAUSAL / ANALOGICAL argument, grade the support instead:
+  - Strong / Moderate / Weak support — how much the evidence raises the claim's
+    probability, and the specific thing (base rate, confounder, disanalogy) that
+    caps it. Reserve "invalid" for a real defeater, not merely "not a guarantee."
 
 WHERE IT BREAKS (if it does)
-  The exact step, and the counterexample or gap that breaks it.
+  Reconstruct the implicit step, don't just name a fallacy:
+  "You're treating X as if it implies Y, but that only holds if Z — and here Z
+  fails because [counterexample / confound / disanalogy]."
+  The reconstruction is checkable; the fallacy label is optional shorthand.
 
 SMALLEST FIX
   The least change that makes it hold: add the missing premise, narrow the
@@ -100,7 +128,8 @@ The **"valid only if you grant X"** verdict is the most common and most useful o
 
 - Audit the **link**, not the conclusion's truth. "The conclusion is correct" never rescues a broken argument.
 - Choose the **weakest reading that still supports the claim** before attacking — don't strawman.
-- Name the failure precisely: *which* step, *which* fallacy, *which* counterexample. "This is illogical" is not a finding.
+- Locate the failure precisely: *which* step, and the counterexample or missing link that breaks it. "This is illogical" is not a finding — and neither is a bare fallacy name, which is a guess to be tested, not the finding itself.
+- Grade non-deductive arguments by strength, not by deductive validity. Inductive, causal, and analogical inferences are defeasible by design; judge how much support they confer, and don't call a reasonable one "invalid" for failing to guarantee.
 - Prefer narrowing the claim over discarding the argument. Most fixes are a qualifier, not a demolition.
 - Don't drag the Socratic loop for its own sake. When the point is made, land it.
 - If the user just wants the verdict fast, drop the Socratic mode and go straight to Phase 2 — the interaction serves them, not the ritual.

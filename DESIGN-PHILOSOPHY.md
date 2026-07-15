@@ -95,6 +95,36 @@ the illusion-of-explanatory-depth procedure made operational [3]: elicit a
 self-rating, force generative explanation of the load-bearing step, then re-rate.
 The gap between ratings is the debt signal.
 
+**Teaching an honest novice repays debt, but only if the novice pushes back.**
+Explaining a result to a naive student is grounded in the protégé effect:
+learners expend more effort, and learn more, when the goal is to teach an agent
+than to learn for themselves, an effect most pronounced for lower-achieving
+learners [25]. But the benefit is not automatic. Tutors default to a
+*knowledge-telling bias* — summarizing the source with little elaboration — and
+reflective knowledge-building is elicited specifically when the tutee asks
+questions that require an inferential answer [26]. Merely explaining to a passive
+fictitious student can even underperform plain self-explanation [27]. This shapes
+`naive-student`'s design: the novice must be confused in a way that forces
+elaboration, and its confusion must be *earned from the actual explanation*
+rather than scripted. A canned "I don't get it" is knowledge-telling bait; an
+inference-demanding question is what turns teaching into learning. The skill is
+therefore the repayment counterpart to `knowledge-debt-audit`'s detection.
+
+**A collaborator helps by co-constructing, not by solving.** `whiteboard-peer`
+co-solves the unfinished middle rather than handing over an answer, following the
+ICAP ordering: Interactive (co-generative) engagement tends to beat Constructive,
+which beats Active, which beats Passive [28]. But the collaborative advantage is
+fragile and conditional. In peer-tutoring data, "constructive" tutor dialog was
+associated with *lower* learning when it reinforced wrong solutions or gave away
+answers, while facilitative dialog helped [29]; and meta-analytically,
+collaborative problem solving's effect on cognitive skills is real but only
+upper-middle, moderated by group size and scaffolding [30]. Hence the skill's hard
+constraint: commit real partial attempts and genuine disagreement, but *never take
+over the full solution*. A peer that solves it for you converts an Interactive
+exchange into passive receipt and can actively depress learning. This is the same
+productive-failure discipline [14] enacted in dialogue: the struggle has to stay
+the user's.
+
 **Writing advice is mostly untested craft.** The writing skills, especially
 `paper-writer`, distill canonical expert advice such as Halmos [15] and Krantz
 [16], but treat that advice as expert testimony rather than settled evidence. Where
@@ -113,6 +143,25 @@ inflation, or correlation stated as cause. Draft audits should make this checkab
 classify claims by support status, validate paragraph flow as an argument, and
 report broken inferences separately from cosmetic gaps by quoting the exact
 sentence.
+
+**Auditing an argument means checking the link, not the conclusion.** The
+`argument-audit` skill reconstructs an argument into claim, stated support, and
+unstated warrant, then interrogates the inference itself — a true conclusion can
+rest on a broken argument. This is the critical-questions method from
+argumentation theory: each argumentation scheme carries a fixed set of questions
+that attack a premise, attack the conclusion on external grounds, or attack the
+premise-to-conclusion step [21], [22], and reconstructing the structure before
+attacking it is the argument-mining move [21]. The skill stays Socratic and
+human-in-the-loop for an evidence-backed reason: LLMs are unreliable at this
+exact task. They detect fallacy structure at near-chance accuracy [23], and
+self-critique tends to degrade a model's own reasoning while a *sound external*
+check improves it [24]. So the skill does not hand over a machine verdict; it
+walks the user to construct the counterexample themselves. That move is also the
+illusion-of-explanatory-depth procedure [3] applied to one's own argument: force
+generative explanation of the load-bearing step and the gap becomes visible. The
+handoff to `theorem-and-claim-audit` for a written report is the same
+generation/audit split applied at the level of interaction mode — dialogue when
+the user should earn the weak link, report when they want it handed over.
 
 **Generation and audit are separate jobs.** Following the narrow-roles principle,
 drafting (`paper-writer`), results prose (`results-writeup`), citation checking
@@ -215,3 +264,54 @@ e27725, 2017. doi:
 impact research? Collaboration, journal and document properties," *Journal of
 Informetrics*, vol. 7, no. 4, pp. 861-873, 2013. doi:
 [10.1016/j.joi.2013.08.006](https://doi.org/10.1016/j.joi.2013.08.006).
+
+[21] J. Lawrence and C. Reed, "Argument Mining: A Survey," *Computational
+Linguistics*, vol. 45, no. 4, pp. 765-818, 2020. doi:
+[10.1162/coli_a_00364](https://doi.org/10.1162/coli_a_00364).
+
+[22] D. Walton, C. Reed, and F. Macagno, *Argumentation Schemes*. Cambridge:
+Cambridge University Press, 2008. doi:
+[10.1017/CBO9780511802034](https://doi.org/10.1017/CBO9780511802034).
+
+[23] I. Robbani, T. Hirst, et al., "Flee the Flaw: Annotating the Underlying
+Logic of Fallacious Arguments Through Templates and Slot-filling," 2024. Preprint.
+Note: reports state-of-the-art language models detecting fallacy templates at
+~0.47 accuracy; cited for the limitation, not a settled effect size.
+
+[24] K. Stechly, K. Valmeekam, and S. Kambhampati, "On the Self-Verification
+Limitations of Large Language Models on Reasoning and Planning Tasks,"
+arXiv:2402.08115, 2024. doi:
+[10.48550/arXiv.2402.08115](https://doi.org/10.48550/arXiv.2402.08115).
+
+[25] C. C. Chase, D. B. Chin, M. A. Oppezzo, and D. L. Schwartz, "Teachable
+Agents and the Protégé Effect: Increasing the Effort Towards Learning," *Journal
+of Science Education and Technology*, vol. 18, no. 4, pp. 334-352, 2009. doi:
+[10.1007/s10956-009-9180-4](https://doi.org/10.1007/s10956-009-9180-4).
+
+[26] R. D. Roscoe and M. T. H. Chi, "Tutor learning: the role of explaining and
+responding to questions," *Instructional Science*, vol. 36, no. 4, pp. 321-350,
+2008. doi:
+[10.1007/s11251-007-9034-5](https://doi.org/10.1007/s11251-007-9034-5).
+
+[27] Z. Pi et al., "Is self-explanation better than explaining to a fictitious
+student when learning from video lectures?" *British Journal of Educational
+Technology*, vol. 53, no. 6, 2022. Note: cited as a boundary condition (passive
+fictitious-audience explanation underperformed self-explanation); exact DOI not
+verified here.
+
+[28] M. T. H. Chi and R. Wylie, "The ICAP Framework: Linking Cognitive Engagement
+to Active Learning Outcomes," *Educational Psychologist*, vol. 49, no. 4,
+pp. 219-243, 2014. doi:
+[10.1080/00461520.2014.965823](https://doi.org/10.1080/00461520.2014.965823).
+
+[29] C. Borchers et al., "Combining Dialog Acts and Skill Modeling: What Chat
+Interactions Enhance Learning Rates During AI-Supported Peer Tutoring?" 2024.
+Preprint. Note: reports that give-away or incorrect-reinforcing "constructive"
+tutor dialog correlated with lower tutee learning; cited for the limitation, not a
+settled effect size.
+
+[30] E. Xu, W. Wang, and Q. Wang, "The effectiveness of collaborative problem
+solving in promoting students' critical thinking: A meta-analysis based on
+empirical literature," *Humanities and Social Sciences Communications*, vol. 10,
+art. 16, 2023. doi:
+[10.1057/s41599-023-01508-1](https://doi.org/10.1057/s41599-023-01508-1).
