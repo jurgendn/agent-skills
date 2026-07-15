@@ -440,6 +440,12 @@
       "description": "Surface publishable theoretical gaps in research papers and run weekly lemma autopsies by weakening one hypothesis before consulting the authors' discussion."
     },
     {
+      "name": "argument-audit",
+      "path": "skills/research-skills/theory-and-claims/argument-audit",
+      "category": "research-skills/theory-and-claims",
+      "description": "Domain-general interactive/Socratic check of whether stated evidence or premises actually establish a claim (math, essay, or everyday argument); converges to a validity verdict plus smallest fix."
+    },
+    {
       "name": "theorem-and-claim-audit",
       "path": "skills/research-skills/theory-and-claims/theorem-and-claim-audit",
       "category": "research-skills/theory-and-claims",
