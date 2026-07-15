@@ -95,7 +95,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 ### Theory and claims
 
-- `research-skills/theory-and-claims/argument-audit` — domain-general, interactive/Socratic check of whether stated evidence/premises actually establish a claim (math, essay, or everyday argument); converges to a validity verdict + smallest fix.
+- `research-skills/theory-and-claims/argument-audit` — interactively and Socratically check whether stated evidence or premises establish a claim in a proof, essay, research conclusion, or everyday argument; converges to a validity verdict plus the smallest fix or counterexample.
 - `research-skills/theory-and-claims/gap-finder` — surface publishable theoretical gaps in papers and run a weekly lemma autopsy that weakens one hypothesis before consulting the authors' discussion.
 - `research-skills/theory-and-claims/theorem-and-claim-audit` — pressure-test paper claims and mathematical arguments.
 - `research-skills/theory-and-claims/theory-to-toy-cases` — turn abstract ideas into minimal examples and sanity checks.

@@ -443,7 +443,7 @@
       "name": "argument-audit",
       "path": "skills/research-skills/theory-and-claims/argument-audit",
       "category": "research-skills/theory-and-claims",
-      "description": "Domain-general interactive/Socratic check of whether stated evidence or premises actually establish a claim (math, essay, or everyday argument); converges to a validity verdict plus smallest fix."
+      "description": "Interactively and Socratically check whether stated evidence or premises establish a claim in a proof, essay, research conclusion, or everyday argument; converges to a validity verdict plus the smallest fix or counterexample."
     },
     {
       "name": "theorem-and-claim-audit",
