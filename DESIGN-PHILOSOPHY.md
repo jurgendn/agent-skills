@@ -169,6 +169,20 @@ drafting (`paper-writer`), results prose (`results-writeup`), citation checking
 separate skills with explicit boundaries. A drafting skill should prepare handoff
 to the relevant audit or review skill rather than silently grading its own output.
 
+**Process rigor must not multiply artifacts.** Separating generation from audit
+is about *passes*, not *files*. The workspace research pipeline
+(`init-workspace`'s `_shared/agents/pipeline.md`) began as four agent files
+whose stages each wrote their own output (`research.md`, `draft.md`,
+`review.md`, `cited.md`); in practice this produced swarms of tiny intermediate
+files the user could not track and re-read costs at every stage. It was
+consolidated into one four-pass protocol (evidence → draft → review → verify)
+run inside the artifact's own file — scaffolding sections (evidence table,
+inline review items) live in the working file and are compressed away by the
+final pass — with a size gate so small notes skip the pipeline entirely. The
+durable rule: a quality process may add passes over an artifact, but its net
+file output should be the artifact itself; and rigor should scale with the
+stakes of the artifact, not apply uniformly to every note.
+
 ## References
 
 [1] J. H. Flavell, "Metacognition and cognitive monitoring: A new area of

@@ -31,6 +31,20 @@ WHERE confidence = "low"
 SORT subtopic ASC
 ```
 
+## Synthesis pipeline status
+
+Which `summaries/` and `map/` notes have been through the four-pass pipeline
+(`agents/pipeline.md`); each pass records itself in the note's frontmatter
+`pipeline:` key (`evidence` → `drafted` → `reviewed` → `verified`). A note
+missing here never entered the pipeline.
+
+```dataview
+TABLE WITHOUT ID file.link AS Note, pipeline AS "Last pass"
+FROM "summaries" OR "map"
+WHERE pipeline
+SORT file.name ASC
+```
+
 ## Reading queue
 
 ```dataview

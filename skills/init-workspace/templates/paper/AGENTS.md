@@ -18,15 +18,14 @@ across agents instead of varying with each one's defaults.
   synthesis, drafts, claims. Do **not** write code, scripts, or notebooks unless
   the user explicitly asks. `data/` holds pointers; experiment code lives in a
   separate repo.
-- **Work in four stages, not one pass.** For any non-trivial artifact, run the
-  pipeline defined in `agents/`: **researcher → reviewer → verifier → writer**.
-  1. *Researcher* (`agents/researcher.md`) — gather and ground evidence in
-     `related-work/`, `experiments/`, `figures/`, and `references/`.
-  2. *Reviewer* (`agents/reviewer.md`) — critique the draft: weak baselines,
-     missing ablations, claims that outrun the evidence.
-  3. *Verifier* (`agents/verifier.md`) — anchor every claim to a source; remove
-     or downgrade anything you cannot ground.
-  4. *Writer* (`agents/writer.md`) — only now write the artifact into its folder.
+- **Substantial artifacts go through the pipeline — in one file.** For any
+  artifact a reader will rely on (a section draft, a synthesis note), run the
+  four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review →
+  verify** — inside the artifact's own file: ground evidence in `related-work/`
+  + `experiments/` + `figures/` + `references/`, draft from it, critique claims
+  that outrun it, then anchor every claim to a source. The pipeline produces
+  exactly one file; never create per-stage side files. Small notes skip the
+  pipeline (the rules below still apply).
 - **Synthesis is source-grounded.** Every factual claim links to a source (a
   `related-work/` note, an `experiments/` note, a `figures/` id, or a
   `references/` file). A claim with no source is not done.
@@ -63,7 +62,7 @@ drafts/           # section drafts: abstract, intro, method, results, discussion
 data/             # POINTERS to datasets (paths, URLs, licences) — not raw data
 submission/       # venue choice, checklist, cover letter, rebuttal
 references/       # venue-conventions, reviewer-risk-checklist, notation/citation, repro-checklist
-agents/           # research pipeline: researcher → reviewer → verifier → writer
+agents/           # pipeline.md: evidence → draft → review → verify (one file)
 _dashboard/       # experiment-index, draft-status
 ```
 
@@ -129,16 +128,16 @@ comes next.
 - **Given a new result:** create `experiments/exp-{NNN}-…md`, fill the
   frontmatter, write the *Reading* tying it back to the paper's claim, and
   update `_dashboard/experiment-index.md`.
-- **Asked to draft/revise the paper or multiple sections:** run the four-stage
-  pipeline from the *Operating contract* (`agents/`): ground in `ideas/` +
-  `related-work/` + `experiments/` + `figures/`, critique, verify every claim
-  against a source, then use `paper-writer` to coordinate the writing phase and
-  write to `drafts/`.
-- **Asked to draft/revise one narrow section:** run the four-stage pipeline from the
-  *Operating contract* (`agents/`): ground in `ideas/` + `experiments/`, critique,
-  verify every claim against a source, then write to `drafts/<section>.md`. Use
-  the matching writer skill from the routing table as the writer stage. Never
-  draft a section before checking `ideas/` for the agreed spine.
+- **Asked to draft/revise the paper or multiple sections:** run the four-pass
+  pipeline (`agents/pipeline.md`) in each section file under `drafts/`: ground
+  in `ideas/` + `related-work/` + `experiments/` + `figures/`, draft, critique,
+  verify every claim against a source — using `paper-writer` to coordinate the
+  writing phase.
+- **Asked to draft/revise one narrow section:** run the four-pass pipeline
+  (`agents/pipeline.md`) in `drafts/<section>.md`, grounding in `ideas/` +
+  `experiments/` and using the matching writer skill from the routing table for
+  the draft pass. Never draft a section before checking `ideas/` for the agreed
+  spine.
 - **Before submission:** run `submission-readiness-audit` and `citation-auditor`;
   use `references/reviewer-risk-checklist.md` to catch OpenReview-era reviewer
   objections; then run an adversarial reviewer pass with `professor-critic`
