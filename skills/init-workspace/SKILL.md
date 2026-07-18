@@ -43,22 +43,28 @@ installed `ielts-*` skills already carry the band descriptors and feedback
 aggregation, so the vault doesn't duplicate them. Every other template seeds its
 own `references/` so the workspace is self-contained.
 
-### Shared research agents
+### Shared research pipeline
 
-The four research-pipeline agents — `researcher → reviewer → verifier → writer` —
-are identical across templates, so they live once at `templates/_shared/agents/`
-(the single source of truth) rather than being duplicated per template. They are
-generalized and agent-portable: they describe each stage's job, integrity rules,
-and output contract without binding to a particular runtime's tools. At scaffold
-time they are copied into the vault at `<vault>/agents/`, so the workspace stays
-self-contained and portable.
+The research pipeline is identical across templates, so it lives once at
+`templates/_shared/agents/pipeline.md` (the single source of truth) rather than
+being duplicated per template. It is a single four-pass protocol — **evidence →
+draft → review → verify** — run *inside the artifact's own file*: the evidence
+table and open review items live in the working file while the pipeline runs and
+are compressed into a final Sources section, so the pipeline never creates
+per-stage side files (no `research.md`/`draft.md`/`review.md`/`cited.md`) and
+its net output is exactly one file. A size gate restricts it to substantial
+artifacts; small notes are covered by the Operating contract in a single pass.
+It is generalized and agent-portable: it names capabilities, integrity rules,
+and an output contract without binding to a particular runtime's tools. At
+scaffold time it is copied into the vault at `<vault>/agents/`, so the workspace
+stays self-contained and portable.
 
 Only the **full-pipeline** templates get the `agents/` folder: `paper`, `theory`,
-and `learn-a-topic`. Their `AGENTS.md` *Operating contract* references the four
-stages as the default for any non-trivial research artifact. The `talk`,
-`phd-application`, and `ielts` templates use a **lighter grounding-only contract**
-(no-code + source-grounded + mark-uncertainty, without the four named stages), so
-they do **not** receive the `agents/` folder.
+and `learn-a-topic`. Their `AGENTS.md` *Operating contract* routes substantial
+research artifacts through the four passes. The `talk`, `phd-application`, and
+`ielts` templates use a **lighter grounding-only contract** (no-code +
+source-grounded + mark-uncertainty, without the pipeline), so they do **not**
+receive the `agents/` folder.
 
 ## Procedure
 
@@ -75,9 +81,9 @@ they do **not** receive the `agents/` folder.
 5. **Copy the seeded files.** Copy the template's `AGENTS.md`, `references/`,
    and `_dashboard/` into the target (see *Merge rules*). For the full-pipeline
    templates only (`paper`, `theory`, `learn-a-topic`), also copy
-   `templates/_shared/agents/` into `<vault>/agents/` so the research pipeline
-   travels with the vault. `talk`, `phd-application`, and `ielts` use the lighter
-   grounding-only contract and get no `agents/` folder.
+   `templates/_shared/agents/pipeline.md` into `<vault>/agents/` so the research
+   pipeline travels with the vault. `talk`, `phd-application`, and `ielts` use
+   the lighter grounding-only contract and get no `agents/` folder.
 6. **Write the entry-file stub.** Write `<vault>/CLAUDE.md` containing exactly
    one line, `@AGENTS.md`. This makes the operating contract auto-load on Claude
    Code (which reads `CLAUDE.md` and follows `@` imports) while staying inert for
@@ -99,6 +105,13 @@ Re-running on an existing directory is safe: **merge, never overwrite.**
 - Copy a seeded file only if no file of that name already exists at the
   destination. Never clobber an existing `AGENTS.md`, reference, dashboard,
   `agents/` file, or any content file — those may hold the user's work or edits.
+- **Legacy pipeline migration (the one exception).** If `<vault>/agents/`
+  contains the retired four role files (`researcher.md`, `reviewer.md`,
+  `verifier.md`, `writer.md`), those are seeded files from the old per-stage
+  design, not user content: offer to delete them and install `pipeline.md` in
+  their place so the vault does not carry two conflicting protocols. Confirm
+  with the user before deleting, and keep any of the four they say they have
+  modified.
 - If `AGENTS.md` already exists, do not replace it; report that the workspace
   already has one and stop touching it.
 - If `CLAUDE.md` already exists, do not replace it — the user may have their own

@@ -14,6 +14,20 @@ from `todo` → `drafting` → `revising` → `done`. The writer skills
 | Results | `drafts/results.md` | todo | results-writeup | every number → an experiment |
 | Discussion | `drafts/discussion.md` | todo | — | limitations stated honestly |
 
+## Pipeline status
+
+Which drafts have been through the four-pass pipeline (`agents/pipeline.md`).
+Requires the Obsidian **Dataview** plugin; each pass records itself in the
+draft's frontmatter `pipeline:` key (`evidence` → `drafted` → `reviewed` →
+`verified`). A draft missing here never entered the pipeline.
+
+```dataview
+TABLE WITHOUT ID file.link AS Draft, pipeline AS "Last pass"
+FROM "drafts"
+WHERE pipeline
+SORT file.name ASC
+```
+
 ## Section spine check
 
 Before drafting, confirm `ideas/` holds an agreed argument spine

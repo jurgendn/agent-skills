@@ -29,6 +29,20 @@ WHERE status = "conjecture" OR status = "sketched"
 SORT date ASC
 ```
 
+## Proof pipeline status
+
+Which proofs have been through the four-pass pipeline (`agents/pipeline.md`);
+each pass records itself in the proof's frontmatter `pipeline:` key
+(`evidence` → `drafted` → `reviewed` → `verified`). A proof missing here never
+entered the pipeline.
+
+```dataview
+TABLE WITHOUT ID file.link AS Proof, pipeline AS "Last pass"
+FROM "proofs"
+WHERE pipeline
+SORT file.name ASC
+```
+
 ## Assumptions in play
 
 Which assumptions the active claims rely on — a wide-spread assumption is a

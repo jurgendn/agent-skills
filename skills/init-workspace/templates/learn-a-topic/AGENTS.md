@@ -14,16 +14,16 @@ agents instead of varying with each one's defaults.
 - **This is learning/synthesis work, not coding.** Produce source notes,
   summaries, a concept map, and exercises. Do **not** write code unless the user
   explicitly asks (an `exercises/` re-derivation may use it when requested).
-- **Work in four stages, not one pass.** For any non-trivial summary or map, run
-  the pipeline in `agents/`: **researcher → reviewer → verifier → writer**.
-  1. *Researcher* (`agents/researcher.md`) — read the actual `sources/` and
-     `notes/`; collect only what they support.
-  2. *Reviewer* (`agents/reviewer.md`) — check the draft summary for claims that
-     outrun the sources, missing caveats, or conflated ideas.
-  3. *Verifier* (`agents/verifier.md`) — anchor every claim to a `sources/` note
-     per `references/source-grounding-rules.md`; demote unsupported claims to
-     `open-questions.md`.
-  4. *Writer* (`agents/writer.md`) — only now write the `summaries/` or `map/` note.
+- **Substantial syntheses go through the pipeline — in one file.** For any
+  non-trivial summary or map note, run the four-pass pipeline in
+  `agents/pipeline.md` — **evidence → draft → review → verify** — inside that
+  note: read the actual `sources/` and `notes/` and collect only what they
+  support; draft; check for claims that outrun the sources, missing caveats, or
+  conflated ideas; then anchor every claim to a `sources/` note per
+  `references/source-grounding-rules.md`, demoting unsupported claims to
+  `open-questions.md`. The pipeline produces exactly one file; never create
+  per-stage side files. Small notes skip the pipeline (the rules below still
+  apply).
 - **Synthesis is source-grounded.** Follow `references/source-grounding-rules.md`:
   nothing in `summaries/` or `map/` is asserted without a link to a `sources/`
   note that supports it.
@@ -61,7 +61,7 @@ search-log.md     # queries, tool/recommender trails, inclusion/exclusion ration
 open-questions.md # running list of unknowns and confusions
 glossary.md       # terms, defined as they appear
 references/       # study-method, source-grounding-rules
-agents/           # research pipeline: researcher → reviewer → verifier → writer
+agents/           # pipeline.md: evidence → draft → review → verify (one file)
 _dashboard/       # topic-map (coverage + confidence by subtopic)
 ```
 
@@ -121,10 +121,9 @@ confidence: medium     # low | medium | high (your grasp of it)
   source was found and why it belongs: keyword search, citation trail, survey
   pointer, recommendation system, LLM suggestion, advisor suggestion, or
   deliberate dissenting/counterexample source.
-- **Synthesising:** run the four-stage pipeline from the *Operating contract*
-  (`agents/`) — read the sources, review the draft for over-reach, verify every
-  claim links to a `sources/` note, then write/extend `summaries/<subtopic>.md`
-  *across* sources.
+- **Synthesising:** run the four-pass pipeline (`agents/pipeline.md`) in
+  `summaries/<subtopic>.md` — read the sources, draft *across* them, review for
+  over-reach, verify every claim links to a `sources/` note.
 - **As you go:** add new terms to `glossary.md` and unknowns to
   `open-questions.md`; update `_dashboard/topic-map.md` confidence.
 - **To check understanding:** create an exercise in `exercises/` and try to
