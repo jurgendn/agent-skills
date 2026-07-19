@@ -81,51 +81,87 @@
     },
     {
       "name": "ielts-learning-planner",
-      "path": "skills/language-learning/ielts-learning-planner",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-learning-planner",
+      "category": "test-prep",
       "description": "Build a personalised IELTS study plan with weekly schedules, drills, and progress milestones."
     },
     {
       "name": "ielts-reading-strategies",
-      "path": "skills/language-learning/ielts-reading-strategies",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-reading-strategies",
+      "category": "test-prep",
       "description": "Teach, practise, and give feedback on IELTS Academic or General Training Reading strategies."
     },
     {
       "name": "ielts-speaking-coach",
-      "path": "skills/language-learning/ielts-speaking-coach",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-speaking-coach",
+      "category": "test-prep",
       "description": "Simulate, score, and give feedback on IELTS Speaking tests across Parts 1, 2, and 3."
     },
     {
       "name": "ielts-vocabulary-builder",
-      "path": "skills/language-learning/ielts-vocabulary-builder",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-vocabulary-builder",
+      "category": "test-prep",
       "description": "Build, drill, and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading."
     },
     {
       "name": "ielts-writing-task1",
-      "path": "skills/language-learning/ielts-writing-task1",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-writing-task1",
+      "category": "test-prep",
       "description": "Draft, analyse, score, and improve IELTS Academic Writing Task 1 responses."
     },
     {
       "name": "ielts-writing-task2",
-      "path": "skills/language-learning/ielts-writing-task2",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-writing-task2",
+      "category": "test-prep",
       "description": "Draft, analyse, score, and improve IELTS Academic or General Training Writing Task 2 essays."
     },
     {
       "name": "ielts-progress-reporter",
-      "path": "skills/language-learning/ielts-progress-reporter",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-progress-reporter",
+      "category": "test-prep",
       "description": "Aggregate marked IELTS Writing feedback files into periodic progress reports of band trends, recurring errors, and revision gains."
     },
     {
       "name": "ielts-grammar-coach",
-      "path": "skills/language-learning/ielts-grammar-coach",
-      "category": "language-learning",
+      "path": "skills/test-prep/ielts-grammar-coach",
+      "category": "test-prep",
       "description": "Estimate an IELTS Grammatical Range & Accuracy (GRA) band, then diagnose and durably fix the recurring errors holding it down via coded corrective feedback, Vietnamese-L1 contrastive diagnosis, a persistent error ledger with spaced re-probes, and targeted drills; also a general-English no-band mode. Isolates GRA (use ielts-writing-task2/ielts-speaking-coach for a whole-task band across all four criteria)."
+    },
+    {
+      "name": "gre-verbal-reasoning",
+      "path": "skills/test-prep/gre-verbal-reasoning",
+      "category": "test-prep",
+      "description": "Coach GRE Text Completion and Sentence Equivalence: predict-then-match method, trap taxonomy, practice generation, and miss classification. RC passages go to gre-reading-comprehension; word learning goes to gre-vocabulary-builder."
+    },
+    {
+      "name": "gre-reading-comprehension",
+      "path": "skills/test-prep/gre-reading-comprehension",
+      "category": "test-prep",
+      "description": "Coach GRE Reading Comprehension and paragraph-argument (critical reasoning) questions: passage mapping, wrong-answer taxonomy, line-reference discipline, and timed drilling. Fill-in-the-blank items go to gre-verbal-reasoning."
+    },
+    {
+      "name": "gre-quant-coach",
+      "path": "skills/test-prep/gre-quant-coach",
+      "category": "test-prep",
+      "description": "Coach GRE Quantitative Reasoning: quantitative-comparison tactics, careless-error elimination, content-gap triage, format strategies, and pacing. GRE test math only, not research-level math."
+    },
+    {
+      "name": "gre-issue-essay",
+      "path": "skills/test-prep/gre-issue-essay",
+      "category": "test-prep",
+      "description": "Draft, score against the 0-6 rubric, and improve GRE Analytical Writing 'Analyze an Issue' essays across all six instruction stems, with a 30-minute timing protocol. IELTS essays go to ielts-writing-task2."
+    },
+    {
+      "name": "gre-vocabulary-builder",
+      "path": "skills/test-prep/gre-vocabulary-builder",
+      "category": "test-prep",
+      "description": "Build and retain GRE vocabulary via meaning clusters, charge, secondary meanings of common words, and spaced retrieval drills embedded in TC/SE-style contexts. Solving actual TC/SE items goes to gre-verbal-reasoning."
+    },
+    {
+      "name": "gre-learning-planner",
+      "path": "skills/test-prep/gre-learning-planner",
+      "category": "test-prep",
+      "description": "Build personalised GRE study plans: diagnostic baseline, Verbal/Quant/AW allocation, daily vocabulary pipeline, practice-test milestones, and test-date scheduling around grad-school application deadlines."
     },
     {
       "name": "apply-profile-reader",
@@ -282,6 +318,12 @@
       "path": "skills/research-skills/idea-and-positioning/cross-domain-analogy-finder",
       "category": "research-skills/idea-and-positioning",
       "description": "Find a concept's structural twin in a distant field to borrow a portable solution (offense) or check whether an idea already exists (defense), with a four-way verification gate and prior-art grounding."
+    },
+    {
+      "name": "gap-motivation-builder",
+      "path": "skills/research-skills/idea-and-positioning/gap-motivation-builder",
+      "category": "research-skills/idea-and-positioning",
+      "description": "Socratically build the motivation case for filling a research gap — consequence, beneficiary, blocker, timeliness, payoff — ending in a motivation verdict plus solution desiderata, without proposing the method."
     },
     {
       "name": "pytorch-training-recipe",

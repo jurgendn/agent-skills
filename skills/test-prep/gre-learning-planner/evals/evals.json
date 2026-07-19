@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-learning-planner",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm applying to US CS PhD programs for Fall 2027, deadlines mostly mid-December. I took a POWERPREP test: 166Q, 153V, haven't done the essay. I can study about 12 hours a week. Build me a plan.",
+      "expected_output": "Diagnoses weak-Verbal/strong-Quant, allocates ~55% verbal with the daily vocabulary slot from day 1, one weekly timed Issue essay, quant maintenance only; recommends a test date working back from December with a retake buffer; flags GRE-optional policies and program score profiles as verify-live; routes activities to the sibling gre-* skills.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Is 6 weeks enough to go from 310 to 320 on the GRE? I can do maybe 15 hours a week.",
+      "expected_output": "Asks for or reasons about the per-section split of the 10-point gap before answering; applies the gap-timeline table honestly (per-section +5 in 6-10 weeks is borderline), distinguishes fast quant behavior fixes from slow vocabulary-driven verbal gains, and prescribes a checkpoint to test the trajectory rather than a flat yes/no.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My last two practice tests were both 158V after four weeks of studying verbal. Should I just book the test?",
+      "expected_output": "Invokes the stagnation rule: two flat checkpoints means rediagnose, not more of the same — examines error-log composition (miss classes) via the section skills before deciding; ties the book-or-retake decision to target-program profiles (verify live) and deadline buffer rather than frustration.",
+      "files": []
+    }
+  ]
+}

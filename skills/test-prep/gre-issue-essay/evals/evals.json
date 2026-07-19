@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-issue-essay",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Score my GRE issue essay please. The prompt was about whether universities should require students to take courses outside their major, with the instruction to discuss circumstances where the recommendation would or wouldn't be advantageous. [essay text: ~450 words, clear position, three listed reasons with generic examples, no counterargument]",
+      "expected_output": "Checks the essay against the recommendation instruction stem first (circumstances-based discussion), assigns a half-point score anchored to the rubric reference with per-dimension justification, gives leverage-ordered feedback quoting the user's sentences, and ends with the score/lever/drill block.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have my GRE in 10 days and haven't practiced the essay at all. What's the 30-minute game plan, and can you give me a prompt to try under timed conditions?",
+      "expected_output": "Delivers the 0-4 / 4-26 / 26-30 timing protocol, explains the six instruction-stem variants matter for task completeness, points to the published ETS pool, and offers a timed practice prompt with scoring afterward.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My AWA practice essays keep getting 4.0. What does a 5.0 or 6.0 essay actually do differently? Show me on my essay if you can. [essay attached]",
+      "expected_output": "Explains the 4→5→6 gradient in leverage order (position with texture, deep few reasons with specific examples, honest counterargument) rather than vocabulary polish, anchored to the rubric levels, and demonstrates the upgrade on the user's own sentences.",
+      "files": []
+    }
+  ]
+}

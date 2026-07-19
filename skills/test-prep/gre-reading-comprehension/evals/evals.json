@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-reading-comprehension",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "On GRE reading comp I always get down to two answers and pick the wrong one, especially on inference questions. Here's an example passage question I missed [passage about coral reef adaptation; question asks what the passage suggests about symbiont shuffling; I picked the choice saying it 'proves reefs will survive warming'].",
+      "expected_output": "Names the trap family (extreme/overstated relative to the passage's hedged claim), enforces the line-reference discipline by asking for or quoting the proving text, explains the smallest-step rule for inference, and logs the miss as an elimination failure with that trap family.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Write me a GRE-style short passage with 3 questions including one select-in-passage and one select-all-that-apply, then grade my answers.",
+      "expected_output": "Produces a dense, hedged, GRE-register passage with the requested mixed formats; explanations quote the proving sentence for each answer; wrong answers are wrong for nameable taxonomy reasons; answers withheld until committed.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "How do I attack those short logic-argument questions on the GRE, like 'which of the following most seriously weakens the conclusion'? I studied for the LSAT years ago but I'm rusty.",
+      "expected_output": "Teaches the conclusion/evidence/assumption decomposition and the weaken-by-attacking-the-assumption pattern (alternative cause, disanalogy, sampling flaw), plus the negation test for assumption questions; offers a targeted drill set.",
+      "files": []
+    }
+  ]
+}

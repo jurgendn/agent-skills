@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-vocabulary-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Teach me 15 new GRE words today. I've been grinding flashcards from a 3500-word list and forgetting everything within a week.",
+      "expected_output": "Introduces 10-20 words in sentence-context-first order, grouped in meaning clusters with charge and hooks (full entry format), sets up the spaced re-probe schedule, and explains why high-frequency + secondary meanings beat the 3500-word grind.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "quiz me on the words from this week: laconic, garrulous, taciturn, voluble, reticent, prolix",
+      "expected_output": "Recognizes these as one talkativeness meaning-cluster and drills discrimination within it (cloze with near-neighbor distractors, charge sort, odd-one-out) rather than definition recital; varies cue formats and reports which distinctions are shaky.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A practice question used 'qualify' to mean something like 'limit' and I had no idea that was a meaning. Are there more words like this I should know for the GRE?",
+      "expected_output": "Identifies the secondary-meanings-of-common-words category as high-value, gives the canonical examples (check, flag, appropriate, wanting, arrest, telling, economy) with GRE-style sentences, and offers to enter them into the ledger with re-probes.",
+      "files": []
+    }
+  ]
+}
