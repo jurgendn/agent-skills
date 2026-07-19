@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-quant-coach",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a math degree but I'm stuck at 164 on GRE quant practice tests. It's embarrassing. Most of my misses are quantitative comparison and stupid mistakes. Help.",
+      "expected_output": "Runs the four-way score diagnosis and identifies the 160+ regime (traps + carelessness, not content); prescribes QC tactics (compare-don't-compute, adversarial number battery, D-discipline) and the careless-error mechanism log, explicitly steering away from content review.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Quant comparison question: x^2 = 16. Quantity A: x. Quantity B: 4. I said C, the answer is D. But x^2=16 means x=4??",
+      "expected_output": "Explains x can be -4 or 4 (the positive-value assumption trap), demonstrates the adversarial-number habit and D-hunting discipline, and classifies the miss as a trap taken rather than a content gap.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Give me a GRE quant practice set — mix of question types including numeric entry and one data interpretation group — and then go through my answers and tell me what my error patterns are.",
+      "expected_output": "Generates the default mixed set (QC + problem-solving formats + data-interpretation on one dataset) with trap-encoding wrong answers, withholds solutions until committed, then reports accuracy by format/topic and the miss-category distribution with one next-session instruction.",
+      "files": []
+    }
+  ]
+}

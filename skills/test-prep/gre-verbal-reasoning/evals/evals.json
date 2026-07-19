@@ -1,0 +1,23 @@
+{
+  "skill_name": "gre-verbal-reasoning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's a GRE question I got wrong: \"Far from being ___, the senator's response was a model of directness.\" The choices were candid, evasive, verbose, terse, forthright. I picked (a) candid because the sentence is about directness. The answer key says (b) evasive. Why?",
+      "expected_output": "Walks the predict-then-match method: identifies 'far from being' as a contrast road sign, so the blank opposes 'directness'; explains evasive fits and names the user's miss as an opposite trap (missed road sign); classifies the miss and does not just restate the answer key.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Give me 6 GRE text completion and sentence equivalence questions, medium-hard, and don't show me the answers until I've tried them. I keep falling for words that sound related to the topic.",
+      "expected_output": "Generates 2 single-blank TC, 2 multi-blank TC, 2 SE items in GRE academic register with determinate clues and road signs, seeds word-you-know traps as requested, withholds answers, and after the user commits produces the error table with miss classification.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm scoring around 80% on untimed verbal fill-in-the-blank practice but I take about 2.5 minutes per question. The real sections are 18 and 23 minutes. What should I change?",
+      "expected_output": "Applies the pacing guidance: TC/SE must bank time for RC; recommends timed prediction drills (e.g., 30-second prediction practice), gives the per-item time targets, and frames accuracy-before-speed thresholds rather than generic advice.",
+      "files": []
+    }
+  ]
+}
