@@ -70,6 +70,7 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 - `research-skills/idea-and-positioning/research-idea-stress-test` — stress-test novelty, assumptions, confounders, and cheap decisive experiments.
 - `research-skills/idea-and-positioning/paper-idea-and-scope-brainstormer` — brainstorm a research idea and scope what a new paper should cover.
 - `research-skills/idea-and-positioning/cross-domain-analogy-finder` — find a concept's structural twin in a distant field to borrow a portable solution (offense) or check whether the idea already exists under another name (defense), gated by a four-way classifier and an import-a-result test.
+- `research-skills/idea-and-positioning/gap-motivation-builder` — Socratically build the motivation case for filling a found gap (consequence, beneficiary, blocker, timeliness, payoff), deliver a motivation verdict, and derive the desiderata any solution must satisfy — without proposing the method.
 
 ### Literature and related work
 
@@ -173,16 +174,22 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 - `coding-support/python-performance-optimization` — Python profiling and performance guidance.
 - `coding-support/python-testing-patterns` — Python testing guidance.
 
-### Language learning
+### Test preparation
 
-- `language-learning/ielts-writing-task1` — draft, analyse, score, and improve IELTS Academic Writing Task 1 reports.
-- `language-learning/ielts-writing-task2` — draft, analyse, score, and improve IELTS Writing Task 2 essays.
-- `language-learning/ielts-speaking-coach` — simulate, score, and improve IELTS Speaking Parts 1–3.
-- `language-learning/ielts-reading-strategies` — teach and practise IELTS Reading strategies and question types.
-- `language-learning/ielts-vocabulary-builder` — build and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading.
-- `language-learning/ielts-learning-planner` — build personalised IELTS study plans and progress routines.
-- `language-learning/ielts-progress-reporter` — aggregate a practice vault's marked `feedback/*.md` files into periodic progress reports (band trends, recurring errors, revision gains).
-- `language-learning/ielts-grammar-coach` — estimate an IELTS **Grammatical Range & Accuracy** band, then diagnose and durably fix the recurring errors holding it down via coded corrective feedback, Vietnamese-L1 contrastive diagnosis, a persistent error ledger with spaced re-probes, and targeted drills; also a general-English (no-band) mode. Isolates GRA — for a whole-task band across all four criteria use `ielts-writing-task2` / `ielts-speaking-coach`.
+- `test-prep/ielts-writing-task1` — draft, analyse, score, and improve IELTS Academic Writing Task 1 reports.
+- `test-prep/ielts-writing-task2` — draft, analyse, score, and improve IELTS Writing Task 2 essays.
+- `test-prep/ielts-speaking-coach` — simulate, score, and improve IELTS Speaking Parts 1–3.
+- `test-prep/ielts-reading-strategies` — teach and practise IELTS Reading strategies and question types.
+- `test-prep/ielts-vocabulary-builder` — build and apply IELTS-relevant vocabulary for Writing, Speaking, and Reading.
+- `test-prep/ielts-learning-planner` — build personalised IELTS study plans and progress routines.
+- `test-prep/ielts-progress-reporter` — aggregate a practice vault's marked `feedback/*.md` files into periodic progress reports (band trends, recurring errors, revision gains).
+- `test-prep/ielts-grammar-coach` — estimate an IELTS **Grammatical Range & Accuracy** band, then diagnose and durably fix the recurring errors holding it down via coded corrective feedback, Vietnamese-L1 contrastive diagnosis, a persistent error ledger with spaced re-probes, and targeted drills; also a general-English (no-band) mode. Isolates GRA — for a whole-task band across all four criteria use `ielts-writing-task2` / `ielts-speaking-coach`.
+- `test-prep/gre-verbal-reasoning` — coach GRE Text Completion and Sentence Equivalence: predict-then-match method, trap taxonomy, practice generation, and miss classification.
+- `test-prep/gre-reading-comprehension` — coach GRE Reading Comprehension and paragraph-argument questions: passage mapping, wrong-answer taxonomy, line-reference discipline, timed drilling.
+- `test-prep/gre-quant-coach` — coach GRE Quantitative Reasoning: quantitative-comparison tactics, careless-error elimination, content-gap triage, pacing.
+- `test-prep/gre-issue-essay` — draft, score (0–6 rubric), and improve GRE Analytical Writing "Analyze an Issue" essays across all six instruction stems.
+- `test-prep/gre-vocabulary-builder` — build and retain GRE vocabulary via meaning clusters, charge, secondary meanings, and spaced cloze drills in TC/SE contexts.
+- `test-prep/gre-learning-planner` — build personalised GRE study plans with section allocation, a daily vocabulary pipeline, practice-test milestones, and application-deadline scheduling.
 
 ### Presentation and slides
 

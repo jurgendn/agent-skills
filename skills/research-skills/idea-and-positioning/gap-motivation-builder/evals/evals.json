@@ -1,0 +1,23 @@
+{
+  "skill_name": "gap-motivation-builder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I ran gap-finder on a paper about spectral clustering for community detection. It found that the consistency guarantee only holds for graphs with bounded degree, but real social networks are heavy-tailed. I want to work on extending the guarantee to heavy-tailed degree distributions. Before I start, help me figure out whether this gap is actually worth filling — I don't want to write a paper whose motivation is just 'the assumption is unrealistic'.",
+      "expected_output": "Socratic dialogue (one question at a time, not a checklist dump) probing consequence, beneficiary, blocker, timeliness, payoff; converges on a Motivation Brief with an explicit verdict and solution desiderata traced to chain links; does not propose the extension method itself.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I already have an algorithm: a modified attention mechanism that's sparsity-aware. I need a good motivation section for it. Everyone says long-context efficiency is a huge problem, so I was going to lead with that. Can you help me build the motivation?",
+      "expected_output": "Detects the method-first situation and switches to reverse-check mode: builds the motivation chain and desiderata without reference to the method first, polices trend-riding ('everyone says') and phantom beneficiaries, then checks the method against the derived desiderata — willing to report a mismatch rather than retrofit.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "There's basically no work on evaluating uncertainty calibration for graph neural networks on temporal graphs. It's a clear gap — nobody has done it. Is that enough for a paper? Give me the verdict quickly, I don't need a long back-and-forth.",
+      "expected_output": "Honors the fast-verdict request (drops the Socratic loop), refuses 'nobody has done it' as motivation, checks the trichotomy (trivial / done under another name / genuine blocker), flags unverified prior-art status as CONDITIONALLY MOTIVATED or routes to literature-triangulation, and delivers the brief with an honest verdict — possibly WEAK.",
+      "files": []
+    }
+  ]
+}

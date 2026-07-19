@@ -183,6 +183,27 @@ durable rule: a quality process may add passes over an artifact, but its net
 file output should be the artifact itself; and rigor should scale with the
 stakes of the artifact, not apply uniformly to every note.
 
+**A gap is an absence; a motivation is a consequence.** Finding a hole in the
+literature and justifying work on it are different jobs, so `gap-finder` and
+`gap-motivation-builder` are separate skills. The design follows the
+gap-spotting vs. problematization distinction from research-methodology work:
+most research questions are constructed by spotting an absence ("understudied",
+"no prior work"), but absence alone is compatible with "not worth doing", and
+gap-spotting tends to reproduce rather than challenge the assumptions of the
+literature it extends [31]. The motivation skill therefore refuses absence as
+motivation and probes a consequence chain instead — what fails today, for whom,
+why the obvious extension doesn't close it, why now, and what filling it
+unlocks — a structure that deliberately tracks the Heilmeier catechism's core
+questions ("How is it done today, and what are the limits of current
+practice?", "Who cares? If you succeed, what difference will it make?") [32].
+The load-bearing probe is "why hasn't this been done?", whose three answers
+route differently: trivial (not a paper), done under another name (route to
+literature search), or a genuine blocker — and the blocker is what makes a
+later method non-arbitrary, because the method must be an answer to it. The
+skill's output is desiderata derived *before* any design exists, so that a
+proposed solution is answerable to the motivation rather than retrofitted onto
+it; proposing the method itself is out of scope by construction.
+
 ## References
 
 [1] J. H. Flavell, "Metacognition and cognitive monitoring: A new area of
@@ -329,3 +350,17 @@ solving in promoting students' critical thinking: A meta-analysis based on
 empirical literature," *Humanities and Social Sciences Communications*, vol. 10,
 art. 16, 2023. doi:
 [10.1057/s41599-023-01508-1](https://doi.org/10.1057/s41599-023-01508-1).
+
+[31] J. Sandberg and M. Alvesson, "Ways of constructing research questions:
+gap-spotting or problematization?" *Organization*, vol. 18, no. 1, pp. 23-44,
+2011. doi:
+[10.1177/1350508410372151](https://doi.org/10.1177/1350508410372151). See also
+M. Alvesson and J. Sandberg, "Generating research questions through
+problematization," *Academy of Management Review*, vol. 36, no. 2, pp. 247-271,
+2011. doi: [10.5465/amr.2009.0188](https://doi.org/10.5465/amr.2009.0188).
+
+[32] G. H. Heilmeier, "The Heilmeier Catechism," DARPA.
+[https://www.darpa.mil/about/heilmeier-catechism](https://www.darpa.mil/about/heilmeier-catechism).
+Attributed to Heilmeier's tenure as DARPA director (1975-1977); cited as the
+canonical question set for motivating proposed research, not as an empirical
+study.
