@@ -1,10 +1,6 @@
 # Writing Progress
 
-Dataview dashboard over `feedback/`. Requires the Obsidian **Dataview** plugin.
-All numbers come from the fixed feedback frontmatter (`band_*`, `errors`,
-`date`, `task`, `prompt_id`, `version`) defined in `AGENTS.md`. For trend
-statistics and revision deltas across the whole vault, run the
-`ielts-progress-reporter` skill (it reads the same `feedback/*.md` files).
+Dataview dashboard over `feedback/`. Requires the Obsidian **Dataview** plugin. All numbers come from the fixed feedback frontmatter (`band_*`, `errors`, `date`, `task`, `prompt_id`, `version`) defined in `AGENTS.md`. For trend statistics and revision deltas across the whole vault, run the `ielts-progress-reporter` skill (it reads the same `feedback/*.md` files).
 
 ## Latest marks
 
@@ -52,8 +48,7 @@ SORT date DESC
 
 ## Revision deltas (multi-version prompts)
 
-Prompts you revised — compare the earliest and latest version of the same
-`prompt_id` to see whether revising moved the band.
+Prompts you revised — compare the earliest and latest version of the same `prompt_id` to see whether revising moved the band.
 
 ```dataview
 TABLE WITHOUT ID prompt_id AS Prompt, rows.version AS Versions, rows.band_overall AS "Overall by version"

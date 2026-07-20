@@ -1,9 +1,6 @@
 # Topic Map
 
-Dataview over `sources/`. Requires the Obsidian **Dataview** plugin. Reads the
-frontmatter schema in `AGENTS.md` (`src`, `title`, `subtopic`, `status`,
-`confidence`, `type`, `year`). This is the coverage view; the conceptual
-landscape lives in `map/`.
+Dataview over `sources/`. Requires the Obsidian **Dataview** plugin. Reads the frontmatter schema in `AGENTS.md` (`src`, `title`, `subtopic`, `status`, `confidence`, `type`, `year`). This is the coverage view; the conceptual landscape lives in `map/`.
 
 ## Coverage by subtopic
 
@@ -33,10 +30,7 @@ SORT subtopic ASC
 
 ## Synthesis pipeline status
 
-Which `summaries/` and `map/` notes have been through the four-pass pipeline
-(`agents/pipeline.md`); each pass records itself in the note's frontmatter
-`pipeline:` key (`evidence` → `drafted` → `reviewed` → `verified`). A note
-missing here never entered the pipeline.
+Which `summaries/` and `map/` notes have been through the four-pass pipeline (`agents/pipeline.md`); each pass records itself in the note's frontmatter `pipeline:` key (`evidence` → `drafted` → `reviewed` → `verified`). A note missing here never entered the pipeline.
 
 ```dataview
 TABLE WITHOUT ID file.link AS Note, pipeline AS "Last pass"

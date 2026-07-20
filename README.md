@@ -191,7 +191,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 
 ### Project setup (entrypoint)
 
-- `init-workspace` — scaffold a structured Obsidian-style workspace for a chosen work type (`ielts`, `paper`, `phd-application`, `talk`, `theory`, `learn-a-topic`): folder tree + an operating-manual `AGENTS.md` that routes work to the relevant skills + workspace-local `references/` + a Dataview dashboard. Confirms type and target directory first; merges (never overwrites) on re-run.
+- `init-workspace` — scaffold a non-coding, note-centric Obsidian workspace for learning, ongoing research notes, research writing, academic applications, talks, test preparation, theory, or similar knowledge work. Every result gets a folder tree plus an operating-manual `AGENTS.md`; workspace-local `references/` and a Dataview dashboard are included when the selected template or intake warrants them. One short intake batch includes target-directory confirmation, then the skill uses one of seven ready templates as-is (`ielts`, `paper`, `phd-application`, `research-notebook`, `talk`, `theory`, `learn-a-topic`), adapts the closest one while keeping its contract consistent, or writes a lean bespoke vault. Seeded prose keeps each paragraph or list item on one physical line and relies on Obsidian soft wrapping. The skill never scaffolds software/code projects, writes into the repository templates, or overwrites existing vault files.
 
 ## Repository policy
 

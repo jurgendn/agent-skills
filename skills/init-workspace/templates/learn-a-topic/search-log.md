@@ -1,7 +1,6 @@
 # Search Log
 
-Record how the reading set was built. This prevents the map from being quietly
-shaped by one keyword, one recommender system, or one LLM-generated list.
+Record how the reading set was built. This prevents the map from being quietly shaped by one keyword, one recommender system, or one LLM-generated list.
 
 ## Query / Trail Template
 

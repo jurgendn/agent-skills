@@ -1,8 +1,6 @@
 # Experiment Index
 
-Dataview over `experiments/`. Requires the Obsidian **Dataview** plugin. Reads
-the frontmatter schema defined in `AGENTS.md` (`exp`, `status`, `verdict`,
-`hypothesis`, `result`, `date`).
+Dataview over `experiments/`. Requires the Obsidian **Dataview** plugin. Reads the frontmatter schema defined in `AGENTS.md` (`exp`, `status`, `verdict`, `hypothesis`, `result`, `date`).
 
 ## All experiments
 
