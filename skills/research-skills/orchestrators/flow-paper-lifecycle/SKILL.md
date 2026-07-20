@@ -1,7 +1,7 @@
 ---
 name: flow-paper-lifecycle
 description: >-
-  Orchestrate a research paper end-to-end — from raw idea through literature grounding, experiment design, implementation, results, writing, submission, rebuttal, and artifact release. Use whenever the user wants to drive a whole paper rather than one stage: "help me write this paper from scratch", "where am I in the paper process", "what should I do next on this project", "take this from idea to submission", "I have results, get me to a draft", "manage my paper workflow", or hands over a project and asks for the path to a venue. This is a ROUTER that sequences existing singleton skills with stage gates; it does not do the ideation, experiments, or writing itself. For a single stage, invoke that stage's skill directly (e.g. abstract-and-intro-writer, experiment-design). For PhD application packages use flow-phd-application. For talks/decks use the presentation skills.
+  Orchestrate a research paper end-to-end — from raw idea through literature grounding, experiment design, implementation, results, writing, submission, rebuttal, and artifact release. Use whenever the user wants to drive a whole paper rather than one stage: "help me write this paper from scratch", "where am I in the paper process", "what should I do next on this project", "take this from idea to submission", "I have results, get me to a draft", "manage my paper workflow", or hands over a project and asks for the path to a venue. Also use it for the writing phase itself — "draft the introduction", "outline this paper", "how should I structure this", "turn this spine into a draft", "my first paper" — which it owns as a phase-gated stage-group (stage 10) rather than delegating. This is otherwise a ROUTER that sequences existing singleton skills with stage gates; it does not do the ideation or experiments itself. For a single narrow section, invoke that section's skill directly (e.g. abstract-and-intro-writer, method-section-writer, results-writeup). For PhD application packages use flow-phd-application. For talks/decks use the presentation skills.
 ---
 
 # Paper Lifecycle Orchestrator
@@ -52,7 +52,7 @@ Pin the MINIMAL vs SUGGESTED baselines/benchmarks the claim needs, and design ab
 **Gate:** minimal baseline+benchmark set agreed; ablations map to specific alternative explanations.
 
 ### Stage 6 — Implement & run → `research-codebase` (+ `pytorch-training-recipe` / `jax-training-recipe` as needed)
-Structure the codebase for fast hypothesis testing and implement the runs. Route to data/training/debugging singletons (`data-pipeline-auditor`, `debugging-strategies`, `hyperparameter-triage`) when those bite.
+Structure the codebase for fast hypothesis testing and implement the runs. When a run misbehaves — divergence, collapse, suspicious gains, a suspected data-path bug, or "which knob next" — go back to `experiment-design`, whose diagnostic pass checks the data path before blaming the model.
 **Gate:** experiments run reproducibly and produce the metrics the plan called for.
 
 ### Stage 7 — Analyze results → `model-eval-error-analysis` → `results-writeup`
@@ -67,9 +67,77 @@ Decide what's a plot vs table, design ablation tables, make captions self-contai
 Lock the paper spine — the throughline from problem to contribution — before drafting prose.
 **Gate:** a stable spine exists; the contribution is fixed. **Do not write sections before this gate.**
 
-### Stage 10 — Write sections → `paper-writer` (+ section singletons as needed)
-Use `paper-writer` as the writing-phase coach: structure the full draft, enforce section gates, keep math prose consistent, and coordinate handoffs. Within that phase, delegate narrow section work to `abstract-and-intro-writer`, `method-section-writer`, `related-work-writer`, and `results-writeup` as needed. Abstract+intro remain a pair; Related Work must come from the stage-3 map.
-**Gate:** a complete draft whose sections all serve the spine.
+### Stage 10 — Write sections (the writing stage-group)
+
+This stage is owned here rather than delegated: it is a phase-gated writing
+coach in four sub-phases. Do not draft ahead of the current gate unless the user
+explicitly overrides it. Delegate narrow section work outward as noted.
+
+Ask the target venue type **once** — theorem-proof mathematics, ML conference,
+or hybrid/applied — and branch the skeleton: math papers foreground definitions,
+theorem statements, proof architecture and relation to known results; ML papers
+foreground contribution bullets, method, experiments, ablations, baselines,
+reproducibility and limitations; hybrid papers keep *both* theorem and empirical
+claims in the claims-to-evidence map rather than letting one hide the other.
+
+Load reference files progressively: `references/writing-structure.md` (10a),
+`references/writing-drafting.md` (10b), `references/writing-math-prose.md`
+(10c), `references/writing-logistics.md` (10d), and
+`references/writing-evidence.md` whenever giving citation/readability/title/
+abstract advice.
+
+**Evidence flags.** Every writing recommendation carries one: **[EXPERT]**
+(craft consensus, not empirically established), **[SUPPORTED]** (empirical
+backing exists), **[CONTESTED]** (evidence conflicts or is field-specific),
+**[REFUTED]** (folklore contradicted by data). Never present an [EXPERT] rule as
+an empirical fact; when unsure, mark it [EXPERT] or say the evidence level is
+unknown.
+
+**10a — Story and skeleton.** Force one contribution sentence before drafting
+anything: *"This paper shows/proposes/proves/introduces that `<new thing>` by
+`<core mechanism/evidence>`."* If the user can't state it, stop and work only on
+that sentence. Build a claims-to-evidence map (claim → supporting
+evidence/proof/result → section). Draft only the introduction *skeleton*, not
+polished prose. [EXPERT]
+**Gate 10a:** one-sentence contribution exists; every contribution has a
+supporting section; a reader of only the intro could state what is new.
+
+**10b — Drafting.** Draft the technical core first, then results, then
+introduction, and the abstract last. Separate generation from revision — leave
+placeholders rather than polishing or chasing fact-checks mid-draft. After
+drafting section N, run the Halmos spiral: rewrite sections 1..N−1 in light of
+what N revealed. Delegate to `abstract-and-intro-writer` (abstract+intro stay a
+pair), `method-section-writer`, `related-work-writer` (sourced from the stage-3
+map, never from memory), and `results-writeup` for verified numeric prose.
+[EXPERT]
+**Gate 10b (per section):** the section states its purpose in the first
+paragraph; it has no forward dependency on unwritten material except an explicit
+placeholder; its claims appear in the claims-to-evidence map.
+
+**10c — Mathematical prose pass.** Build a notation table (symbol, meaning,
+type/domain, first definition, collisions). Define every symbol before use.
+Replace vague "any" with "each"/"every" where quantification is universal. Make
+every theorem statement self-contained — hypotheses belong in the statement, not
+only in the preceding paragraph. Give every nontrivial proof a one-sentence
+proof-idea line. For every "it is easy to see", "clearly", or "by a standard
+argument": justify it, cite it, or delete it. [EXPERT]
+**Gate 10c:** notation table complete; zero undefined symbols; every theorem
+re-readable in isolation; every clearly/easy/standard claim justified, cited, or
+removed.
+
+**10d — Draft handoff.** Check venue fit before final formatting (scope,
+audience, page limit, style file, anonymity, supplement rules, deadline). Run
+coauthor sign-off: freeze the version, list open risks, request explicit
+approval, no surprise authorship changes. For journals, prepare a concise cover
+letter stating fit and contribution without re-arguing the paper. For ML venues,
+attach a reproducibility checklist (code/data, seeds, hardware,
+hyperparameters, splits, eval scripts, licenses, compute). [EXPERT]
+**Gate 10d:** a complete draft whose sections all serve the spine, with venue
+fit, coauthor sign-off, and reproducibility artifacts recorded.
+
+On gate failure, return a compact pass/fail checklist and **quote the exact
+offending text** for each failure; if an artifact is missing, quote the missing
+item name instead.
 
 ### Stage 11 — Audit citations → `citation-auditor`
 Verify references exist, claims match sources, nothing is hallucinated or misattributed.
@@ -93,10 +161,10 @@ Decide what to release and package it; audit that results actually reproduce.
 
 ## Router Rules
 
-- **Delegate, don't duplicate.** Each stage hands to a singleton; this file owns sequencing and gates.
+- **Delegate, don't duplicate.** Each stage hands to a singleton; this file owns sequencing and gates. **Stage 10 is the one exception** — the writing phase is owned here, because its gates and the pipeline's gates are the same gates; it still delegates narrow section work outward.
 - **Resume, don't restart.** Enter at the project's real stage; pick up at the last unmet gate.
 - **Hard gate before stage 10.** No section-writing until the argument/spine (stage 9) is stable — drafting on an unstable contribution wastes the most time.
 - **Loop backward freely.** Weak results (7) can send the project back to design (4) or even reframe (2). Going backward is normal, not failure.
 - **Venue can move earlier.** If the deadline is fixed, run stage 13 up front so its norms shape scope and baselines.
-- **Reviewing someone else's paper is a different route.** If the user is acting as a reviewer, hand off to `peer-review-writer`; for OpenReview-era venues it should use `references/openreview-era-reviewing.md`.
+- **Reviewing someone else's paper is a different route.** If the user is acting as a reviewer, hand off to `peer-review-writer`.
 - **Stop at the user's goal.** Not every project needs stages 13–15 in one pass.

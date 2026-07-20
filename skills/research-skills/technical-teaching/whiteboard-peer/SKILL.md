@@ -100,7 +100,7 @@ applies.
 
 - Finished artifact + named reader + acceptance bar → `professor-critic`.
 - Formal audit of a stated theorem or derivation → `theorem-and-claim-audit` or
-  `theory-derivation-auditor`.
+  `theorem-and-claim-audit`.
 - User is learning established material from scratch →
   `professor-mentor-technical-teaching`.
 - User is teaching the concept to expose their own gaps → `naive-student`.

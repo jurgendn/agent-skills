@@ -9,7 +9,6 @@ description: >-
 Produces compile-ready LaTeX Beamer source for academic talks and lectures. This skill is the **render** step — it governs how content lands on slides (the *medium*). Three upstream concerns are handled elsewhere and assumed (or done inline, lightly, when missing):
 
 - **Narrative & pacing** (the one takeaway, the arc, time budget, what to cut) → `research-talk-planner`.
-- **Per-slide structure & design rules** (the slide-spec, claim-titles, density) → `deck-design-principles`.
 - **Content reasoning** (how to actually explain a method or idea — the pressure it responds to, intuition before formalism, math as justification, the fundamental tradeoff) → `professor-mentor-technical-teaching`.
 
 These compose as layers, they do not compete: `professor-mentor-technical-teaching` decides *what the right explanation is*; this skill *compresses that explanation to the medium*. The professor layer is the source for the substance of teaching-oriented slides (lecture content, the seminar idea/method movement); it is **not** a deck structure — never expand its eight-stage arc onto eight dense slides. Pull its reasoning into a slide's `Message` and `Notes`, then cut to one signal per frame.
@@ -54,7 +53,7 @@ Lectures differ from talks: they prioritize learning over persuasion. Expect sec
 If there's no plan and the talk is non-trivial, state the **one takeaway** in a sentence and a rough time budget before proceeding. Don't silently invent an arc — surface it for confirmation.
 
 ### 2. Build the slide-spec
-Produce the per-slide spec from `deck-design-principles` (one block per frame). Pacing: **~1 slide/minute** as default; fewer slides with more time beats more slides rushed. Use claim-titles. Mark each visual's provenance (reuse paper figure / new TikZ / table / chart).
+Produce the per-slide spec from `references/slide-spec-and-design.md` (one block per frame). Pacing: **~1 slide/minute** as default; fewer slides with more time beats more slides rushed. Use claim-titles. Mark each visual's provenance (reuse paper figure / new TikZ / table / chart).
 
 For any **method / idea / concept** slide — and across a whole **lecture** — reason about the content with `professor-mentor-technical-teaching` *before* compressing it:
 

@@ -1,8 +1,8 @@
 # Slide design principles (reference)
 
-Workspace-local crib of the rules the `deck-design-principles` skill applies in
-depth. Use this while filling `_dashboard/slide-plan.md`; use the skill for
-slide-level feedback and the full spec schema.
+Workspace-local crib of the rules the `deck-*` builder skills apply in depth.
+Use this while filling `_dashboard/slide-plan.md`; each builder carries the full
+spec schema in its own `references/slide-spec-and-design.md`.
 
 ## One signal per slide
 
@@ -36,5 +36,5 @@ slide-level feedback and the full spec schema.
 - High contrast; don't rely on colour alone to distinguish series.
 - Readable from the back row: large type, thick lines.
 
-For the per-slide spec schema and detailed critique, defer to
-`deck-design-principles`; for narrative/pacing, to `research-talk-planner`.
+For the per-slide spec schema and detailed critique, defer to the `deck-*`
+builder you are rendering with; for narrative/pacing, to `research-talk-planner`.

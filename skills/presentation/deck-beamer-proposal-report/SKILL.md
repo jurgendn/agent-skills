@@ -8,7 +8,7 @@ description: >-
 
 Produces compile-ready Beamer source for **proposals** (what you intend to do and why it's fundable/approvable) and **reports** (what you did versus what you promised). These genres are structured around a plan-of-work, not a single contribution — they need objectives, work packages, timelines, milestones, deliverables, budget, and risk, and reports add progress-vs-plan.
 
-This is the render step. It reuses the slide-spec and design rules from `deck-design-principles`. It is *not* `deck-beamer-academic` (single-paper results talk) and *not* `deck-business-report` (PPTX/Canva, executive audience).
+This is the render step. Its slide-spec schema and format-independent design rules live in `references/slide-spec-and-design.md` — read that first. It is *not* `deck-beamer-academic` (single-paper results talk) and *not* `deck-business-report` (PPTX/Canva, executive audience).
 
 ---
 
@@ -54,7 +54,7 @@ Spine:
 - Audience and slot length; institutional/funder Beamer template if mandated.
 
 ### 2. Build the slide-spec
-Use the relevant spine above as the skeleton, then produce per-slide spec blocks (`deck-design-principles`). For the *persuasion* craft behind a proposal deck — framing it as a sell not an info dump, the hourglass, the three proposal figure archetypes (butterfly / family-portrait / before-after), and density discipline — see `references/proposal-persuasion-craft.md` (grounded in Knapen et al., 2025, arXiv:2504.01645). Genre-specific guidance:
+Use the relevant spine above as the skeleton, then produce per-slide spec blocks (`references/slide-spec-and-design.md`). For the *persuasion* craft behind a proposal deck — framing it as a sell not an info dump, the hourglass, the three proposal figure archetypes (butterfly / family-portrait / before-after), and density discipline — see `references/proposal-persuasion-craft.md` (grounded in Knapen et al., 2025, arXiv:2504.01645). Genre-specific guidance:
 
 - **Objectives** get claim-titles framed as outcomes, not topics.
 - **Timeline** → one Gantt slide (TikZ `pgfgantt`), not a wall of dates.

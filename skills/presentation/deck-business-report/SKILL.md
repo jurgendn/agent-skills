@@ -8,7 +8,7 @@ description: >-
 
 Produces decks for a **business audience** — executives, managers, clients, cross-functional stakeholders — in **PowerPoint** (generated as a real `.pptx`) or **Canva** (import-ready content plus a design spec, since Canva files can't be generated programmatically). The audience cares about decisions, impact, risk, and next steps, not methodological novelty.
 
-This is the render step for non-LaTeX decks. It reuses the slide-spec and design rules from `deck-design-principles`. For academic LaTeX decks use the `beamer-*` skills instead.
+This is the render step for non-LaTeX decks. Its slide-spec schema and format-independent design rules live in `references/slide-spec-and-design.md` — read that first. For academic LaTeX decks use the `beamer-*` skills instead.
 
 ---
 
@@ -46,7 +46,7 @@ Every spine opens with a **single executive-summary slide** that stands alone �
 - Branding: template/theme colors, logo, fonts (a corporate `.pptx` template to start from?).
 
 ### 2. Build the slide-spec
-Use the genre spine, then per-slide spec blocks (`deck-design-principles`), with business-specific emphasis:
+Use the genre spine, then per-slide spec blocks (`references/slide-spec-and-design.md`), with business-specific emphasis:
 
 - **Slide 1 after title = executive summary**: the recommendation + 2–3 reasons + the ask. Self-contained.
 - **Claim-titles as business outcomes**: "Pilot cut handling time 31% — recommend full rollout", not "Pilot Results".

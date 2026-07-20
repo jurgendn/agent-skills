@@ -41,7 +41,7 @@ Hand off to extract every explicit and hidden premise: which are logically neces
 **Exit gate:** the user has an explicit assumption inventory, tagged necessary vs convenience.
 **Checkpoint:** a Tier 3 set (which assumption is load-bearing; what changes in the conclusion if a given premise is dropped).
 
-### Stage 3 — Verify the mechanism → `theory-derivation-auditor` (and/or `theory-to-toy-cases`)
+### Stage 3 — Verify the mechanism → `theorem-and-claim-audit` (and/or `theory-to-toy-cases`)
 If there's a derivation, hand off to check it line by line. If it's a method/algorithm, ground it with `theory-to-toy-cases` so the mechanism becomes something the user can actually compute on a minimal example.
 **Exit gate:** the user has either traced the derivation step by step or run the smallest worked example end to end.
 **Checkpoint:** a Tier 2 + Tier 4 set (compute a fresh toy case unaided; re-derive one nontrivial step without the reference).

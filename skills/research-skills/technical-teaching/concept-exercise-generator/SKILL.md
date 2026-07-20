@@ -91,5 +91,5 @@ yourself against the rubric in solutions.md.
 
 - Learner missed problems and needs re-teaching → `professor-mentor-technical-teaching`.
 - Misses cluster on computing minimal cases → `theory-to-toy-cases`.
-- Tier-4 critique/derivation exposed a real gap in the source itself → `gap-finder` or `theory-derivation-auditor`.
+- Tier-4 critique/derivation exposed a real gap in the source itself → `gap-finder` or `theorem-and-claim-audit`.
 - Called from a learning flow → return the pass/fail-by-tier result to the orchestrator so it can decide the next stage.

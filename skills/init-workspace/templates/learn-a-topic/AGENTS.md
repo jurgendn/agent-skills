@@ -112,7 +112,7 @@ confidence: medium     # low | medium | high (your grasp of it)
 | `map/`, comparing sources | `literature-triangulation` |
 | understanding a hard concept | `professor-mentor-technical-teaching` |
 | turning it into a survey/Related Work | `related-work-writer` |
-| testing a derivation/claim you learned | `theory-derivation-auditor`, `theory-to-toy-cases` |
+| testing a derivation/claim you learned | `theorem-and-claim-audit`, `theory-to-toy-cases` |
 
 ## Default actions
 

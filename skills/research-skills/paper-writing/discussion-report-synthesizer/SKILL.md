@@ -18,7 +18,7 @@ Turn a fragmented academic conversation into a single, readable document that a 
 
 - The user wants to write a section of a research paper — use `method-section-writer`, `abstract-and-intro-writer`, or `results-writeup` instead.
 - The user wants a grounded literature survey — use `literature-triangulation` or `related-work-writer`.
-- The conversation is about experimental logs or run results — use `results-writeup` or `experiment-trace-summarizer`.
+- The conversation is about experimental logs or run results — use `results-writeup` or `experiment-design`.
 - The conversation has only one question and one answer — a short direct reply is better than a full report.
 
 ## Workflow

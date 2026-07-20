@@ -81,11 +81,11 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 ### Experiment design and analysis
 
-- `research-skills/experiment-design-and-analysis/experiment-design` — design minimal, decision-relevant experiments.
+- `research-skills/experiment-design-and-analysis/experiment-design` — design minimal, decision-relevant experiments, and diagnose runs that already went wrong (symptom classification, data-path audit before model blame, mechanism-wise tuning, scaling-curve fitting via `scripts/fit_scaling_law.py`).
+- `research-skills/experiment-design-and-analysis/benchmark-and-baseline-selector` — recommend the MINIMAL vs SUGGESTED baselines and benchmarks a claim needs to be credible.
 - `research-skills/experiment-design-and-analysis/hypothesis-and-ablation-planner` — isolate mechanisms with targeted ablations.
 - `research-skills/experiment-design-and-analysis/model-eval-error-analysis` — inspect model failures beyond aggregate metrics.
 - `research-skills/experiment-design-and-analysis/statistical-testing-guide` — choose the right test, compute effect sizes, plan seed counts, and report statistics correctly.
-- `research-skills/experiment-design-and-analysis/deep-learning-experimentation/*` — specialist diagnostics for data pipelines, training runs, scaling, probes, hyperparameters, and experiment traces.
 
 ### Implementation support
 
@@ -100,7 +100,11 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 - `research-skills/theory-and-claims/gap-finder` — surface publishable theoretical gaps in papers and run a weekly lemma autopsy that weakens one hypothesis before consulting the authors' discussion.
 - `research-skills/theory-and-claims/theorem-and-claim-audit` — pressure-test paper claims and mathematical arguments.
 - `research-skills/theory-and-claims/theory-to-toy-cases` — turn abstract ideas into minimal examples and sanity checks.
-- `research-skills/theory-and-claims/theory-heavy-math-ml/*` — specialist support for assumptions, counterexamples, derivations, formalism translation, theorem distillation, and proof sketches.
+- `research-skills/theory-and-claims/theory-heavy-math-ml/theory-assumption-extractor` — surface the assumptions a theorem or method actually relies on.
+- `research-skills/theory-and-claims/theory-heavy-math-ml/theory-counterexample-hunter` — hunt for the smallest witness that breaks a claim.
+- `research-skills/theory-and-claims/theory-heavy-math-ml/theory-formalism-translator` — translate between formalisms without losing the content of a claim.
+- `research-skills/theory-and-claims/theory-heavy-math-ml/theory-paper-to-theorem-distiller` — distill a paper down to its load-bearing theorem statements.
+- `research-skills/theory-and-claims/theory-heavy-math-ml/theory-proof-sketcher` — sketch a proof architecture before committing to full details.
 
 ### Technical teaching
 
@@ -113,7 +117,6 @@ Pass the no-full-depth flag only if you intentionally do not want nested skill d
 
 ### Paper writing
 
-- `research-skills/paper-writing/paper-writer` — guide the writing phase of a research paper from contribution sentence to draft handoff with phase gates, evidence flags, math-prose hygiene, and venue logistics.
 - `research-skills/paper-writing/paper-argument-planner` — plan the central thesis, contribution framing, and claim-to-evidence spine.
 - `research-skills/paper-writing/abstract-and-intro-writer` — draft or revise the abstract and introduction as a matched pair.
 - `research-skills/paper-writing/method-section-writer` — draft or revise the method section with consistent notation, motivation-first structure, and correct level of detail.
@@ -167,12 +170,7 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 
 ### Coding support
 
-- `coding-support/debugging-strategies` — systematic debugging support.
 - `coding-support/prompting-claude-models` — prompt/system-prompt/agent design for Claude-backed features; grounds volatile model-specific behavior in the live Anthropic docs.
-- `coding-support/python-code-style` — Python style and linting guidance.
-- `coding-support/python-design-patterns` — Python design/refactoring guidance.
-- `coding-support/python-performance-optimization` — Python profiling and performance guidance.
-- `coding-support/python-testing-patterns` — Python testing guidance.
 
 ### Test preparation
 
@@ -193,7 +191,6 @@ Lightweight routers that sequence the singleton research skills into a guided wo
 
 ### Presentation and slides
 
-- `presentation/deck-design-principles` — shared slide-spec schema and design rules (one-signal-per-slide, claim-titles, hierarchy, density) reused by the format-specific builders.
 - `presentation/deck-beamer-academic` — compile-ready LaTeX Beamer decks for academic talks, seminars, conferences, defenses, and lectures.
 - `presentation/deck-beamer-proposal-report` — compile-ready LaTeX Beamer decks for research proposals, progress reports, milestone reviews, and final reports.
 - `presentation/deck-business-report` — PowerPoint/Canva business report decks for executives, managers, clients, pilots, and stakeholder updates.

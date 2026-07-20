@@ -53,7 +53,7 @@ Hand off to turn the sharpened idea + assumptions into a precisely quantified st
 Hand off to design the proof strategy: the high-level argument, the lemmas needed, the proof technique, and the riskiest step. Optionally ground the strategy on a minimal instance with `theory-to-toy-cases` before committing.
 **Exit gate:** there's a proof skeleton with named lemmas and an identified weakest link.
 
-### Stage 5 — Audit & attack → `theory-counterexample-hunter` (+ `theory-derivation-auditor`)
+### Stage 5 — Audit & attack → `theory-counterexample-hunter` (+ `theorem-and-claim-audit`)
 Hand off to attack the claim and the skeleton: hunt counterexamples at the assumption boundaries, and audit any concrete derivation steps line by line. This is where over-broad claims get caught before they reach a referee.
 **Exit gate:** no surviving counterexample to the stated claim, and the risky derivation steps check out — or the claim has been narrowed until both hold.
 

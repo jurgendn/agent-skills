@@ -26,7 +26,7 @@ The recurring ways theory arguments go wrong. Scan this before marking a claim
 ## Bounds and algebra
 
 - **Off-by-epsilon / off-by-constant** — a dropped factor that flips a tight
-  bound into a false one. Audit with `theory-derivation-auditor`.
+  bound into a false one. Audit with `theorem-and-claim-audit`.
 - **Loose union bound presented as tight** — fine for existence, fatal if the
   claim is about the rate.
 - **Direction of an inequality reversed** — especially after dividing by a

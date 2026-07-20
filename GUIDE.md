@@ -163,7 +163,6 @@ Choose the row closest to your goal:
 | Develop a paper from idea through submission | `$flow-paper-lifecycle` |
 | Build a complete PhD application package | `$flow-phd-application` |
 | Find and frame an industry AI/R&D problem | `$industry-problem-framing` |
-| Diagnose a bug | `$debugging-strategies` |
 | Work on one IELTS skill | The corresponding `ielts-*` skill |
 | Create a structured workspace | `$init-workspace` |
 
@@ -178,7 +177,7 @@ My goal is to defend it at an advisor meeting next week.
 If the task is already precise, invoke the singleton directly:
 
 ```text
-Use $theory-derivation-auditor to check this derivation line by line.
+Use $theorem-and-claim-audit to check this derivation line by line.
 ```
 
 ## The mental model

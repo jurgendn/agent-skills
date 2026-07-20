@@ -1,6 +1,6 @@
 ---
 name: theorem-and-claim-audit
-description: Pressure-test mathematical arguments and ML paper claims. Use for theorem sketches, proof outlines, derivations, ML paper claims, reviewer-mode critique, hidden assumptions, skipped proof steps, invalid generalization, weak empirical support, overclaimed conclusions, or whenever a result looks cleaner or stronger than expected.
+description: Pressure-test mathematical arguments, derivations, and ML paper claims, and deliver a written report-style audit. Use for theorem sketches, proof outlines, step-by-step derivations, ML paper claims, reviewer-mode critique, hidden assumptions, skipped proof steps, invalid generalization, weak empirical support, overclaimed conclusions, or whenever a result looks cleaner or stronger than expected — including "check my derivation", "which step breaks", "did I drop a constant", "does this algebra hold", or "audit this proof". Use argument-audit instead when the user wants to be walked Socratically to the weak link rather than handed a report, or when the claim is an essay/application/everyday argument rather than a formal or empirical one.
 ---
 
 # Theorem and Claim Audit
@@ -116,6 +116,25 @@ in a suitable basis.
 ```
 
 ---
+
+### Step-by-step derivations
+
+When the target is a *derivation* rather than a theorem statement, check each
+transformation, not just the endpoints:
+
+- Rewrite the derivation one step at a time, and for each step name the rule
+  that justifies it.
+- Flag silent assumptions as they enter: differentiability, invertibility,
+  exchange of limits, independence, convergence mode.
+- Verify dimensions, domains, signs, and constants at every line.
+- Mark the **first** invalid or unproven step exactly — everything downstream
+  of it is unaudited, not wrong.
+- If the derivation holds only under added conditions, state the weakest
+  conditions you found.
+- Distinguish an algebra mistake from a missing assumption; they have different
+  repairs.
+- Do not repair the derivation silently. Name the repair.
+- If a derivation is only heuristic, label it heuristic rather than valid.
 
 ## 5. Search for Hidden Assumptions
 

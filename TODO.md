@@ -4,6 +4,36 @@ Backlog for the agent-skills ecosystem. Source: learning-to-learn audit handoff
 (2026-07-07). Items are independent — pick per session. Status markers: `[ ]` open,
 `[~]` in progress / partially done, `[x]` done.
 
+## Done this session (2026-07-20) — skill pruning, 98 → 84
+
+Rationale (recorded in CLAUDE.md at each affected directory): remove skills that
+re-order default agent behavior; keep skills that constrain it. The 2026-05-30/31
+batch averaged ~250 words and mostly restated what a capable model already does.
+
+- [x] Removed the deep-learning-experimentation/ family (6). Its real content —
+  symptom classification, data-path-before-model ordering, mechanism-wise tuning —
+  folded into `experiment-design`, whose description now also carries the
+  diagnostic triggers. scaling-law-tracker's 257-line `fit_scaling_law.py`
+  (selftest passes) was **preserved** into `experiment-design/scripts/`.
+- [x] Removed 4× `python-*` + debugging-strategies (5). `coding-support/` now
+  holds `prompting-claude-models` only.
+- [x] Merged theory-derivation-auditor → `theorem-and-claim-audit` as a
+  step-by-step derivation section; 14 references repointed.
+- [x] Merged paper-writer → `flow-paper-lifecycle` stage 10 as a four-sub-phase
+  writing stage-group (10a–10d) with gates; its 5 reference files moved to
+  `references/writing-*.md`.
+- [x] Dissolved deck-design-principles into a per-builder
+  `references/slide-spec-and-design.md` in all three `deck-*` skills, removing the
+  last sibling→sibling hard dependency.
+- [x] Fixed dead references found en route: ai-writing-detector (absent from
+  repo), a dangling `references/openreview-era-reviewing.md`, and the missing
+  `benchmark-and-baseline-selector` README entry — three of PR 1.1's items.
+
+**Open follow-up:** dissolving deck-design-principles dropped its direct-use
+entry point ("is this slide too busy", "fix the visual hierarchy") — tool-agnostic
+slide feedback now has no triggering home. Decide whether to give that trigger to
+`deck-beamer-academic` as the default or leave it out.
+
 ## In flight
 
 - [~] **Calibrate `professor-critic`** — skill is authored, registered, and wired in

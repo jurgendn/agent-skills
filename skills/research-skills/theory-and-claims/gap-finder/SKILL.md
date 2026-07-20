@@ -69,7 +69,7 @@ possible limitations.
 ### When NOT to use lemma-autopsy mode
 
 - The target is the user's own conjecture → `theory-counterexample-hunter`.
-- The user needs a formal line-by-line proof check → `theory-derivation-auditor`.
+- The user needs a formal line-by-line proof check → `theorem-and-claim-audit`.
 - The goal is a venue review rather than diagnosis practice → `peer-review-writer`.
 - The paper has no proof or dependency-structured claim.
 
@@ -189,6 +189,6 @@ Briefly note what the paper *does* prove well — both for fairness and so the u
 
 - Turn a suspected failure into a systematic counterexample search →
   `theory-counterexample-hunter`
-- Audit the exact algebraic or analytic step → `theory-derivation-auditor`
+- Audit the exact algebraic or analytic step → `theorem-and-claim-audit`
 - Develop a surviving extension into a formal theorem → `flow-idea-to-proof`
 - Write a venue-facing review of the paper → `peer-review-writer`

@@ -19,8 +19,6 @@ Prompts are the interface to an LLM the way an API signature is the interface to
 ## When not to use it
 
 - **API/SDK mechanics** (model IDs, pricing, sampling parameters, tool-use JSON schema, prompt caching, token counting, migration) → use the `claude-api` reference. This skill is about *what the prompt says*, not how the call is wired.
-- **Python code quality** of the surrounding harness → `python-code-style`, `python-testing-patterns`, `python-design-patterns`, `python-performance-optimization`.
-- **Runtime bugs in the harness that aren't about model behavior** → `debugging-strategies`.
 
 ## Ground model-specific behavior in the live docs
 

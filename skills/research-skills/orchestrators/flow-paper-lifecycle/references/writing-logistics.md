@@ -14,7 +14,7 @@ Use for Phase 4 draft handoff logistics: venue-aware formatting checks, coauthor
 - [EXPERT] For journal submissions, write a short cover letter that states the paper's fit, central contribution, and confirmation that the manuscript is not under review elsewhere if required.
 - [EXPERT] Treat referee reports as information, not as a referendum on the author's worth. Separate required changes, optional improvements, misunderstandings caused by the draft, and disagreements with the referee.
 - [EXPERT] When responding to referees, answer every substantive point with a location in the revised draft, a concise explanation, or a respectful reason for not changing.
-- [EXPERT] Before submission, hand off the full draft to `argument-audit`, `submission-readiness-audit`, and `citation-auditor`; if LLM-assisted prose was used, also run `ai-writing-detector`.
+- [EXPERT] Before submission, hand off the full draft to `argument-audit`, `submission-readiness-audit`, and `citation-auditor`.
 
 ## Venue Fit Checklist
 
