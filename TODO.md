@@ -4,6 +4,42 @@ Backlog for the agent-skills ecosystem. Source: learning-to-learn audit handoff
 (2026-07-07). Items are independent — pick per session. Status markers: `[ ]` open,
 `[~]` in progress / partially done, `[x]` done.
 
+## Done this session (2026-07-20) — taxonomy flatten (PR 2)
+
+**The measurement that justified it.** `npx skills add jurgendn/agent-skills -l`
+returned **31** skills; with `--full-depth`, **98**. Those 31 were exactly the
+skills at `skills/<skill>/` and `skills/<category>/<skill>/` — so the CLI's default
+discovery stops **two levels under `skills/`**, and 59 of 84 skills were invisible
+to anyone installing without the flag. This was a distribution bug, not tidiness.
+Note `--full-depth` does *not* mean "search deeper" — the CLI documents it as
+"search all subdirectories even when a root SKILL.md exists"; the depth limit is
+separate and undocumented.
+
+- [x] 62 `git mv`s into 14 categories, all at ≤ 2 levels. Skill `name` fields
+  unchanged (verified by set comparison before/after).
+- [x] `skills/init-workspace/` deliberately left at the top level as the project
+  entrypoint. The depth rule is therefore **≤ 2**, not "exactly 2".
+- [x] Sub-categories eliminated: `deep-learning-experimentation/`,
+  `theory-heavy-math-ml/`, `industrial-rnd/banking/`. Name prefixes group
+  siblings instead; CLAUDE.md now forbids sub-categories outright.
+- [x] `gap-finder` moved from theory-and-claims to `research-discovery` — it mines
+  others' papers for one's own gaps, which is discovery, not claim-checking.
+- [x] `--full-depth` removed from `scripts/install.sh`, `install.ps1`, README,
+  GUIDE. README catalog regenerated with real per-skill sections.
+- [x] CLAUDE.md structure section rewritten; the category directories now *are*
+  the taxonomy (the parallel numbered list is gone, so there is one less registry
+  to drift). AGENTS.md regenerated from it.
+- [x] **GATE 2 verified before pushing**, against a local clone of the working
+  tree: 84/84 discovered with no flags (exact set match), and 3 skills installed
+  by name via the standard CLI, carrying their `scripts/` and `references/`.
+
+**Caught by that gate:** `experiment-design` was silently dropped by the CLI —
+its description contained `misbehaves: "my loss diverged"`, and a plain YAML
+scalar cannot contain `": "`. No error was emitted; the skill just vanished from
+the listing. Fixed with block style (`>-`). The lesson: **frontmatter validation
+must parse YAML, not regex `^description:`** — a regex check passed this file.
+All 84 now parse under `yaml.safe_load`.
+
 ## Done this session (2026-07-20) — skill pruning, 98 → 84
 
 Rationale (recorded in CLAUDE.md at each affected directory): remove skills that
@@ -28,6 +64,9 @@ batch averaged ~250 words and mostly restated what a capable model already does.
 - [x] Fixed dead references found en route: ai-writing-detector (absent from
   repo), a dangling `references/openreview-era-reviewing.md`, and the missing
   `benchmark-and-baseline-selector` README entry — three of PR 1.1's items.
+- [x] README expanded from two wildcard lines (deep-learning-experimentation/*,
+  theory-heavy-math-ml/*) to real per-skill entries; README, skills.json,
+  CLAUDE.md and AGENTS.md now agree at 84.
 
 **Open follow-up:** dissolving deck-design-principles dropped its direct-use
 entry point ("is this slide too busy", "fix the visual hierarchy") — tool-agnostic

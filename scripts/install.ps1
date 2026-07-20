@@ -1,7 +1,6 @@
 param(
     [string]$Repo = "https://github.com/jurgendn/agent-skills.git",
     [string]$Skill = "*",
-    [switch]$NoFullDepth
 )
 
 $npx = Get-Command npx -ErrorAction SilentlyContinue
@@ -13,8 +12,6 @@ if (-not $npx) {
 
 $argsList = @("skills", "add", $Repo, "--skill", $Skill)
 
-if (-not $NoFullDepth) {
-    $argsList += "--full-depth"
 }
 
 Write-Host "Running: npx $($argsList -join ' ')"
