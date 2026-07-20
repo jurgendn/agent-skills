@@ -1,9 +1,6 @@
 # Draft Status
 
-Track the state of each paper section. Update the table by hand as sections move
-from `todo` → `drafting` → `revising` → `done`. The writer skills
-(`abstract-and-intro-writer`, `method-section-writer`, `results-writeup`,
-`related-work-writer`) produce the prose in `drafts/`.
+Track the state of each paper section. Update the table by hand as sections move from `todo` → `drafting` → `revising` → `done`. The writer skills (`abstract-and-intro-writer`, `method-section-writer`, `results-writeup`, `related-work-writer`) produce the prose in `drafts/`.
 
 | Section | File | Status | Owner skill | Notes |
 |---|---|---|---|---|
@@ -16,10 +13,7 @@ from `todo` → `drafting` → `revising` → `done`. The writer skills
 
 ## Pipeline status
 
-Which drafts have been through the four-pass pipeline (`agents/pipeline.md`).
-Requires the Obsidian **Dataview** plugin; each pass records itself in the
-draft's frontmatter `pipeline:` key (`evidence` → `drafted` → `reviewed` →
-`verified`). A draft missing here never entered the pipeline.
+Which drafts have been through the four-pass pipeline (`agents/pipeline.md`). Requires the Obsidian **Dataview** plugin; each pass records itself in the draft's frontmatter `pipeline:` key (`evidence` → `drafted` → `reviewed` → `verified`). A draft missing here never entered the pipeline.
 
 ```dataview
 TABLE WITHOUT ID file.link AS Draft, pipeline AS "Last pass"
@@ -30,6 +24,4 @@ SORT file.name ASC
 
 ## Section spine check
 
-Before drafting, confirm `ideas/` holds an agreed argument spine
-(`paper-argument-planner`). Each section should advance one part of that spine;
-if a section has no job in the spine, cut it.
+Before drafting, confirm `ideas/` holds an agreed argument spine (`paper-argument-planner`). Each section should advance one part of that spine; if a section has no job in the spine, cut it.

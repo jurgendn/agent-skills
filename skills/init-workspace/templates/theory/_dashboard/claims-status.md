@@ -1,8 +1,6 @@
 # Claims Status
 
-Dataview over `claims/`. Requires the Obsidian **Dataview** plugin. Reads the
-frontmatter schema in `AGENTS.md` (`claim`, `status`, `statement`,
-`assumptions`, `proof`, `date`).
+Dataview over `claims/`. Requires the Obsidian **Dataview** plugin. Reads the frontmatter schema in `AGENTS.md` (`claim`, `status`, `statement`, `assumptions`, `proof`, `date`).
 
 ## All claims
 
@@ -31,10 +29,7 @@ SORT date ASC
 
 ## Proof pipeline status
 
-Which proofs have been through the four-pass pipeline (`agents/pipeline.md`);
-each pass records itself in the proof's frontmatter `pipeline:` key
-(`evidence` → `drafted` → `reviewed` → `verified`). A proof missing here never
-entered the pipeline.
+Which proofs have been through the four-pass pipeline (`agents/pipeline.md`); each pass records itself in the proof's frontmatter `pipeline:` key (`evidence` → `drafted` → `reviewed` → `verified`). A proof missing here never entered the pipeline.
 
 ```dataview
 TABLE WITHOUT ID file.link AS Proof, pipeline AS "Last pass"
@@ -45,8 +40,7 @@ SORT file.name ASC
 
 ## Assumptions in play
 
-Which assumptions the active claims rely on — a wide-spread assumption is a
-single point of failure worth scrutinising.
+Which assumptions the active claims rely on — a wide-spread assumption is a single point of failure worth scrutinising.
 
 ```dataview
 TABLE WITHOUT ID assumption AS Assumption, length(rows) AS "Used by"

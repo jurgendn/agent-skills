@@ -1,8 +1,6 @@
 # Schools Tracker
 
-The master clock for this cycle. Keep one note per school in `fit-notes/` (or add
-frontmatter to a per-school note) and let Dataview roll them up here, or maintain
-the table by hand. Requires the Obsidian **Dataview** plugin for the queries.
+The master clock for this cycle. Keep one note per school in `fit-notes/` (or add frontmatter to a per-school note) and let Dataview roll them up here, or maintain the table by hand. Requires the Obsidian **Dataview** plugin for the queries.
 
 ## Manual tracker
 
