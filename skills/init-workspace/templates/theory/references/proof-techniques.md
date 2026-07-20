@@ -2,7 +2,7 @@
 
 A working menu of strategies to reach for when sketching a proof. This is a
 prompt list, not a textbook — the actual sketching and auditing is done by
-`theory-proof-sketcher` and `theory-derivation-auditor`.
+`theory-proof-sketcher` and `theorem-and-claim-audit`.
 
 ## General strategies
 
@@ -39,5 +39,5 @@ prompt list, not a textbook — the actual sketching and auditing is done by
 - Name where each **assumption** is used; an unused assumption is a clue (it may
   be removable, or you proved something weaker).
 - Keep the **quantifier order** straight (∀∃ vs ∃∀) — see `common-pitfalls.md`.
-- After a sketch, audit each step with `theory-derivation-auditor` and try to
+- After a sketch, audit each step with `theorem-and-claim-audit` and try to
   break the result with `theory-counterexample-hunter`.

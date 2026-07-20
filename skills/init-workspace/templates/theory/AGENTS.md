@@ -105,7 +105,7 @@ What's proved, what's hand-wavy, what would refute it.
 |---|---|
 | formalising an idea | `theory-proof-sketcher`, `theory-formalism-translator` |
 | `definitions/`, assumptions | `theory-assumption-extractor` |
-| `proofs/` | `theory-proof-sketcher`; `theory-derivation-auditor` to check steps |
+| `proofs/` | `theory-proof-sketcher`; `theorem-and-claim-audit` to check steps |
 | `counterexamples/` | `theory-counterexample-hunter` |
 | `toy-cases/` | `theory-to-toy-cases` |
 | auditing a finished claim | `theorem-and-claim-audit`, `gap-finder` |
@@ -120,7 +120,7 @@ Use `flow-idea-to-proof` to orchestrate the sequence (idea → claim → assumpt
 - **Developing a proof:** run the four-pass pipeline (`agents/pipeline.md`) in
   `proofs/proof-{NNN}…md` — ground in `definitions/` + `references/`, draft the
   argument, hunt counterexamples, audit every non-trivial step (use
-  `theory-derivation-auditor` for the verify pass).
+  `theorem-and-claim-audit` for the verify pass).
 - **Before claiming `proved`:** stress-test with `theory-counterexample-hunter`
   and a `toy-cases/` sanity check; run `theorem-and-claim-audit`.
 - **Update `_dashboard/claims-status.md`** whenever a claim's status changes.
@@ -132,7 +132,7 @@ Use `flow-idea-to-proof` to orchestrate the sequence (idea → claim → assumpt
   weaker-than-stated assumption is a bug.
 - **Stress-test before trusting.** A claim is `conjecture` until a counterexample
   hunt and a toy case have failed to break it. Don't mark `proved` on intuition.
-- **Check the algebra.** Run `theory-derivation-auditor` on derivation-heavy
+- **Check the algebra.** Run `theorem-and-claim-audit` on derivation-heavy
   steps; off-by-epsilon and non-uniform bounds are the usual culprits
   (`common-pitfalls.md`).
 - **Notation is fixed once** in `definitions/` and `references/notation.md`; don't

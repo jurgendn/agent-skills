@@ -1,7 +1,7 @@
 # Slide Plan
 
 One row per slide — the spec the `deck-*` builder renders. Fill this from the
-approved `narrative/` using `deck-design-principles`. Keep the **claim title**
+approved `narrative/` using `references/slide-design-principles.md`. Keep the **claim title**
 (not a topic label) and the **one signal** for each slide.
 
 ## Per-slide spec

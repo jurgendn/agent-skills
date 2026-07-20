@@ -126,7 +126,8 @@ productive-failure discipline [14] enacted in dialogue: the struggle has to stay
 the user's.
 
 **Writing advice is mostly untested craft.** The writing skills, especially
-`paper-writer`, distill canonical expert advice such as Halmos [15] and Krantz
+the writing stage-group in `flow-paper-lifecycle`, distill canonical expert
+advice such as Halmos [15] and Krantz
 [16], but treat that advice as expert testimony rather than settled evidence. Where
 writing folklore has been tested, the results are mixed: large-scale abstract
 analysis found that shorter abstracts predicted fewer citations, while shorter
@@ -164,7 +165,7 @@ generation/audit split applied at the level of interaction mode — dialogue whe
 the user should earn the weak link, report when they want it handed over.
 
 **Generation and audit are separate jobs.** Following the narrow-roles principle,
-drafting (`paper-writer`), results prose (`results-writeup`), citation checking
+drafting (`flow-paper-lifecycle` stage 10), results prose (`results-writeup`), citation checking
 (`citation-auditor`), and submission readiness (`submission-readiness-audit`) are
 separate skills with explicit boundaries. A drafting skill should prepare handoff
 to the relevant audit or review skill rather than silently grading its own output.

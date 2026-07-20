@@ -112,7 +112,7 @@ What this means for the paper's claim, and what to run next.
 | `related-work/` | `literature-triangulation` (map) → `related-work-writer` (prose); `citation-auditor` to verify |
 | `experiments/` | `experiment-design`, `benchmark-and-baseline-selector`, `hypothesis-and-ablation-planner`, `statistical-testing-guide`, `model-eval-error-analysis` |
 | `figures/` | `figure-table-planner` |
-| `drafts/` full-paper drafting | `paper-writer` (coordinates the writing phase and delegates section specialists) |
+| `drafts/` full-paper drafting | `flow-paper-lifecycle` stage 10 (the phase-gated writing stage-group; delegates section specialists) |
 | `drafts/abstract.md`, `intro.md` | `abstract-and-intro-writer` for isolated abstract/intro work |
 | `drafts/method.md` | `method-section-writer` |
 | `drafts/results.md` | `results-writeup` |
@@ -131,8 +131,8 @@ comes next.
 - **Asked to draft/revise the paper or multiple sections:** run the four-pass
   pipeline (`agents/pipeline.md`) in each section file under `drafts/`: ground
   in `ideas/` + `related-work/` + `experiments/` + `figures/`, draft, critique,
-  verify every claim against a source — using `paper-writer` to coordinate the
-  writing phase.
+  verify every claim against a source — using `flow-paper-lifecycle` stage 10 to
+  coordinate the writing phase.
 - **Asked to draft/revise one narrow section:** run the four-pass pipeline
   (`agents/pipeline.md`) in `drafts/<section>.md`, grounding in `ideas/` +
   `experiments/` and using the matching writer skill from the routing table for

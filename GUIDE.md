@@ -43,11 +43,11 @@ install Node.js, close and reopen the terminal, then try again.
 Run:
 
 ```bash
-npx skills add https://github.com/jurgendn/agent-skills.git --list --full-depth
+npx skills add https://github.com/jurgendn/agent-skills.git --list
 ```
 
-This lists the skills without installing them. `--full-depth` is required because
-this repository organizes skills into nested categories.
+This lists the skills without installing them. Every skill lives at
+`skills/<category>/<skill>/`, which the CLI discovers by default.
 
 ### 3. Install one skill
 
@@ -56,14 +56,13 @@ Start with the guided learning flow:
 ```bash
 npx skills add https://github.com/jurgendn/agent-skills.git \
   --skill flow-learn-new-topic \
-  --full-depth \
   --global
 ```
 
 On Windows PowerShell, enter the same command on one line:
 
 ```powershell
-npx skills add https://github.com/jurgendn/agent-skills.git --skill flow-learn-new-topic --full-depth --global
+npx skills add https://github.com/jurgendn/agent-skills.git --skill flow-learn-new-topic --global
 ```
 
 The installer detects compatible agents and may ask where to install the skill.
@@ -130,7 +129,7 @@ private keys, confidential datasets, or material you are not authorized to share
 | Problem | What to do |
 |---|---|
 | `npx: command not found` | Install Node.js, then reopen the terminal. |
-| The repository reports no skills | Include `--full-depth` and use the full repository URL shown above. |
+| The repository reports no skills | Use the full repository URL shown above. |
 | The skill is not listed after installation | Run `npx skills list --global`; reinstall and select the correct AI client. |
 | The agent ignores `$flow-learn-new-topic` | Restart the agent, then say “Use the flow-learn-new-topic skill…” in plain text. |
 | Installation reports a permission or symlink error | Retry in a writable directory or choose copy instead of symlink when prompted. |
@@ -163,7 +162,6 @@ Choose the row closest to your goal:
 | Develop a paper from idea through submission | `$flow-paper-lifecycle` |
 | Build a complete PhD application package | `$flow-phd-application` |
 | Find and frame an industry AI/R&D problem | `$industry-problem-framing` |
-| Diagnose a bug | `$debugging-strategies` |
 | Work on one IELTS skill | The corresponding `ielts-*` skill |
 | Create a structured workspace | `$init-workspace` |
 
@@ -178,7 +176,7 @@ My goal is to defend it at an advisor meeting next week.
 If the task is already precise, invoke the singleton directly:
 
 ```text
-Use $theory-derivation-auditor to check this derivation line by line.
+Use $theorem-and-claim-audit to check this derivation line by line.
 ```
 
 ## The mental model
@@ -209,7 +207,7 @@ assistant from pretending to be researcher, teacher, reviewer, and grader at onc
 
 ### 3. Roles match the maturity of the work
 
-The technical-teaching family is intentionally stage-specific:
+The learning-and-metacognition family is intentionally stage-specific:
 
 | Role | Use it when | It must not become |
 |---|---|---|

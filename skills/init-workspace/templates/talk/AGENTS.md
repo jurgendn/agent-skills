@@ -58,7 +58,7 @@ _dashboard/       # slide-plan (per-slide spec)
 | Folder | Skill to use |
 |---|---|
 | `narrative/` | `research-talk-planner` — settle message/arc/pacing **first** |
-| `_dashboard/slide-plan.md` | `deck-design-principles` (per-slide spec schema + rules) |
+| `_dashboard/slide-plan.md` | the matching `deck-*` builder (its `references/slide-spec-and-design.md` holds the spec schema + rules) |
 | `slides/` (academic talk) | `deck-beamer-academic` |
 | `slides/` (proposal / progress report) | `deck-beamer-proposal-report` |
 | `slides/` (executive / industrial report) | `deck-business-report` |
@@ -70,7 +70,7 @@ _dashboard/       # slide-plan (per-slide spec)
   `narrative/` — message, audience, arc, time budget, and what to cut. Do **not**
   open a deck builder yet.
 - **Once the narrative is approved:** fill `_dashboard/slide-plan.md` (one row
-  per slide) using `deck-design-principles`, then render with the matching
+  per slide) using the builder's `references/slide-spec-and-design.md`, then render with the matching
   `deck-*` builder into `slides/`.
 - **Per slide:** capture what you'll *say* in `script.md`, not on the slide.
 
@@ -79,7 +79,7 @@ _dashboard/       # slide-plan (per-slide spec)
 - **Narrative before slides.** No deck building until `narrative/` holds an
   agreed message and arc. Slides render a plan; they don't invent it.
 - **One signal per slide.** Each slide makes a single point; the title states the
-  claim, not the topic (`deck-design-principles`).
+  claim, not the topic (see `references/slide-design-principles.md`).
 - **Slides are not the paper.** Don't paste paper figures or paragraphs; adapt
   figures for projection (`figures/`) and put prose in `script.md`.
 - **Respect the time budget.** The arc in `narrative/` sets a slide count; if the
