@@ -112,6 +112,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `research-communication/figure-table-planner` — plan figures, tables, captions, and main-vs-appendix evidence.
 - `research-communication/method-section-writer` — draft or revise the method section with consistent notation, motivation-first structure, and correct level of detail.
 - `research-communication/paper-argument-planner` — plan the central thesis, contribution framing, and claim-to-evidence spine.
+- `research-communication/research-proposal-writer` — write or refine a forward-looking research proposal: a multi-year PhD research plan for a prospective supervisor or fellowship, or a next-paper pitch to your advisor.
 - `research-communication/research-talk-planner` — structure a conference talk, seminar, or job talk from a paper or set of results.
 - `research-communication/results-writeup` — write calibrated Results, Experiments, Discussion, lab notes, and technical reports from verified findings.
 
