@@ -1,0 +1,23 @@
+{
+  "skill_name": "research-proposal-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm applying for a PhD in Germany and the professor asked me to send a 4-page research proposal about what I want to work on for the next 3-4 years. I have a rough idea (efficient uncertainty estimation for LLMs) and some notes. Help me write the proposal.",
+      "expected_output": "Intake batch (mode=PhD, reader, constraints, what exists), then a skeleton outline mapped to the Heilmeier-based sections with [NEEDED] flags, approval gate before prose; year-1 concrete / later-years directional calibration; fit-as-dependency section; no promised outcomes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I want to pitch my next paper to my advisor tomorrow. The idea: contrastive pretraining transfers badly to long-tail classes and I think a reweighting scheme fixes it. Write me a short proposal document.",
+      "expected_output": "Next-paper mode: 1-2 pages around one falsifiable claim, minimal experiment set with decision points in weeks, risks with fallbacks, and an explicit ask; skips background/fit sections.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Here's my draft research plan. My supervisor said it feels vague but couldn't say why. It says things like 'we will explore the relationship between architecture and robustness' and 'we expect to significantly improve robustness benchmarks'. Can you refine it?",
+      "expected_output": "Refine mode: runs the failure-mode checklist, reports a ranked diagnosis first (promised outcomes, 'we will explore' non-operations, missing milestones/fallbacks), then rewrites affected sections as questions/deliverables and concrete research operations without silently rewriting the rest.",
+      "files": []
+    }
+  ]
+}

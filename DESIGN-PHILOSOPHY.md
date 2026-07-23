@@ -205,6 +205,44 @@ skill's output is desiderata derived *before* any design exists, so that a
 proposed solution is answerable to the motivation rather than retrofitted onto
 it; proposing the method itself is out of scope by construction.
 
+**A proposal promises questions, not outcomes.** A research proposal is a
+forward-looking artifact with no results to defend, so it is judged entirely on
+plausibility and feasibility — which forces a register distinct from paper
+prose. `research-proposal-writer` therefore requires objectives phrased as
+falsifiable questions or checkable deliverables where either answer is
+informative, and flags guaranteed results ("will outperform") as a proposal
+failure mode. Its methodology rule — an argument for why the planned operations
+are the best attack, never a bare task list, since "most proposals fail because
+they leave reviewers wondering what the applicant will actually do" — and its
+three-reviewer-questions opening (what will we learn, why is it worth knowing,
+how will we know the conclusions are valid) come from Przeworski and Salomon's
+committee-craft essay [33]. Its section skeleton and checkable-milestone rule
+("mid-term and final exams") track the Heilmeier catechism [32] — the same
+question set `gap-motivation-builder` uses, applied at a different stage: the
+motivation skill uses it to derive desiderata *before* any design exists, while
+the proposal skill uses it as the document skeleton once a direction is chosen.
+Like the writing-advice literature, proposal-writing guidance is expert
+testimony and committee craft rather than experimental evidence, and carries
+the same epistemic discipline.
+
+**Split skills when the process diverges; mode-switch when only parameters
+differ.** Several skills serve two audiences or artifact variants from one
+skill body: `deck-beamer-proposal-report` covers proposal defenses and progress
+reports, `peer-review-writer` carries meta-review and emergency-review modes,
+`ielts-grammar-coach` carries a general-English mode, and
+`research-proposal-writer` covers both the multi-year PhD proposal and the
+next-paper advisor pitch. The rule behind these choices: when two variants
+share the same skeleton and failure modes and differ only in calibration
+parameters (reader, time horizon, one conditional section), splitting them
+produces near-identical `description` fields that degrade triggering — agents
+match on descriptions, and two skills competing for the same phrasings pick
+wrongly. A single skill with an explicit mode question resolves the ambiguity
+at intake instead. Conversely, when the variants demand different *processes*
+(the author/reviewer split between `reviewer-response-strategist` and
+`peer-review-writer`, or the qualitative/scored split between
+`apply-package-auditor` and `apply-dossier-evaluator`), they stay separate
+skills with mutually disambiguating descriptions.
+
 ## References
 
 [1] J. H. Flavell, "Metacognition and cognitive monitoring: A new area of
@@ -365,3 +403,9 @@ problematization," *Academy of Management Review*, vol. 36, no. 2, pp. 247-271,
 Attributed to Heilmeier's tenure as DARPA director (1975-1977); cited as the
 canonical question set for motivating proposed research, not as an empirical
 study.
+
+[33] A. Przeworski and F. Salomon, "The Art of Writing Proposals," Social
+Science Research Council, 1988/1995.
+[https://www.ssrc.org/publications/the-art-of-writing-proposals/](https://www.ssrc.org/publications/the-art-of-writing-proposals/).
+Cited as expert committee-craft testimony on proposal writing, not as an
+empirical study.

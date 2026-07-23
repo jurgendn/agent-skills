@@ -338,6 +338,12 @@
       "description": "Turn verified research findings into calibrated scientific writing."
     },
     {
+      "name": "research-proposal-writer",
+      "path": "skills/research-communication/research-proposal-writer",
+      "category": "research-communication",
+      "description": "Write or refine a forward-looking research proposal — a multi-year PhD research plan for a prospective supervisor or fellowship, or a next-paper pitch to your advisor."
+    },
+    {
       "name": "research-talk-planner",
       "path": "skills/research-communication/research-talk-planner",
       "category": "research-communication",
