@@ -7,7 +7,7 @@ Orientation for any agent operating on this theory/proof vault. This file is the
 Read this before doing any work in this vault. Where a rule here conflicts with your own default behavior, this file wins, so the vault behaves the same across agents instead of varying with each one's defaults.
 
 - **This is theory work, not coding.** Produce claims, proofs, counterexamples, and toy cases. Write code only for a `toy-cases/` sanity check the user asks for — never as the default response.
-- **Substantial results go through the pipeline — in one file.** For any non-trivial result, run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside the proof/claim's own file: gather the relevant definitions, prior results, and assumptions from `definitions/` + `claims/` + `references/`; draft the argument; attack it (counterexamples, hidden assumptions, the hand-wavy step); then audit every derivation step and downgrade anything not yet established (off-by-epsilon, non-uniform bounds). The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline (the rules below still apply).
+- **Substantial results go through the pipeline — in one file.** For any non-trivial result, run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside the proof/claim's own file: gather the relevant definitions, prior results, and assumptions from `definitions/` + `claims/` + `references/`; draft the argument; attack it (counterexamples, hidden assumptions, the hand-wavy step); then audit every derivation step and downgrade anything not yet established (off-by-epsilon, non-uniform bounds). The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline and follow `agents/note-method.md` instead — **capture → expand → store → query**, keeping the raw capture inside the note and having the user review any agent expansion rather than accepting it as written (the rules below still apply).
 - **Synthesis is source-grounded.** Every non-trivial step cites a definition, a prior result, or a `references/` technique. A step with no justification is not proved.
 - **Mark uncertainty explicitly.** Separate what is proved from what is conjectured or hand-wavy. Tag unproved steps as `(gap)` / `#unverified`, and say what would close or refute them. A claim stays `conjecture` until the review and verify passes clear it.
 - **Report what you actually did, not what you intended.** Before marking a step, section, or check done, point to the artifact or source that shows it. If a step was skipped or a result is unverified, say so plainly — never present intended, plausible, or in-progress work as completed.
@@ -27,6 +27,7 @@ counterexamples/  # constructions that break or bound a claim
 toy-cases/        # minimal examples, simulations, sanity checks
 references/       # proof-techniques, common-pitfalls, notation
 agents/           # pipeline.md: evidence → draft → review → verify (one file)
+                  # note-method.md: capture → expand → store → query (small notes)
 _dashboard/       # claims-status
 ```
 

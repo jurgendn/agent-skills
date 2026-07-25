@@ -6,8 +6,8 @@ Orientation for any agent operating on this research-paper vault. This file is t
 
 Read this before doing any work in this vault. Where a rule here conflicts with your own default behavior, this file wins. This makes the vault behave the same across agents instead of varying with each one's defaults.
 
-- **This is research work, not coding.** Produce research artifacts — notes, synthesis, drafts, claims. Do **not** write code, scripts, or notebooks unless the user explicitly asks. `data/` holds pointers; experiment code lives in a separate repo.
-- **Substantial artifacts go through the pipeline — in one file.** For any artifact a reader will rely on (a section draft, a synthesis note), run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside the artifact's own file: ground evidence in `related-work/` + `experiments/` + `figures/` + `references/`, draft from it, critique claims that outrun it, then anchor every claim to a source. The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline (the rules below still apply).
+- **This is research work, not coding.** Produce research artifacts — notes, synthesis, drafts, claims. Do **not** write code, scripts, or notebooks unless the user explicitly asks. `experiments/data-pointers.md` holds dataset pointers; experiment code lives in a separate repo.
+- **Substantial artifacts go through the pipeline — in one file.** For any artifact a reader will rely on (a section draft, a synthesis note), run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside the artifact's own file: ground evidence in `related-work/` + `experiments/` + `figures/` + `references/`, draft from it, critique claims that outrun it, then anchor every claim to a source. The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline and follow `agents/note-method.md` instead — **capture → expand → store → query**, keeping the raw capture inside the note and having the user review any agent expansion rather than accepting it as written (the rules below still apply).
 - **Synthesis is source-grounded.** Every factual claim links to a source (a `related-work/` note, an `experiments/` note, a `figures/` id, or a `references/` file). A claim with no source is not done.
 - **Mark uncertainty explicitly.** Separate established results from inference. Tag anything not directly source-backed as `(inference)` or `#unverified`, and say what evidence would settle it. Never present speculation as fact.
 - **Report what you actually did, not what you intended.** Before marking a step, section, or check done, point to the artifact or source that shows it. If a step was skipped or a result is unverified, say so plainly — never present intended, plausible, or in-progress work as completed.
@@ -25,10 +25,10 @@ related-work/     # per-paper literature notes + the synthesized related-work ma
 experiments/      # one note per experiment: hypothesis, setup, result, verdict
 figures/          # figure sources + caption drafts (the visual evidence)
 drafts/           # section drafts: abstract, intro, method, results, discussion
-data/             # POINTERS to datasets (paths, URLs, licences) — not raw data
 submission/       # venue choice, checklist, cover letter, rebuttal
 references/       # venue-conventions, reviewer-risk-checklist, notation/citation, repro-checklist
 agents/           # pipeline.md: evidence → draft → review → verify (one file)
+                  # note-method.md: capture → expand → store → query (small notes)
 _dashboard/       # experiment-index, draft-status
 ```
 
@@ -96,7 +96,7 @@ Use `flow-paper-lifecycle` to orchestrate the whole sequence when unsure what co
 ## Rules
 
 - **Claims are backed by experiments.** Every contribution claim in `ideas/` or `drafts/` must point to an `experiments/` note (or a figure) that supports it. If it can't, mark it as unsupported rather than asserting it.
-- **No raw data or code here.** `data/` holds pointers only; experiment code lives in the `research-codebase` repo. Keep this vault about the *paper*.
+- **No raw data or code here.** `experiments/data-pointers.md` holds dataset pointers only; experiment code lives in the `research-codebase` repo. Keep this vault about the *paper*.
 - **Notation is consistent.** Follow `references/notation-and-citation-style.md` across all drafts; don't let `\citep`/`\citet` or symbol use drift per section.
 - **Reproducibility is tracked as you go**, not bolted on at the end — keep `references/reproducibility-checklist.md` current per experiment.
 - **Reviewer risk is tracked before submission.** Use `references/reviewer-risk-checklist.md` to check claim support, novelty, baselines, reproducibility, limitations/ethics, data attribution, and rebuttal readiness before the final audit.

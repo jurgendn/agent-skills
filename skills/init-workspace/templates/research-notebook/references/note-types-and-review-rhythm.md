@@ -4,10 +4,13 @@ Use the lightest note that preserves a research decision or makes later synthesi
 
 ## Capture and promotion
 
-- Put a fragment in `inbox/` only when its durable type is unclear or capture speed matters. If it is plainly a question, source, evidence item, or decision, write the durable note directly.
-- Promote an inbox item when it will affect a future choice, needs evidence, or should remain findable after the current session.
-- Preserve the useful context and link back to the capture; do not duplicate the same prose across several folders.
-- Delete or archive a capture only after the durable note contains what matters.
+`agents/note-method.md` holds the general loop — capture → expand → store → query. This section is how it applies to this notebook's note types.
+
+- Write the fragment straight into the durable note it belongs to. There is no staging folder: if the type is plainly a question, source, evidence item, or decision, create that note now.
+- Capture rough. Fragments, abbreviations, and keywords beat full sentences during the session; expansion is a separate pass afterwards.
+- Give a fragment its own durable note once it will affect a future choice, needs evidence, or should remain findable after the current session. Until then it can live inside a note it relates to.
+- **Preserve the raw capture inside the durable note** under a `## Raw capture` heading, rather than deleting it once the prose reads well. It is the better input to any later expansion, the fallback when an expansion turns out wrong, and the record of what you actually thought before it got cleaned up.
+- Do not duplicate the same prose across several folders. If the type is genuinely unclear, start it in `questions/` and reclassify once you know.
 
 ## Durable note types
 
@@ -34,11 +37,11 @@ Status changes require a short explanation and a link to the note or artifact th
 
 Keep the review short enough to sustain:
 
-1. Triage `inbox/`: promote, link, park, or remove each capture.
+1. Surface durable notes not yet linked to a question or idea; link, park, or remove them.
 2. Inspect active questions and ideas: identify stale items and the next decision-relevant check.
 3. Link new reading and evidence to the questions or ideas they bear on.
 4. Review recent decisions for triggered revisit conditions.
-5. Write one `reviews/{YYYY}-W{NN}.md` note: what changed, what did not, what is blocked, and the next one to three priorities.
+5. Write one `log/{YYYY}-W{NN}.md` note: what changed, what did not, what is blocked, and the next one to three priorities.
 
 Do not report intended work as progress. A week with a refuted idea, clarified question, or documented blocker can still be a productive research week.
 

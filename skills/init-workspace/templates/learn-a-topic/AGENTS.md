@@ -7,8 +7,8 @@ Orientation for any agent operating on this learning vault. This file is the map
 Read this before doing any work in this vault. Where a rule here conflicts with your own default behavior, this file wins, so the vault behaves the same across agents instead of varying with each one's defaults.
 
 - **This is learning/synthesis work, not coding.** Produce source notes, summaries, a concept map, and exercises. Do **not** write code unless the user explicitly asks (an `exercises/` re-derivation may use it when requested).
-- **Substantial syntheses go through the pipeline — in one file.** For any non-trivial summary or map note, run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside that note: read the actual `sources/` and `notes/` and collect only what they support; draft; check for claims that outrun the sources, missing caveats, or conflated ideas; then anchor every claim to a `sources/` note per `references/source-grounding-rules.md`, demoting unsupported claims to `open-questions.md`. The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline (the rules below still apply).
-- **Synthesis is source-grounded.** Follow `references/source-grounding-rules.md`: nothing in `summaries/` or `map/` is asserted without a link to a `sources/` note that supports it.
+- **Substantial syntheses go through the pipeline — in one file.** For any non-trivial summary or map note, run the four-pass pipeline in `agents/pipeline.md` — **evidence → draft → review → verify** — inside that note: read the actual `sources/` notes and collect only what they support; draft; check for claims that outrun the sources, missing caveats, or conflated ideas; then anchor every claim to a `sources/` note per `references/source-grounding-rules.md`, demoting unsupported claims to `open-questions.md`. The pipeline produces exactly one file; never create per-stage side files. Small notes skip the pipeline and follow `agents/note-method.md` instead — **capture → expand → store → query**, keeping the raw capture inside the note and having the user review any agent expansion rather than accepting it as written (the rules below still apply).
+- **Synthesis is source-grounded.** Follow `references/source-grounding-rules.md`: nothing in `summaries/` is asserted without a link to a `sources/` note that supports it.
 - **Mark uncertainty explicitly.** Record your grasp honestly (`confidence:` in source frontmatter); tag anything you believe but cannot source as an entry in `open-questions.md`, not as fact.
 - **Report what you actually did, not what you intended.** Before marking a step, section, or check done, point to the artifact or source that shows it. If a step was skipped or a result is unverified, say so plainly — never present intended, plausible, or in-progress work as completed.
 - **Check inputs before running a skill; ask for what's missing.** Each skill/stage draws from specific folders (see *Layout*) — `sources/` is the root: synthesis, maps, and exercises all build on populated source notes. Before running one, confirm its input folder(s) actually contain the needed notes; if a required input is empty or missing, **stop and ask the user to add the source (or say where it lives) — do not proceed on an empty folder or fabricate the input.**
@@ -20,16 +20,15 @@ A workspace for learning a new topic well enough to summarise it, use it, and kn
 ## Layout
 
 ```text
-sources/          # one note per source (paper/book/talk/post) + bib info
-notes/            # reading notes per source (mirrors sources/ filenames)
-summaries/        # synthesised summaries per subtopic (across sources)
-map/              # concept / landscape map of the area
+sources/          # one note per source: bib info + your reading notes, together
+summaries/        # synthesis across sources: per-subtopic summaries + map.md
 exercises/        # practice problems, self-tests, re-derivations
 search-log.md     # queries, tool/recommender trails, inclusion/exclusion rationale
 open-questions.md # running list of unknowns and confusions
 glossary.md       # terms, defined as they appear
 references/       # study-method, source-grounding-rules
 agents/           # pipeline.md: evidence → draft → review → verify (one file)
+                  # note-method.md: capture → expand → store → query (small notes)
 _dashboard/       # topic-map (coverage + confidence by subtopic)
 ```
 
@@ -37,11 +36,10 @@ _dashboard/       # topic-map (coverage + confidence by subtopic)
 
 ```text
 sources/   src-{NNN}-{shortname}.md     # src-001-attention-is-all-you-need.md
-notes/     src-{NNN}-{shortname}.md     # same name as the source it annotates
-summaries/ {subtopic}.md                # attention.md, optimization.md
+summaries/ {subtopic}.md                # attention.md, optimization.md (+ map.md)
 ```
 
-Zero-pad numbers. A reading note in `notes/` shares the filename of the `sources/` note it covers.
+Zero-pad numbers. One file per source — bib info and reading notes live in the same note, not split across folders.
 
 ## Source note format
 
@@ -75,25 +73,25 @@ confidence: medium     # low | medium | high (your grasp of it)
 | Folder / task | Skill to use |
 |---|---|
 | onboarding sequence | `flow-learn-new-topic` (orchestrates the whole path) |
-| `map/`, comparing sources | `literature-triangulation` |
+| `summaries/map.md`, comparing sources | `literature-triangulation` |
 | understanding a hard concept | `professor-mentor-technical-teaching` |
 | turning it into a survey/Related Work | `related-work-writer` |
 | testing a derivation/claim you learned | `theorem-and-claim-audit`, `theory-to-toy-cases` |
 
 ## Default actions
 
-- **Adding a source:** create `sources/src-{NNN}-…md` with frontmatter, then a reading note in `notes/` of the same name. Record in `search-log.md` how the source was found and why it belongs: keyword search, citation trail, survey pointer, recommendation system, LLM suggestion, advisor suggestion, or deliberate dissenting/counterexample source.
+- **Adding a source:** create `sources/src-{NNN}-…md` with frontmatter and write the reading notes into that same file. Record in `search-log.md` how the source was found and why it belongs: keyword search, citation trail, survey pointer, recommendation system, LLM suggestion, advisor suggestion, or deliberate dissenting/counterexample source.
 - **Synthesising:** run the four-pass pipeline (`agents/pipeline.md`) in `summaries/<subtopic>.md` — read the sources, draft *across* them, review for over-reach, verify every claim links to a `sources/` note.
 - **As you go:** add new terms to `glossary.md` and unknowns to `open-questions.md`; update `_dashboard/topic-map.md` confidence.
 - **To check understanding:** create an exercise in `exercises/` and try to re-derive or explain without looking (`study-method.md`).
 
 ## Rules
 
-- **Ground every claim.** Nothing in `summaries/` or `map/` is asserted without a link to a `sources/` note that supports it (`source-grounding-rules.md`). Mark unsourced beliefs as open questions, not facts.
+- **Ground every claim.** Nothing in `summaries/` is asserted without a link to a `sources/` note that supports it (`source-grounding-rules.md`). Mark unsourced beliefs as open questions, not facts.
 - **Note your confidence honestly.** `confidence: low` on a source is a signal to revisit, not a failure. The dashboard surfaces weak spots.
 - **Keep the glossary and open-questions live** — they are the cheapest measure of progress.
 - **Keep the search trail visible.** Do not let semantic search, recommender systems, or LLM-suggested reading lists silently define the field. Log the queries and tool suggestions you used, then deliberately add at least one source from outside the dominant recommended cluster when mapping a new area.
-- **Synthesise, don't collect.** A pile of reading notes isn't understanding; the value is in `summaries/` and `map/` that connect sources.
+- **Synthesise, don't collect.** A pile of reading notes isn't understanding; the value is in `summaries/` (including `map.md`) that connect sources.
 
 ## Obsidian formatting rules
 

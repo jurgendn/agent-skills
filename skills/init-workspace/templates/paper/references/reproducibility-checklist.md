@@ -6,7 +6,7 @@ Keep this current **as you run experiments**, not as a scramble before the deadl
 
 - [ ] Random **seed(s)** recorded; results reported over multiple seeds with variance, not a single run.
 - [ ] **Config** captured (hyperparameters, model size, optimizer, schedule) — ideally a committed config file referenced from the experiment note.
-- [ ] **Data**: exact dataset version/split, preprocessing, and any filtering; pointer stored in `data/` (not the raw data).
+- [ ] **Data**: exact dataset version/split, preprocessing, and any filtering; pointer stored in `experiments/data-pointers.md` (not the raw data).
 - [ ] **Compute**: hardware, wall-clock, and approximate cost noted.
 - [ ] **Code commit** hash that produced the numbers (in the `research-codebase` repo).
 
