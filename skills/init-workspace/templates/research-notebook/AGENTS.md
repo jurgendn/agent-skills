@@ -7,7 +7,7 @@ Orientation for any agent operating on this research notebook. This file is the 
 Read this before doing any work in this vault. Where a rule here conflicts with your own default behavior, this file wins, so the vault behaves the same across agents instead of varying with each one's defaults.
 
 - **This is research note-taking, not coding.** Produce questions, ideas, reading notes, evidence notes, decisions, meeting notes, and syntheses. Do **not** write or store code, scripts, or computational notebooks in this vault. If the user requests implementation work, route it to a separate code repository and record only the resulting notes or artifact links here.
-- **Small captures stay small; substantial syntheses use the pipeline.** Inbox entries, individual questions, meeting notes, and decision records do not need a four-pass process. For any synthesis or research-position note a reader will rely on, run `agents/pipeline.md` — **evidence → draft → review → verify** — inside that note, grounding it in `reading/` + `evidence/` + `decisions/`. The pipeline produces exactly one file; never create per-stage side files.
+- **Small captures stay small; substantial syntheses use the pipeline.** Individual questions, reading notes, meeting notes, and decision records do not need a four-pass process; they follow `agents/note-method.md` — **capture → expand → store → query**, keeping the raw capture inside the note and having the user review any agent expansion rather than accepting it as written. For any synthesis or research-position note a reader will rely on, run `agents/pipeline.md` — **evidence → draft → review → verify** — inside that note, grounding it in `reading/` + `evidence/` + `decisions/`. The pipeline produces exactly one file; never create per-stage side files.
 - **Separate evidence from interpretation.** A source claim points to a `reading/` note or checkable source; an observed result points to an `evidence/` note or external artifact; an interpretation is marked as an inference. Do not turn a plausible idea into an established finding.
 - **Mark uncertainty explicitly.** Give questions and ideas honest statuses; tag unsupported beliefs as `(inference)` or `#unverified`, and state what observation, source, or argument would change the assessment.
 - **Report what you actually did, not what you intended.** Before marking a question answered, an idea supported, or a review complete, point to the note or source that establishes it. If a check was skipped, say so plainly.
@@ -15,22 +15,21 @@ Read this before doing any work in this vault. Where a rule here conflicts with 
 
 ## What this vault is
 
-An ongoing research notebook for turning fragments into traceable research judgment. Capture quickly in `inbox/`, promote durable questions and ideas into their own notes, connect them to reading and evidence, record consequential decisions, and periodically synthesize what changed. The vault optimises for recovering *why you currently believe something* without turning note-system maintenance into the research itself.
+An ongoing research notebook for turning fragments into traceable research judgment. Capture rough directly in the durable note, promote questions and ideas into their own notes, connect them to reading and evidence, record consequential decisions, and periodically synthesize what changed. The vault optimises for recovering *why you currently believe something* without turning note-system maintenance into the research itself.
 
 ## Layout
 
 ```text
-inbox/            # quick captures awaiting classification; not permanent storage
 questions/        # one research question per note, with status and resolution evidence
 ideas/            # hypotheses, mechanisms, method directions, and partial arguments
 reading/          # one note per external source, grounded in the source actually read
 evidence/         # observations, result summaries, artifact links, and negative results
 decisions/        # consequential choices, alternatives, rationale, and revisit triggers
-meetings/         # advisor/collaborator notes with decisions and assigned actions
 syntheses/        # substantial cross-note maps, positions, and periodic research summaries
-reviews/          # weekly/monthly notebook reviews and unresolved-item audits
+log/              # dated entries: meeting notes and weekly notebook reviews
 references/       # note-types-and-review-rhythm
 agents/           # pipeline.md: evidence → draft → review → verify (one file)
+                  # note-method.md: capture → expand → store → query (small notes)
 _dashboard/       # research-overview: open questions, active ideas, evidence, decisions
 ```
 
@@ -42,8 +41,8 @@ ideas/      idea-{NNN}-{shortname}.md        # idea-003-directed-objective.md
 reading/    src-{NNN}-{shortname}.md         # src-012-barber-bimodularity.md
 evidence/   ev-{NNN}-{shortname}.md          # ev-007-seven-edge-witness.md
 decisions/  dec-{YYYY-MM-DD}-{shortname}.md  # dec-2026-07-20-baseline-first.md
-meetings/   {YYYY-MM-DD}-{shortname}.md       # 2026-07-20-advisor-sync.md
-reviews/    {YYYY}-W{NN}.md                   # 2026-W30.md
+log/        {YYYY-MM-DD}-{shortname}.md       # 2026-07-20-advisor-sync.md
+log/        {YYYY}-W{NN}.md                   # 2026-W30.md  (weekly review)
 ```
 
 Zero-pad sequence numbers. Prefer stable descriptive names over generic files such as `notes.md` or `thoughts-2.md`.
@@ -100,11 +99,11 @@ Use `whiteboard-peer` as the first skill when the notebook begins from an unfini
 
 ## Default actions
 
-- **Capturing:** put an unclassified fragment in `inbox/` with a date and enough context to understand it later. If its type is already clear, create the durable note directly instead of manufacturing an inbox step.
+- **Capturing:** write the fragment straight into the durable note it belongs to, keeping the rough version under `## Raw capture` per `agents/note-method.md`. There is no staging folder — if the type is genuinely unclear, start the note in `questions/` and reclassify it later.
 - **Promoting a question or idea:** create the numbered durable note, link the source capture, state what would resolve or falsify it, and connect any current reading or evidence. Do not delete the original capture until the durable note preserves its useful context.
 - **Adding reading or evidence:** describe only the source actually read or the observation actually made. Link the URL, vault note, repository path, result file, or other checkable artifact. Keep interpretation in its own paragraph and label inference explicitly.
 - **Recording a decision:** state the choice, alternatives considered, evidence available at the time, tradeoff accepted, and the condition that should trigger reconsideration. A decision note is a rationale record, not proof the choice was correct.
-- **Reviewing weekly:** empty or triage `inbox/`; surface stale active questions; connect orphan ideas to evidence or mark them parked; inspect recent decisions for triggered revisit conditions; write `reviews/{YYYY}-W{NN}.md` describing what actually changed and what remains unresolved.
+- **Reviewing weekly:** surface durable notes not yet linked to a question or idea; surface stale active questions; connect orphan ideas to evidence or mark them parked; inspect recent decisions for triggered revisit conditions; write `log/{YYYY}-W{NN}.md` describing what actually changed and what remains unresolved.
 - **Synthesising:** run the four-pass pipeline in the final file under `syntheses/`. Build from existing notes, resolve or retain review warnings, and verify every factual claim before marking `pipeline: verified`.
 
 ## Rules

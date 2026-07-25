@@ -125,6 +125,71 @@ exchange into passive receipt and can actively depress learning. This is the sam
 productive-failure discipline [14] enacted in dialogue: the struggle has to stay
 the user's.
 
+**When the roles run simultaneously, they interfere — so the interference is what
+the design must legislate.** The discussion mode inside `flow-learn-new-topic` and
+`flow-deep-understanding` puts the novice, the peer, and the professor in one live
+session, which is not simply the three skills added together. Two collisions have to
+be resolved explicitly or the session degrades into the lecture it was chosen to
+avoid. First, if the peer answers the student's question, the elaboration the
+protégé effect depends on [25], [26] is performed by the peer rather than the user,
+and it is precisely the answer-giving tutor dialog associated with *lower* learning
+[29]. Hence: the user always responds first, and the peer's default move is to
+challenge an answer already given, not to supply one. Second, the novice's playback
+is only diagnostic if its model was built from the user's words alone — so the
+student may use nothing but what was spoken aloud in the session, and tags each
+accepted link by source. That tagging carries the real result: a model that holds on
+peer- or mentor-supplied links is borrowed, not owned, which is `knowledge-debt-audit`'s
+subject rather than evidence of understanding. The professor correspondingly splits
+three ways, because moderating is not teaching and neither is grading, and
+`professor-critic` in particular cannot fire mid-session — it demands a finished
+artifact, a named reader, and an acceptance bar that live thinking-stage work does
+not have. This mode is a *gate verifier* rather than a fourth orchestrator: users
+reach for discussion while already inside a learning flow, so it belongs to those
+flows' gates, not to a separate skill they would never think to invoke.
+
+**Note-taking advice needs the same epistemic flags as writing advice, because the
+strongest-sounding findings are the weakest ones.** The `note-method.md` protocol in
+`init-workspace` distills the controlled note-taking literature, and doing so
+honestly required demoting three claims that the popular synthesis of that
+literature states confidently. First, structured formats (Cornell, Parallel)
+outscoring unstructured linear notes is real [34], but it is an *overall achievement*
+difference, not a retention mechanism — the same trial found the time×group
+interaction non-significant, meaning no method decayed more slowly. Writing "Cornell
+aids retention" would invert what the data show. Second, the widely repeated
+cognitive-load story — digital feels easiest, therefore it is processed shallowly —
+is contradicted by that study's own regressions, where cognitive load had no
+significant association with retention while motivation was the strongest predictor
+across every method. The design consequence is the opposite of the folklore: a rule
+that makes the vault tedious is a cost against retention, not a neutral tradeoff, so
+the protocol is forbidden from adding friction on cognitive-load grounds. Third, the
+efficiency results for LLM note expansion (~47% less text written, ~44% less time)
+come from a twelve-person study [35] that never measured retention at all, so the
+protocol flags expansion *efficiency-only* and keeps the user's review-and-edit step
+mandatory rather than assuming the encoding benefit survives automation.
+
+That mandatory review is not merely a hedge against unmeasured risk; it is the part
+with the best support. Meta-analytically, the medium of capture matters far less
+than what happens afterwards [36], and handwriting's small achievement advantage is
+*conditional on the notes being reviewed over time* — it disappears without review,
+even though typing reliably produces greater volume [37]. More notes are not better
+notes, and a capture nobody returns to earns nothing regardless of how it was
+recorded. This is why the protocol treats the expand pass as the load-bearing step
+rather than the capture pass, and why an unreviewed model expansion is classified as
+a transcript rather than a note.
+
+The same discipline resolves the one place where LLM note tooling quietly
+contradicts the learning literature. "Query your notes instead of re-reading them"
+is defended by appeal to retrieval practice, but retrieval practice is supported
+when *the human* retrieves; asking a model to search and synthesize delegates the
+retrieval and the benefit with it. This is the identical failure that
+`knowledge-debt-audit` exists to detect and that `whiteboard-peer` guards against by
+refusing to complete the solution [29] — so the protocol permits querying to
+*locate* what to re-derive, then requires closing the answer and reconstructing it.
+Preserving the raw capture beside the expansion is the note-taking form of the same
+provenance rule the learn-flows' discussion mode enforces with `[USER]`/`[PEER]`
+tags: a note that reads as yours but was largely generated is a debt, and the
+system has to keep the distinction visible rather than let clean prose erase it.
+
 **Writing advice is mostly untested craft.** The writing skills, especially
 the writing stage-group in `flow-paper-lifecycle`, distill canonical expert
 advice such as Halmos [15] and Krantz
@@ -409,3 +474,33 @@ Science Research Council, 1988/1995.
 [https://www.ssrc.org/publications/the-art-of-writing-proposals/](https://www.ssrc.org/publications/the-art-of-writing-proposals/).
 Cited as expert committee-craft testimony on proposal writing, not as an
 empirical study.
+
+[34] M. Yıldırım, "The effects of note-taking methods on lasting learning: the
+role of motivation and cognitive load," *Frontiers in Psychology*, vol. 16, art.
+1697151, 2026. doi:
+[10.3389/fpsyg.2025.1697151](https://doi.org/10.3389/fpsyg.2025.1697151).
+Randomized trial, n = 134, four methods, four-week retention test. Cited for
+three results: only Cornell-vs-linear survived correction; the time×group
+interaction was non-significant, F(3,129) = 1.82, p = 0.146; and motivation
+predicted retention (β = 0.50-0.60, p ≤ 0.003) while cognitive load did not.
+
+[35] F. Huq, A. Samee, D. C. Lin, X. A. Tang, and J. P. Bigham, "NoTeeline:
+Supporting Real-Time, Personalized Notetaking with LLM-Enhanced Micronotes," in
+*Proc. 30th Int. Conf. on Intelligent User Interfaces (IUI '25)*, 2025. arXiv:
+[2409.16493](https://arxiv.org/abs/2409.16493). Cited for efficiency only —
+47.0% less text written, 43.9% less time, 93.2% factual correctness (HHEM), n =
+12. The authors state explicitly that they did not measure long-term retention.
+
+[36] D. Voyer, S. T. Ronis, and N. Byers, "The effect of notetaking method on
+academic performance: A systematic review and meta-analysis," *Contemporary
+Educational Psychology*, vol. 68, art. 102025, 2022. doi:
+[10.1016/j.cedpsych.2021.102025](https://doi.org/10.1016/j.cedpsych.2021.102025).
+
+[37] A. E. Flanigan, J. Wheeler, T. Colliot, J. Lu, and K. A. Kiewra, "Typed
+Versus Handwritten Lecture Notes and College Student Achievement: A
+Meta-Analysis," *Educational Psychology Review*, vol. 36, art. 78, 2024. doi:
+[10.1007/s10648-024-09914-w](https://doi.org/10.1007/s10648-024-09914-w).
+24 studies. Handwriting's achievement advantage is small (Hedges' g = 0.248) and
+conditional on reviewing the notes; typing yields greater volume (g = 0.919).
+Cited for the review-dependence, which is why the note protocol makes the user's
+review pass mandatory.

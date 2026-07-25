@@ -1,7 +1,7 @@
 ---
 name: flow-learn-new-topic
 description: >-
-  Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use when the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or gives a topic they have no grounding in. Routes through singleton skills with graded exercise checkpoints. Use flow-deep-understanding when the user already knows the basics and wants mastery of ONE specific thing; use flow-idea-to-proof to formalize the user's own research idea.
+  Orchestrate breadth-first onboarding into an unfamiliar topic, method, subfield, or research area — going from near-zero to a working, usable map. Use when the user says "I want to learn X", "help me get up to speed on X", "I'm new to X, where do I start", "give me a learning path for X", "I need to understand this field before I can read its papers", or gives a topic they have no grounding in. Routes through singleton skills with graded exercise checkpoints. Also carries a DISCUSSION MODE in which the user learns by explaining to a cast — an honest novice, an opinionated lab mate, and a professor — instead of taking exercise checkpoints; trigger it on "I learn better by discussing", "question me while I explain", "let's discuss this instead of you lecturing me", "set up a study group", or "run this like a lab meeting". Use flow-deep-understanding when the user already knows the basics and wants mastery of ONE specific thing; use flow-idea-to-proof to formalize the user's own research idea.
 ---
 
 # Learn a New Topic (Orchestrator)
@@ -31,6 +31,8 @@ Orient → Map → Build intuition → Ground with toy cases → Read sources �
 ```
 
 **Gates are verified, not assumed.** Each exit gate is checked with an *exercise checkpoint*: hand off to `concept-exercise-generator` to produce a short, graded easy-to-advanced problem set (with solutions in a separate file) targeting that stage's level. The user attempts it, self-scores against the rubric, and only then advances. A gate is met when the user clears the checkpoint's harder (Tier 3+) problems unaided — passing only the easy recall problems means re-study, not progress. Skip a checkpoint only when the user explicitly opts out or is clearly already past that stage.
+
+**Or verify the gate by discussion.** A user who learns by explaining may clear any gate through a *discussion round* on that stage's material instead of an exercise set — see **Discussion Mode** below. The two verifiers are interchangeable per stage: exercises test whether the user can solve, discussion tests whether they can explain without borrowing. Neither is a soft option; both are cleared unaided or not at all.
 
 ### Stage 1 — Orient (you, directly)
 Give a one-screen lay of the land: what problem this area exists to solve, the 3–6 sub-areas inside it, and the names they'll keep hearing. This is a sketch to make later stages navigable, not a lecture.
@@ -64,6 +66,32 @@ Route any playback error back to the stage that should have supplied the missing
 dependency.
 **Exit gate:** the playback holds together and predicts one fresh case without the
 student silently repairing the explanation.
+*In discussion mode the playback has been running since stage 1* — this stage is its
+summation over the whole map, not first contact with the student.
+
+## Discussion Mode
+
+Some users learn by *being the explainer* rather than by reading and then testing. In discussion mode the user teaches the current stage's material to a cast of three, and the resulting playback clears that stage's gate in place of an exercise checkpoint. This is a gate mechanism, not a new stage: the pipeline above is unchanged, only how each gate gets verified.
+
+**The cast.** STUDENT (`naive-student`) drives with earned questions. PEER (`whiteboard-peer`) challenges the user's answers. MENTOR (`professor-mentor-technical-teaching`) supplies a missing dependency, rarely. MODERATOR is this file — it rules each answer in one line and decides when to move on.
+
+**The professor splits three ways.** Moderating is not teaching, and neither is grading. `professor-critic` must **not** fire during a discussion: it requires a finished artifact, a named reader, and an acceptance bar, none of which a live session has, and a verdict on unfinished thinking only demoralizes.
+
+**What each voice may know.** The STUDENT may use only what has been spoken aloud in this session — never outside domain knowledge, which is its *silent repair* failure mode and would make the playback decorative instead of diagnostic. The STUDENT tags every link it accepts with `[USER]`, `[PEER]`, or `[MENTOR]`. PEER and MENTOR are unrestricted in knowledge but tightly restricted in timing and volume.
+
+**The round.** STUDENT asks one question at the earliest unsupported link → USER answers first, always → PEER may then *challenge* (its default move), or *assist* with one partial move only if the user explicitly passes → MODERATOR rules `CORRECT` / `INCOMPLETE: <what's missing>` / `WRONG: <the error>` / `STALLED` → STUDENT records the source tag and asks the next question.
+
+**The escalation ladder.** Never skip a rung:
+
+```text
+USER answers → PEER challenges → USER retries → PEER partial move → MENTOR minimal dependency
+```
+
+Jumping straight to the mentor converts the discussion back into the lecture the user chose to avoid. Per round: one student question, one substantive peer move, one moderator line, at most one mentor dependency. If the mentor fires in two consecutive rounds, stop — the material is above the user's current footing, so drop back a stage rather than lecturing through it.
+
+**Passing the gate.** The gate passes when the playback holds **and** every load-bearing link is `[USER]`-owned. A model that holds on borrowed links is a debt, not understanding: route those links to `knowledge-debt-audit` and re-run the round that should have established them.
+
+Because this mode is breadth-first, keep each round scoped to one concept on the map. A discussion that sprawls across the whole area produces a playback too diffuse to localize any gap.
 
 ## Handoffs Out
 
@@ -73,6 +101,10 @@ When breadth is no longer the bottleneck, route onward:
 - They want to evaluate whether a method is actually good / find gaps → **gap-finder** or `research-idea-stress-test`.
 - They can explain the map but want a peer on a half-formed extension →
   **whiteboard-peer**.
+- They want the explanation itself judged → have them write it up as a finished piece
+  first, then hand to `professor-critic` with a named reader and acceptance bar **the
+  user supplies** — do not invent either. This is where the critic belongs: on a
+  committed artifact after the discussion, never inside it.
 
 ## Router Rules
 
@@ -81,4 +113,5 @@ When breadth is no longer the bottleneck, route onward:
 - **One concept at a time in stages 3–4.** Breadth-first does not mean everything-at-once.
 - **Honor the depth target.** "Read papers" stops at stage 5; "just curious" may stop at stage 3.
 - **Stop when the gate is met.** Don't push the user through stages they don't need.
-- **Verify gates, don't assume them.** Confirm each gate with a `concept-exercise-generator` checkpoint; advance only when the user clears its Tier 3+ problems unaided. Generate the exercises there — never inline them here.
+- **Verify gates, don't assume them.** Confirm each gate with a `concept-exercise-generator` checkpoint, or with a discussion round; advance only when the user clears it unaided. Generate the exercises there — never inline them here.
+- **In discussion mode, the user answers first.** A peer that pre-empts the user destroys the diagnostic — the playback would then be grading the peer, not the user.

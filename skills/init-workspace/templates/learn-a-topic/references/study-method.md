@@ -13,7 +13,7 @@ How to use this vault so reading turns into understanding. These are the methods
 
 - **Spaced revisit** — come back to `confidence: low` sources after a few days; the dashboard surfaces them.
 - **Interleave** — alternate subtopics rather than finishing one in isolation; connections live at the boundaries.
-- **Map as you go** — keep `map/` current; a concept you can't place on the map isn't integrated yet.
+- **Map as you go** — keep `summaries/map.md` current; a concept you can't place on the map isn't integrated yet.
 
 ## Depth control
 
@@ -29,8 +29,11 @@ How to use this vault so reading turns into understanding. These are the methods
 
 ## AI-assisted learning discipline
 
+`agents/note-method.md` holds the mechanics of the capture → expand → store → query loop. This section is the learning discipline that constrains it.
+
 - **Use AI to expose gaps, not to outsource understanding.** Good uses: ask for questions, counterexamples, alternative explanations, and checks of your own summary. Weak uses: accepting a generated synthesis before reading the source.
-- **Keep the human load-bearing step.** Before trusting an AI explanation, close it and write the idea yourself, derive the key step, or solve a small exercise.
+- **Keep the human load-bearing step.** Before trusting an AI explanation, close it and write the idea yourself, derive the key step, or solve a small exercise. This is why the loop's expand pass ends in *your* review and edit: LLM expansion is measured to save effort, but whether it preserves the encoding benefit of writing it yourself has never been tested.
+- **Querying the vault is not retrieval practice.** Asking an agent to find and synthesize across your notes delegates the retrieval, and with it the learning benefit. Query to locate what to re-derive; then close the answer and reconstruct it yourself.
 - **Log AI-suggested sources in `search-log.md`.** Treat them as candidates until primary sources support the claims.
 
 ## Signals you actually understand it

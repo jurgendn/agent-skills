@@ -22,8 +22,7 @@ A workspace for one talk — conference, seminar, job talk, defense, lecture, or
 ```text
 narrative/        # the talk plan: message, audience, arc, timing, what to cut
 slides/           # the deck source (.tex Beamer, or .pptx)
-figures/          # figures adapted FOR slides (not paper figures verbatim)
-assets/           # logos, images, icons, fonts
+figures/          # visuals for the deck: figures adapted for slides, plus logos/icons/fonts
 script.md         # speaker notes — what to say per slide
 references/       # slide-design-principles, talk-structure-patterns
 _dashboard/       # slide-plan (per-slide spec)

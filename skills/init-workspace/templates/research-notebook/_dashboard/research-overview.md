@@ -53,7 +53,7 @@ SORT updated DESC
 
 ```dataview
 LIST
-FROM "reviews"
+FROM "log"
 SORT file.name DESC
 LIMIT 12
 ```

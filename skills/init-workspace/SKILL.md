@@ -19,7 +19,7 @@ structure + conventions laid down. Trigger on "set up / start / initialize /
 scaffold / bootstrap a workspace or vault for …" when the work is learning,
 research, writing, academic applications, test preparation, presentations,
 theory, or another activity whose primary artifacts are notes and documents.
-Requests in this scope that do not match the seven templates use the bespoke path.
+Requests in this scope that do not match the eight templates use the bespoke path.
 
 ## When NOT to use
 
@@ -37,7 +37,7 @@ Requests in this scope that do not match the seven templates use the bespoke pat
 
 ## Template menu
 
-The seven templates are the **starting points**, not a closed set — see
+The eight templates are the **starting points**, not a closed set — see
 *Clarifying intake* below for how a request that doesn't cleanly match one of
 these still gets scaffolded.
 
@@ -48,36 +48,67 @@ these still gets scaffolded.
 | `paper` | One research paper, idea → submission → artifact | `flow-paper-lifecycle` |
 | `phd-application` | A full PhD/research application cycle | `flow-phd-application` |
 | `research-notebook` | Ongoing research questions, ideas, evidence, decisions, and synthesis | `whiteboard-peer` |
+| `study-notes` | Per-session study loop: capture → expand → drill, two folders | `professor-mentor-technical-teaching` |
 | `talk` | A talk/presentation, narrative → slides | `research-talk-planner` |
 | `theory` | A theory/proof project, claim → proof → stress-test | `flow-idea-to-proof` |
 
-The `ielts` template ships **AGENTS.md only** (plus folders + dashboard): the
-installed `ielts-*` skills already carry the band descriptors and feedback
-aggregation, so the vault doesn't duplicate them. Every other template seeds its
-own `references/` so the workspace is self-contained.
+Two templates ship **AGENTS.md only**, for opposite reasons. `ielts` gets folders
+plus a dashboard but no `references/`, because the installed `ielts-*` skills
+already carry the band descriptors and feedback aggregation. `study-notes` is
+deliberately the leanest in the set — exactly two folders, no `references/`, no
+`_dashboard/`, no `agents/` — so its `AGENTS.md` inlines the whole method rather
+than seeding files that would add filing decisions to a capture-speed workflow.
+The other six seed their own `references/` so the workspace is self-contained.
 
-### Shared research pipeline
+Pick `study-notes` when the work is organized **by session** (a course, a reading
+series — each sitting yields one note and one exercise file) and
+`learn-a-topic` when it is organized **by source and subtopic** (mapping an
+unfamiliar field). Both involve learning; the organizing axis is the
+discriminator.
 
-The research pipeline is identical across templates, so it lives once at
-`templates/_shared/agents/pipeline.md` (the single source of truth) rather than
-being duplicated per template. It is a single four-pass protocol — **evidence →
-draft → review → verify** — run *inside the artifact's own file*: the evidence
-table and open review items live in the working file while the pipeline runs and
-are compressed into a final Sources section, so the pipeline never creates
-per-stage side files (no `research.md`/`draft.md`/`review.md`/`cited.md`) and
-its net output is exactly one file. A size gate restricts it to substantial
-artifacts; small notes are covered by the Operating contract in a single pass.
-It is generalized and agent-portable: it names capabilities, integrity rules,
+### Shared agent protocols
+
+Two protocols are identical across templates, so they live once under
+`templates/_shared/agents/` (the single source of truth) rather than being
+duplicated per template. They are a matched pair split by artifact size:
+`pipeline.md` governs substantial artifacts, `note-method.md` governs everything
+below that gate.
+
+**`note-method.md` — capture → expand → store → query.** Every template's
+contract says small notes skip the pipeline; this file is what they follow
+instead, so "skip the pipeline" no longer means "no method." It carries the
+everyday loop (capture rough fragments, expand after the session, store
+structured, query to locate rather than to recall), the rule that the **raw
+capture is preserved inside the note** rather than deleted once the prose reads
+well, and the retrieval contract that makes frontmatter and section headers
+load-bearing rather than cosmetic. Its evidence claims are epistemically flagged
+— structured formats outscoring unstructured ones is *supported*, LLM expansion
+is *efficiency-only* with retention unmeasured, and the "digital feels easy so it
+must be shallow" story is marked *contested* — so the vault does not assert more
+than the research does.
+
+**`pipeline.md` — evidence → draft → review → verify.** A single four-pass
+protocol run *inside the artifact's own file*: the evidence table and open review
+items live in the working file while the pipeline runs and are compressed into a
+final Sources section, so the pipeline never creates per-stage side files (no
+`research.md`/`draft.md`/`review.md`/`cited.md`) and its net output is exactly
+one file. A size gate restricts it to substantial artifacts; anything smaller
+falls to `note-method.md` under the same Operating contract.
+
+Both are generalized and agent-portable: they name capabilities, integrity rules,
 and an output contract without binding to a particular runtime's tools. At
-scaffold time it is copied into the vault at `<vault>/agents/`, so the workspace
-stays self-contained and portable.
+scaffold time both are copied into the vault at `<vault>/agents/`, so the
+workspace stays self-contained and portable.
 
-Only the **full-pipeline** templates get the `agents/` folder: `paper`, `theory`,
-`learn-a-topic`, and `research-notebook`. Their `AGENTS.md` *Operating contract*
-routes substantial research artifacts through the four passes. The `talk`,
-`phd-application`, and `ielts` templates use a **lighter grounding-only
-contract** (no-code + source-grounded + mark-uncertainty, without the pipeline),
-so they do **not** receive the `agents/` folder.
+Only the **full-pipeline** templates get the `agents/` folder, and they get both
+files: `paper`, `theory`, `learn-a-topic`, and `research-notebook`. Their
+`AGENTS.md` *Operating contract* routes substantial research artifacts through
+the four passes and small notes through the note loop. The `talk`,
+`phd-application`, `ielts`, and `study-notes` templates use a **lighter
+grounding-only contract** (no-code + source-grounded + mark-uncertainty, without
+the pipeline), so they do **not** receive the `agents/` folder. `study-notes`
+inlines the capture → expand → store → query rules it needs directly into its
+`AGENTS.md`, since adding `agents/` would break its two-folder guarantee.
 
 ## Clarifying intake
 
@@ -107,7 +138,7 @@ user answers, the scaffold should land in that same turn.
 ## Procedure
 
 1. **Run the clarifying intake** (above) and decide the path:
-   - **Use as-is** — the description matches one of the seven template types
+   - **Use as-is** — the description matches one of the eight template types
      with no stated differences. Proceed with that template unchanged.
    - **Adapt** — matches one type but with named differences. Use that
      template as the base and adjust only what the differences require: add or
@@ -119,7 +150,12 @@ user answers, the scaffold should land in that same turn.
      reporting and input checks where present, the one-file pipeline rules
      where present, *Merge rules*, and Obsidian formatting — but update folder
      names and type-specific statements so the contract matches the adapted
-     Layout.
+     Layout. **`agents/note-method.md` and the note-method references travel
+     together**: `learn-a-topic`'s `study-method.md` and `research-notebook`'s
+     `note-types-and-review-rhythm.md` both defer their capture mechanics to it,
+     so an adapted vault that keeps either reference must keep `agents/`, and one
+     that drops `agents/` must fold those mechanics into the reference instead of
+     leaving it pointing at a file the vault does not have.
    - **Bespoke** — none of the seven fit. Synthesize a scaffold *for this vault
      only* (never write into this repo's `templates/`) that follows the same
      shape as the others: a folder tree sized to the actual answers, a full
@@ -130,7 +166,8 @@ user answers, the scaffold should land in that same turn.
      and marked uncertainty where claims are involved, report only completed
      work, and check required input notes before running downstream skills. If
      the work is a substantial source-grounded synthesis or research artifact,
-     also copy `templates/_shared/agents/pipeline.md` into `agents/`, exactly
+     also copy both `templates/_shared/agents/pipeline.md` and
+     `templates/_shared/agents/note-method.md` into `agents/`, exactly
      like the full-pipeline templates do. Skip a
      `_dashboard/` or `references/` unless the answers clearly call for one;
      a bespoke scaffold should be as lean as the intake justifies, not a
@@ -155,11 +192,11 @@ user answers, the scaffold should land in that same turn.
    intake justified) directly. For templates or bespoke scaffolds carrying the
    full-pipeline contract (`paper`, `theory`, `learn-a-topic`,
    `research-notebook`, or a bespoke source-grounded synthesis/research
-   artifact), also copy
-   `templates/_shared/agents/pipeline.md` into
-   `<vault>/agents/` so the research pipeline travels with the vault. `talk`,
-   `phd-application`, `ielts`, and any bespoke non-research scaffold use the
-   lighter grounding-only contract and get no `agents/` folder.
+   artifact), also copy both `templates/_shared/agents/pipeline.md` and
+   `templates/_shared/agents/note-method.md` into
+   `<vault>/agents/` so both protocols travel with the vault. `talk`,
+   `phd-application`, `ielts`, `study-notes`, and any bespoke non-research
+   scaffold use the lighter grounding-only contract and get no `agents/` folder.
 6. **Write the entry-file stub.** Write `<vault>/CLAUDE.md` containing exactly
    one line, `@AGENTS.md`. This makes the operating contract auto-load on Claude
    Code (which reads `CLAUDE.md` and follows `@` imports) while staying inert for
@@ -191,7 +228,7 @@ or redesign the existing workspace.
 - **Legacy pipeline migration (the one exception).** If `<vault>/agents/`
   contains the retired four role files (`researcher.md`, `reviewer.md`,
   `verifier.md`, `writer.md`), those are seeded files from the old per-stage
-  design, not user content: offer to delete them and install `pipeline.md` in
+  design, not user content: offer to delete them and install `pipeline.md` and `note-method.md` in
   their place so the vault does not carry two conflicting protocols. Confirm
   with the user before deleting, and keep any of the four they say they have
   modified.

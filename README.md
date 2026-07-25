@@ -127,9 +127,9 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 
 ### Research workflows
 
-- `research-workflows/flow-deep-understanding` — depth-first mastery of one paper, method, or theorem.
+- `research-workflows/flow-deep-understanding` — depth-first mastery of one paper, method, or theorem; discussion mode available.
 - `research-workflows/flow-idea-to-proof` — raw idea → formal claim → defensible proof design.
-- `research-workflows/flow-learn-new-topic` — breadth-first onboarding into an unfamiliar research area.
+- `research-workflows/flow-learn-new-topic` — breadth-first onboarding into an unfamiliar research area; discussion mode available.
 - `research-workflows/flow-paper-lifecycle` — idea → experiments → writing → submission → rebuttal → artifact release.
 - `research-workflows/flow-phd-application` — profile → CV → fit → SOP → recommenders → outreach → package audit.
 
@@ -192,7 +192,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 
 ### Project setup (entrypoint)
 
-- `init-workspace` — scaffold a non-coding, note-centric Obsidian workspace for learning, ongoing research notes, research writing, academic applications, talks, test preparation, theory, or similar knowledge work. Every result gets a folder tree plus an operating-manual `AGENTS.md`; workspace-local `references/` and a Dataview dashboard are included when the selected template or intake warrants them. One short intake batch includes target-directory confirmation, then the skill uses one of seven ready templates as-is (`ielts`, `paper`, `phd-application`, `research-notebook`, `talk`, `theory`, `learn-a-topic`), adapts the closest one while keeping its contract consistent, or writes a lean bespoke vault. Seeded prose keeps each paragraph or list item on one physical line and relies on Obsidian soft wrapping. The skill never scaffolds software/code projects, writes into the repository templates, or overwrites existing vault files.
+- `init-workspace` — scaffold a non-coding, note-centric Obsidian workspace for learning, ongoing research notes, research writing, academic applications, talks, test preparation, theory, or similar knowledge work. Every result gets a folder tree plus an operating-manual `AGENTS.md`; workspace-local `references/` and a Dataview dashboard are included when the selected template or intake warrants them. One short intake batch includes target-directory confirmation, then the skill uses one of eight ready templates as-is (`ielts`, `paper`, `phd-application`, `research-notebook`, `study-notes`, `talk`, `theory`, `learn-a-topic`), adapts the closest one while keeping its contract consistent, or writes a lean bespoke vault. Seeded prose keeps each paragraph or list item on one physical line and relies on Obsidian soft wrapping. The skill never scaffolds software/code projects, writes into the repository templates, or overwrites existing vault files.
 
 ## Repository policy
 

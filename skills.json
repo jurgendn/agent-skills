@@ -467,13 +467,13 @@
       "name": "flow-learn-new-topic",
       "path": "skills/research-workflows/flow-learn-new-topic",
       "category": "research-workflows",
-      "description": "Orchestrate breadth-first onboarding into an unfamiliar research area by sequencing singleton research skills."
+      "description": "Orchestrate breadth-first onboarding into an unfamiliar research area by sequencing singleton research skills; includes a discussion mode where the user learns by explaining to a novice/peer/professor cast."
     },
     {
       "name": "flow-deep-understanding",
       "path": "skills/research-workflows/flow-deep-understanding",
       "category": "research-workflows",
-      "description": "Orchestrate depth-first mastery of one paper, method, or theorem by sequencing singleton research skills."
+      "description": "Orchestrate depth-first mastery of one paper, method, or theorem by sequencing singleton research skills; includes a discussion mode where the user learns by explaining to a novice/peer/professor cast."
     },
     {
       "name": "flow-idea-to-proof",
