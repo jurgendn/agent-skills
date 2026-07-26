@@ -1,4 +1,6 @@
-# Pin versions before a conference submission so the repo reproduces.
+# Pin exact versions before submission so the repo still reproduces later:
+#   pip freeze > requirements.txt
 numpy
 # torch
 # scipy
+# scikit-learn
