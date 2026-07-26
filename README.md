@@ -103,7 +103,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `research-engineering/jax-training-recipe` — turn a paper idea into an implementable JAX/Flax/Optax training recipe.
 - `research-engineering/paper-to-code` — reproduce a paper with no released code in minimal PyTorch and verify the method works via staged gates.
 - `research-engineering/pytorch-training-recipe` — turn a paper idea into an implementable PyTorch training recipe.
-- `research-engineering/research-codebase` — structure research code for fast hypothesis testing and command-to-result traceability.
+- `research-engineering/research-codebase` — fix a pipeline contract, run many configurations, and aggregate finished runs into the paper's table with automatic provenance.
 
 ### Research communication
 

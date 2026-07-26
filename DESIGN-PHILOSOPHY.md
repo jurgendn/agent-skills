@@ -190,6 +190,35 @@ provenance rule the learn-flows' discussion mode enforces with `[USER]`/`[PEER]`
 tags: a note that reads as yours but was largely generated is a debt, and the
 system has to keep the distinction visible rather than let clean prose erase it.
 
+**Methodology advice needs the same flags — and sometimes the arithmetic has to be
+checked, not just the provenance.** `research-codebase`'s evidence base extends the
+note-taking discipline above to experimental-practice guidance, and doing so honestly
+required three separate kinds of demotion. First, a *misattribution* repaired: the
+frequently quoted "85% of results reproduced with author assistance vs 4% without" is
+Raff's independent study cited by the NeurIPS reproducibility report [42], measured
+against a 63.5%-of-255-manuscripts baseline and flagged by those authors themselves as
+likely selection-biased — secondary summaries routinely restate it as the conference
+program's own finding. Second, a paper *cited and partly declined*: Wolter et al. [41]
+argue for packaging, CI, and type checking in ML research, which this repo's
+minimum-viable stance defers; the skill adopts its seeds/pinning/one-command items and
+declines the rest using the paper's own "only when appropriate" hedge, because its
+measurements concern released artifacts rather than in-flight work. Silently citing a
+source that argues against one's own position is the weaker move; naming the decline is
+the honest one. Third — and the reason this principle is worth recording separately —
+a proposed metric *failed on its own arithmetic*. Michelucci and Venturini's Composite
+Overfitting Score [40] is not identifiable: under the published formula, overfitting
+drives both terms below their optimum and yields the same side of 1 that the paper's
+interpretation text labels underfitting, and both of its worked examples are same-side
+cases so the defect is never exercised. Its companion LOR statistic has a sign
+convention fixed by an error-type metric that silently inverts for accuracy-type ones —
+a trap live inside the paper, whose planning table uses F1 while its results table uses
+MAE. The durable rule: verifying that a source exists and says what it is quoted as
+saying is not sufficient for a source that proposes a *computation*. Recompute its
+worked examples and test the untested branch before importing it. Here the resolution
+was to keep the paper's table format and emit the four raw quantities instead of any
+composite, since separate columns are strictly more informative and have no convention
+to get wrong.
+
 **Writing advice is mostly untested craft.** The writing skills, especially
 the writing stage-group in `flow-paper-lifecycle`, distill canonical expert
 advice such as Halmos [15] and Krantz
@@ -248,6 +277,52 @@ final pass — with a size gate so small notes skip the pipeline entirely. The
 durable rule: a quality process may add passes over an artifact, but its net
 file output should be the artifact itself; and rigor should scale with the
 stakes of the artifact, not apply uniformly to every note.
+
+**"Add structure only when the pain justifies it" assumes a user who can refactor.**
+The repo's default is minimum-viable practice, deliberately deferring heavyweight
+tooling until a project is large enough to pay for it [38]. `research-codebase`
+*rejects* that stance, and the exception is principled rather than a lapse: its users
+are strong mathematically and cannot code, so they will neither recognize the pain nor
+be able to execute the refactor it is supposed to trigger. Deferral in that setting
+does not postpone structure; it produces `train_v2_final_REAL.py` and results that
+overwrote each other. The generalization is that defer-until-it-hurts is advice for
+someone who will feel the hurt and can act on it — where that does not hold, the small
+fixed skeleton is given once, up front, and growing it is forbidden. Note which
+minimalism survives the inversion: the skill still refuses packaging, CI, and abstract
+config systems. What changed is *when* the contract is fixed, not how much machinery
+there is.
+
+The corollary matters more than the principle. **A requirement that depends on the user
+remembering something is not a requirement.** The same skill previously satisfied its
+own command-to-result rule with a hand-maintained mapping file, which is exactly the
+artifact that rots first and is impossible to maintain at all once a sweep has hundreds
+of runs. Provenance is therefore written by the machine on every run, missing metrics
+fail loudly at run time rather than surfacing as a hole in a table 200 runs later, and
+the paper's table is generated rather than transcribed. This is the sibling of the
+artifact rule above: that one says a quality process should not multiply *files*, this
+one says it should not multiply *obligations*. Where a rule can be discharged by a
+mechanism, stating it as a discipline is a design failure.
+
+That principle also fixes what counts as verification when the user cannot read the
+code. Plausible-looking code that executes and is wrong is the characteristic failure
+mode of agent-written research tooling, and the COSEAL guidelines name it explicitly
+[43]; a non-programmer cannot catch it by inspection. So the harness is verified by
+running it end-to-end, and its checks are chosen to be ones the user can confirm are
+*mathematically* the right checks even without being able to write them — determinism
+under a repeated seed, disjoint train/test indices, agreement with a known reference
+solution. Writing the checks this way is what makes the division of labor honest: the
+agent owns the code, the user still owns the criterion.
+
+One evidence-backed protocol falls out of the same skill and is worth recording because
+it contradicts a convenient default. **No fixed number of seeds is defensible.**
+Henderson et al. [39] ran ten trials differing only in random seed, split them into two
+groups of five, and the two groups formed statistically different distributions; they
+decline to recommend a trial count and point to bootstrap confidence bounds instead.
+Hardcoding "five seeds" — the intuitive default, and the exact configuration shown to
+come apart — is therefore not licensed. The operational consequences are mechanical:
+aggregate every run matching a configuration and never the maximum or the best few,
+report a bootstrap interval rather than only a standard deviation, and treat a wide
+interval as a demand for more seeds rather than an invitation to a bolder claim.
 
 **A gap is an absence; a motivation is a consequence.** Finding a hole in the
 literature and justifying work on it are different jobs, so `gap-finder` and
@@ -504,3 +579,60 @@ Meta-Analysis," *Educational Psychology Review*, vol. 36, art. 78, 2024. doi:
 conditional on reviewing the notes; typing yields greater volume (g = 0.919).
 Cited for the review-dependence, which is why the note protocol makes the user's
 review pass mandatory.
+
+[38] G. Wilson, J. Bryan, K. Cranston, J. Kitzes, L. Nederbragt, and T. K. Teal,
+"Good enough practices in scientific computing," *PLOS Computational Biology*,
+vol. 13, no. 6, e1005510, 2017. doi:
+[10.1371/journal.pcbi.1005510](https://doi.org/10.1371/journal.pcbi.1005510).
+arXiv:[1609.00037](https://arxiv.org/abs/1609.00037). Cited as the canonical
+minimum-viable-practice stance this repo defaults to, including its own
+"what we left out" deferral list — and as the stance `research-codebase`
+deliberately inverts for users who cannot perform the refactor it presumes.
+
+[39] P. Henderson, R. Islam, P. Bachman, J. Pineau, D. Precup, and D. Meger,
+"Deep Reinforcement Learning that Matters," in *Proc. AAAI Conference on
+Artificial Intelligence*, vol. 32, 2018. arXiv:
+[1709.06560](https://arxiv.org/abs/1709.06560). Cited for the seed result: ten
+trials differing only in random seed, split into two groups of five, produced
+statistically different distributions (2-sample t-test across training,
+t = -9.09, p = 0.0016). The authors explicitly decline to recommend a trial
+count and point to bootstrap confidence bounds and power analysis instead.
+
+[40] U. Michelucci and F. Venturini, "Best Practices for Machine Learning
+Experimentation in Scientific Applications," arXiv:
+[2511.21354](https://arxiv.org/abs/2511.21354), 2025. Preprint, 9 pages. Cited
+for its planning/results table format only. Its LOR and COS statistics are
+**not adopted**: COS is not identifiable (overfitting and underfitting fall on
+the same side of 1 under the published formula, contradicting the paper's own
+interpretation text, and both worked examples are same-side cases), and LOR's
+sign convention inverts between error-type and accuracy-type metrics.
+
+[41] M. Wolter, L. Veeramacheneni, and C. T. Hoyt, "More Rigorous Software
+Engineering Would Improve Reproducibility in Machine Learning Research," arXiv:
+[2502.00902](https://arxiv.org/abs/2502.00902), 2025. Crawl of repositories
+linked from NeurIPS/ICML/ICLR/AISTATS/TMLR/MLOSS papers, 2018-2025. Cited both
+for its adopted items (recorded seeds, pinned dependencies, one command that
+re-runs every experiment) and as the instance of a source **partly declined**
+with reason: its packaging/CI/type-checking recommendations target released
+artifacts, and the paper itself qualifies them as applying "only when
+appropriate."
+
+[42] J. Pineau, P. Vincent-Lamarre, K. Sinha, V. Larivière, A. Beygelzimer,
+F. d'Alché-Buc, E. Fox, and H. Larochelle, "Improving Reproducibility in Machine
+Learning Research (A Report from the NeurIPS 2019 Reproducibility Program),"
+*Journal of Machine Learning Research*, vol. 22, no. 164, pp. 1-20, 2021. arXiv:
+[2003.12206](https://arxiv.org/abs/2003.12206). Cited for the code-submission
+trend (<50% at NeurIPS 2018 to 74.4% at camera-ready in 2019 under an
+expects-but-does-not-require policy) and as the attribution correction: the
+85%-vs-4% reproduction figure is E. Raff, "A step toward quantifying
+independently reproducible machine learning research," *NeurIPS*, 2019, cited
+by this report against a 63.5%-of-255-manuscripts baseline and flagged there
+for likely selection bias — not a finding of the NeurIPS program itself.
+
+[43] T. Eimer, L. Schäpermeier, A. Biedenkapp, A. Tornede, L. Kotthoff, et al.
+(COSEAL Research Network), "Best Practices For Empirical Meta-Algorithmic
+Research," arXiv:[2512.16491](https://arxiv.org/abs/2512.16491), 2025. Cited for
+the prototype-experiment stage (exercise logging, plotting, and resource
+tracking end-to-end on dummy data before scaling, and extrapolate cost from it)
+and for its warning that AI coding tools can produce clean-looking, executable,
+yet wrong code whose output must be checked before it is relied on.

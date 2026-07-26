@@ -1,6 +1,9 @@
-# outputs/ is regenerable — keep it out of git. results/ IS tracked.
+# outputs/ is regenerable by `python run.py` -- keep it out of git.
+# results/ IS tracked: it holds the generated paper tables.
 outputs/
 __pycache__/
 *.pyc
+
+# Raw and derived data stay out of git; record how to obtain them in the README.
 data/raw/
 data/processed/

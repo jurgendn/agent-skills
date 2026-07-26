@@ -47,7 +47,7 @@
       "name": "research-codebase",
       "path": "skills/research-engineering/research-codebase",
       "category": "research-engineering",
-      "description": "Structure and maintain a research codebase for fast hypothesis testing."
+      "description": "Set up the harness around an experiment: pipeline contract, sweep runner, and aggregation to the paper's table."
     },
     {
       "name": "ielts-learning-planner",
