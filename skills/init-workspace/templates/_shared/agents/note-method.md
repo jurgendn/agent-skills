@@ -32,6 +32,8 @@ Turn the fragments into full notes: complete sentences, key terms defined, a sum
 - **Expansion is grounded in the capture plus a source actually read** — the same integrity rules as the pipeline apply (never fabricate a source, never describe an unread one, gaps become `TODO` not filler).
 - **The user reviews and edits the result.** This is the step that substitutes for the traditional rewrite-your-notes pass, and it is the only part of the loop with a plausible claim on learning. An unreviewed expansion is a transcript, not a note.
 
+A note is not done growing after its first pass. When you come back later — a new session's fragments, a new handwritten page, a line typed straight into the note — that is a new increment on the same note, not a new note and not a sync problem between two copies: the vault file is the only copy there ever was. Expand only the new increment. Never regenerate the whole expansion, since the earlier prose already carries your edits and a full re-expansion would silently overwrite them.
+
 ### 3. Store — structured so it can be found
 
 Write the reviewed note to its destination with the frontmatter and headers its template specifies (see *Retrieval contract*).
@@ -50,11 +52,13 @@ It earns its space three ways: expansions are better when the model sees both th
 
 Mark provenance whenever the two are mixed: what you wrote, and what was expanded or supplied for you. A note that reads as yours but was largely generated is a debt, not understanding — the same distinction `knowledge-debt-audit` tracks, and the same one the learn-flows' discussion mode records with `[USER]`/`[PEER]`/`[MENTOR]` tags.
 
+When a note grows across more than one sitting, append each new increment under its own dated sub-heading inside `## Raw capture` (e.g. `### 2026-07-31`) rather than editing or merging into what is already there. This keeps every past increment intact for the next expansion pass to check against, and keeps "what did I actually write, and when" answerable by reading the section rather than by memory.
+
 ## Retrieval contract
 
 The vault is queried by machine, so a few conventions are load-bearing rather than cosmetic:
 
-- **Frontmatter is metadata, not decoration.** Valid YAML from line 1. Whatever fields the template defines (`title`, `tags`, `source`, `date`, `status`, `confidence`) are what filtering runs on — an omitted `confidence` makes a note invisible to a "what am I unsure about" query.
+- **Frontmatter is metadata, not decoration.** Valid YAML from line 1. Whatever fields the template defines (`title`, `tags`, `source`, `date`, `status`, `confidence`) are what filtering runs on — an omitted `confidence` makes a note invisible to a "what am I unsure about" query. For a note that grows across sittings, add `updated` alongside the template's birth-date field (`date` or `created`): the birth date is when the note was born, `updated` is its most recent increment, and only the second stays true once the note has been added to more than once.
 - **Section headers are stable because retrieval chunks on them.** Renaming `## Summary` to `## Overview` in one note silently breaks every query that targets it. Follow the template's headers; add new ones rather than renaming existing ones.
 - **Links are the graph.** `[[wikilinks]]` let a query about one concept surface neighbours that never mention it by name. Link when you write, not in a later cleanup pass that will not happen.
 
@@ -64,4 +68,4 @@ Before sending note content to a remote model, check what is in it. Public mater
 
 ## Done means
 
-One file at its destination; the raw capture preserved inside it; the expansion reviewed by the user rather than accepted as written; frontmatter valid and headers matching the template; anything uncertain marked rather than smoothed away.
+One file at its destination; the raw capture preserved inside it; the expansion reviewed by the user rather than accepted as written; frontmatter valid and headers matching the template; anything uncertain marked rather than smoothed away. A later increment meets the same bar for that increment: its capture dated and preserved, its expansion reviewed, `updated` bumped — and the previously reviewed prose left intact.
