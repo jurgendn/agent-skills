@@ -4,9 +4,7 @@ How to adapt a statement across systems without inventing a persona or a stereot
 
 ## The model
 
-\[
-\textbf{Applicant Evidence} + \textbf{Target Evidence} + \textbf{Selection / Funding Regime} \rightarrow \textbf{Narrative Strategy}
-\]
+**Applicant Evidence + Target Evidence + Selection/Funding Regime → Narrative Strategy**
 
 - **Applicant Evidence** — what the user has actually done. Fixed.
 - **Target Evidence** — this university, department, laboratory, supervisor.
@@ -16,9 +14,7 @@ The third term is deliberately **not** "regional cultural prior." A funder's pub
 
 ## The invariant
 
-\[
-\boxed{\textbf{facts fixed; weights vary}}
-\]
+**Facts fixed; weights vary.**
 
 Adapting a statement changes **which evidence is salient, in what order, at what depth, and framed against which criterion**. It never changes what the applicant did, never adds a claim, and never subtracts an inconvenient one.
 
@@ -38,17 +34,9 @@ These provide zero evidence of applicant–programme fit, and they signal that t
 
 ## The geopolitical inference gate
 
-A true fact about a country's strategy does **not** license an emphasis in a statement:
+A true fact about a country's strategy **does not by itself license** an emphasis in a statement. It licenses one only when the full chain is documented:
 
-\[
-\text{geopolitical fact} \nRightarrow \text{SOP emphasis}
-\]
-
-It licenses one only when the full chain is documented:
-
-\[
-\text{geopolitical objective} \rightarrow \text{funding / programme objective} \rightarrow \text{published selection criterion}
-\]
+**geopolitical objective → funding/programme objective → published selection criterion**
 
 This chain is falsifiable, which is the point. **Australia Awards passes it** — the scheme's own policy documents tie education to partner-country development, leadership, and return-home contribution, and that is a stated objective. **"China emphasises technological self-reliance, therefore mention strategic self-reliance in your SOP"** fails it: the first half may be true, but no published selection criterion connects it to how an individual applicant is scored. Do not make that leap, and do not let a user make it — the advice can actively damage an application depending on reader, field, and year.
 
@@ -66,7 +54,7 @@ Campus France states that a doctoral candidate needs a **thesis topic and a thes
 
 ### Australia — Awards and ordinary RTP are different genres
 
-- **Australia Awards** is a development-policy instrument. It targets partner-country development, leadership and lasting change, and contribution after returning home. Scholars must return home on completion and **remain outside Australia for at least two years**; seeking permanent residence inside that window incurs a debt for the full scholarship cost (which for a PhD can reach roughly AUD 320,000). This is a hard constraint with financial consequences and must be surfaced to any user considering it, not just treated as essay framing.
+- **Australia Awards** is a development-policy instrument. It targets partner-country development, leadership and lasting change, and contribution after returning home. Scholars must return home on completion and **remain outside Australia for at least two years**; seeking to remain in or return to Australia inside that window incurs a debt for the full cost of the scholarship, which for a doctorate is substantial. This is a hard constraint with real financial consequences and must be surfaced to any user considering it, not just treated as essay framing.
 - **Ordinary RTP** scholarships are administered by individual universities with their own selection processes, centred on research readiness, a supervisor, and a feasible project.
 
 Write these as two genres. An Awards statement foregrounds development impact, leadership, and reintegration; an RTP application foregrounds research preparation and project fit.
