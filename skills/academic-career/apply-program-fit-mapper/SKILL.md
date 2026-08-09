@@ -44,6 +44,8 @@ If interests are vague, turn them into several searchable themes instead of forc
 
 Applying a department-first strategy to a supervisor-first system produces applications with no advocate; the reverse produces outreach that reads as presumptuous. Ask which applies per target rather than assuming from country, since both patterns exist within most systems.
 
+Some systems bind this structurally. Campus France states that a French doctoral candidate needs a **thesis topic and thesis supervisor before enrolment**, with acceptance by a doctoral school, and that doctoral work sits within a laboratory. Treat that as a fact about the French doctoral structure — **not** as a general rule that a supervisor must be contacted before submitting any application anywhere, since procedures differ by institution and funding route. Verify per target.
+
 ### 2. Define fit criteria
 
 Use criteria such as:

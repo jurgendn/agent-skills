@@ -52,6 +52,8 @@ Use `Dear Professor [Surname]`, write in English, keep it short, and mirror thei
 
 The conventions above govern the opening and the register. They do **not** change what makes the email work: specificity about their actual research, brevity, a clear ask, and something that could not have been sent to anyone else. A perfectly addressed generic email is still a generic email.
 
+**Never praise the country or the institution's reputation to show fit.** "I have long admired Germany's culture of precision," "your university is world-renowned," "I am inspired by Japan's research excellence" — these are the email equivalent of a form letter and are read as such. They give the recipient no evidence that you know anything about *their* work. Cite the paper, not the nation. If a sentence would survive being pasted into an email to a different professor in a different country, delete it.
+
 ## Volatility
 
 Individual preference overrides national convention, and some academics say so on their own pages ("please just call me X"). Institutional style guides change. Treat everything here as the default when you have no better information, and treat the recipient's own stated preference, their page, and their reply signature as authoritative over it.

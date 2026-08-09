@@ -35,6 +35,14 @@ This is the field most often gotten wrong, in both directions.
 
 Do not tell a user that a given country "expects a photo." That claim varies by document type, sector, institution, and year, and asserting it confidently can put discriminatory personal data into an application that never asked for it.
 
+## Adapting a CV across targets: facts fixed, weights vary
+
+A CV is adapted by **reordering and reweighting**, never by rewriting history. What may change across targets: which section comes first, how much space an item gets, which outputs are expanded versus listed, and which criterion an entry is framed against. What never changes: what the user did, author order as published, dates, titles, and status.
+
+Where a programme publishes explicit selection criteria, allocate evidence against them. The Hong Kong PhD Fellowship Scheme, for instance, names four yardsticks — academic excellence, research ability/potential, communication and interpersonal skills, and leadership — so a package targeting it should have identifiable support for each, including the two that most departmental applications never score. That is reweighting against a published rubric, not invention.
+
+**Do not adapt a CV to a country's supposed character.** There is no version of this CV for "a culture that values modesty." There is a version for *this call's stated criteria*, and that is the only adaptation with a checkable basis.
+
 ## Publication and output listing
 
 - Use the **citation style of the target field**, consistently, and state author order as published — do not reorder to move the user forward.

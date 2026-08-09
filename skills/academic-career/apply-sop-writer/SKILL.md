@@ -40,6 +40,13 @@ If the user has not provided the prompt or word limit, ask for it or make assump
 
 That file flags its own register claims — how personal or narrative a statement should be — as **weakly sourced**. Do not assert them as national rules. Read the prompt's own verbs and answer the question actually asked.
 
+Two rules from that file are hard, and apply to every draft and every critique:
+
+- **Never praise a country to show fit.** "I admire Germany's precision," "Singapore is renowned for excellence" — these give a reader no evidence of applicant–programme fit and signal that the applicant researched the country instead of the lab. Test: if a sentence would survive being moved to an application in a different country, it is doing no work.
+- **Facts fixed; weights vary.** Adapting across targets changes which evidence is salient, its order, depth, and which published criterion it is framed against. It never changes what the applicant did, never adds a claim, and never drops an inconvenient one. Seven targets do not mean seven identities.
+
+A country only enters the reasoning where it produces a **documented institutional mechanism** (France's supervisor-and-laboratory doctoral structure, Australia Awards' development mandate, HKPFS's published four-part rubric). A true geopolitical fact does not by itself license an emphasis — that requires the full chain *geopolitical objective → programme objective → published selection criterion*.
+
 When the essay is (or contains) a forward-looking **research plan** or a fellowship
 proposal, `references/proposal-and-research-plan-craft.md` covers proposal-specific
 craft: the research-statement-vs-plan distinction, the hourglass structure, the four
