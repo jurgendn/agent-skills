@@ -41,6 +41,10 @@ A CV is adapted by **reordering and reweighting**, never by rewriting history. W
 
 Where a programme publishes explicit selection criteria, allocate evidence against them. The Hong Kong PhD Fellowship Scheme, for instance, names four yardsticks — academic excellence, research ability/potential, communication and interpersonal skills, and leadership — so a package targeting it should have identifiable support for each, including the two that most departmental applications never score. That is reweighting against a published rubric, not invention.
 
+**The funding scheme's genre decides which evidence leads** — and two schemes in the same country can differ completely. An academic-excellence scheme wants record and research potential first. A development-change scheme (which typically also requires documented years of professional experience) wants the professional problem and the change it motivates. A leadership scheme wants influence and trajectory. An industry/professional scheme makes deployed systems and engineering work the strongest evidence on the page. A research-cooperation scheme wants the proposal and the named host.
+
+The same project can legitimately appear as *technical preparation*, as *a problem encountered in practice*, or as *evidence of exceptional ability*, depending on the criterion it is framed against — with no fact altered. That is reweighting; inventing a role or inflating a contribution is not.
+
 **Do not adapt a CV to a country's supposed character.** There is no version of this CV for "a culture that values modesty." There is a version for *this call's stated criteria*, and that is the only adaptation with a checkable basis.
 
 ## Publication and output listing

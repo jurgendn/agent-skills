@@ -50,6 +50,8 @@ Do not adjust any score up or down on the basis of an applicant's nationality, f
 
 What is not scoreable is an inferred national preference. A true geopolitical fact licenses a scoring criterion only when the chain **geopolitical objective → programme objective → published selection criterion** can be shown. Where the chain breaks, do not score the dimension on it; record the uncertainty instead. Fellowship-specific criteria are also not national criteria — NSF GRFP's Intellectual Merit / Broader Impacts framing applies to GRFP applicants (US citizens, nationals, and permanent residents only), not to US admissions generally.
 
+**Score dimension 2 against the scheme's genre, not its nationality.** Read the genre off the published objectives: academic-excellence, development/change, leadership/influence, industry/professional, research-cooperation, consortium/mobility, or diplomatic/bilateral. A dossier that is strong for one genre can be genuinely weak for another — a pure research record against a development-change scheme requiring years of professional experience is a real mismatch, not a presentation problem, and should score accordingly. Two schemes from the same national agency frequently belong to different genres with different eligibility, so never infer the genre from the funder's country.
+
 Where a programme carries **hard post-award constraints** — Australia Awards requires returning home and remaining outside Australia for at least two years, with a debt liability for the full scholarship cost otherwise — surface them under eligibility and risk. They change whether the target is viable, not just how it scores.
 
 ## Volatility rule (read before scoring eligibility or programs)

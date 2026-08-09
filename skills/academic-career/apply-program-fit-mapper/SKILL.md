@@ -37,14 +37,16 @@ Identify:
 
 If interests are vague, turn them into several searchable themes instead of forcing one narrow topic.
 
-**Establish whether each target admits supervisor-first or department-first — it changes the whole shortlisting strategy.**
+**Establish each target's application regime before shortlisting — it decides what a shortlist entry even is.** `references/application-regimes.md` carries the four regimes and their consequences:
 
-- **Supervisor-first** (much of Europe, UK project studentships, Australian HDR/RTP routes, MSCA/EURAXESS positions): the applicant is admitted onto a specific project or into a specific group, often after an individual agreement with the academic. At some institutions a supervisor's informal agreement is a precondition for the application to be considered at all — this is set per university, not nationally, so confirm with the graduate research office. Here the unit of shortlisting is **a person and a funded project**, outreach precedes application, and depth on two or three targets beats breadth.
-- **Department-first** (typical US PhD admissions): the applicant is admitted to a department or cohort, may rotate, and settles with an advisor later. Here the unit is **a department with several plausible advisors**, a shortlist needs multiple names per school, and pre-application contact is optional and sometimes discouraged.
+- **Supervisor-first** (France, French-speaking Belgium, many project-funded posts) — the unit is *a person and a project*; outreach is the critical path; depth beats breadth.
+- **Vacancy-first** (Sweden, Norway, MSCA/EURAXESS) — the unit is *an advertised position* and the applicant becomes an employee; you monitor vacancy boards rather than shortlist departments.
+- **Call/competition-first** (Italian *bandi*) — the unit is *a specific call* with ranked selection and a fixed window.
+- **Department-first** (typical US admissions) — the unit is *a department with several plausible advisors*; pre-application contact is optional and sometimes discouraged.
 
-Applying a department-first strategy to a supervisor-first system produces applications with no advocate; the reverse produces outreach that reads as presumptuous. Ask which applies per target rather than assuming from country, since both patterns exist within most systems.
+Identify the **funding regime separately**, since it may have a different selector — programme-attached, a standalone scholarship, project or employment funding, or a nominated scheme screened by the host institution or a national sending partner. Also check for the two edge cases: funding that is eligibility-assessed rather than competitive (Italian DSU is income-based), and levels where a country simply has no general government scholarship, so there is nothing to apply to.
 
-Some systems bind this structurally. Campus France states that a French doctoral candidate needs a **thesis topic and thesis supervisor before enrolment**, with acceptance by a doctoral school, and that doctoral work sits within a laboratory. Treat that as a fact about the French doctoral structure — **not** as a general rule that a supervisor must be contacted before submitting any application anywhere, since procedures differ by institution and funding route. Verify per target.
+Ask which regime applies per target rather than assuming from country — most countries contain several, and a single university can differ by department or funding source.
 
 ### 2. Define fit criteria
 
