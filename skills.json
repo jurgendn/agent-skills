@@ -146,6 +146,12 @@
       "description": "Build and audit academic CVs for PhD, research, fellowship, internship, and RA applications."
     },
     {
+      "name": "apply-interview-prep",
+      "path": "skills/academic-career/apply-interview-prep",
+      "category": "academic-career",
+      "description": "Prepare for academic selection interviews — PhD admissions, funder panels (DAAD), scholarship/embassy panels, MSc admissions, and prospective-supervisor conversations — by triaging who is across the table."
+    },
+    {
       "name": "apply-package-auditor",
       "path": "skills/academic-career/apply-package-auditor",
       "category": "academic-career",
