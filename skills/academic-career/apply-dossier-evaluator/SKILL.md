@@ -40,6 +40,12 @@ Scoring MUST be anchored, not impressionistic:
   `references/calibration-anchors.md` so the scale stays fixed across runs.
 - For every score, cite the concrete evidence and the anchor band it matched.
 
+**Separate presentation convention from substance.** Dimensions 6 (statement quality) and 7 (letters) are the ones most easily corrupted by a convention mismatch: a statement written to a European motivation-letter prompt, a CV on a mandated template, a reference letter in a restrained register, or a grade reported on its native scale can all *look* weak against expectations set by a different system while the underlying evidence is strong.
+
+The rule: **score the evidence, not the packaging.** Where a dossier's weakness is a fixable convention mismatch — wrong format, missing section the target expects, unattributed contribution, self-converted grade — record it under *Highest-leverage fixes*, not as a reduced dimension score. Where the weakness is substantive (no research evidence, no letter-writer who can speak to research ability), score it. State explicitly which of the two you concluded and why, so the call is auditable.
+
+Do not adjust any score up or down on the basis of an applicant's nationality, first language, or home institution's country. Where a credential's *recognition* genuinely gates admission, that belongs to dimension 1 (eligibility) with `references/degree-equivalence.md`, not to a quality dimension.
+
 ## Volatility rule (read before scoring eligibility or programs)
 
 NEVER treat a cached deadline, GPA cutoff, score minimum, CV/SOP word limit, or

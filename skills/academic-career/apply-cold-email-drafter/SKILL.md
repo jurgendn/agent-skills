@@ -37,6 +37,17 @@ Identify:
 
 If professor-specific evidence is missing, ask for it or draft a clearly marked placeholder version. Do not fabricate paper titles or claims.
 
+### 1b. Set the address and register for the target system
+
+Before drafting the opening, establish how this recipient should be addressed. `references/address-and-formality.md` carries the conventions — German-speaking systems expect a written-out title and no first names unless invited; Italian address is formal and often governed by a published *bando*; Anglophone systems use `Dear Professor [Surname]`; Nordic and Dutch academia are markedly informal.
+
+Two rules override any convention:
+
+- **Take the recipient's title from their own institutional page**, never from their name and never by inference. Where the page is ambiguous, choose the more formal option.
+- **Their stated preference and their reply signature win.** Mirror the register they answer in.
+
+Getting this right costs nothing and is read before the pitch. It does not substitute for the pitch — a perfectly addressed generic email is still generic.
+
 ### 2. Choose the email strategy
 
 Select one primary ask:

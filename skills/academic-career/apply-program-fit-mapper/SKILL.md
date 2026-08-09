@@ -37,6 +37,13 @@ Identify:
 
 If interests are vague, turn them into several searchable themes instead of forcing one narrow topic.
 
+**Establish whether each target admits supervisor-first or department-first — it changes the whole shortlisting strategy.**
+
+- **Supervisor-first** (much of Europe, UK project studentships, Australian HDR/RTP routes, MSCA/EURAXESS positions): the applicant is admitted onto a specific project or into a specific group, often after an individual agreement with the academic. At some institutions a supervisor's informal agreement is a precondition for the application to be considered at all — this is set per university, not nationally, so confirm with the graduate research office. Here the unit of shortlisting is **a person and a funded project**, outreach precedes application, and depth on two or three targets beats breadth.
+- **Department-first** (typical US PhD admissions): the applicant is admitted to a department or cohort, may rotate, and settles with an advisor later. Here the unit is **a department with several plausible advisors**, a shortlist needs multiple names per school, and pre-application contact is optional and sometimes discouraged.
+
+Applying a department-first strategy to a supervisor-first system produces applications with no advocate; the reverse produces outreach that reads as presumptuous. Ask which applies per target rather than assuming from country, since both patterns exist within most systems.
+
 ### 2. Define fit criteria
 
 Use criteria such as:

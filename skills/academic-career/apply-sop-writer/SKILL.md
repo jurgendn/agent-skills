@@ -36,6 +36,10 @@ Identify:
 
 If the user has not provided the prompt or word limit, ask for it or make assumptions explicit.
 
+**The prompt defines the document — its name does not.** "Statement of purpose," "motivation letter," and "personal statement" are used inconsistently and overlap heavily, so do not infer requirements from the label. `references/statement-conventions-by-system.md` covers what genuinely varies: whether the application targets a **named project or position** (much of Europe, MSCA/EURAXESS, UK studentships, Australian projects — argue fit to *that* project) or a **department or cohort** (typical US admissions — argue direction and fit to several possible advisors); whether a separate research proposal carries the research content; and the extra scored dimension that mission-driven scholarships attach to post-degree plans.
+
+That file flags its own register claims — how personal or narrative a statement should be — as **weakly sourced**. Do not assert them as national rules. Read the prompt's own verbs and answer the question actually asked.
+
 When the essay is (or contains) a forward-looking **research plan** or a fellowship
 proposal, `references/proposal-and-research-plan-craft.md` covers proposal-specific
 craft: the research-statement-vs-plan distinction, the hourglass structure, the four
