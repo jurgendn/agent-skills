@@ -36,6 +36,19 @@ Identify:
 
 If the user has not provided the prompt or word limit, ask for it or make assumptions explicit.
 
+**The prompt defines the document — its name does not.** "Statement of purpose," "motivation letter," and "personal statement" are used inconsistently and overlap heavily, so do not infer requirements from the label. `references/statement-conventions-by-system.md` covers what genuinely varies: whether the application targets a **named project or position** (much of Europe, MSCA/EURAXESS, UK studentships, Australian projects — argue fit to *that* project) or a **department or cohort** (typical US admissions — argue direction and fit to several possible advisors); whether a separate research proposal carries the research content; and the extra scored dimension that mission-driven scholarships attach to post-degree plans.
+
+That file flags its own register claims — how personal or narrative a statement should be — as **weakly sourced**. Do not assert them as national rules. Read the prompt's own verbs and answer the question actually asked.
+
+Two rules from that file are hard, and apply to every draft and every critique:
+
+- **Never praise a country to show fit.** "I admire Germany's precision," "Singapore is renowned for excellence" — these give a reader no evidence of applicant–programme fit and signal that the applicant researched the country instead of the lab. Test: if a sentence would survive being moved to an application in a different country, it is doing no work.
+- **Facts fixed; weights vary.** Adapting across targets changes which evidence is salient, its order, depth, and which published criterion it is framed against. It never changes what the applicant did, never adds a claim, and never drops an inconvenient one. Seven targets do not mean seven identities.
+
+**Identify the scheme's genre before drafting** — it decides what must dominate the document, and two schemes from the same national agency routinely differ. The reference file names seven (academic-excellence, development/change, leadership/influence, industry/professional, research-cooperation, consortium/mobility, diplomatic/bilateral) and carries the extraction method: identify the application regime, identify the funding regime, extract the published criteria, reweight existing evidence against them, note the hard constraints. Watch for **two selectors** on one application — a host institution or national sending partner may screen and nominate before the funder reads anything.
+
+A country only enters the reasoning where it produces a **documented institutional mechanism** (France's supervisor-and-laboratory doctoral structure, Australia Awards' development mandate, HKPFS's published four-part rubric). A true geopolitical fact does not by itself license an emphasis — that requires the full chain *geopolitical objective → programme objective → published selection criterion*.
+
 When the essay is (or contains) a forward-looking **research plan** or a fellowship
 proposal, `references/proposal-and-research-plan-craft.md` covers proposal-specific
 craft: the research-statement-vs-plan distinction, the hourglass structure, the four

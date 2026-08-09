@@ -37,6 +37,10 @@ Extract:
 
 If the user has not provided their current material, ask for it or provide a fill-in template.
 
+**Establish the format requirements before drafting.** A CV rejected on format is never read for content. Ask for — or tell the user exactly where to find — the call's required-documents list, any mandatory template, any stated page limit, and whether the institution publishes its own CV template. `references/cv-format-and-required-documents.md` covers this, including where Europass is genuinely required (EU-funded calls, Italian *bandi* asking for *formato europeo*), how to report grades on their native scale without self-converting, and how to handle personal-data fields.
+
+On personal data specifically: include a photo, date of birth, or similar **only when the call or template asks for it**. Do not import industry-résumé conventions into an academic application, and do not tell the user that a given country "expects a photo" — that varies by document type, institution, and year, and asserting it can push discriminatory personal data into an application that never requested it.
+
 ### 2. Separate evidence from presentation
 
 Classify material into:

@@ -37,6 +37,17 @@ Identify:
 
 If interests are vague, turn them into several searchable themes instead of forcing one narrow topic.
 
+**Establish each target's application regime before shortlisting — it decides what a shortlist entry even is.** `references/application-regimes.md` carries the four regimes and their consequences:
+
+- **Supervisor-first** (France, French-speaking Belgium, many project-funded posts) — the unit is *a person and a project*; outreach is the critical path; depth beats breadth.
+- **Vacancy-first** (Sweden, Norway, MSCA/EURAXESS) — the unit is *an advertised position* and the applicant becomes an employee; you monitor vacancy boards rather than shortlist departments.
+- **Call/competition-first** (Italian *bandi*) — the unit is *a specific call* with ranked selection and a fixed window.
+- **Department-first** (typical US admissions) — the unit is *a department with several plausible advisors*; pre-application contact is optional and sometimes discouraged.
+
+Identify the **funding regime separately**, since it may have a different selector — programme-attached, a standalone scholarship, project or employment funding, or a nominated scheme screened by the host institution or a national sending partner. Also check for the two edge cases: funding that is eligibility-assessed rather than competitive (Italian DSU is income-based), and levels where a country simply has no general government scholarship, so there is nothing to apply to.
+
+Ask which regime applies per target rather than assuming from country — most countries contain several, and a single university can differ by department or funding source.
+
 ### 2. Define fit criteria
 
 Use criteria such as:

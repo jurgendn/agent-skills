@@ -40,6 +40,20 @@ Scoring MUST be anchored, not impressionistic:
   `references/calibration-anchors.md` so the scale stays fixed across runs.
 - For every score, cite the concrete evidence and the anchor band it matched.
 
+**Separate presentation convention from substance.** Dimensions 6 (statement quality) and 7 (letters) are the ones most easily corrupted by a convention mismatch: a statement written to a European motivation-letter prompt, a CV on a mandated template, a reference letter in a restrained register, or a grade reported on its native scale can all *look* weak against expectations set by a different system while the underlying evidence is strong.
+
+The rule: **score the evidence, not the packaging.** Where a dossier's weakness is a fixable convention mismatch — wrong format, missing section the target expects, unattributed contribution, self-converted grade — record it under *Highest-leverage fixes*, not as a reduced dimension score. Where the weakness is substantive (no research evidence, no letter-writer who can speak to research ability), score it. State explicitly which of the two you concluded and why, so the call is auditable.
+
+Do not adjust any score up or down on the basis of an applicant's nationality, first language, or home institution's country. Where a credential's *recognition* genuinely gates admission, that belongs to dimension 1 (eligibility) with `references/degree-equivalence.md`, not to a quality dimension.
+
+**Score sponsor/mission fit (dimension 2) only against published criteria.** A funder's mission may legitimately drive scoring where the programme states it — Australia Awards publishes development impact, leadership, and return-home contribution as objectives, and HKPFS publishes four named yardsticks including communication and leadership. Those are scoreable.
+
+What is not scoreable is an inferred national preference. A true geopolitical fact licenses a scoring criterion only when the chain **geopolitical objective → programme objective → published selection criterion** can be shown. Where the chain breaks, do not score the dimension on it; record the uncertainty instead. Fellowship-specific criteria are also not national criteria — NSF GRFP's Intellectual Merit / Broader Impacts framing applies to GRFP applicants (US citizens, nationals, and permanent residents only), not to US admissions generally.
+
+**Score dimension 2 against the scheme's genre, not its nationality.** Read the genre off the published objectives: academic-excellence, development/change, leadership/influence, industry/professional, research-cooperation, consortium/mobility, or diplomatic/bilateral. A dossier that is strong for one genre can be genuinely weak for another — a pure research record against a development-change scheme requiring years of professional experience is a real mismatch, not a presentation problem, and should score accordingly. Two schemes from the same national agency frequently belong to different genres with different eligibility, so never infer the genre from the funder's country.
+
+Where a programme carries **hard post-award constraints** — Australia Awards requires returning home and remaining outside Australia for at least two years, with a debt liability for the full scholarship cost otherwise — surface them under eligibility and risk. They change whether the target is viable, not just how it scores.
+
 ## Volatility rule (read before scoring eligibility or programs)
 
 NEVER treat a cached deadline, GPA cutoff, score minimum, CV/SOP word limit, or
