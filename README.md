@@ -147,6 +147,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `academic-career/apply-cold-email-drafter` — draft, critique, and revise concise cold emails to professors and PIs.
 - `academic-career/apply-cv-builder` — build and audit academic CVs for PhD, research master's, fellowship, internship, RA, and lab applications.
 - `academic-career/apply-dossier-evaluator` — score a further-education dossier (PhD, master's, scholarship, internship) on a reproducible 11-dimension rubric, with eligibility and scholarship-program (VEF/DAAD/Fulbright/Erasmus/MSCA) fit.
+- `academic-career/apply-interview-prep` — prepare for academic selection interviews (PhD admissions, DAAD-style funder panels, scholarship/embassy panels, MSc admissions, prospective-supervisor calls) by first triaging who is across the table.
 - `academic-career/apply-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 - `academic-career/apply-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
 - `academic-career/apply-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.

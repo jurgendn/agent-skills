@@ -1,7 +1,7 @@
 ---
 name: flow-phd-application
 description: >-
-  Orchestrate a complete PhD / research-program application package end-to-end — from reading the applicant's materials through CV, program & faculty fit, SOP, recommender strategy, professor outreach, and a final package audit. Use whenever the user wants to drive the whole application rather than one piece: "help me with my PhD applications", "where do I start with my application", "manage my application process", "I'm applying to PhD programs, what's the plan", "get my materials ready", or hands over a folder of CV/transcripts/notes and asks for the path to submission. This is a ROUTER that sequences existing singleton skills with stage gates; it does not write the SOP, CV, or emails itself. For a single piece, invoke that skill directly (e.g. apply-sop-writer, apply-cv-builder). For driving a research paper use flow-paper-lifecycle.
+  Orchestrate a complete PhD / research-program application package end-to-end — from reading the applicant's materials through CV, program & faculty fit, SOP, recommender strategy, professor outreach, a final package audit, and interview preparation once shortlists arrive. Use whenever the user wants to drive the whole application rather than one piece: "help me with my PhD applications", "where do I start with my application", "manage my application process", "I'm applying to PhD programs, what's the plan", "get my materials ready", or hands over a folder of CV/transcripts/notes and asks for the path to submission. This is a ROUTER that sequences existing singleton skills with stage gates; it does not write the SOP, CV, or emails itself. For a single piece, invoke that skill directly (e.g. apply-sop-writer, apply-cv-builder). For driving a research paper use flow-paper-lifecycle.
 ---
 
 # PhD Application Orchestrator
@@ -26,7 +26,7 @@ Run in order; **enter at the applicant's actual stage** and resume from the last
 ```text
 1 Read the profile → 2 Build the CV → 3 Map program & faculty fit
 → 4 Write the SOP → 5 Plan recommenders → 6 Professor outreach
-→ 7 Audit the package
+→ 7 Audit the package → 8 Prepare for interviews
 ```
 
 **Conditional route (not in the linear order):** for a graded scorecard, a
@@ -66,6 +66,11 @@ Check the assembled package for completeness, internal consistency (CV ↔ SOP �
 **Gate:** the package passes a consistency-and-completeness audit for each target program.
 For a *scored* read of the same package — per-dimension 1–5, tier, and the highest-leverage gap — also run the conditional route `apply-dossier-evaluator` (the auditor checks coherence; the evaluator assigns numbers).
 
+### Stage 8 — Prepare for interviews → `apply-interview-prep`
+Post-submission, once shortlists and supervisor replies arrive. Triage **who is across the table** first — a funder's academic committee, a prospective supervisor, an administrative/embassy panel, or a document-only process with no interview — then build the answer bank, calibrate self-presentation, and rehearse. Reuses stage 1's profile and stage 3's fit notes so spoken answers match the submitted file.
+*Optional reader's-eye pass:* hand a rehearsal to `professor-critic` with the triaged assessor as the named reader and the real decision as the bar.
+**Gate:** the assessor type is identified per invitation, and the core answers are deliverable aloud without contradicting the submitted application. **Skip entirely where the process is document-only** — say so rather than manufacturing prep.
+
 ## Router Rules
 
 - **Delegate, don't duplicate.** Each stage hands to a singleton; this file owns sequencing and gates.
@@ -73,5 +78,6 @@ For a *scored* read of the same package — per-dimension 1–5, tier, and the h
 - **Hard dependency: fit before SOP.** No SOP drafting (4) until the fit map (3) exists — a generic SOP is the most common failure.
 - **Resume, don't restart.** Enter at the applicant's real stage; reuse the profile across cycles and schools.
 - **Per-school, not one-size.** Stages 3–7 vary by target program; the audit (7) is per-program.
+- **Interviews are triaged, not generic.** Stage 8 branches on assessor type; a funder committee, a supervisor call, and an embassy panel are different exams. Where selection is document-only, there is no stage 8 — the letter and references carry it.
 - **Motivation underneath.** If the "why" is unstable, route to `apply-motivation-keeper` before or alongside the package work.
 - **Score, eligibility & scholarships → `apply-dossier-evaluator`.** Conditional, not a linear stage: route here when the user wants a graded scorecard, a cross-border eligibility verdict (e.g. a 4-year BSc against a master's-required EU PhD — check *early*, before stage 4), or scholarship-mission fit (VEF/DAAD/Fulbright/Erasmus/MSCA). Re-score before stage 7 to surface the highest-leverage gaps. Always verify cutoffs/limits/deadlines against the live official call.

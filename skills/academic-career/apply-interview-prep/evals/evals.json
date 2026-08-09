@@ -1,0 +1,53 @@
+{
+  "skill_name": "apply-interview-prep",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I got shortlisted for a DAAD research grant and the interview is in ten days. What will they ask me and how should I prepare?",
+      "expected_output": "Triage to assessor type A (funder's academic committee); preparation weighted to research-plan feasibility, host justification, and career integration; note that the submitted motivation letter is discussed in the interview; treat published criteria weightings as verify-against-the-live-call.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "A professor in Melbourne replied to my cold email and wants a 30-minute video call next week about a possible PhD. It's informal, so I don't think I need to prepare much?",
+      "expected_output": "Triage to assessor type B (prospective supervisor); correct the 'informal' assumption; require reading at least one of their recent papers well enough to ask a real question; prepare to think aloud rather than recite; bidirectional questions on supervision style, funding, and contract terms.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "How should I prepare for my SISGP scholarship interview?",
+      "expected_output": "Identifies that SISGP selects on documents with no interview stage (assessor type D), says so plainly instead of generating interview prep, and routes to apply-sop-writer / apply-cv-builder / apply-recommendation-letter-strategist; flags mandatory templates and verify-against-the-live-call.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Mock interview me. Question: tell me about a time a project failed. My answer: 'We had issues with our dataset in my master's thesis so the results were bad at first but we fixed it and I learned data quality matters.'",
+      "expected_output": "Identifies the first-person gap and the vague result; asks follow-ups to surface individual action and a measured outcome; restructures with STAR/AR including a concrete change in practice; delegates any verdict-style grading to professor-critic rather than scoring it directly.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "I'm from Vietnam and interviewing with a German committee. I feel like saying 'I did this' sounds arrogant. What should I do?",
+      "expected_output": "Calibration framed as accuracy of credit for work actually done, not personality coaching or national-character claims; explains that understating a real contribution reads as weaker contribution to an assessor expecting direct claims; asks what specifically feels uncomfortable; avoids Hofstede-style national trait generalizations.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Here's my two-minute research summary, is it okay? 'My research is about using deep learning to improve medical image analysis. I worked with a large dataset and built a model that performed better than existing approaches. It has a lot of potential for clinical applications.'",
+      "expected_output": "Does not accept it. Names the failing concreteness tests with the offending phrases quoted ('deep learning', 'a large dataset', 'performed better', 'a lot of potential' are all category words or unquantified), asks the extraction questions needed to replace each with a named thing or a number, requires the so-what, and has the user redeliver and time it aloud. Does not silently rewrite it for them or invent numbers.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "I have an interview for a DAAD Study Scholarship for a master's in Germany. I don't have a research proposal — should I invent one? What will they focus on?",
+      "expected_output": "Triage to assessor type A on the master's route; explicitly does NOT require a research proposal, since the criterion is the quality of the study OR research plan; focuses prep on programme/curriculum choice, the bridge from prior degree, and concrete post-degree plans as a scored criterion; discourages overselling a research direction at this level.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "Can you help me write the motivation letter for my Erasmus Mundus application?",
+      "expected_output": "Does NOT trigger this skill's interview workflow; routes to apply-sop-writer for the written essay. May note that Erasmus Mundus has no doctoral track if PhD context is present.",
+      "files": []
+    }
+  ]
+}
