@@ -151,7 +151,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `academic-career/apply-motivation-keeper` — recover motivation, reframe setbacks, and rebuild momentum through rejection, stagnation, imposter syndrome, and burnout.
 - `academic-career/apply-package-auditor` — audit the full application package for coherence, missing evidence, risk, and deadline priorities.
 - `academic-career/apply-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.
-- `academic-career/apply-program-fit-mapper` — map applicant interests to programs, faculty, labs, and school-specific fit evidence.
+- `academic-career/apply-program-fit-mapper` — map applicant interests to programmes, tracks, faculty, and labs; screen profile fit against a programme's declared theme or specialisation before shortlisting.
 - `academic-career/apply-recommendation-letter-strategist` — choose recommenders, plan letter strategy, draft requests, and prepare recommender packets.
 - `academic-career/apply-research-direction-mapper` — define a professor's recent and trending research direction for fit notes, SOPs, and outreach.
 - `academic-career/apply-sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays.

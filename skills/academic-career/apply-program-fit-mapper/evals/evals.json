@@ -16,7 +16,19 @@
     {
       "id": 3,
       "prompt": "Build a program-fit table for my PhD shortlist. I care about research fit more than ranking, but I also want to avoid single-advisor risk. My interests are robust evaluation for LLM agents and data-centric ML.",
-      "expected_output": "A program-fit mapping framework with shortlist criteria, advisor-depth risk assessment, and school-specific notes structure.",
+      "expected_output": "A program-fit mapping framework with shortlist criteria, advisor-depth risk assessment, and target-specific notes structure.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "I'm looking at an Erasmus Mundus joint master's in mathematics whose specialisation is 'Digital and Green Transition', with eight pathways. My background is pure functional analysis and some numerical linear algebra. Does my profile actually match this programme's focus?",
+      "expected_output": "A thematic-fit screen run before any faculty mapping: extract the declared theme and pathway list from the live official pages rather than the programme name, decompose the umbrella phrase into the research it covers, map the applicant's real evidence onto it, and return a core / adjacent-with-a-named-bridge / stretch / outside-scope verdict at the pathway level. Any bridge must name specific work the applicant did and survive the swap test; where no honest bridge exists, say the programme is a poor target rather than manufacturing relevance.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "This doctoral school is themed around 'AI for sustainable industry'. My publications are all in theoretical bandit algorithms. Write me the paragraph explaining why I fit their theme.",
+      "expected_output": "Refuses to manufacture the paragraph as the first move: screens thematic fit first, and either produces a real bridge grounded in specific prior work that the programme's own materials connect to the theme, or states that the profile is outside the declared scope and the target should be deprioritized. Must not relabel unrelated theoretical work in the programme's vocabulary or assert an unevidenced interest in sustainability.",
       "files": []
     }
   ]

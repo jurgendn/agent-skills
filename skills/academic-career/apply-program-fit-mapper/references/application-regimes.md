@@ -58,15 +58,40 @@ Two failure modes worth checking for explicitly: a country may have **no general
 
 ---
 
+## Declared theme is a third separate axis
+
+A programme's **theme, specialisation, track, or application focus** is independent of both admission regime and funding regime. Any regime can be themed or open: a department-first PhD programme may admit into an unthemed department, while a consortium master's admits into named specialisation pathways and a project-funded vacancy is themed down to a single research question.
+
+Where a theme is declared, it is **published selection content**. A committee reading a themed call is asking whether this applicant's work belongs to that theme, and an application that never answers that question loses on relevance regardless of its academic strength.
+
+### Extraction method
+
+1. **Read the declared scope off the live official pages.** Take the programme's own wording, the pathway or track list, the stated objectives, and any funder mission sitting behind the programme. Do not infer a theme from the programme's title, its department, or prior knowledge of the field — titles are marketing and themes change per cycle.
+2. **Decompose the theme into the research activities it actually covers.** Umbrella phrases ("digital and green transition", "smart society", "sustainable industry") are containers, not topics. Pathway descriptions, module lists, partner institutions, and example thesis projects show what the container holds. Where the container is genuinely broad, record it as broad rather than narrowing it on the user's behalf.
+3. **Map real applicant evidence onto the decomposition** — projects, methods, data, application domains, publications, professional work. A method-level match counts only where the programme's own materials show that method serving this theme; otherwise it is a claim about the field, not about the programme.
+4. **Classify: core / adjacent, bridged / stretch / outside scope.** A bridge must be one checkable sentence naming specific applicant work and the specific part of the theme it serves.
+5. **Act on the verdict.** *Core* and *adjacent, bridged* stay on the shortlist and hand their bridge to the statement. *Stretch* is a weak target and must be labelled one. *Outside scope* leaves the shortlist.
+
+### Guards
+
+- **Facts fixed, weights vary.** A theme changes which real work leads, how deeply it is described, and which published criterion it is framed against. It never changes what the applicant did.
+- **The swap test.** If a bridging sentence survives substituting a different specialisation unchanged, it is filler, not thematic evidence.
+- **"Outside scope" is a real answer.** Producing a bridge for every target turns this screen into a framing generator, which is precisely the failure it exists to prevent.
+- **Multi-pathway programmes need a pathway-level answer.** Fitting the umbrella theme while fitting no individual pathway is a common and disqualifying outcome; check the level at which the applicant actually chooses.
+
+---
+
 ## Mismatch costs
 
 - Department-first strategy applied to a supervisor-first target → an application with no advocate.
 - Supervisor-first outreach applied to a department-first target → reads as presumptuous, and can violate stated policy.
 - Treating a vacancy-first target as an open-ended admission → applying to a department that does not admit that way, or missing that the position closed.
 - Treating a call-first target as a rolling application → missing the only window in the cycle.
+- Ignoring a declared theme → a strong academic application that never answers the relevance question the committee is actually asking.
+- Manufacturing a theme bridge → the most detectable weakness in a themed application, and a wasted cycle.
 
 ---
 
 ## Volatility
 
-Deadlines, call cycles, vacancy availability, nomination quotas, and eligibility rules change every cycle, and institutions vary within every country named here. Everything above describes **published structures**, not national temperament. Verify each target against its own official pages before committing it to a shortlist.
+Deadlines, call cycles, vacancy availability, nomination quotas, eligibility rules, and **declared themes, specialisation names, and pathway lists** change every cycle, and institutions vary within every country named here. Everything above describes **published structures**, not national temperament. Verify each target against its own official pages before committing it to a shortlist.

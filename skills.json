@@ -167,7 +167,7 @@
       "name": "apply-program-fit-mapper",
       "path": "skills/academic-career/apply-program-fit-mapper",
       "category": "academic-career",
-      "description": "Map applicant interests to PhD programs, faculty, labs, and school-specific fit evidence."
+      "description": "Map applicant interests to programmes, tracks, faculty, and labs, and check profile fit against a programme's declared theme or specialisation."
     },
     {
       "name": "apply-research-direction-mapper",

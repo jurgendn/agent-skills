@@ -24,7 +24,7 @@ Adapting a statement changes **which evidence is salient, in what order, at what
 
 ---
 
-## Two anti-patterns — treat as hard rules
+## Three anti-patterns — treat as hard rules
 
 **1. Cultural-praise anti-pattern.** Never demonstrate fit by praising generalised national characteristics.
 
@@ -35,6 +35,16 @@ Adapting a statement changes **which evidence is salient, in what order, at what
 These provide zero evidence of applicant–programme fit, and they signal that the applicant researched the *country* instead of the *lab*. Institutional context may change which existing evidence is emphasised; it must never become an object of generic praise. If a sentence would survive being moved to an application to a different country, it is doing no work.
 
 **2. Identity-mutation anti-pattern.** Do not invent a different applicant for each target. Rotate the same object: preserve claims and evidence, change salience, ordering, framing, and level of detail according to *verified* target criteria. Seven targets do not mean seven identities.
+
+**3. Force-fit anti-pattern.** Where a programme declares a theme, specialisation, or track — "digital and green transition", "AI for health", a mission-scoped doctoral school, a topic-restricted call — never manufacture a connection to it by relabelling unrelated work.
+
+> ✗ "My work on matrix factorisation is fundamentally about enabling the green transition."
+> ✗ "I have always been passionate about sustainability" (attached to a CV showing none).
+> ✓ "I built the demand-forecasting model for [X]'s distribution network, which is the load-balancing problem the Energy Systems pathway studies at grid scale."
+
+The test is the **swap test**: substitute a different specialisation into the sentence. If it still reads fine, the sentence is filler and proves nothing — the same diagnostic as the cultural-praise rule. A real bridge names specific work the applicant actually did and the specific part of the declared theme it serves, and it breaks when the theme changes.
+
+Facts stay fixed here too. A theme decides which real work leads and how deeply it is described; it does not license inventing an interest, promising a pivot the CV cannot support, or restating a project in the programme's vocabulary and calling that fit. Where **no honest bridge exists, the correct output is that this is the wrong programme** — not a better-worded paragraph. Route thematic screening to `apply-program-fit-mapper` before drafting; if it returned *stretch* or *outside scope*, say so rather than writing around it.
 
 ## The geopolitical inference gate
 
@@ -52,7 +62,7 @@ Run this for **each target separately**. It is the reusable part of this file; e
 
 1. **Identify the application regime** — how does one actually get admitted here? (See the three families below.)
 2. **Identify the funding regime** — is the money attached to the programme, to a separate scholarship, to a specific project, or to an employment contract? These have different selectors.
-3. **Extract the published criteria** — from the call, the scheme's own pages, the vacancy text. Write them down as a list.
+3. **Extract the published criteria** — from the call, the scheme's own pages, the vacancy text. Write them down as a list. **A declared theme, specialisation, or track scope belongs on that list**: where the programme states one, relevance to it is a criterion the statement must answer, and the answer must be a real bridge (anti-pattern 3).
 4. **Reweight the applicant's existing evidence against that list.** Every criterion should have identifiable support somewhere in the package.
 5. **Note the hard constraints** — eligibility, residency, return-home conditions, mandatory templates, deadlines.
 
