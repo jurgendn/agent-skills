@@ -40,10 +40,11 @@ If the user has not provided the prompt or word limit, ask for it or make assump
 
 That file flags its own register claims — how personal or narrative a statement should be — as **weakly sourced**. Do not assert them as national rules. Read the prompt's own verbs and answer the question actually asked.
 
-Two rules from that file are hard, and apply to every draft and every critique:
+Three rules from that file are hard, and apply to every draft and every critique:
 
 - **Never praise a country to show fit.** "I admire Germany's precision," "Singapore is renowned for excellence" — these give a reader no evidence of applicant–programme fit and signal that the applicant researched the country instead of the lab. Test: if a sentence would survive being moved to an application in a different country, it is doing no work.
 - **Facts fixed; weights vary.** Adapting across targets changes which evidence is salient, its order, depth, and which published criterion it is framed against. It never changes what the applicant did, never adds a claim, and never drops an inconvenient one. Seven targets do not mean seven identities.
+- **Never force-fit a declared theme.** Where the programme states a theme, specialisation, or track ("digital and green transition", a mission-scoped school, a topic-restricted call), relevance to it is a published criterion the statement must answer — but only with a bridge naming specific work the applicant actually did and the specific part of the theme it serves. Same swap test: if the sentence survives substituting a different specialisation, it proves nothing. Where no honest bridge exists, tell the user this is the wrong programme instead of wording around it; screen with `apply-program-fit-mapper` first.
 
 **Identify the scheme's genre before drafting** — it decides what must dominate the document, and two schemes from the same national agency routinely differ. The reference file names seven (academic-excellence, development/change, leadership/influence, industry/professional, research-cooperation, consortium/mobility, diplomatic/bilateral) and carries the extraction method: identify the application regime, identify the funding regime, extract the published criteria, reweight existing evidence against them, note the hard constraints. Watch for **two selectors** on one application — a host institution or national sending partner may screen and nominate before the funder reads anything.
 
