@@ -152,6 +152,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `academic-career/apply-package-auditor` — audit the full application package for declared-theme fit, coherence, missing evidence, risk, and deadline priorities.
 - `academic-career/apply-profile-reader` — read academic-career profile folders/files and extract reusable evidence for SOPs, CVs, fit mapping, emails, and application audits.
 - `academic-career/apply-program-fit-mapper` — map applicant interests to programmes, tracks, faculty, and labs; screen profile fit against a programme's declared theme or specialisation before shortlisting.
+- `academic-career/apply-program-theme-extractor` — determine what a programme, track, pathway, or call actually selects for (declared theme, or an operative theme inferred from official evidence), applicant-free and across a whole candidate list.
 - `academic-career/apply-recommendation-letter-strategist` — choose recommenders against the target's declared theme, plan letter strategy, draft requests, and prepare recommender packets.
 - `academic-career/apply-research-direction-mapper` — define a professor's recent and trending research direction for fit notes, SOPs, and outreach.
 - `academic-career/apply-sop-writer` — write, review, and iterate PhD application Statements of Purpose and research-fit essays, checking the declared theme before faculty fit.

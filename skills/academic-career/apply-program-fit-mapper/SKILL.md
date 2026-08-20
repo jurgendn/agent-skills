@@ -36,6 +36,7 @@ Check theme before people. Where a themed programme has no single advisor to map
 - The user wants a broad literature review not tied to application fit. Use `literature-triangulation`.
 - The user wants to audit a finished application package. Use `apply-package-auditor`.
 - The user wants CV structure or bullet rewriting. Use `apply-cv-builder`.
+- The question is only what a programme, track, or call selects for, with no applicant evidence in play — including characterising a whole candidate list before comparing any of it to a profile. Use `apply-program-theme-extractor`, then return here with its dossier.
 
 ## Workflow
 
@@ -66,6 +67,8 @@ Ask which regime applies per target rather than assuming from country — most c
 ### 2. Screen thematic fit — before mapping any faculty
 
 Many programmes declare a **theme, specialisation, track, or application focus** that scopes what work belongs there: an Erasmus Mundus joint master's with named specialisation pathways, a doctoral school organised around a mission area, a call restricted to listed topics, a centre funded for one agenda. That declared scope is published selection content, not marketing. `references/application-regimes.md` carries the theme axis and the extraction method; the short form:
+
+**If a theme dossier from `apply-program-theme-extractor` already exists for this target, consume it** — take its declared theme, decomposition, pathway list, and **status label** as given and start at classification below. Otherwise run the extraction inline. Where the dossier's status is `inferred`, the operative theme may reorder which real evidence leads, but it **cannot produce an "outside scope" verdict** — only a declared theme can drop a target. Where the status is `genuinely open`, skip this step and record it as such; where it is `link needed`, leave the target unclassified.
 
 1. **Extract the declared theme from the live official pages** — the programme's own words, plus the pathway/track list, the stated objectives, and any funder mission behind it. Never infer a theme from the programme's name or your prior knowledge of the field. **Search the web for every target you do not already have page text for**, including programmes you have never encountered; a programme absent from your prior knowledge is the normal case, not a reason to skip the screen. Fetch the programme/consortium page, the current cycle's call, and each pathway page separately, and record the URL and access date. Where the official page cannot be located or the cycle's call is unpublished, ask the user for the link and leave the target unclassified rather than screening against a guess.
 2. **Decompose it** into the concrete research activities it actually funds. A theme like "digital and green transition" is a container: read the pathway descriptions, module lists, and example projects to see which mathematics or engineering it means, and note where the container is genuinely broad rather than narrowing it for the user.
