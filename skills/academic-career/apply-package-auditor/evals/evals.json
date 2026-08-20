@@ -18,6 +18,12 @@
       "prompt": "Check whether my application narrative is consistent: my CV emphasizes robotics projects, my SOP emphasizes representation learning, my faculty list is mostly HCI professors, and one recommender only knows me from a course.",
       "expected_output": "A cross-document coherence audit that flags conflicting research identity, weak fit evidence, recommender risk, and concrete alignment fixes.",
       "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Audit my package for an Erasmus Mundus master's I found last week — I don't think you'll know it. My publications and my SOP are all pure optimization theory, my letters are from two optimization professors, and the programme is themed around 'digital and green transition'. My grades and papers are strong, so is the package ready?",
+      "expected_output": "Runs the declared-theme screen first: searches the web for the consortium page, the current call, and the pathway list rather than inferring the theme from the programme's name or answering from memory, and asks for the link if the official page cannot be located instead of guessing. Reports a per-target theme verdict, notes whether the SOP answers the theme and whether the letters were briefed for it, and refuses to let a strong academic record downgrade an unanswered theme to a polish item. Rejects any bridge sentence that survives substituting a different specialisation, and treats 'outside scope, drop this target' as a legitimate outcome rather than manufacturing a green-transition angle.",
+      "files": []
     }
   ]
 }
