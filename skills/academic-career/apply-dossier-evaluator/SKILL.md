@@ -52,6 +52,8 @@ What is not scoreable is an inferred national preference. A true geopolitical fa
 
 **Score dimension 2 against the scheme's genre, not its nationality.** Read the genre off the published objectives: academic-excellence, development/change, leadership/influence, industry/professional, research-cooperation, consortium/mobility, or diplomatic/bilateral. A dossier that is strong for one genre can be genuinely weak for another — a pure research record against a development-change scheme requiring years of professional experience is a real mismatch, not a presentation problem, and should score accordingly. Two schemes from the same national agency frequently belong to different genres with different eligibility, so never infer the genre from the funder's country.
 
+**Read the declared theme off the live official page, per run.** Like faculty fit (dimension 8), a programme's theme, track, and pathway list are fetched, not remembered: **search the web** for the programme's or call's own pages — including the specific pathway page where several exist — and take the scope in the programme's own words. Never infer it from the programme's name, and never score against a theme you did not read. Where the page cannot be located or the cycle's call is unpublished, record the theme as unverified and ask for the link instead of scoring it.
+
 **A declared theme is published criteria too.** Where the programme states a theme, specialisation, track, or topic scope — a consortium master's with named pathways, a mission-scoped doctoral school, a topic-restricted call — relevance to it is scoreable under dimension 2, at the level the applicant actually chooses (fitting the umbrella theme while fitting no individual pathway is a real mismatch). Apply the same substance/packaging split: a dossier whose real work sits inside the theme but never frames itself against it is a **highest-leverage fix**, while a dossier with no evidence base in the theme and no honest bridge to it is a genuinely low score and may be the wrong target entirely — say so rather than scoring it politely. Do not credit a bridge that would survive substituting a different specialisation; that sentence is filler, not evidence.
 
 Where a programme carries **hard post-award constraints** — Australia Awards requires returning home and remaining outside Australia for at least two years, with a debt liability for the full scholarship cost otherwise — surface them under eligibility and risk. They change whether the target is viable, not just how it scores.
@@ -200,6 +202,14 @@ highest-leverage fix.
 
 ## Coherence findings
 - [Checklist item]: [pass/fail + note]
+
+## Declared-theme verdict (per target)
+| Target | Declared theme / pathway (programme's own words) | Source page + date checked | Verdict | Target viable? |
+|---|---|---|---|---|
+
+<!-- Verdict: core / adjacent, bridged / stretch / outside scope / no declared theme — N/A / unverified — link needed.
+     This drops or keeps a TARGET; it is not a second dossier-wide gate (eligibility is the only gate).
+     An "outside scope" target is reported as the wrong target, not merely as a low dimension-2 score. -->
 
 ## Sponsor / program fit notes
 - [Program]: [what it weights] — [fit] — [LIVE-VERIFY: cutoffs/limits]

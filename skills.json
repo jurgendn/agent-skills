@@ -149,13 +149,13 @@
       "name": "apply-interview-prep",
       "path": "skills/academic-career/apply-interview-prep",
       "category": "academic-career",
-      "description": "Prepare for academic selection interviews — PhD admissions, funder panels (DAAD), scholarship/embassy panels, MSc admissions, and prospective-supervisor conversations — by triaging who is across the table."
+      "description": "Prepare for academic selection interviews \u2014 PhD admissions, funder panels (DAAD), scholarship/embassy panels, MSc admissions, and prospective-supervisor conversations \u2014 by triaging who is across the table."
     },
     {
       "name": "apply-package-auditor",
       "path": "skills/academic-career/apply-package-auditor",
       "category": "academic-career",
-      "description": "Audit a full PhD application package for coherence, missing evidence, risks, and priorities."
+      "description": "Audit a full PhD application package for declared-theme fit, coherence, missing evidence, risks, and priorities."
     },
     {
       "name": "apply-dossier-evaluator",
@@ -185,13 +185,13 @@
       "name": "apply-recommendation-letter-strategist",
       "path": "skills/academic-career/apply-recommendation-letter-strategist",
       "category": "academic-career",
-      "description": "Choose recommenders, plan letter strategy, draft requests, and prepare recommender packets."
+      "description": "Choose recommenders against the target's declared theme, plan letter strategy, draft requests, and prepare recommender packets."
     },
     {
       "name": "apply-sop-writer",
       "path": "skills/academic-career/apply-sop-writer",
       "category": "academic-career",
-      "description": "Write, review, score, and iterate Statements of Purpose and PhD application essays."
+      "description": "Write, review, score, and iterate Statements of Purpose and PhD application essays against the programme's declared theme."
     },
     {
       "name": "artifact-release-packager",
@@ -263,7 +263,7 @@
       "name": "gap-motivation-builder",
       "path": "skills/research-discovery/gap-motivation-builder",
       "category": "research-discovery",
-      "description": "Socratically build the motivation case for filling a research gap — consequence, beneficiary, blocker, timeliness, payoff — ending in a motivation verdict plus solution desiderata, without proposing the method."
+      "description": "Socratically build the motivation case for filling a research gap \u2014 consequence, beneficiary, blocker, timeliness, payoff \u2014 ending in a motivation verdict plus solution desiderata, without proposing the method."
     },
     {
       "name": "pytorch-training-recipe",
@@ -347,7 +347,7 @@
       "name": "research-proposal-writer",
       "path": "skills/research-communication/research-proposal-writer",
       "category": "research-communication",
-      "description": "Write or refine a forward-looking research proposal — a multi-year PhD research plan for a prospective supervisor or fellowship, or a next-paper pitch to your advisor."
+      "description": "Write or refine a forward-looking research proposal \u2014 a multi-year PhD research plan for a prospective supervisor or fellowship, or a next-paper pitch to your advisor."
     },
     {
       "name": "research-talk-planner",

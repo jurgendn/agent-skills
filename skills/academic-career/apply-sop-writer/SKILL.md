@@ -1,6 +1,7 @@
 ---
 name: apply-sop-writer
-description: Write, review, score, improve, or iterate on Statements of Purpose and PhD application essays for research programs. Use this skill whenever the user is applying to PhD programs, research internships, fellowships, or graduate programs and asks for SOP strategy, essay structure, research fit, faculty alignment, motivation framing, draft critique, or revision help. This skill is especially relevant for research-focused applications where the essay must connect prior work, future research direction, and program fit.
+description: >-
+  Write, review, score, improve, or iterate on Statements of Purpose and PhD application essays for research programs. Use this skill whenever the user is applying to PhD programs, research internships, fellowships, or graduate programs and asks for SOP strategy, essay structure, research fit, faculty alignment, motivation framing, draft critique, or revision help. Every review and plan checks the statement against the programme's declared theme, specialisation, or track before faculty fit, searching the web for the live official programme page when the target is not already known. This skill is especially relevant for research-focused applications where the essay must connect prior work, future research direction, and program fit.
 ---
 
 # SOP Writer
@@ -71,7 +72,23 @@ Prefer concrete research details over broad passion claims.
 
 ### 3. Evaluate fit and specificity
 
-For each target program, check:
+**Check the declared theme first — before faculty fit.** Run this on every draft review and every plan, not only when the user raises it.
+
+Where the target declares a theme, specialisation, track, or topic scope, relevance to it is a published criterion, and a statement that never answers it fails on the committee's own terms no matter how strong the research record behind it is. **Academic strength does not compensate for an unanswered declared theme.**
+
+Get the theme from the live source. If the target is not one you already have text for in this conversation, **search the web for the programme's or call's official page** — including the specific track or pathway page where the programme has several — and read the declared scope in the programme's own words. Never infer the theme from the programme's name. If the page cannot be found or the cycle's call is unpublished, say so and ask the user for the link rather than reviewing against a guessed theme.
+
+Then judge the draft:
+
+- Does the statement name the theme's actual content, or only its slogan?
+- Is the bridge built from **specific work the applicant did**, serving a **specific part** of the theme?
+- Swap test: substitute a different specialisation into the bridging sentence. If it still reads fine, it proves nothing — mark it as filler and rewrite it or cut it.
+- For multi-pathway programmes, does the draft fit the **chosen pathway**, not just the umbrella? Fitting the umbrella while fitting no pathway is a common disqualifier.
+- Where no honest bridge exists, say plainly that this is the wrong programme instead of wording around it, and route to `apply-program-fit-mapper`.
+
+Where the target declares no theme, record `no declared theme — N/A` with the page checked, so the reader can see the check was run.
+
+Then, for each target program, check:
 
 - named faculty/labs are genuinely relevant
 - fit is intellectual, not just prestige-based
@@ -101,6 +118,11 @@ For draft review:
 
 ## Overall assessment
 
+## Declared-theme fit
+<!-- Theme in the programme's own words + source page and date checked, or "no declared theme — N/A".
+     Verdict: core / adjacent, bridged / stretch / outside scope.
+     Quote the draft's bridging sentence and state whether it survives the swap test. -->
+
 ## Research narrative
 
 ## Strengths
@@ -118,6 +140,10 @@ For planning:
 
 ```markdown
 # SOP Plan
+
+## Declared-theme fit
+<!-- Same contract as the review format: theme in the programme's own words, source page and
+     date checked (or "no declared theme — N/A"), verdict, and the bridge the draft must earn. -->
 
 ## Core research identity
 
