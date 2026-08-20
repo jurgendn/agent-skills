@@ -383,6 +383,45 @@ at intake instead. Conversely, when the variants demand different *processes*
 `apply-package-auditor` and `apply-dossier-evaluator`), they stay separate
 skills with mutually disambiguating descriptions.
 
+### Declared versus inferred selection criteria
+
+`apply-program-theme-extractor` was split out of the theme screen because
+characterising what a target selects for is answerable with no applicant
+evidence in play, and is normally run over a whole candidate list before any
+one target is compared to a profile — a different process from the fit verdict,
+which needs the applicant. The split carries one durable rule that any skill
+touching selection criteria must preserve: **a declared criterion and an
+inferred one do not have the same authority.** A declared theme is published
+selection content and can disqualify a target; an inferred theme is the agent's
+hypothesis about the selector and may only reweight the emphasis and order of
+real evidence. Inference is exactly where a fit screen degenerates into the
+framing generator it exists to prevent — some theme can always be inferred — so
+the guard is four-part: a cross-tier evidence bar (two sources from two
+different tiers of the evidence hierarchy, at least one of them funding- or
+curriculum-level, with URLs and access dates), a recency window so a stale
+portfolio is not reported as a current scope, an **exclusion test** — a scope
+that rules nothing out is a description of the field rather than a theme — and
+a mandatory status label in the output rather than advisory prose, with
+`genuinely open` and `link needed` preserved as legitimate visible outputs. An
+inferred theme never drops a target. The exclusion test is the load-bearing
+guard: an inference procedure without a falsification step will always find
+something, which is the mechanism by which a fit screen turns into the framing
+generator it was built to prevent.
+
+The same skill fixes the boundary of what may count as institutional evidence
+at all. An individual person's research is not an institution's selection
+scope — generalising from a few faculty pages manufactures a criterion nobody
+published — so person-level inference stays with
+`apply-research-direction-mapper` and only aggregate, published roster
+composition counts at the programme level. A country is likewise not evidence:
+it enters only through the family's existing falsifiable chain (geopolitical
+objective → programme objective → published selection criterion), never as a
+national tendency. And because live-lookup methods scale their cost with the
+candidate list, the search itself is budgeted — a cheap pass over every target
+answering only "declared or not", then the expensive inference pass restricted
+to targets still alive after the user's other filters, with an explicit
+stopping rule once the gates pass.
+
 ## References
 
 [1] J. H. Flavell, "Metacognition and cognitive monitoring: A new area of

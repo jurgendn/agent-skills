@@ -44,6 +44,7 @@ Turn the profile into a research-oriented academic CV; surface missing evidence 
 **Gate:** a research-framed CV exists; gaps in research evidence are named.
 
 ### Stage 3 — Map program & faculty fit → `apply-program-fit-mapper`
+Where the targets' focus is not yet known — an unfamiliar programme, a landing page that never states a scope, or a whole candidate list to characterise — run `apply-program-theme-extractor` first, applicant-free, and bring its per-target theme dossier into this stage. Carry its status label (`declared` / `inferred` / `genuinely open` / `link needed`): only a **declared** theme can drop a target.
 Convert interests into searchable research themes; shortlist programs and identify specific faculty/labs with fit evidence and per-school fit notes.
 **Gate:** a shortlist with named faculty and concrete fit evidence per target, **plus a per-target declared-theme verdict** (core / adjacent-bridged / stretch / outside scope / no declared theme) read off the programme's live official pages — web-searched for any target not already known. *Outside scope* targets leave the list here. **The SOP depends on this.**
 
