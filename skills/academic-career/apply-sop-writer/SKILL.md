@@ -107,7 +107,18 @@ Improve:
 - fit paragraph: program-specific and evidence-based
 - ending: concise forward-looking close
 
-Avoid inflated language, generic praise, and unsupported claims of passion.
+Avoid inflated language, generic praise, and unsupported claims of passion. One
+specific source of inflated language deserves naming: **vocabulary drilled for IELTS
+or GRE must not migrate into a statement.** A language test scores lexical range; an
+admissions committee does not, and *significant / crucial / myriad / delve into /
+underscore / testament to* spend budget a concrete detail could have used.
+
+`references/prose-craft.md` carries the sentence- and paragraph-level craft: the
+chained-cycle skeleton (one motivation carried through project → result → unresolved
+gap, at rising stakes, so the essay reads as one argument rather than a list),
+scene-before-claim narration, the test-register anti-pattern above in full, emotional
+register, and readability devices. Those are craft heuristics, not a scoring rubric —
+apply them as hypotheses about a draft, not as rules a committee enforces.
 
 ## Output formats
 
