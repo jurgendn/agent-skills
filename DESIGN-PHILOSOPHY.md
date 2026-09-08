@@ -422,6 +422,35 @@ answering only "declared or not", then the expensive inference pass restricted
 to targets still alive after the user's other filters, with an explicit
 stopping rule once the gates pass.
 
+### Audience provenance: whose convention is this?
+
+`apply-cv-reviewer` records a failure mode that is general beyond CVs. Nine
+university career-office pages on academic CVs were distilled to ground the
+skill; eight are written for the faculty and postdoc **job market** or state no
+audience, and one addresses applicants **to** a graduate programme. They give
+opposite advice on the most visible property of the document: the job-market
+sources converge on cumulative multi-page comprehensiveness (2–7 pages,
+"completeness is more important than brevity"), while the applicant-facing
+source specifies one to two pages and notes that most courses do not want a CV
+at all.
+
+The risk is not that the guidance is wrong. It is that the majority guidance is
+correct for a different reader, is far better represented in what a model has
+absorbed, and produces a confident, fluent, wrong review finding — telling a
+prospective PhD student their CV is too short. Volume of agreement was
+measuring corpus composition, not consensus.
+
+So a distilled reference is not finished when its claims are attributed and
+graded by strength. Each claim also carries **who it was written for**, and the
+skill states the resulting rule in the negative, where it actually binds:
+*never report a short application CV as a weakness on length alone, and never
+recommend exhaustiveness.* This is the same discipline the family already
+applies to national conventions — describe what the receiving institution
+expects, route the specific to the live call — extended to the guidance
+literature itself. Where a source's own audience is not stated, that is
+recorded as unknown rather than assumed, and where a page could not be fetched,
+the provenance caveat travels with the quote.
+
 ## References
 
 [1] J. H. Flavell, "Metacognition and cognitive monitoring: A new area of

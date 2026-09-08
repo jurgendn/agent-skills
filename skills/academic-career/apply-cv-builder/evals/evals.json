@@ -15,8 +15,8 @@
     },
     {
       "id": 3,
-      "prompt": "Please review my academic CV for a research master's application. I have no publications, but I have two substantial research projects, teaching assistant experience, and a GitHub repo. What weak spots will admissions committees notice?",
-      "expected_output": "A CV audit focused on research-readiness signal, section ordering, missing evidence, and practical priority fixes.",
+      "prompt": "I have no publications, but two substantial research projects, teaching assistant experience, and a GitHub repo, and I'm applying to a research master's. How should I order my CV sections and where should each of these go?",
+      "expected_output": "A recommended section order that leads with the applicant's strongest evidence, placement guidance for projects/teaching/code, missing-information checklist, and priority fixes. Routes deep per-bullet diagnosis to apply-cv-reviewer.",
       "files": []
     }
   ]

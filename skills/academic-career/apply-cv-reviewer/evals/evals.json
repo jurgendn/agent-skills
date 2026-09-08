@@ -1,0 +1,59 @@
+{
+  "skill_name": "apply-cv-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's my CV for a research master's application. Two research projects, one industry internship, a workshop poster, and a long skills list. What weak spots will an admissions committee notice?",
+      "expected_output": "A diagnosis, not a rewrite: committee impression, per-experience decomposition into task/contribution/method/outcome with `not stated` where unsupported, A-D bullet grades, committee concerns with severity and smallest repair, and prioritized fixes.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Just rewrite these CV bullets to sound stronger: 'Worked on a recommendation system. Helped with model training. Contributed to a published paper.'",
+      "expected_output": "Diagnoses first even though a rewrite was requested: flags 'worked on'/'helped with'/'contributed to' as unclear ownership, notes missing task, method, and outcome, and asks for the missing facts rather than inventing methods, metrics, or sole authorship. Rewrites only after the diagnosis, leaving [confirm: ...] placeholders.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My CV lists PyTorch, Docker, Kubernetes, AWS, Spark, and Airflow under skills, and my bullets say things like 'built ML pipelines' and 'applied deep learning models'. Is that enough technical signal for a PhD application?",
+      "expected_output": "Reports the vocabulary imbalance \u2014 tooling-dominated with no problem, theory, or method terms \u2014 and recommends precise replacements only where the supplied material already supports them, without introducing methods the candidate has not evidenced.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Score my whole profile out of 5 and tell me whether I'm competitive for a DAAD scholarship.",
+      "expected_output": "Routes to apply-dossier-evaluator rather than producing a scored dossier verdict; may offer a CV-only diagnosis as a separate, narrower deliverable.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Review my CV against this specific PhD programme in computational neuroscience \u2014 is my computer vision publication relevant?",
+      "expected_output": "Grades intrinsic strength and target relevance on separate axes, does not treat prestige as relevance, and either uses an existing apply-program-fit-mapper verdict or prints `target relevance: unassessed \u2014 run apply-program-fit-mapper` instead of guessing the programme's scope.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "My CV for a PhD application is only 2 pages and I have no publications. Everyone says academic CVs should be 4-5 pages and comprehensive. How much do I need to add?",
+      "expected_output": "Corrects the premise: the multi-page comprehensive norm is faculty-job-market guidance, while an application CV is 1-2 pages selective (Oxford tells graduate applicants exactly that, and that many courses do not require a CV at all). Does not report length as a weakness, does not recommend padding, checks what the call actually asks for, and normalizes having no publications at this stage.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "One of my CV bullets says 'Proposed and developed a novel graph-based fraud detection framework, published at a top venue.' I was fourth author and my actual job was writing the training code and running the experiments.",
+      "expected_output": "Identifies ownership inflation using the CRediT frame: the bullet claims Conceptualization and Methodology while the evidence supports Software, Investigation, and Validation. Flags 'novel' as unsupported self-assessment. Proposes a repair stating the real roles precisely without escalating, and does not treat fourth authorship as weak in itself.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "My skills section lists graph theory, Louvain, PageRank, centrality, node2vec, GNNs, PyTorch Geometric, DGL, and NetworkX. My one research bullet says 'Applied graph algorithms to a large social network dataset.' Does my CV show graph expertise?",
+      "expected_output": "Separates anchored from declared terms: the entire graph vocabulary is declared-only, while the single anchored bullet contains just the generic 'graph algorithms' and an unquantified 'large dataset'. Names this as breadth claimed but not demonstrated rather than as a strong method profile, notes that Louvain/PageRank/centrality are algorithms and measures rather than the method motivating them, and asks which question each was computed to answer before recommending any substitution.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Review my CV for an economics PhD. My bullets say 'Conducted econometric analysis of labour market data using Stata' and 'Ran regressions to study minimum wage effects'.",
+      "expected_output": "Applies the same buckets outside computer science: 'econometric analysis' and 'ran regressions' are imprecise category labels (two researchers doing different work could write either), Stata is tooling and the lowest-weight signal, no identification strategy (method) or evaluation is named, and the task is an area rather than a question with a success criterion. Does not require ML or CS vocabulary, and asks what the identification strategy was rather than supplying one.",
+      "files": []
+    }
+  ]
+}
