@@ -1,6 +1,6 @@
 ---
 name: apply-cv-builder
-description: Build, revise, and audit academic CVs for PhD applications, research master's programs, fellowships, research internships, RA roles, and lab applications. Use this skill whenever the user asks to turn a resume into an academic CV, improve research-experience bullets, organize publications/projects/teaching/awards, identify missing evidence for research readiness, or make a CV fit research admissions expectations.
+description: Build, revise, and restructure academic CVs for PhD applications, research master's programs, fellowships, research internships, RA roles, and lab applications. Use this skill whenever the user asks to turn a resume into an academic CV, improve research-experience bullets, organize publications/projects/teaching/awards, identify missing evidence for research readiness, or make a CV fit research admissions expectations.
 ---
 
 # Academic CV Builder
@@ -10,7 +10,7 @@ An academic CV is an evidence document. It should make the applicant's research 
 ## Use this when
 
 - The user is applying to PhD programs, research master's programs, fellowships, research internships, RA roles, or labs.
-- The user wants to create, revise, or audit an academic CV.
+- The user wants to create, revise, or restructure an academic CV.
 - The user asks to convert an industry-style resume into a research-oriented CV.
 - The user needs stronger research-experience, project, publication, teaching, award, or technical-skill entries.
 - The user wants to identify missing or weak evidence in their research profile.
@@ -21,6 +21,7 @@ An academic CV is an evidence document. It should make the applicant's research 
 - The user wants faculty or program matching. Use `apply-program-fit-mapper`.
 - The user wants a full application-package risk audit. Use `apply-package-auditor`.
 - The user wants a purely industry resume optimized for recruiters rather than research admissions.
+- The user wants a **diagnosis** of an existing CV — what a committee will notice, per-experience decomposition, graded bullets — before anything is rewritten. Use `apply-cv-reviewer` first, then return here to act on its repairs.
 
 ## Workflow
 
