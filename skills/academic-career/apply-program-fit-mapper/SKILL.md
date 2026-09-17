@@ -18,6 +18,8 @@ Fit has **three independent axes**, and a target can pass one while failing anot
 - **Thematic** — is the applicant's actual work inside the programme's declared theme, specialisation, or track scope? (step 2)
 - **Intellectual** — which specific people or groups does the applicant connect to? (steps 3–5)
 
+A fourth check, **goal fit**, compares the applicant's stated post-degree goal with the graduate the programme intends to produce (step 2b). It flags and reweights; it never drops a target.
+
 Check theme before people. Where a themed programme has no single advisor to map — a consortium master's with specialisation pathways, a thematic call, a mission-scoped track — thematic fit *is* the fit assessment.
 
 ## Use this when
@@ -89,6 +91,18 @@ Two guards:
 
 Where thematic fit is *core* or *adjacent, bridged*, hand the bridge sentence and its supporting evidence to `apply-sop-writer`. Where it is *stretch* or *outside scope*, say so before the user invests in the application.
 
+### 2b. Check goal fit — flag, never drop
+
+Where the applicant has a stated post-degree goal and a programme profile exists (from `apply-program-theme-extractor`, pass C) — or the user asks — compare that goal with the programme's **intended graduate**: the declared graduate profile and learning outcomes, and any published destination data. Fetch the graduate-profile and career-prospects pages live if no profile exists, recording URL and access date; where none is published, record `goal fit: unassessed — no graduate profile published`.
+
+Report one of:
+
+- **Aligned** — the declared profile or destination data points where the applicant wants to go.
+- **Divergent** — for example a PhD-pipeline goal against an industry-oriented professional master's, or an academic-career goal against a development scholarship built to return graduates into home-country policy roles. Name the divergence and what it means for the application ("what after" answers, which evidence leads).
+- **Unassessed** — no goal stated, or no profile published.
+
+Keep the labels apart: a declared graduate profile and a programme's `advertised` selling points are different evidence, and a brochure line is never a graduate profile. Goal fit **never produces "outside scope" and never drops a target** — only a declared theme can. Where the funding scheme's own published criteria score post-degree plans (development, bilateral, or leadership missions), a divergence is a real risk; say so, and let the user decide.
+
 ### 3. Define fit criteria
 
 Use criteria such as:
@@ -152,6 +166,11 @@ Use:
 | Target | Declared theme / track (as published) | Thematic fit | Bridge (one sentence, or "none") | Evidence behind the bridge |
 |---|---|---|---|---|
 <!-- Thematic fit: core / adjacent, bridged / stretch / outside scope -->
+
+## Goal fit
+| Target | Applicant goal | Intended graduate (declared / evidenced) | Goal fit | Source |
+|---|---|---|---|---|
+<!-- Goal fit: aligned / divergent / unassessed — never a drop -->
 
 ## Faculty/program fit table
 | Program/lab/faculty | Regime | Fit level | Evidence | Risks / unknowns | Follow-up |

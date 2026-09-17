@@ -422,6 +422,21 @@ answering only "declared or not", then the expensive inference pass restricted
 to targets still alive after the user's other filters, with an explicit
 stopping rule once the gates pass.
 
+The same skill carries a second, on-request product — a programme profile of
+selling points, intended graduate, and expected learning outcomes — and it is
+kept in the same skill only because it reads the same pages for the same unit.
+Its rule extends the declared/inferred distinction: **what a programme offers is
+not what it selects for.** Selling points are the institution persuading
+applicants, so they carry an `advertised` label, must survive a swap test (a
+claim every competitor makes is not a differentiator) and a backing check, and
+never count as theme evidence or drop a target. Formal learning outcomes and
+graduate profiles are `declared`; destination data is `evidenced`; the three
+labels are reported separately because a brochure and its data can disagree,
+and the disagreement is itself the finding. Downstream, goal fit against the
+intended graduate may flag and reweight but never drop — only a declared theme
+can — and a statement that repeats the brochure back to its authors is evidence
+of nothing.
+
 ### Audience provenance: whose convention is this?
 
 `apply-cv-reviewer` records a failure mode that is general beyond CVs. Nine
