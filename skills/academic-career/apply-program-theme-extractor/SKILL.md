@@ -39,7 +39,7 @@ Presenting an inferred theme with the authority of a declared one is worse than 
 
 ## Do not use this when
 
-- The applicant's evidence is in play and the question is fit. Use `apply-program-fit-mapper` — it owns the core / adjacent-bridged / stretch / outside-scope verdict and the swap test.
+- The applicant's evidence is in play and the question is fit. Use `apply-program-fit-mapper` — it owns the core / adjacent-bridged / stretch / outside-scope verdict and the fit swap test on the bridging sentence.
 - The question is about one professor's research direction. Use `apply-research-direction-mapper`.
 - The question is how a target *admits* or *funds* people rather than what it selects for thematically. That is the application-regime and funding-regime axis inside `apply-program-fit-mapper`.
 - The user wants statement prose built on a theme. Use `apply-sop-writer`.
@@ -117,11 +117,13 @@ Three gates. An operative theme must pass all three, or the answer is `genuinely
 
 ### 6. Programme profile — pass C, on request, shortlisted targets only
 
-Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. Characterising fifteen candidates does not need fifteen marketing reads. Fetch live, recording URL and access date, and give every item one **authority label**:
+Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any theme status except `link needed`, and does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. Fetch live, recording URL and access date, and give every item one **authority label**:
 
 - `declared` — formal institutional content: published programme learning outcomes, a qualification or graduate profile, compulsory modules, thesis requirements.
 - `evidenced` — observed data about what actually happens: graduate destination statistics, alumni placements, a published partner or internship list.
 - `advertised` — the programme's own persuasion: "why study with us", scholarship mission slogans, claimed differentiators.
+
+The authority label `declared` is not the dossier status `declared`: a declared graduate profile or learning outcome is never a declared theme and licenses no thematic screen.
 
 Never merge the labels. An `advertised` claim and the `evidenced` data behind it are reported as two lines.
 
@@ -130,15 +132,15 @@ Never merge the labels. An `advertised` claim and the `evidenced` data behind it
 1. **Swap test.** Would the claim survive being moved to a competing programme? "World-class faculty", "international environment", "strong industry links", "interdisciplinary" — every programme says these. Mark them `generic` and drop them from the differentiator list.
 2. **Backing check.** Is there a page that shows the claim — a named partner list, a mobility structure, a funded placement, a lab or dataset only this programme has? Backed → keep with its source. Unbacked → keep, labelled `advertised, unbacked`.
 
-What survives both is the programme's real differentiator list. An empty list is a legitimate answer.
+The differentiator list is the backed rows only. `advertised, unbacked` rows are listed beneath it for completeness and are never handed downstream as differentiators. An empty list is a legitimate answer.
 
-**(b) Intended graduate — who the programme is built to produce.** Read the formal graduate or qualification profile and the career-prospects page (`declared`), then any destination or alumni data (`evidenced`). Extract the specialisations and capabilities the graduate is meant to hold, and the destinations the programme aims at — research/PhD pipeline, industry, public sector, the funder's home-country mission. Where the declared profile and the destination data disagree (a "research-oriented" programme whose graduates mostly go to industry), report both; the disagreement is the finding.
+**(b) Intended graduate — who the programme is built to produce.** Read the formal graduate or qualification profile (`declared`) and the career-prospects page — which is `advertised` unless it is itself a formal profile or is backed by destination data, then any destination or alumni data (`evidenced`). Extract the specialisations and capabilities the graduate is meant to hold, and the destinations the programme aims at — research/PhD pipeline, industry, public sector, the funder's home-country mission. Where the declared profile and the destination data disagree (a "research-oriented" programme whose graduates mostly go to industry), report both; the disagreement is the finding.
 
 **(c) Expected outcomes — what they actually teach.** Formal programme learning outcomes first, then compulsory modules before electives, then required thesis, internship, or mobility components. Report what the programme **commits to teaching**, not what electives make possible.
 
 Where a part has no official page, output `none published` for that part. Do not reconstruct a graduate profile from the programme's name or field.
 
-The profile is **offer content, not selection content**. It never changes the theme status, never feeds the three inference gates except where step 4 already admits the same page as tier-2 curriculum or destination evidence, and never drops a target.
+The profile is **offer content, not selection content**. It never changes the theme status, and never drops a target. Pages fetched in pass C are never re-fed into step 4; if pass C surfaces a tier-1 or tier-2 page that pass B missed, record `candidate theme evidence — re-run pass B` and leave the status unchanged.
 
 ### 7. Hand off
 
@@ -179,10 +181,11 @@ One block per target.
 |---|---|---|
 
 ## Programme profile (only when requested — pass C)
-### Differentiators (passed swap test)
+### Differentiators (passed swap test and backing check)
 | Claim | Authority | Backing page | Accessed |
 |---|---|---|---|
-<!-- authority: declared / evidenced / advertised, unbacked -->
+<!-- authority: declared / evidenced / advertised (backed) -->
+- Unbacked, not handed downstream: [advertised claims with no backing page]
 - Dropped as generic: [claims every programme makes]
 
 ### Intended graduate
