@@ -5,7 +5,8 @@ description: >-
   declared theme, specialisation, or application focus before writing target-specific materials. Covers PhD, research master's, and joint/consortium
   programmes such as Erasmus Mundus. Use whenever the user asks which professors or programmes fit their interests, how to shortlist targets, how to compare
   faculty fit, "does my profile match this programme's focus", "is my background relevant to this specialisation/track/theme", "should I even apply to this
-  one", how to turn interests into searchable research themes, or how to prepare target-specific fit notes for SOPs.
+  one", how to turn interests into searchable research themes, how to prepare target-specific fit notes for SOPs, or "does this programme match my career goal" (a goal-fit flag against the graduate the programme
+  intends to produce, which never drops a target).
 ---
 
 # Program Fit Mapper
@@ -93,7 +94,7 @@ Where thematic fit is *core* or *adjacent, bridged*, hand the bridge sentence an
 
 ### 2b. Check goal fit — flag, never drop
 
-Where the applicant has a stated post-degree goal and a programme profile exists (from `apply-program-theme-extractor`, pass C) — or the user asks — compare that goal with the programme's **intended graduate**: the declared graduate profile and learning outcomes, and any published destination data. Fetch the graduate-profile and career-prospects pages live if no profile exists, recording URL and access date; where none is published, record `goal fit: unassessed — no graduate profile published`.
+Where the applicant has a stated post-degree goal and a programme profile exists (from `apply-program-theme-extractor`, pass C) — or the user asks — compare that goal with the programme's **intended graduate**: the declared graduate profile and learning outcomes, and any published destination data. Fetch the graduate-profile and career-prospects pages live if no profile exists, recording URL and access date; where none is published, record `goal fit: unassessed — no graduate profile published`. Label each piece of evidence: formal graduate profile or learning outcomes = `declared`; destination or alumni data = `evidenced`; career-prospects or brochure copy = `advertised`, which cannot support an *aligned* or *divergent* verdict on its own.
 
 Report one of:
 

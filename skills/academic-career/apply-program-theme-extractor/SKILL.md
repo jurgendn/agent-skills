@@ -117,7 +117,7 @@ Three gates. An operative theme must pass all three, or the answer is `genuinely
 
 ### 6. Programme profile — pass C, on request, shortlisted targets only
 
-Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any theme status except `link needed`, and does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. Fetch live, recording URL and access date, and give every item one **authority label**:
+Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any target whose official programme page was located, even when the cycle's call is unpublished — skip it only when no official page exists — and it does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. Fetch live, recording URL and access date, and give every item one **authority label**:
 
 - `declared` — formal institutional content: published programme learning outcomes, a qualification or graduate profile, compulsory modules, thesis requirements.
 - `evidenced` — observed data about what actually happens: graduate destination statistics, alumni placements, a published partner or internship list.
@@ -127,7 +127,7 @@ The authority label `declared` is not the dossier status `declared`: a declared 
 
 Never merge the labels. An `advertised` claim and the `evidenced` data behind it are reported as two lines.
 
-**(a) Selling points — what staff would say to convince you.** Collect them from the landing page, "why this programme" and FAQ pages, the scholarship or funder mission page, and partner lists. Then run two checks on each claim:
+**(a) Selling points — what staff would say to convince you.** Collect them from the landing page, "why this programme" and FAQ pages, the scholarship or funder mission page, and partner lists. First write one **Positioning** sentence, in the programme's own frame, of how it sells itself — what it leads with (industry links rather than research training, mobility rather than depth) is itself informative about what it wants to be. Label it `advertised`; it informs the user and is never handed downstream as a differentiator. Then run two checks on each claim:
 
 1. **Swap test.** Would the claim survive being moved to a competing programme? "World-class faculty", "international environment", "strong industry links", "interdisciplinary" — every programme says these. Mark them `generic` and drop them from the differentiator list.
 2. **Backing check.** Is there a page that shows the claim — a named partner list, a mobility structure, a funded placement, a lab or dataset only this programme has? Backed → keep with its source. Unbacked → keep, labelled `advertised, unbacked`.
@@ -140,7 +140,7 @@ The differentiator list is the backed rows only. `advertised, unbacked` rows are
 
 Where a part has no official page, output `none published` for that part. Do not reconstruct a graduate profile from the programme's name or field.
 
-The profile is **offer content, not selection content**. It never changes the theme status, and never drops a target. Pages fetched in pass C are never re-fed into step 4; if pass C surfaces a tier-1 or tier-2 page that pass B missed, record `candidate theme evidence — re-run pass B` and leave the status unchanged.
+The profile is **offer content, not selection content**. It never changes the theme status, and never drops a target. Pages fetched in pass C are never re-fed into step 4; for targets with status `inferred` or `genuinely open`, if pass C surfaces a tier-1 or tier-2 page that pass B missed, record `candidate theme evidence — re-run pass B` and leave the status unchanged.
 
 ### 7. Hand off
 
@@ -181,6 +181,8 @@ One block per target.
 |---|---|---|
 
 ## Programme profile (only when requested — pass C)
+- **Positioning (advertised):** [one sentence, in the programme's own frame — not handed downstream]
+
 ### Differentiators (passed swap test and backing check)
 | Claim | Authority | Backing page | Accessed |
 |---|---|---|---|
