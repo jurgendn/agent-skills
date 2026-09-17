@@ -7,12 +7,17 @@ description: >-
   candidate list of targets characterised before any of them is compared against a profile. Works applicant-free and over many targets at once, producing a
   reusable theme dossier per target. Distinct from apply-program-fit-mapper, which needs the applicant's evidence and issues the four-way
   fit verdict — route there once a profile enters. Distinct from apply-research-direction-mapper, which maps one person's research direction rather than
-  an institution's selection scope.
+  an institution's selection scope. Also builds, on request for shortlisted targets, a programme profile kept apart from the theme — the
+  programme's verified selling points, the graduate it intends to produce, and its expected learning outcomes — for questions like "why should I
+  choose this track", "what makes this programme different", "what kind of graduate does this scholarship want to produce", "what will I actually learn
+  there", or material for a "why this programme" paragraph or interview answer.
 ---
 
 # Program Theme Extractor
 
 Before anyone can ask "does my work fit here", someone has to answer "what is *here*". This skill answers only the second question, for one target or for a whole candidate list, with no applicant evidence in play.
+
+It also answers a second, separate question on request: what does *here* **offer and produce**? That is the programme profile (step 6) — selling points, intended graduate, expected outcomes. It is kept apart from the theme on purpose: what a programme advertises is not what it selects for.
 
 A programme's theme is **published selection content**, not marketing. Where it is declared, quote it. Where it is not declared, it may still be *operative* — visible in what the programme teaches, funds, and graduates — or the programme may be genuinely open, which is an equally real answer.
 
@@ -30,10 +35,11 @@ Presenting an inferred theme with the authority of a declared one is worse than 
 - The user asks whether a call is topic-restricted or open.
 - The user needs a pathway-level answer for a multi-specialisation joint programme.
 - A downstream skill needs a theme dossier that does not exist yet.
+- The user has shortlisted a target and asks what it offers: why choose this track, what graduate it aims to produce, what it teaches — usually as material for a "why this programme" paragraph or interview answer (step 6).
 
 ## Do not use this when
 
-- The applicant's evidence is in play and the question is fit. Use `apply-program-fit-mapper` — it owns the core / adjacent-bridged / stretch / outside-scope verdict and the swap test.
+- The applicant's evidence is in play and the question is fit. Use `apply-program-fit-mapper` — it owns the core / adjacent-bridged / stretch / outside-scope verdict and the fit swap test on the bridging sentence.
 - The question is about one professor's research direction. Use `apply-research-direction-mapper`.
 - The question is how a target *admits* or *funds* people rather than what it selects for thematically. That is the application-regime and funding-regime axis inside `apply-program-fit-mapper`.
 - The user wants statement prose built on a theme. Use `apply-sop-writer`.
@@ -96,6 +102,7 @@ Three gates. An operative theme must pass all three, or the answer is `genuinely
 - **An individual professor's research.** It is *their* direction, not the institution's selection scope, and generalising from three faculty pages invents a criterion nobody published. Person-level direction belongs to `apply-research-direction-mapper`. Only the aggregate roster distribution in tier 3 counts here.
 - **The country.** A nation has no theme. A country enters only where it produces a **documented institutional mechanism**, and only through the falsifiable chain *geopolitical objective → programme objective → published selection criterion* — which is already captured when step 2 fetches the funder's own mission page. "Programmes in this country tend to emphasise X" is a cultural prior, not published selection content, and must never appear in a dossier.
 - **The programme's name, its department, its ranking, or your prior knowledge of the field.**
+- **Selling points.** "Why study with us" copy, rankings claims, and brochure differentiators are the programme persuading applicants, not publishing a selection criterion. They are not even tier-4 framing evidence: they cannot count toward any gate and can never drop a target. They belong in the programme profile (step 6) only.
 
 ### 5. Assign exactly one status, and state it in the output
 
@@ -108,7 +115,36 @@ Three gates. An operative theme must pass all three, or the answer is `genuinely
 
 `genuinely open` and `link needed` must both remain visible outputs. Producing a theme for every target turns this skill into a framing generator — precisely the failure the whole screen exists to prevent.
 
-### 6. Hand off
+### 6. Programme profile — pass C, on request, shortlisted targets only
+
+Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any target whose official programme page was located, even when the cycle's call is unpublished — among requested targets, skip it only when no official page exists — and it does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. **The profile is applicant-free, exactly like the theme.** While extracting it, do not read or use the user's CV, profile, goals, statement drafts, stored memory, or anything known about them from this or earlier conversations. Do not select, rank, filter, phrase, or omit an item by its relevance to the user. The test: two different applicants asking about the same programme page on the same day must receive the same profile. Relating the profile to an applicant happens downstream — goal fit in `apply-program-fit-mapper`, need-tying in `apply-sop-writer` and `apply-interview-prep` — never here.
+
+Fetch live, recording URL and access date, and give every item one **authority label**:
+
+- `declared` — formal institutional content: published programme learning outcomes, a qualification or graduate profile, compulsory modules, thesis requirements.
+- `evidenced` — observed data about what actually happens: graduate destination statistics, alumni placements, a published partner or internship list.
+- `advertised` — the programme's own persuasion: "why study with us", scholarship mission slogans, claimed differentiators.
+
+The authority label `declared` is not the dossier status `declared`: a declared graduate profile or learning outcome is never a declared theme and licenses no thematic screen.
+
+Never merge the labels. An `advertised` claim and the `evidenced` data behind it are reported as two lines.
+
+**(a) Selling points — what staff would say to convince you.** Collect them from the landing page, "why this programme" and FAQ pages, the scholarship or funder mission page, and partner lists. First write one **Positioning** sentence, in the programme's own frame, of how it sells itself — what it leads with (industry links rather than research training, mobility rather than depth) is itself informative about what it wants to be. Label it `advertised`; it informs the user and is never handed downstream as a differentiator. Then run two checks on each claim:
+
+1. **Swap test.** Would the claim survive being moved to a competing programme? The comparison class is programmes of the same level and field in general — never the user's own shortlist, which would make the list depend on the applicant. "World-class faculty", "international environment", "strong industry links", "interdisciplinary" — every programme says these. Mark them `generic` and drop them from the differentiator list.
+2. **Backing check.** Is there a page that shows the claim — a named partner list, a mobility structure, a funded placement, a lab or dataset only this programme has? Backed → keep with its source. Unbacked → keep, labelled `advertised, unbacked`.
+
+The differentiator list is the backed rows only. `advertised, unbacked` rows are listed beneath it for completeness and are never handed downstream as differentiators. An empty list is a legitimate answer.
+
+**(b) Intended graduate — who the programme is built to produce.** Read the formal graduate or qualification profile (`declared`) and the career-prospects page — which is `advertised` unless it is itself a formal profile or is backed by destination data, then any destination or alumni data (`evidenced`). Extract the specialisations and capabilities the graduate is meant to hold, and the destinations the programme aims at — research/PhD pipeline, industry, public sector, the funder's home-country mission. Where the declared profile and the destination data disagree (a "research-oriented" programme whose graduates mostly go to industry), report both; the disagreement is the finding.
+
+**(c) Expected outcomes — what they actually teach.** Formal programme learning outcomes first, then compulsory modules before electives, then required thesis, internship, or mobility components. Report what the programme **commits to teaching**, not what electives make possible.
+
+Where a part has no official page, output `none published` for that part. Do not reconstruct a graduate profile from the programme's name or field.
+
+The profile is **offer content, not selection content**. It never changes the theme status, and never drops a target. Pages fetched in pass C are never re-fed into step 4; for targets with status `inferred` or `genuinely open`, if pass C surfaces a tier-1 or tier-2 page that pass B missed, record `candidate theme evidence — re-run pass B` and leave the status unchanged.
+
+### 7. Hand off
 
 State explicitly which downstream question this dossier does *not* answer: whether the applicant fits. Route to `apply-program-fit-mapper` with the dossier, and carry the status label with it — the fit verdict's power depends on it.
 
@@ -146,18 +182,38 @@ One block per target.
 | Pathway | Declared scope | Status |
 |---|---|---|
 
+## Programme profile (only when requested — pass C)
+- **Positioning (advertised):** [one sentence, in the programme's own frame — not handed downstream]
+
+### Differentiators (passed swap test and backing check)
+| Claim | Authority | Backing page | Accessed |
+|---|---|---|---|
+<!-- authority: declared / evidenced / advertised (backed) -->
+- Unbacked, not handed downstream: [advertised claims with no backing page]
+- Dropped as generic: [claims every programme makes]
+
+### Intended graduate
+- **Declared profile:** [specialisations, capabilities, target destinations — or "none published"]
+- **Evidenced destinations:** [data, year, source — or "none published"]
+- **Mismatch:** [where declared and evidenced disagree, or "none found"]
+
+### Expected outcomes
+- **Learning outcomes:** [formal list, verbatim or close — or "none published"]
+- **Compulsory components:** [modules, thesis, internship, mobility]
+
 ## Hard constraints found
 - [topic restrictions, eligible research areas, mandatory specialisation choice, or "none found"]
 
 ## Not answered here
 - Applicant fit. Route to `apply-program-fit-mapper` with this dossier and its status.
+- How to use the programme profile in prose. Route differentiators and outcomes to `apply-sop-writer` or `apply-interview-prep`, and the intended graduate profile to `apply-program-fit-mapper` for the goal-fit check.
 ```
 
 For a candidate list, precede the blocks with a one-row-per-target summary table (target, unit, status, one-line scope) so the user can triage before reading.
 
 ## Quality bar
 
-A strong output lets the user say what each target selects for, and cite where that came from. Every theme traces to a fetched page with a date. No target carries a scope the institution did not publish without an `inferred` label attached, and no target is dropped on an inferred theme. Targets whose pages could not be found are visible as `link needed` rather than quietly missing.
+A strong output lets the user say what each target selects for, and cite where that came from. Every theme traces to a fetched page with a date. No target carries a scope the institution did not publish without an `inferred` label attached, and no target is dropped on an inferred theme. Targets whose pages could not be found are visible as `link needed` rather than quietly missing. A programme profile contains nothing that would change for a different applicant. In it, no `advertised` claim is presented as a differentiator without the swap test, and no graduate profile appears that the institution did not publish.
 
 Two counts are worth watching as a self-check. If `inferred` is firing on most targets, the exclusion test is not being applied and the dossiers are describing fields rather than scopes. If pass B ran on targets the user had already ruled out on country, funding, or deadline, the search budget was spent on nothing.
 

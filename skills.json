@@ -173,13 +173,13 @@
       "name": "apply-program-fit-mapper",
       "path": "skills/academic-career/apply-program-fit-mapper",
       "category": "academic-career",
-      "description": "Map applicant interests to programmes, tracks, faculty, and labs, and check profile fit against a programme's declared theme or specialisation."
+      "description": "Map applicant interests to programmes, tracks, faculty, and labs, and check profile fit against a programme's declared theme or specialisation, plus a goal-fit flag against the graduate it intends to produce."
     },
     {
       "name": "apply-program-theme-extractor",
       "path": "skills/academic-career/apply-program-theme-extractor",
       "category": "academic-career",
-      "description": "Determine what a programme, track, pathway, or call actually selects for \u2014 declared theme, or an operative theme inferred from official evidence \u2014 applicant-free and across many targets."
+      "description": "Determine what a programme, track, pathway, or call actually selects for \u2014 declared theme, or an operative theme inferred from official evidence \u2014 applicant-free and across many targets; on request, also a programme profile of verified selling points, intended graduate, and learning outcomes."
     },
     {
       "name": "apply-research-direction-mapper",
