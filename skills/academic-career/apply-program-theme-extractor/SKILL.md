@@ -117,7 +117,9 @@ Three gates. An operative theme must pass all three, or the answer is `genuinely
 
 ### 6. Programme profile — pass C, on request, shortlisted targets only
 
-Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any target whose official programme page was located, even when the cycle's call is unpublished — skip it only when no official page exists — and it does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. Fetch live, recording URL and access date, and give every item one **authority label**:
+Run this only when the user asks what a target offers, or when a "why this programme" paragraph or interview answer needs material — and only for targets the user is actually applying to. It runs for any target whose official programme page was located, even when the cycle's call is unpublished — skip it only when no official page exists — and it does not depend on passes A or B having found a theme. Characterising fifteen candidates does not need fifteen marketing reads. **The profile is applicant-free, exactly like the theme.** While extracting it, do not read or use the user's CV, profile, goals, statement drafts, stored memory, or anything known about them from this or earlier conversations. Do not select, rank, filter, phrase, or omit an item by its relevance to the user. The test: two different applicants asking about the same programme page on the same day must receive the same profile. Relating the profile to an applicant happens downstream — goal fit in `apply-program-fit-mapper`, need-tying in `apply-sop-writer` and `apply-interview-prep` — never here.
+
+Fetch live, recording URL and access date, and give every item one **authority label**:
 
 - `declared` — formal institutional content: published programme learning outcomes, a qualification or graduate profile, compulsory modules, thesis requirements.
 - `evidenced` — observed data about what actually happens: graduate destination statistics, alumni placements, a published partner or internship list.
@@ -211,7 +213,7 @@ For a candidate list, precede the blocks with a one-row-per-target summary table
 
 ## Quality bar
 
-A strong output lets the user say what each target selects for, and cite where that came from. Every theme traces to a fetched page with a date. No target carries a scope the institution did not publish without an `inferred` label attached, and no target is dropped on an inferred theme. Targets whose pages could not be found are visible as `link needed` rather than quietly missing. In a programme profile, no `advertised` claim is presented as a differentiator without the swap test, and no graduate profile appears that the institution did not publish.
+A strong output lets the user say what each target selects for, and cite where that came from. Every theme traces to a fetched page with a date. No target carries a scope the institution did not publish without an `inferred` label attached, and no target is dropped on an inferred theme. Targets whose pages could not be found are visible as `link needed` rather than quietly missing. A programme profile contains nothing that would change for a different applicant. In it, no `advertised` claim is presented as a differentiator without the swap test, and no graduate profile appears that the institution did not publish.
 
 Two counts are worth watching as a self-check. If `inferred` is firing on most targets, the exclusion test is not being applied and the dossiers are describing fields rather than scopes. If pass B ran on targets the user had already ruled out on country, funding, or deadline, the search budget was spent on nothing.
 
