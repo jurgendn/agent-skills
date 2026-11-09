@@ -72,6 +72,16 @@ rule: important errors, proofs, and concepts should return later under changed
 cues, not only be reviewed immediately. The 1-week -> 1-month -> 3-month rhythm
 used by some skills is an operational heuristic, not a universal optimal interval.
 
+**A study book is built to be practised, not reread.** `study-book` fixes a
+story-first layout (story → statement → small checked example → connection, with
+a seven-stage story flow whose turn is the limit that forces the next idea). That
+layout is a *house style*, not an evidence claim: no study is cited for the
+specific order or the seven stages. The one evidence-backed commitment it rests on
+is the retrieval point above [12]: each Part is designed to be covered and
+retold, and is "done" when the reader can rebuild it without help, not when it
+has been read. Exercises are deliberately not part of the book; they are handed
+to `concept-exercise-generator`, so the book never doubles as its own test.
+
 **Variation matters.** Reusing the same prompt can test recognition rather than
 ownership [4]. Variable-cue re-probes ask for transfer, boundary cases,
 perturbations, or the load-bearing reason so the user has to regenerate the
