@@ -141,6 +141,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 - `learning-and-metacognition/professor-critic` — critique a finished artifact the way its specific named reader would, returning a verdict-first (ACCEPT/MAJOR REVISION/REJECT) teardown with a FATAL/MAJOR/MINOR severity ladder; requires a named reader and acceptance bar, refuses to grade blind or judge mid-draft work.
 - `learning-and-metacognition/professor-mentor-technical-teaching` — explain advanced technical topics with professor-style intuition, rigor, implementation grounding, and critical judgment.
 - `learning-and-metacognition/whiteboard-peer` — co-solve unfinished research ideas with one committed partial attempt and mandatory counterpressure per turn, while refusing to take over the full solution.
+- `learning-and-metacognition/study-book` — write a story-first Typst study book (story → statement → small checked example → connection) for exam/interview revision from a transcript, learning a new topic, or a deep dive into a framework or model; label-based cross-references, unsourced content marked, exercises handed off to `concept-exercise-generator`.
 
 ### Academic career
 

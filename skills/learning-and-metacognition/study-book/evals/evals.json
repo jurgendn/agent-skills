@@ -1,0 +1,30 @@
+{
+  "skill_name": "study-book",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here is my transcript (BSc Applied Mathematics, Hanoi). I have the APS interview in three weeks. Make me a revision book of my courses so I can explain them to the panel.",
+      "expected_output": "Exam mode. One intake batch, then a Part plan table (subjects grouping courses, weak grades marked, thesis Part, then Gaps and Strategy) awaiting confirmation. Parts built only from course names are flagged as unverified scope; APS format and language are looked up live or marked link needed, never asserted."
+    },
+    {
+      "id": 2,
+      "prompt": "I want to really understand optimal transport. Write me study notes from these three papers, I know measure theory and convex optimisation already.",
+      "expected_output": "Topic mode. Parts are subtopics grounded in the three papers; connections link to measure theory and convex duality; closing questions use the Self-test title; no Gaps or Strategy Parts; ends by offering concept-exercise-generator."
+    },
+    {
+      "id": 3,
+      "prompt": "Make me a deep-dive book on how vLLM's PagedAttention works, version 0.6. I'll be modifying the scheduler.",
+      "expected_output": "Deep-dive mode. Version recorded on the title page; each interface or behaviour claim cites the paper, docs, or a source file at that version, or is marked unverified; depth goes to the scheduler; worked examples are small numerical traces, not code listings."
+    },
+    {
+      "id": 4,
+      "prompt": "Explain SVD to me intuitively.",
+      "expected_output": "Should NOT trigger study-book: a live explanation in chat belongs to professor-mentor-technical-teaching."
+    },
+    {
+      "id": 5,
+      "prompt": "Give me practice problems from easy to hard on Markov chains with solutions.",
+      "expected_output": "Should NOT trigger study-book: a graded exercise set belongs to concept-exercise-generator."
+    }
+  ]
+}
