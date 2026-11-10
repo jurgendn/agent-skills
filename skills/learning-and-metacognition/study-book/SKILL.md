@@ -5,8 +5,8 @@ description: >-
   material, not recite it. Three modes chosen at intake: exam revision from a transcript, syllabus or
   course list (oral exam, APS/DAAD or PhD/MSc admissions interview, qualifying exam); learning a new
   topic from a source list; or a deep dive into one framework, model or method. Every Part follows
-  story, statement, small checked example, connection, with a concept graph, decision table, seven-stage
-  story flow and questions. Use whenever the user says "make a study book / revision book / study
+  story, statement, small checked example, connection, with a spine diagram, concept graph, decision
+  table, seven-stage story flow and questions. Use whenever the user says "make a study book / revision book / study
   guide", "summarise my courses for the interview", "prepare me for the APS interview from my
   transcript", "write me notes to really understand X", "a deep dive into how <framework/model> works",
   or wants a Part added to an existing book of this kind, even without mentioning Typst. Not live
@@ -110,13 +110,59 @@ Colours: `c-blue c-orange c-aqua c-yellow c-violet c-red c-ink c-muted`; mark we
 
 ## 7. Figures (Plotly)
 
-Figures, charts and diagrams are drawn with **Plotly** by default (a function plot, vectors in the plane, a loss curve, a probability density, an attention heat map, a geometric picture), exported as SVG and embedded with `#fig`. **Simple box-and-arrow diagrams stay in Typst**: the `concept-map` and `story-flow` helpers (their boxes carry live `@sec:` references) and any small flow of a few labelled boxes, drawn with fletcher's `diagram`/`node`/`edge`, which `helpers.typ` already imports. Anything with data, coordinates or curves goes to Plotly.
+Figures, charts and diagrams are drawn with **Plotly** by default (a function plot, vectors in the plane, a loss curve, a probability density, an attention heat map, a geometric picture, the Part's spine diagram), exported as SVG and embedded with `#fig`. **Two exceptions stay in Typst**: the `concept-map` and `story-flow` helpers, because their boxes carry live `@sec:` references, and any tiny inline flow of two or three boxes inside prose (fletcher's `diagram`/`node`/`edge`, which `helpers.typ` already imports).
 
 - Each figure script starts `from book_style import go, save` and ends `save(fig, "NN-slug-name")`. `book_style` sets the book's palette and fonts and a fixed export size, so all figures look the same; do not restyle per figure.
-- **Plot computed values, never hand-placed shapes.** The script computes what it draws (eigenvectors, densities, iterates) with `numpy`, so the figure is checked the same way as a worked example. Fix random seeds.
+- **Plot computed values, never hand-placed shapes** (the spine diagram below is the one exception: its geometry is conceptual). The script computes what it draws (eigenvectors, densities, iterates) with `numpy`, so the figure is checked the same way as a worked example. Fix random seeds.
 - Name every trace (`name="..."`) or hide the legend; Plotly otherwise prints "trace 0".
 - No Plotly title: the Typst caption carries it. Axis titles in words plus units or symbols.
 - One figure answers one question from the section's story; skip it if the prose and the worked example already show it.
+
+### The spine diagram
+
+One picture of what the whole Part is *for*: its objects, the question it asks of them, the recurring move, the theorem that licenses each move, and where the move fails. Build it by answering, in order:
+
+1. **Objects**: what does the subject study?
+2. **Central problem**: what does it want to know or compute about them?
+3. **Core move**: the recurring strategy; these become the arrows.
+4. **Guarantees**: the theorem that justifies each arrow; these become the arrow labels.
+5. **Limits**: where the move fails (often the subject's advanced chapters); show it as a dashed arrow, a note on an arrow, or a `#pitfall` under the figure.
+
+Then **place every `==` section on a node or arrow**. A section that fits nowhere means the spine is wrong, or the section belongs in another Part; fix the spine, do not drop the section. **Do not force the shape** "transform → solve the easy problem → return" when the subject's spine is classification (objects sorted by an invariant), construction (building up from axioms), or limits (what cannot be done). Draw the shape the subject actually has.
+
+Draw it with `diagram(nodes, edges)` from `book_style`. Boxes size themselves to their text and arrows stop at box edges. Number the arrow labels ①②③…, and put the section mapping in the Typst caption with `@sec:` references, so a missing section fails the build. Any inequality or error decomposition the diagram implies goes under the figure as a displayed Typst equation, not into the plot. Numerical analysis, the reference case:
+
+```python
+# figures/03-numerical-analysis.py
+from book_style import diagram, save
+
+nodes = {  # (x, y, label); about 4 units between columns; 2–3 between rows, 3 when labels have two lines
+    "P":  (0, 2, "P<br><i>integral, ODE, PDE, f(x)=0</i>"),
+    "x":  (8, 2, "x  (true solution)"),
+    "SP": (0, 0, "SP<sub>h</sub>  (computable)"),
+    "S":  (4, 0, "Solver"),
+    "xt": (8, 0, "x̃<sub>h</sub> ≈ x<sub>h</sub>"),
+}
+edges = [  # (from, to, label[, {"dash": True, "side": "above|below|left|right"}])
+    ("P", "x", "not computable", {"dash": True}),
+    ("P", "SP", "① discretize,<br>parameter h", {"side": "left"}),
+    ("SP", "S", "② solve", {"side": "above"}),
+    ("S", "xt", "③ stop at tol", {"side": "above"}),
+    ("xt", "x", "④ converges as h → 0<br>(consistency + stability)"),
+]
+save(diagram(nodes, edges), "03-numerical-analysis-spine")
+```
+
+```typst
+#fig(image("/figures/03-numerical-analysis-spine.svg", width: 100%),
+  [The approximately commuting diagram. ① @sec:interpolation @sec:quadrature, ② @sec:direct-solvers,
+   ③ @sec:iterative-solvers @sec:newton, ④ @sec:convergence.])
+$ norm(x - tilde(x)_h) <= underbrace(norm(x - x_h), "discretization") + underbrace(norm(x_h - tilde(x)_h), "solver + rounding") $
+```
+
+It commutes only approximately, in the limit h → 0. In floating point, rounding error grows as h shrinks, giving an accuracy floor (the limit). Newton applied to f(x) = 0 directly is the special case SP<sub>h</sub> = P, where only the bottom path's error remains.
+
+Use HTML for labels (`<sub>`, `<i>`, `<br>`), not Unicode subscripts, which the font may lack. If labels collide, spread the columns or pass a larger `pad`; then check the render (§10).
 
 ## 8. `main.typ` and the Part skeleton
 
@@ -144,11 +190,12 @@ Every content Part, in this order:
 
 1. `= Title <part:slug>` (exam mode: grades in the title, e.g. `= Calculus (C+ / B+)`).
 2. `#part-story`: the one idea the Part grows from, how its topics follow, a one-liner to say aloud.
-3. `#concept-map`.
-4. `#framework`: 5–8 rows of step → question → tool, citing `@sec:...`.
-5. `#story-flow` for the Part.
-6. 5–10 `== Section <sec:slug>`, each: `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
-7. `#ask` for the whole Part.
+3. Spine diagram (§7) with its caption mapping arrows to sections. In deep-dive mode, draw one for the whole system in `@sec:big-picture` instead, and per Part only when that component has its own spine.
+4. `#concept-map`.
+5. `#framework`: 5–8 rows of step → question → tool, citing `@sec:...`.
+6. `#story-flow` for the Part.
+7. 5–10 `== Section <sec:slug>`, each: `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
+8. `#ask` for the whole Part.
 
 The reader's own thesis or project Part follows the same skeleton from their document only, plus a first-person section on their contribution and a "two-minute summary".
 
@@ -170,7 +217,7 @@ The voice and the ten principles are in `references/teaching-philosophy.md`. The
 Write Overview + the first 2–3 Parts, compile, then 3–4 Parts at a time, compiling after each batch.
 
 1. The build finishes with zero errors (missing labels and wrong story-flow lengths are errors).
-2. Render each concept-graph and figure page (`pdftoppm -r 70 -png -f P -l P`) and look at it: no overlapping boxes, no arrows crossing boxes, figure text readable, no "trace 0" legends.
+2. Render each concept-graph, spine-diagram and figure page (`pdftoppm -r 70 -png -f P -l P`) and look at it: no overlapping boxes, no arrows crossing boxes, figure text readable, no "trace 0" legends.
 3. Run the end-of-Part checklist in `references/teaching-philosophy.md`.
 4. Report: the Part list, Parts marked unverified scope, facts about the reader's work you could not confirm, and the version and sources used in deep-dive mode.
 5. Offer the study-time next steps (the book's job ends where practice begins):

@@ -47,6 +47,7 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
 - [ ] Is the turn (limit → idea) stated in one sentence for each story, with the extra assumption named if the limit only motivates the idea?
 - [ ] Does each central idea say where it breaks and what trade-off it cannot avoid?
 - [ ] Is there a worked example with small numbers, and was it recomputed?
+- [ ] Does the spine diagram place every section on a node or arrow, name the guarantee on each arrow, and show where the core move fails?
 - [ ] Does at least one link point to another Part, the reader's own work, or their prior knowledge?
 - [ ] Could the reader say the core idea in about 60 seconds without notes, then predict a fresh case, separate it from its nearest alternative, and say where it stops applying?
 - [ ] Are weak areas treated honestly and load-bearing areas given depth?
