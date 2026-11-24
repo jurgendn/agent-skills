@@ -2,7 +2,7 @@
 
 Use in each figure script (figures/NN-slug.py, one script per Part):
 
-    from book_style import go, save          # or: from book_style import diagram, save
+    from book_style import go, save, ROLE, DASH, label_ends   # or: from book_style import diagram, save
     fig = go.Figure(...)
     save(fig, "02-svd-singular-values")       # writes figures/02-svd-singular-values.svg
 
@@ -17,15 +17,27 @@ import plotly.io as pio
 COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#6250d6", "#e34948", "#5f5e5a"]
 INK, MUTED = "#1b1b1a", "#5f5e5a"
 
+# Colour is a role, not an order. Only blue, orange, aqua pass a colour-blind check as a set
+# (red≈orange and violet≈blue fail even for normal vision), so they are the only data-series
+# colours; a 4th series goes to small multiples. Pair each series colour with its dash, so lines
+# stay apart in grayscale print.
+ROLE = dict(
+    main="#2a78d6", second="#eb6834", third="#1baf7a",  # data series, in this order
+    breaks="#e34948",     # only for where an idea fails; always with a text label
+    context="#5f5e5a",    # true solution, reference lines, baselines
+    highlight="#6250d6",  # one point or region the caption is about; never a series
+)
+DASH = dict(main="solid", second="dash", third="dot")
+
 pio.templates["book"] = go.layout.Template(
     layout=dict(
         font=dict(family="Libertinus Serif, New Computer Modern, serif", size=16, color=INK),
-        colorway=COLORS,
+        colorway=[ROLE["main"], ROLE["second"], ROLE["third"]],
         paper_bgcolor="white",
         plot_bgcolor="white",
         margin=dict(l=60, r=20, t=30, b=50),
-        xaxis=dict(showline=True, linecolor=MUTED, ticks="outside", tickcolor=MUTED, zeroline=False, showgrid=False),
-        yaxis=dict(showline=True, linecolor=MUTED, ticks="outside", tickcolor=MUTED, zeroline=False, showgrid=False),
+        xaxis=dict(automargin=True, showline=True, linecolor=MUTED, ticks="outside", tickcolor=MUTED, zeroline=False, showgrid=False),
+        yaxis=dict(automargin=True, showline=True, linecolor=MUTED, ticks="outside", tickcolor=MUTED, zeroline=False, showgrid=False),
         legend=dict(bgcolor="rgba(0,0,0,0)"),
     )
 )
@@ -41,6 +53,27 @@ def save(fig, name, width=None, height=None):
     """
     fig.write_image(OUT / f"{name}.svg", width=width or fig.layout.width or 640,
                     height=height or fig.layout.height or 380)
+
+
+def label_ends(fig, at=None):
+    """Label each named line trace in ink next to its last point (or the point nearest x = at),
+    and hide the legend. Use when 2–3 lines are apart at that x (SKILL.md §7, labelling)."""
+    import math
+
+    def axis(ref, kind):  # "x2" -> layout.xaxis2
+        return fig.layout[kind + "axis" + ref[1:]]
+
+    for tr in fig.data:
+        if tr.name and tr.x is not None and len(tr.x):
+            i = len(tr.x) - 1 if at is None else min(range(len(tr.x)), key=lambda j: abs(tr.x[j] - at))
+            x, y = tr.x[i], tr.y[i]  # annotations on a log axis take log10 positions
+            if axis(tr.xaxis or "x", "x").type == "log": x = math.log10(x)
+            if axis(tr.yaxis or "y", "y").type == "log": y = math.log10(y)
+            fig.add_annotation(x=x, y=y, text=tr.name, showarrow=False, xanchor="left",
+                               xshift=6, font=dict(color=INK, size=14),
+                               xref=tr.xaxis or "x", yref=tr.yaxis or "y")
+    fig.update_layout(showlegend=False, margin=dict(r=40))
+    return fig
 
 
 def diagram(nodes, edges, pad=(1.6, 0.5), width=640):

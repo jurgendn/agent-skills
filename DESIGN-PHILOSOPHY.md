@@ -82,6 +82,25 @@ retold, and is "done" when the reader can rebuild it without help, not when it
 has been read. Exercises are deliberately not part of the book; they are handed
 to `concept-exercise-generator`, so the book never doubles as its own test.
 
+**A central idea is carried by two compared cases, not one.** The study book
+teaches each Part's central idea with two worked cases, a prompt for the reader
+to compare them *before* an alignment table, then the principle and the spine
+diagram, and closes the Part with a transfer question that gives no hint. The
+evidence is *supported* for the combination, not for an order: with one story,
+a stated principle, summary, or diagram barely raised unhinted transfer, while
+two stories raised it from 21% to 45%, and a principle added to two stories
+raised it again from 40% to 62% [44]; comparing the same two cases beat reading
+them separately, 48% vs 19%, and only 16% of separate readers linked the cases
+on their own [45]. That is why the reader, not the author, does the comparing:
+a ready-made table was not what those studies tested. "Close pair first for a
+new reader" rests only on the abstract-level claim that maximizing variability
+is not always the best route to transfer [46], and is a default, not a finding.
+Limits: undergraduates, single sessions, one principle each, mostly immediate
+tests, and best transfer rates near 50–60%. The book's placement of these
+pieces inside a Part remains house style. A connection between Parts follows
+the same logic: it names correspondences and what does not carry over, because
+an analogy that matches only surface features does not transfer.
+
 **Variation matters.** Reusing the same prompt can test recognition rather than
 ownership [4]. Variable-cue re-probes ask for transfer, boundary cases,
 perturbations, or the load-bearing reason so the user has to regenerate the
@@ -729,3 +748,23 @@ the prototype-experiment stage (exercise logging, plotting, and resource
 tracking end-to-end on dummy data before scaling, and extrapolate cost from it)
 and for its warning that AI coding tools can produce clean-looking, executable,
 yet wrong code whose output must be checked before it is relied on.
+
+[44] M. L. Gick and K. J. Holyoak, "Schema induction and analogical transfer,"
+*Cognitive Psychology*, vol. 15, no. 1, pp. 1–38, 1983, doi:
+[10.1016/0010-0285(83)90002-6](https://doi.org/10.1016/0010-0285(83)90002-6).
+Cited for the one-analog vs two-analog transfer rates, the failure of a stated
+principle or diagram with a single analog, and schema quality predicting
+transfer (full text read).
+
+[45] D. Gentner, J. Loewenstein, and L. Thompson, "Learning and transfer: A
+general role for analogical encoding," *Journal of Educational Psychology*,
+vol. 95, no. 2, pp. 393–408, 2003, doi:
+[10.1037/0022-0663.95.2.393](https://doi.org/10.1037/0022-0663.95.2.393). Cited
+for comparison vs separate study of the same two cases and for learners rarely
+comparing successive cases unprompted (full text read).
+
+[46] D. Gentner and C. Hoyos, "Analogy and abstraction," *Topics in Cognitive
+Science*, vol. 9, no. 3, pp. 672–693, 2017, doi:
+[10.1111/tops.12278](https://doi.org/10.1111/tops.12278). Abstract only read;
+cited only for its claim that maximizing variability is not always the best
+route to generalization and transfer.

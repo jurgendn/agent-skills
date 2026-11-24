@@ -9,7 +9,7 @@
     {
       "id": 2,
       "prompt": "I want to really understand optimal transport. Write me study notes from these three papers, I know measure theory and convex optimisation already.",
-      "expected_output": "Topic mode. Parts are subtopics grounded in the three papers; connections link to measure theory and convex duality; closing questions use the Self-test title; no Gaps or Strategy Parts; ends by offering concept-exercise-generator."
+      "expected_output": "Topic mode. Parts are subtopics grounded in the three papers; connections link to measure theory and convex duality; the central idea of each Part uses two close worked cases with a Compare-before-reading-on prompt before the alignment table, and each Part ends with a no-hint transfer question; closing questions use the Self-test title; no Gaps or Strategy Parts; ends by offering concept-exercise-generator."
     },
     {
       "id": 3,
