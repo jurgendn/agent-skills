@@ -5,8 +5,9 @@ description: >-
   material, not recite it. Three modes chosen at intake: exam revision from a transcript, syllabus or
   course list (oral exam, APS/DAAD or PhD/MSc admissions interview, qualifying exam); learning a new
   topic from a source list; or a deep dive into one framework, model or method. Every Part follows
-  story, statement, small checked example, connection, with a spine diagram, concept graph, decision
-  table, seven-stage story flow and questions. Use whenever the user says "make a study book / revision book / study
+  story, statement, small checked example, connection; its central idea is taught by having the reader
+  compare two worked cases, and it ends with a transfer question that gives no hint. Each Part also has
+  a spine diagram, concept graph, decision table, seven-stage story flow and questions. Use whenever the user says "make a study book / revision book / study
   guide", "summarise my courses for the interview", "prepare me for the APS interview from my
   transcript", "write me notes to really understand X", "a deep dive into how <framework/model> works",
   or wants a Part added to an existing book of this kind, even without mentioning Typst. Not live
@@ -41,6 +42,8 @@ The Part skeleton (§8) is the same in every mode. What changes:
 | A Part is | one subject (may group several courses) | one subtopic | one component or stage of the system |
 | Grounded in | syllabus, notes, thesis | the source list | paper, official docs, source at the pinned version |
 | Connection points to | another course, the thesis | another Part, the reader's prior knowledge | another Part, the reader's prior knowledge, rival designs |
+| The two compared cases (§8) | may be far apart: the reader has met the material | **close**: same kind of object, alike on the surface, so lining them up is easy | may be far apart, e.g. two rival designs for the same job |
+| The transfer question | far: different surface, no hint | far: different surface, no hint | far: a system or setting the Part never mentions |
 | Closing questions | `#ask[...]`: likely examiner questions | `#ask(title: "Self-test questions")[...]` | same as topic |
 | Weighting | weak grades: more examples and questions; strong grades: more depth | load-bearing ideas get depth | the parts the reader will modify or debug get depth |
 | Extra closing Parts | Gaps, Strategy (§4) | none | none |
@@ -112,11 +115,95 @@ Colours: `c-blue c-orange c-aqua c-yellow c-violet c-red c-ink c-muted`; mark we
 
 Figures, charts and diagrams are drawn with **Plotly** by default (a function plot, vectors in the plane, a loss curve, a probability density, an attention heat map, a geometric picture, the Part's spine diagram), exported as SVG and embedded with `#fig`. **Two exceptions stay in Typst**: the `concept-map` and `story-flow` helpers, because their boxes carry live `@sec:` references, and any tiny inline flow of two or three boxes inside prose (fletcher's `diagram`/`node`/`edge`, which `helpers.typ` already imports).
 
-- Each figure script starts `from book_style import go, save` and ends `save(fig, "NN-slug-name")`. `book_style` sets the book's palette and fonts and a fixed export size, so all figures look the same; do not restyle per figure.
+- Each figure script starts `from book_style import go, save, ROLE, DASH, label_ends` and ends `save(fig, "NN-slug-name")`. `book_style` sets the book's palette and fonts and a fixed export size, so all figures look the same; do not restyle per figure.
 - **Plot computed values, never hand-placed shapes** (the spine diagram below is the one exception: its geometry is conceptual). The script computes what it draws (eigenvectors, densities, iterates) with `numpy`, so the figure is checked the same way as a worked example. Fix random seeds.
-- Name every trace (`name="..."`) or hide the legend; Plotly otherwise prints "trace 0".
 - No Plotly title: the Typst caption carries it. Axis titles in words plus units or symbols.
 - One figure answers one question from the section's story; skip it if the prose and the worked example already show it.
+
+**Colour is a role, not an order.** Use `ROLE[...]`, never hex codes or Plotly's default cycle. Only `main` (blue), `second` (orange) and `third` (aqua) are data-series colours: they are the only three of the palette that stay apart for colour-blind readers (red and orange, violet and blue do not, even for normal vision). Give each series its matching dash, `DASH[...]`, so lines stay apart in grayscale print. A fourth series goes to small multiples, never a new colour. `breaks` (red) is only for where an idea fails, always with a text label; `context` (grey) is only for the true solution, reference lines and baselines; `highlight` (violet) marks the one point or region the caption is about, never a series. The same role keeps the same colour in every Part.
+
+**Pick the form from the question the caption answers.**
+
+| The question | Form |
+|---|---|
+| *Convergence and error* | |
+| How fast does it converge? | log error against step: a straight line is a linear rate (slope = log of the factor), a downward bend is faster than linear |
+| How does error scale with h or n? | log–log error against h or n: the slope is the order |
+| Where does it stop improving? | log–log error against h with the floor marked (e.g. rounding), the optimal h annotated |
+| *Functions and shape* | |
+| What does it look like, and how good is the approximation? | line plot: the true function in `context`, the approximation in `main`; add an error panel below on a shared x-axis if the gap is small |
+| How does a parameter change the shape? | 2–3 labelled lines, one per parameter value, or small multiples for more; never an animation |
+| Where is the optimum, and how does the method get there? | contour plot of the objective with the iterates as a marked path; equal x/y scale |
+| *Distributions and uncertainty* | |
+| What does the distribution look like? | histogram or density, mean or median as a `context` line |
+| How do two or three distributions differ? | overlaid densities on one axis; more groups: box or violin plots side by side |
+| How uncertain is the estimate? | line with a shaded band for a curve; error bars for a few points |
+| Does the sample match the theory? | QQ plot, or the empirical density with the theoretical one in `context` |
+| *Relationships* | |
+| Do two quantities relate? | scatter with the fitted line, residuals in a panel below |
+| Are the classes separable? | scatter by class (at most 3) with the decision boundary |
+| What trades off against what? | scatter of the options with the Pareto frontier as a line |
+| Is there a sweet spot (bias–variance, h, learning rate)? | U-shaped curve with the minimum annotated |
+| *Magnitudes and ranking* | |
+| Which is largest, in what order? | sorted horizontal bars or a dot plot |
+| What changed per item, before vs after? | dumbbell or slope chart |
+| *Geometry and linear algebra* | |
+| What does a linear map do? | unit circle → ellipse with the singular vectors as arrows; equal x/y scale |
+| Projection, orthogonality, eigenvectors | vectors as arrows before and after, right angles marked; equal x/y scale |
+| How fast does a spectrum decay? | singular values or eigenvalues against index, log y |
+| *Matrices and structure* | |
+| What are the entries (attention, covariance, a kernel)? | heat map in one hue, light to dark; signed values: two hues with grey at zero |
+| Where are the non-zeros? | sparsity (spy) plot |
+| *Dynamics and training* | |
+| How does it evolve in time? | line against time; a 2-D system as a phase portrait with equal x/y scale |
+| How does training go? | train and test loss against steps, log y if it spans orders of magnitude |
+| *Conceptual* | |
+| What is the Part for? | the spine diagram (below) |
+| How do the terms depend on each other? | the concept map (Typst) |
+| A single number, or a few exact values | no chart: prose or a table |
+
+Never put two y-axes on one plot: two quantities with different units get two panels sharing the x-axis.
+
+**Choose the labelling from the figure, then check the render:**
+- One series: no legend; the caption and axis title name it.
+- Two or three lines that are apart at their ends: `label_ends(fig)`, which writes each trace's `name` in ink beside its last point and hides the legend. If they are apart somewhere else, `label_ends(fig, at=x)`.
+- Lines that cross or bunch everywhere: keep the legend, or split into panels.
+- Scatter by class: one ink label per cluster, placed at its centre.
+- Bars: the category names sit on the axis; no legend.
+- More than three series: small multiples, each panel titled.
+- Heat maps: a colour bar, because colour is a scale there, not an identity.
+- Label text is always in ink, never in the series colour. Name every trace anyway; Plotly otherwise prints "trace 0".
+
+**Annotate what the caption asks about**: one or two arrows with short text at the point that answers the question (a slope, a floor, a crossing), arrows in `context` grey. **The caption states the answer, not only the subject**: "The cos iteration's error falls in a straight line (linear rate); the √2 iteration's error bends down (quadratic)", not "Error against step".
+
+**The two compared cases (§8) get one figure when they can be drawn**: same axes, same scale, same role colours, so the alignment shows at a glance; it sits next to the alignment table. **The transfer question gets no figure**, or one in a deliberately different form, because a familiar figure is a hint. Reference case, the pair from §8:
+
+```python
+# figures/04-fixed-point.py
+import math
+from book_style import go, save, ROLE, DASH, label_ends
+
+xs, ys = [1.0], [1.0]                       # Case A: x ← (x + 2/x)/2; Case B: x ← cos x
+for _ in range(4): xs.append((xs[-1] + 2 / xs[-1]) / 2)
+for _ in range(15): ys.append(math.cos(ys[-1]))
+star = 1.0
+for _ in range(200): star = math.cos(star)
+eA = [(t, abs(x - math.sqrt(2))) for t, x in enumerate(xs) if abs(x - math.sqrt(2)) > 1e-15]
+eB = [(t, abs(y - star)) for t, y in enumerate(ys)]
+
+fig = go.Figure()
+for (name, e, role) in (("Case A: √2", eA, "main"), ("Case B: cos x = x", eB, "second")):
+    fig.add_scatter(x=[t for t, _ in e], y=[v for _, v in e], name=name, mode="lines+markers",
+                    line=dict(color=ROLE[role], dash=DASH[role], width=2), marker=dict(size=8))
+fig.update_yaxes(type="log", title="error |x<sub>t</sub> − x*|", exponentformat="power")
+fig.update_xaxes(title="step t")
+label_ends(fig)
+fig.add_annotation(x=9, y=math.log10(eB[9][1]), text="slope = log 0.67 per step", ax=40, ay=-40,
+                   arrowcolor=ROLE["context"])  # annotations on a log axis take log10 positions
+fig.add_annotation(x=3, y=math.log10(eA[3][1]), text="error squares each step", ax=95, ay=0,
+                   arrowcolor=ROLE["context"])
+save(fig, "04-fixed-point-rates")
+```
 
 ### The spine diagram
 
@@ -174,7 +261,9 @@ Use HTML for labels (`<sub>`, `<i>`, `<br>`), not Unicode subscripts, which the 
 #outline(title: [Contents], depth: 1, indent: auto)
 
 = Overview <part:overview>
-#box-note("How to use")[Read each topic as story → statement → example → connection. Practise, don't reread:
+#box-note("How to use")[Read each topic as story → statement → example → connection. At each
+  "Compare before reading on" box, write down what corresponds to what before looking at the table.
+  Try each Part's last question before reading its hint. Practise, don't reread:
   cover the right column of each story flow and retell the seven stages, redraw each concept graph
   from memory, say each Part's core idea aloud in 60 seconds.]
 #concept-map([how to read one], nodes: (("t", 0, 0, "t", [Term], none), ("c", 1, 0, "c", [Concept], none),
@@ -190,21 +279,45 @@ Every content Part, in this order:
 
 1. `= Title <part:slug>` (exam mode: grades in the title, e.g. `= Calculus (C+ / B+)`).
 2. `#part-story`: the one idea the Part grows from, how its topics follow, a one-liner to say aloud.
-3. Spine diagram (§7) with its caption mapping arrows to sections. In deep-dive mode, draw one for the whole system in `@sec:big-picture` instead, and per Part only when that component has its own spine.
-4. `#concept-map`.
-5. `#framework`: 5–8 rows of step → question → tool, citing `@sec:...`.
-6. `#story-flow` for the Part.
-7. 5–10 `== Section <sec:slug>`, each: `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
-8. `#ask` for the whole Part.
+3. `#concept-map`.
+4. `#framework`: 5–8 rows of step → question → tool, citing `@sec:...`.
+5. `#story-flow` for the Part.
+6. **The central idea, by comparison**: the first `== Section <sec:slug>`, built in this order:
+   1. `#idea`: why it exists.
+   2. **Two worked cases**, `#ex(title: "Case A: ...")` and `#ex(title: "Case B: ...")`: small numbers, recomputed, the same structure in both. How far apart they look depends on the mode (§2).
+   3. `#box-note("Compare before reading on")[...]`: tell the reader to write down what corresponds to what in the two cases, and one thing that differs, before reading further.
+   4. **Alignment table**: a plain `#table` with columns *role in the idea | Case A | Case B*, one row per correspondence, and a last row *does not carry over*.
+   5. **The principle**: the exact statement (`#defn` or theorem) of what the two cases share.
+   6. **Spine diagram** (§7), placed here next to the pair, with its caption mapping arrows to sections and naming the arrows both cases follow ("Case A and Case B both follow ①→②"). If the cases can be drawn, their paired figure (§7) sits beside the alignment table. In deep-dive mode, draw one for the whole system in `@sec:big-picture` instead, and per Part only when that component has its own spine; the Part's comparison section then cites it.
+   7. `#pitfall`: where the idea breaks.
+7. 4–9 further `== Section <sec:slug>`, each: `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
+8. `#ask` for the whole Part. Its **last question is a transfer question**: a fresh case that looks different from everything in the Part (§2), worded without naming the Part, its idea or its terms. A hint follows it, marked to be read only after trying: `_Hint (read after trying): ..._`.
+
+Example of steps 6.2–6.4 for a Part on fixed-point iteration (topic mode, so the pair is close):
+
+```typst
+#ex(title: "Case A: √2 by iteration")[$x_(t+1) = (x_t + 2\/x_t)\/2$, from $x_0 = 1$: 1.5, 1.41667, 1.41422.]
+#ex(title: "Case B: cos x = x")[$x_(t+1) = cos x_t$, from $x_0 = 1$: 0.5403, 0.8576, 0.6543, … → 0.7391.]
+#box-note("Compare before reading on")[Write down what plays the same role in A and B, and one thing that differs. Then read the table.]
+#table(columns: 3,
+  [*Role*], [*Case A*], [*Case B*],
+  [update map $T$], [$(x + 2\/x)\/2$], [$cos x$],
+  [fixed point $x^* = T(x^*)$], [$sqrt(2)$], [$0.7391$],
+  [why it converges], [$T'(x^*) = 0$], [$|T'(x^*)| = 0.67 < 1$],
+  [does not carry over], [error squares each step], [error shrinks by about 0.67 each step])
+```
 
 The reader's own thesis or project Part follows the same skeleton from their document only, plus a first-person section on their contribution and a "two-minute summary".
 
 ## 9. Writing rules
 
-The voice and the ten principles are in `references/teaching-philosophy.md`. The ones agents most often break:
+The voice and the eleven principles are in `references/teaching-philosophy.md`. The ones agents most often break:
 
 - Every section opens with *why it exists*, before any definition.
 - Name the cross-Part connection wherever the mathematics really connects; these links are the content.
+- **A connection is a mapping, not a label.** Name at least two correspondences (this Part's *x* is that Part's *y*) and one thing that does not carry over. "This is like X" alone is not a connection.
+- **The reader does the comparing.** The "Compare before reading on" box always comes before the alignment table; a table the reader only reads is weaker than one they first try to fill.
+- **Keep an analogy only if a relation carries over**, not only a resemblance, and say where it stops holding.
 - Worked examples use small numbers and are **recomputed with `python3 -c`**, not by eye.
 - Deep-dive examples are small numerical traces done by hand (two tokens through attention, one step of an optimiser), not code listings, unless the user asks for code.
 - **Say where the new idea breaks.** The story flow's stage 3 covers the limits of the *old* approach; every central method also gets a `#pitfall` with its own failure modes and the one trade-off it cannot avoid. Required in deep-dive mode and for strong grades in exam mode.
@@ -217,11 +330,11 @@ The voice and the ten principles are in `references/teaching-philosophy.md`. The
 Write Overview + the first 2–3 Parts, compile, then 3–4 Parts at a time, compiling after each batch.
 
 1. The build finishes with zero errors (missing labels and wrong story-flow lengths are errors).
-2. Render each concept-graph, spine-diagram and figure page (`pdftoppm -r 70 -png -f P -l P`) and look at it: no overlapping boxes, no arrows crossing boxes, figure text readable, no "trace 0" legends.
+2. Render each concept-graph, spine-diagram and figure page (`pdftoppm -r 70 -png -f P -l P`) and look at it: no overlapping boxes, no arrows crossing boxes, figure text readable, no "trace 0" legends, labels beside the lines they name. Render figure pages once more in grayscale (`pdftoppm -gray`): every series must still be told apart.
 3. Run the end-of-Part checklist in `references/teaching-philosophy.md`.
 4. Report: the Part list, Parts marked unverified scope, facts about the reader's work you could not confirm, and the version and sources used in deep-dive mode.
 5. Offer the study-time next steps (the book's job ends where practice begins):
-   - **Exercises** → `concept-exercise-generator`, one set per Part, passing this format as the brief: four tiers (1 define and identify; 2 run the method on a small case; 3 explain why, when it fails, what to choose; 4 derive, prove, design); every exercise with a model answer, a "you've got it if" check, and the "common wrong turn" it is designed to catch; the last exercise of each Part is the story-flow drill (retell the seven stages from memory).
+   - **Exercises** → `concept-exercise-generator`, one set per Part, passing this format as the brief: four tiers (1 define and identify; 2 run the method on a small case; 3 explain why, when it fails, what to choose; 4 derive, prove, design); every exercise with a model answer, a "you've got it if" check, and the "common wrong turn" it is designed to catch; one tier-3 exercise asks the reader to state, in their own words, the principle the Part's two compared cases share; the last exercise of each Part is the story-flow drill (retell the seven stages from memory).
    - **Done-check per Part** → `naive-student`: the reader teaches the Part's story flow from memory to an honest novice.
    - **A section that does not click** → `professor-mentor-technical-teaching` for a live explanation, rather than rewriting the book.
    - **Exam mode**: `apply-interview-prep` for mock interviews; `professor-critic` on the reader's own two-minute thesis summary or one-liners, with the named panel as the reader.
