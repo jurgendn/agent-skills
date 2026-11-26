@@ -1,0 +1,25 @@
+Third-party material
+
+The MIT License in `LICENSE` does not apply to the material below. All rights in
+it remain with its owners, and this notice grants no permission to use it.
+
+1. Files that summarise or paraphrase third-party scoring material
+
+IELTS band descriptors (owned by the IELTS partners) and the GRE Analytical
+Writing scoring guide (owned by ETS):
+
+- `skills/test-prep/ielts-grammar-coach/references/ielts-band-descriptors.md`
+- `skills/test-prep/ielts-learning-planner/references/ielts-band-descriptors.md`
+- `skills/test-prep/ielts-speaking-coach/references/ielts-band-descriptors.md`
+- `skills/test-prep/ielts-writing-task1/references/ielts-band-descriptors.md`
+- `skills/test-prep/ielts-writing-task2/references/ielts-band-descriptors.md`
+- `skills/test-prep/gre-issue-essay/references/awa-scoring-rubric.md`
+
+These files are unofficial working aids. This repository is not affiliated with
+or endorsed by the IELTS partners or ETS. For authoritative wording, use the
+official sources.
+
+2. Quotations
+
+Short quotations from third-party sources, found in files across `skills/`,
+remain the property of their respective owners.

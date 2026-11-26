@@ -1,5 +1,7 @@
 # IELTS Band Descriptors — Grammatical Range & Accuracy (GRA)
 
+> **License:** this file is not covered by the repository's MIT License. It summarises material owned by the IELTS partners, whose rights are unaffected.
+
 Scoped to the **GRA criterion only** (this skill isolates GRA; for a whole-task band
 across all four criteria use `ielts-writing-task2` / `ielts-speaking-coach`). GRA is
 one of four equally-weighted criteria; the task band is the average of all four,

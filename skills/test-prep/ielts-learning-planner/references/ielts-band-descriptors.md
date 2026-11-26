@@ -1,5 +1,7 @@
 # IELTS Band Descriptors (reference)
 
+> **License:** this file is not covered by the repository's MIT License. It summarises material owned by the IELTS partners, whose rights are unaffected.
+
 Scoring reference for `ielts-learning-planner` — used to set realistic
 per-skill targets and explain what each band requires across Writing and
 Speaking.

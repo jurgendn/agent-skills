@@ -1,5 +1,7 @@
 # IELTS Speaking Band Descriptors (reference)
 
+> **License:** this file is not covered by the repository's MIT License. It summarises material owned by the IELTS partners, whose rights are unaffected.
+
 Scoring reference for `ielts-speaking-coach`. Read the relevant criterion
 **before** assigning a band so scoring stays anchored to the public criteria
 rather than to a remembered impression.
