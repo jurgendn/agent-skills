@@ -4,17 +4,17 @@
     {
       "id": 1,
       "prompt": "Here is my transcript (BSc Applied Mathematics, Hanoi). I have the APS interview in three weeks. Make me a revision book of my courses so I can explain them to the panel.",
-      "expected_output": "Exam mode. One intake batch, then a Part plan table (subjects grouping courses, weak grades marked, thesis Part, then Gaps and Strategy) awaiting confirmation. Parts built only from course names are flagged as unverified scope; APS format and language are looked up live or marked link needed, never asserted."
+      "expected_output": "Exam mode. One intake batch, then a Part plan table (subjects grouping courses, weak grades marked, each Part's order and recurring pattern, thesis Part, then Gaps and Strategy) awaiting confirmation. Weak subjects are cases-first, familiar ones map-first; the recurring patterns table sits in Strategy. Parts built only from course names are flagged as unverified scope; APS format and language are looked up live or marked link needed, never asserted."
     },
     {
       "id": 2,
       "prompt": "I want to really understand optimal transport. Write me study notes from these three papers, I know measure theory and convex optimisation already.",
-      "expected_output": "Topic mode. Parts are subtopics grounded in the three papers; connections link to measure theory and convex duality; the central idea of each Part uses two close worked cases with a Compare-before-reading-on prompt before the alignment table, and each Part ends with a no-hint transfer question; closing questions use the Self-test title; no Gaps or Strategy Parts; ends by offering concept-exercise-generator."
+      "expected_output": "Topic mode. Parts are subtopics grounded in the three papers; connections link to measure theory and convex duality; the central idea of each Part uses two close worked cases with a Compare-before-reading-on prompt before the alignment table, and each Part is cases-first, with the alignment table on a page after the compare box, and ends with a no-hint transfer question whose hint and You-have-it-if check each have their own page; recurring patterns, if any, are collected in a closing table; the Overview gives how to read, why the book is built this way, checkable outcomes and a learning map before any content Part, without stating a principle; closing questions use the Self-test title; no Gaps or Strategy Parts; ends by offering concept-exercise-generator."
     },
     {
       "id": 3,
       "prompt": "Make me a deep-dive book on how vLLM's PagedAttention works, version 0.6. I'll be modifying the scheduler.",
-      "expected_output": "Deep-dive mode. Version recorded on the title page; each interface or behaviour claim cites the paper, docs, or a source file at that version, or is marked unverified; depth goes to the scheduler; worked examples are small numerical traces, not code listings."
+      "expected_output": "Deep-dive mode. Version recorded on the title page; each interface or behaviour claim cites the paper, docs, or a source file at that version, or is marked unverified; depth goes to the scheduler; the Overview shows the system map without giving away how components work; worked examples are small numerical traces, not code listings."
     },
     {
       "id": 4,
@@ -25,6 +25,16 @@
       "id": 5,
       "prompt": "Give me practice problems from easy to hard on Markov chains with solutions.",
       "expected_output": "Should NOT trigger study-book: a graded exercise set belongs to concept-exercise-generator."
+    },
+    {
+      "id": 6,
+      "prompt": "I'm new to derivatives. I know functions, rates and limits. Write me a study book Part on the derivative.",
+      "expected_output": "Topic mode, cases-first. In the printed order: title, a Before-you-start line, the question, two close worked cases, Compare before reading on, alignment table, then the principle. Nothing before the compare box (headings, Overview, captions) states the principle; the map appears at the end under Putting it together; the transfer question names no concept; the alignment table starts on a page after the compare box; the hint and a You-have-it-if check each have their own page; no recurring pattern is invented for a single Part."
+    },
+    {
+      "id": 7,
+      "prompt": "Revision book for my oral exam: Linear Algebra (grade A, I know it well) and Measure Theory (grade C, shaky). Lecture notes attached.",
+      "expected_output": "Exam mode. The plan marks Linear Algebra map-first and Measure Theory cases-first. A pattern is listed only if it appears in both with nameable correspondences; if so the reusing Part has a Seen-before box after its principle and Strategy holds the patterns table."
     }
   ]
 }

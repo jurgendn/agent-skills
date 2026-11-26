@@ -133,6 +133,8 @@
   show link: set text(fill: c-blue)
   set list(indent: 0.6em)
   set enum(indent: 0.6em)
+  // A figure taller than the page shrinks to fit; the default would crop it without an error.
+  set image(fit: "contain")
   show table: set text(size: 9.5pt)
   show table: set par(justify: false)
   set table(stroke: 0.4pt + c-muted.lighten(50%), inset: 6pt)

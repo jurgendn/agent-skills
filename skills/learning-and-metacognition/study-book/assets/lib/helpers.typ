@@ -5,7 +5,7 @@
 // Plain information box (overview pages, source facts).
 #let box-note(title, body) = teach-box(title, "■", c-muted, body)
 
-// Opening of every Part (violet): the one idea the Part grows from.
+// The one idea the Part grows from (violet). Opens a map-first Part, or the summary of a cases-first one.
 #let part-story(principle, body) = story(title: "The core idea")[
   *Core principle: #principle*
   #v(0.3em)
@@ -34,22 +34,35 @@
   body
 }
 
+// An unbreakable diagram taller than the page is cut off silently, so fail the build instead.
+#let whole(name, body) = layout(size => {
+  let height = measure(body, width: size.width).height
+  assert(height <= size.height, message: name + " is taller than a page and would be cut off: shorten or split it")
+  body
+})
+
+// Centred content may run into the margins, but past the paper edge it is cut off: fail the build.
+#let on-paper(name, body) = layout(_ => {
+  assert(measure(body).width <= page.width, message: name + " is wider than the paper and would be cut off: use fewer columns")
+  align(center, body)
+})
+
 // Concept dependency graph. Arrows run from a prerequisite to what is built on it.
 // nodes: (key, x, y, kind, label, sec). kind: "t" term, "c" concept/theorem, "m" method, "x" from another Part.
 // sec: a heading label such as <sec:svd>, or none. A label that does not exist fails the build.
 // edges: space-separated "a>b", or "a>b~30" to bend by 30 degrees.
 // own: true when the graph tells a story the prose does not; false when it retells the Part story; none for no prefix.
-#let concept-map(title, nodes: (), edges: "", own: false, reading) = {
+#let concept-map(title, nodes: (), edges: "", own: false, kicker: "Concept graph", reading) = {
   let style = (
     t: (fill: white, stroke: 0.5pt + c-muted, corner-radius: 0pt),
     c: (fill: c-violet.lighten(88%), stroke: 1.1pt + c-violet, corner-radius: 2pt),
     m: (fill: c-orange.lighten(88%), stroke: 0.8pt + c-orange, corner-radius: 11pt),
     x: (fill: luma(245), stroke: (paint: c-muted, thickness: 0.6pt, dash: "dashed"), corner-radius: 2pt),
   )
-  block(breakable: false, above: 1em, below: 1.2em, width: 100%)[
-    #text(font: heading-font, size: 9pt, weight: "bold", fill: c-violet)[Concept graph: #title]
+  whole("concept-map", block(breakable: false, above: 1em, below: 1.2em, width: 100%)[
+    #text(font: heading-font, size: 9pt, weight: "bold", fill: c-violet)[#kicker: #title]
     #v(0.2em)
-    #align(center, diagram(
+    #on-paper("concept-map", diagram(
       cell-size: (3.05cm, 1.45cm),
       spacing: 0pt,
       edge-stroke: 0.6pt + c-muted,
@@ -68,16 +81,17 @@
     ))
     #v(0.15em)
     #text(size: 8.5pt)[#if own == true [*The graph's own story:*] else if own == false [*Follows the story:*] #reading]
-  ]
+  ])
 }
 
 // Decision table: at each step, what to ask and which tool to pick. rows: step, question, tool (cite with @sec:...).
-#let framework(title, ..rows) = block(breakable: false, above: 1em, below: 1.2em, width: 100%)[
+// Breaks across pages when it must, repeating its header.
+#let framework(title, ..rows) = block(breakable: true, above: 1em, below: 1.2em, width: 100%)[
   #block(sticky: true, below: 0.5em, text(font: heading-font, size: 9pt, weight: "bold", fill: c-aqua.darken(25%))[Framework: #title])
   #set text(size: 8.5pt)
   #table(
     columns: (0.8fr, 1.1fr, 2.3fr),
-    [*Step*], [*Ask*], [*Choose the tool*],
+    table.header([*Step*], [*Ask*], [*Choose the tool*]),
     ..rows.pos(),
   )
 ]
@@ -86,7 +100,7 @@
 #let story-flow(title, ..texts) = {
   let stages = ([Problem], [Approaches], [Limits + motivation], [Idea], [Assumptions], [Theory], [Summary + ELI5])
   assert(texts.pos().len() == stages.len(), message: "story-flow needs exactly 7 texts, one per stage")
-  block(breakable: false, above: 1em, below: 1.2em, width: 100%)[
+  whole("story-flow", block(breakable: false, above: 1em, below: 1.2em, width: 100%)[
     #text(font: heading-font, size: 9pt, weight: "bold", fill: c-violet)[Story flow: #title]
     #v(0.2em)
     #align(center, diagram(
@@ -108,5 +122,5 @@
       )),
       ..range(stages.len() - 1).map(i => edge(label("s" + str(i)), label("s" + str(i + 1)), "-|>")),
     ))
-  ]
+  ])
 }

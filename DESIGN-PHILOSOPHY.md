@@ -72,11 +72,15 @@ rule: important errors, proofs, and concepts should return later under changed
 cues, not only be reviewed immediately. The 1-week -> 1-month -> 3-month rhythm
 used by some skills is an operational heuristic, not a universal optimal interval.
 
-**A study book is built to be practised, not reread.** `study-book` fixes a
-story-first layout (story → statement → small checked example → connection, with
-a seven-stage story flow whose turn is the limit that forces the next idea). That
-layout is a *house style*, not an evidence claim: no study is cited for the
-specific order or the seven stages. The one evidence-backed commitment it rests on
+**A study book is built to be practised, not reread.** `study-book` gives every
+idea a story, statement, small checked example and connection, with a seven-stage
+story flow whose turn is the limit that forces the next idea. Familiar material is
+laid out map-first; new or weak material is laid out cases-first, with the map as
+a closing summary, because a map read before the comparison answers it. The
+layout is a *house style*, not an evidence claim: no study is cited for either
+order or the seven stages. The book tells its reader this too: its opening states
+the principles, labels the design choices as such, and lists outcomes the reader
+can check alone, promising no exam or admission result. The one evidence-backed commitment it rests on
 is the retrieval point above [12]: each Part is designed to be covered and
 retold, and is "done" when the reader can rebuild it without help, not when it
 has been read. Exercises are deliberately not part of the book; they are handed
@@ -84,8 +88,9 @@ to `concept-exercise-generator`, so the book never doubles as its own test.
 
 **A central idea is carried by two compared cases, not one.** The study book
 teaches each Part's central idea with two worked cases, a prompt for the reader
-to compare them *before* an alignment table, then the principle and the spine
-diagram, and closes the Part with a transfer question that gives no hint. The
+to compare them *before* an alignment table (for new material on an earlier page;
+for familiar material it is only a check on a principle already stated), then the
+principle and the spine diagram, and closes the Part with a transfer question that gives no hint. The
 evidence is *supported* for the combination, not for an order: with one story,
 a stated principle, summary, or diagram barely raised unhinted transfer, while
 two stories raised it from 21% to 45%, and a principle added to two stories
@@ -95,11 +100,17 @@ on their own [45]. That is why the reader, not the author, does the comparing:
 a ready-made table was not what those studies tested. "Close pair first for a
 new reader" rests only on the abstract-level claim that maximizing variability
 is not always the best route to transfer [46], and is a default, not a finding.
-Limits: undergraduates, single sessions, one principle each, mostly immediate
+Limits: students (including high-school students) and negotiation novices, puzzle and
+negotiation tasks rather than mathematics, one principle each, mostly immediate
 tests, and best transfer rates near 50–60%. The book's placement of these
-pieces inside a Part remains house style. A connection between Parts follows
-the same logic: it names correspondences and what does not carry over, because
-an analogy that matches only surface features does not transfer.
+pieces inside a Part, including cases ahead of the principle for new material,
+remains house style. A connection between Parts follows the same logic: it names
+correspondences and what does not carry over, because an analogy that matches
+only surface features does not transfer. Recurring patterns are pointed out only
+after the new principle and collected at the end of the book, so they do not give
+a comparison away; this too is house style. They stay a table in the book rather
+than a separate registry file with a validator, until real books show names
+drifting.
 
 **Variation matters.** Reusing the same prompt can test recognition rather than
 ownership [4]. Variable-cue re-probes ask for transfer, boundary cases,

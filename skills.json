@@ -431,7 +431,7 @@
       "name": "study-book",
       "path": "skills/learning-and-metacognition/study-book",
       "category": "learning-and-metacognition",
-      "description": "Write a story-first Typst study book (story, statement, small checked example, connection; each Part's central idea taught by two worked cases the reader compares, ending with a no-hint transfer question; with spine diagrams, concept graphs, decision tables and seven-stage story flows) for exam or interview revision from a transcript, learning a new topic, or a deep dive into one framework or model; cross-references are labels, unsourced content is marked, and exercises are handed off to concept-exercise-generator."
+      "description": "Write a story-first Typst study book (each Part's central idea taught by two worked cases the reader compares, placed before the principle and Part summary for new or weak material; a no-hint transfer question; recurring patterns collected at the end; with spine diagrams, concept graphs, decision tables and seven-stage story flows) for exam or interview revision from a transcript, learning a new topic, or a deep dive into one framework or model; cross-references are labels, unsourced content is marked, and exercises are handed off to concept-exercise-generator."
     },
     {
       "name": "gap-finder",
