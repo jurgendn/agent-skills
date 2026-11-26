@@ -23,11 +23,11 @@ A durable book the reader studies from, built so that a second question ("why?",
 Ask only what the sources do not already answer:
 
 1. **Mode and goal.** *Exam* (what exam or interview, target programme or panel, language), *topic* (what to learn and what for), or *deep dive* (which framework, model or method, and which version).
-2. **Reader.** What they already know well; this is what the *connection* step links to. In exam mode: degree, institution, grading scale.
+2. **Reader.** What they already know well (this is what the *connection* step links to) and the book's default style, Foundation or Depth (§2), with any Part that should differ. In exam mode: degree, institution, grading scale.
 3. **Sources.** Exam: transcript with grades, syllabi or lecture notes, thesis if it will be examined. Topic: papers, textbook chapters, lecture notes. Deep dive: the paper, official docs, or repository, at a pinned version.
 4. **Scope and output.** What to include or skip; target directory.
 
-Defaults if unstated: English; exam mode treats grades below B as weak; output in `study-book/` of the current project.
+Defaults if unstated: English; style as in §2; exam mode treats grades below B as weak; output in `study-book/` of the current project.
 
 ## 2. Mode table
 
@@ -36,14 +36,33 @@ Every mode builds Parts from the same pieces (§8). What changes:
 | | Exam | Topic | Deep dive |
 |---|---|---|---|
 | A Part is | one subject (may group several courses) | one subtopic | one component or stage of the system |
-| Part order (§8) | *map-first* for familiar subjects; *cases-first* for weak or unfamiliar ones | cases-first | cases-first, opening with the question the component answers; map-first for a component the reader already knows |
+| Default style (below) | Depth | Foundation | Foundation |
 | Grounded in | syllabus, notes, thesis | the source list | paper, official docs, source at the pinned version |
 | Connection points to | another course, the thesis | another Part, the reader's prior knowledge | another Part, the reader's prior knowledge, rival designs |
-| The two compared cases (§8) | **close** if cases-first; may be far apart if map-first | **close**: same kind of object, alike on the surface | as exam; rival designs must do the same job under comparable conditions |
+| The two compared cases (§8) | **close** (same kind of object, alike on the surface) if cases-first; may be far apart if map-first | as exam | as exam; rival designs must do the same job under comparable conditions |
 | The transfer question | far: different surface, no hint | far: different surface, no hint | far: a system or setting the Part never mentions |
 | Closing questions | `#ask[...]`: likely examiner questions | `#ask(title: "Self-test questions")[...]` | same as topic |
-| Weighting | weak grades: more examples and questions; strong grades: more depth | load-bearing ideas get depth | the parts the reader will modify or debug get depth |
+| Weighting | weak grades: more examples and questions; strong grades: depth goes to proof ideas, edge cases and failure modes | load-bearing ideas get depth | the parts the reader will modify or debug get depth |
 | Extra closing Parts | Gaps, Strategy (§4) | none | none |
+
+### Part style
+
+Each content Part is **Foundation** (new or weak material) or **Depth** (a solid background to build on). The style is the only switch for the Part's order (§8), figures (§7) and section content.
+
+| | Foundation | Depth |
+|---|---|---|
+| Order | cases-first; a deep-dive component opens with the question it answers | map-first |
+| Figures | drawn by default for a shape, quantity, process or structure | only for what the prose and example do not show |
+| Sections | plain explanation, worked example, link to the section before | also proofs, why each assumption is needed, a counterexample, real trade-offs |
+
+Choose it per Part; the first rule that applies wins:
+
+1. The reader's explicit choice for that Part.
+2. The reader's current assessment of it: "new to me" means Foundation; "I know this" means Depth.
+3. A weak transcript grade: Foundation.
+4. The default: Depth for the reader's own thesis or project; for any other Part the book default the reader set, otherwise the mode's row above.
+
+The *Weighting* row sets page budget only: a load-bearing idea or a component the reader will modify does not become Depth because of it.
 
 ## 3. Grounding: never invent
 
@@ -59,9 +78,9 @@ Every mode builds Parts from the same pieces (§8). What changes:
 - **Exam mode only**, two closing Parts:
   - **Gaps**: short primers for topics the target programme expects but the transcript lacks, each with *why it is expected* (citing the live programme page) and a priority.
   - **Strategy**: the recurring patterns table (§8); how to handle weak grades honestly (one sentence of context, then demonstrate the knowledge, then point to later evidence of growth); the four-step answer (intuition, statement, small example, connection; if memory fails, rebuild aloud from the story); a final checklist.
-- **Choose each Part's order.** A subject is familiar only if nothing marks it as weak or new: in exam mode, a grade below the weak threshold or the reader saying it is unfamiliar makes it cases-first.
+- **Choose each Part's style** by the rules in §2.
 - **Find the recurring patterns.** A pattern is a method, relation or operation that appears in at least two Parts, where you can name the correspondences and a result or procedure from one tells you something checkable about the other. For each Part note *introduces X*, *reuses X*, or none. Do not force one: similar notation is not a pattern.
-- Show the plan as a table (Part, title, needs, after it you can, order, pattern, sources, planned sections), with the book's 3–5 overall outcomes under it, and wait for confirmation.
+- Show the plan as a table (Part, title, needs, after it you can, style, pattern, sources, planned sections), with the book's 3–5 overall outcomes under it, and wait for confirmation.
 
 ## 5. Project layout and build
 
@@ -80,7 +99,14 @@ Every mode builds Parts from the same pieces (§8). What changes:
 
 **If `lib/` already exists, never overwrite it.** Older books use an earlier API (`course()`, `course-story`, `story-flow` with a section base, string section numbers); swapping in the bundled lib breaks every existing Part. Read the existing `helpers.typ` and write new Parts against its API; migrate to the bundled lib only if the user agrees.
 
-Build: first regenerate figures, `for f in figures/[0-9]*.py; do python3 "$f"; done` (needs `plotly` and `kaleido`; without a local install, `uv run --with plotly --with kaleido --with numpy python3 "$f"`; kaleido 1.x drives a local Chrome), then `typst compile --root . study-book/main.typ study-book.pdf`. `--root .` is required because imports are root-relative (`/lib/helpers.typ`). Tested with Typst 0.15.1; `@preview/fletcher:0.5.8` downloads on first build. The heading fonts are macOS fonts; elsewhere Typst falls back with a warning, which is harmless.
+Build from the project root with one command, so Typst runs only after every figure has regenerated (otherwise it can compile a stale SVG from an earlier build):
+
+```bash
+sh -ec 'for f in figures/[0-9]*.py; do [ -e "$f" ] || continue; python3 "$f"; done' &&
+  typst compile --root . study-book/main.typ study-book.pdf
+```
+
+Figures need `plotly` and `kaleido`; without a local install, replace `python3` with `uv run --with plotly --with kaleido --with numpy python3`. Kaleido 1.x drives a local Chrome. `--root .` is required because imports are root-relative (`/lib/helpers.typ`). Tested with Typst 0.15.1; `@preview/fletcher:0.5.8` downloads on first build. The heading fonts are macOS fonts; elsewhere Typst falls back with a warning, which is harmless.
 
 ## 6. The Typst API (use these, do not redefine them)
 
@@ -99,7 +125,7 @@ Every Part file starts with `#import "/lib/helpers.typ": *`, which re-exports `t
 | `#idea[...]` | "The story" at the start of each section. |
 | `#ex[...]`, `#ex(title: "...")[...]` | Worked example. |
 | `#ask[...]`, `#ask(title: "Self-test questions")[...]` | Closing questions of a Part. |
-| `#box-note("Title")[...]` | Neutral box: overview, source facts, unverified-scope notice, "Compare before reading on" or "Check the principle against two cases", "Seen before". |
+| `#box-note("Title")[...]` | Neutral box: overview, source facts, unverified-scope notice, "Compare before reading on" or "Check the principle against two cases", "Predict before reading on" (§9), "Seen before". |
 | `#story(title: "...")[...]`, `#takeaway[...]`, `#pitfall[...]`, `#eli5[...]`, `#defn("Term")[...]`, `#derivation(title: "...")[...]` | General boxes. |
 | `#fig(image("/figures/NN-slug-name.svg", width: 80%), [caption])` | Figure (Plotly SVG, §7). Pass `image(...)` with a root-absolute path, not a path string. |
 | `#part[Label]` | Divider inside one long section. |
@@ -115,9 +141,12 @@ Colours: `c-blue c-orange c-aqua c-yellow c-violet c-red c-ink c-muted`; mark we
 Figures, charts and diagrams are drawn with **Plotly** by default (a function plot, vectors in the plane, a loss curve, a probability density, an attention heat map, a geometric picture, the Part's spine diagram), exported as SVG and embedded with `#fig`. **Two exceptions stay in Typst**: the `concept-map` and `story-flow` helpers, because their boxes carry live `@sec:` references, and any tiny inline flow of two or three boxes inside prose (fletcher's `diagram`/`node`/`edge`, which `helpers.typ` already imports).
 
 - Each figure script starts `from book_style import go, save, ROLE, DASH, label_ends` and ends `save(fig, "NN-slug-name")`. `book_style` sets the book's palette and fonts and a fixed export size, so all figures look the same; do not restyle per figure.
-- **Plot computed values, never hand-placed shapes** (the spine diagram below is the one exception: its geometry is conceptual). The script computes what it draws (eigenvectors, densities, iterates) with `numpy`, so the figure is checked the same way as a worked example. Fix random seeds.
+- **Plot computed values, never hand-placed shapes** (the exceptions are the spine diagram below and process or structure figures, drawn with its `diagram()`: their geometry is conceptual). The script computes what it draws (eigenvectors, densities, iterates) with `numpy`, so the figure is checked the same way as a worked example. Fix random seeds.
 - No Plotly title: the Typst caption carries it. Axis titles in words plus units or symbols.
-- One figure answers one question from the section's story; skip it if the prose and the worked example already show it.
+- One figure answers one question from the section's story. Whether to draw it depends on the Part's style (§2):
+  - **Foundation**: a section about a shape, a quantity, a process or a structure gets a figure; leaving it out needs a reason in the final report (§10). It counts only if you can say what the figure shows that the reader would otherwise have to picture: a curve, a geometric relation, values changing, steps in order, parts and their connections. A section that only names or defines things does not count and needs no reason.
+  - **Depth**: only what the prose and worked example do not show, such as a boundary, a failure or a comparison of methods.
+  - Both: no quota and nothing decorative; a section with nothing to show gets no figure. The caption, compare-box (§8) and transfer-question rules still apply.
 
 **Colour is a role, not an order.** Use `ROLE[...]`, never hex codes or Plotly's default cycle. Only `main` (blue), `second` (orange) and `third` (aqua) are data-series colours: they are the only three of the palette that stay apart for colour-blind readers (red and orange, violet and blue do not, even for normal vision). Give each series its matching dash, `DASH[...]`, so lines stay apart in grayscale print. A fourth series goes to small multiples, never a new colour. `breaks` (red) is only for where an idea fails, always with a text label; `context` (grey) is only for the true solution, reference lines and baselines; `highlight` (violet) marks the one point or region the caption is about, never a series. The same role keeps the same colour in every Part.
 
@@ -158,6 +187,7 @@ Figures, charts and diagrams are drawn with **Plotly** by default (a function pl
 | How does training go? | train and test loss against steps, log y if it spans orders of magnitude |
 | *Conceptual* | |
 | What is the Part for? | the spine diagram (below) |
+| What are the steps, or how are the parts connected? | boxes and arrows with `diagram()` |
 | How do the terms depend on each other? | the concept map (Typst) |
 | A single number, or a few exact values | no chart: prose or a table |
 
@@ -173,7 +203,7 @@ Never put two y-axes on one plot: two quantities with different units get two pa
 - Heat maps: a colour bar, because colour is a scale there, not an identity.
 - Label text is always in ink, never in the series colour. Name every trace anyway; Plotly otherwise prints "trace 0".
 
-**Annotate what the caption asks about**: one or two arrows with short text at the point that answers the question (a slope, a floor, a crossing), arrows in `context` grey. **The caption states the answer, not only the subject**: "The cos iteration's error falls along a near-straight line (linear rate); the √2 iteration's error bends down (faster than linear)", not "Error against step". Claim no more than the picture shows.
+**Annotate what the caption asks about**: one or two arrows with short text at the point that answers the question (a slope, a floor, a crossing), arrows in `context` grey. **The caption states the answer, not only the subject**: "The cos iteration's error falls along a near-straight line (linear rate); the √2 iteration's error bends down (faster than linear)", not "Error against step". Claim no more than the picture shows. **Exception:** when the figure is what the reader has to judge in a "Predict before reading on" box (§9), the caption names what is plotted and asks the question, no annotation gives the verdict away, and the interpretation follows in the text.
 
 **The two compared cases (§8) get one figure when they can be drawn**: same axes, same scale, same role colours, so the alignment shows at a glance; it sits next to the alignment table. **The transfer question gets no figure**, or one in a deliberately different form, because a familiar figure is a hint. Reference case, the pair from §8:
 
@@ -266,6 +296,7 @@ Use HTML for labels (`<sub>`, `<i>`, `<br>`), not Unicode subscripts, which the 
   corresponds and one thing that differs, then read on. The Part's summary is at its end.
 + Where a Part opens with its summary, read it, then come back later and rebuild it from memory. At
   "Check the principle against two cases", find the principle in both before reading the table.
++ At "Predict before reading on", commit to an answer, with your reason, before reading further.
 + Try each Part's last question first. Turn to the hint only if stuck, then check yourself against
   "You have it if".
 + Practise, don't reread: cover the right column of each story flow and retell the seven stages,
@@ -287,8 +318,8 @@ Use HTML for labels (`<sub>`, `<i>`, `<br>`), not Unicode subscripts, which the 
 - *Memory is the test.* Rereading feels like knowing; retelling without the page shows whether you do.
 - *Gaps are marked.* "Unverified scope" means no supplied source backs that content: check it.
 
-Everything else here (reason first, the loop, page order, boxes, the seven-stage story flow) is a design
-choice, not a research finding.
+Everything else here (reason first, the loop, the Foundation and Depth styles, page order, boxes, the
+seven-stage story flow) is a design choice, not a research finding.
 
 == Learning map <sec:map>
 #concept-map([order of the Parts], kicker: "Learning map",
@@ -314,7 +345,7 @@ choice, not a research finding.
 
 **The Overview is the reader's way in** (Part 0, a support Part), in the order above. Fill it for this book:
 
-- **How to read**: describe only what the book contains (drop the two-case steps if every Part is map-first).
+- **How to read**: describe only what the book contains (if every Part is map-first, drop only the cases-first step; keep the one on checking a stated principle against both cases).
 - **Why it is built this way**: half a page at most, in the reader's words, only about what the book contains. State research support no more strongly than `references/teaching-philosophy.md` does, and say what is only a design choice.
 - **Learning map**: every content Part once, with an arrow for each prerequisite from the plan; the table gives each Part's own outcome. Past about 10 Parts, draw one map per group. Each *Needs* cell matches that Part's *Before you start* line, where it has one.
 - **What you will be able to do**: 3–5 abilities for the whole book, adapted to the reader's goal, each with a check they can run alone. Use observable verbs (explain, compute, choose, predict, design), not "understand". Promise only what the Parts' examples and questions practise, never an exam or admission result. An outcome names the task, not the method that solves it: "estimate a rate from a table of nearby values", not "take the limit of the difference quotient".
@@ -326,18 +357,18 @@ Every content Part is built from these blocks:
 - **Title**: `= Title <part:slug>` (exam mode: grades in the title, e.g. `= Calculus (C+ / B+)`).
 - **Map**: `#part-story` (the one idea the Part grows from, how its topics follow, a one-liner to say aloud), `#concept-map`, `#framework` (5–8 rows of step → question → tool, citing `@sec:...`) and the Part's `#story-flow`.
 - **Central idea**, by comparison: the first `== Section <sec:slug>` (below).
-- **Further sections**: 4–9 `== Section <sec:slug>`, each `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
-- **Questions**: `#ask` for the whole Part. Its **last question is a transfer question**: a fresh case that looks different from everything in the Part (§2), worded without naming the Part, its idea or its terms.
+- **Further sections**: 4–9 `== Section <sec:slug>`, each `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`. By style (§2): Foundation explains plainly and says how the section follows from the one before; Depth adds proofs (`#derivation`), why each assumption is needed, a counterexample, and trade-offs, each only where the section really has one and it can be checked or sourced (§3); never invent one to fill the slot. For a system component these are its preconditions and failure cases from the cited source, not mathematical proofs.
+- **Questions**: `#ask` for the whole Part. No question repeats one that a worked example or problem already answered; change what the reader has to decide, not only the numbers. Its **last question is a transfer question**: a fresh case that looks different from everything in the Part (§2), worded without naming the Part, its idea or its terms.
 - **Hint and check**: last in the Part, each on its own page: `#pagebreak()`, `_Hint (read after trying): ..._`, then `#pagebreak()`, `_You have it if: ..._` giving the answer and what a correct solution must say, followed by `_If you missed this, which correspondence or condition did you overlook?_` The Part must therefore state the conditions under which its principle holds.
 
-The order depends on whether the reader has met the material (§2):
+The Part's style (§2) sets the order:
 
 | | Order |
 |---|---|
-| **Cases-first** (new or weak) | title → *Before you start* line → central idea → further sections → `== Putting it together <sec:slug-summary>` holding the map → questions → hint → check |
-| **Map-first** (familiar) | title → map → central idea → further sections → questions → hint → check |
+| **Cases-first** (Foundation) | title → *Before you start* line → central idea → further sections → `== Putting it together <sec:slug-summary>` holding the map → questions → hint → check |
+| **Map-first** (Depth) | title → map → central idea → further sections → questions → hint → check |
 
-In a cases-first Part nothing printed before the "Compare before reading on" box states the principle: not the Part or section title (word the section title as the question), the *Before you start* line, `#idea`, or a figure caption. The *Before you start* line (`*Before you start:* ...`) is one sentence naming what the reader needs to know already, never the idea.
+In a cases-first Part nothing printed before the "Compare before reading on" box states the principle: not the Part or section title (word the section title as the question), the *Before you start* line, `#idea`, or a figure caption, and no figure before that box draws what the two cases share. The *Before you start* line (`*Before you start:* ...`) is one sentence naming what the reader needs to know already, never the idea.
 
 **The central-idea section**, in this order:
 
@@ -371,7 +402,7 @@ Example of steps 2–4 for a cases-first Part on fixed-point iteration (so the p
   [does not carry over], [$e_(t+1) = e_t^2 \/ (2 x_t)$], [near $x^*$, error shrinks by about 0.67 a step])
 ```
 
-The reader's own thesis or project Part is map-first (they know it), built from their document only, plus a first-person section on their contribution and a "two-minute summary".
+The reader's own thesis or project Part defaults to Depth, since they know it (§2 can override), and is built from their document only, plus a first-person section on their contribution and a "two-minute summary".
 
 ## 9. Writing rules
 
@@ -382,12 +413,13 @@ The voice and the eleven principles are in `references/teaching-philosophy.md`. 
 - **A connection is a mapping, not a label.** Name at least two correspondences (this Part's *x* is that Part's *y*) and one thing that does not carry over. "This is like X" alone is not a connection.
 - **The reader does the comparing.** The prompt box always comes before the alignment table, and in a cases-first Part on an earlier page; a table the reader only reads is weaker than one they first try to fill.
 - **Keep an analogy only if a relation carries over**, not only a resemblance, and say where it stops holding.
-- Worked examples use small numbers and are **recomputed with `python3 -c`**, not by eye.
+- Worked examples use small numbers and are **recomputed with `python3 -c`**, not by eye. A worked problem states every value its answer depends on.
+- **Let the reader commit before the answer.** Where they already have what they need to predict a result, choose a method or reject an assumption, put `#box-note("Predict before reading on")[...]` there, in either style. It names the decision ("which input voltage sets the minimum inductance?"), never only "think first". The text that follows answers it and names one plausible wrong answer and what it should send the reader back to. No quota, and no forced page break, so the answer may sit just below. It does not replace the compare box, and before that box it must not give the principle away (§8).
 - Deep-dive examples are small numerical traces done by hand (two tokens through attention, one step of an optimiser), not code listings, unless the user asks for code.
 - **Say where the new idea breaks.** The story flow's stage 3 covers the limits of the *old* approach; every central method also gets a `#pitfall` with its own failure modes and any trade-off it really carries (do not invent one to fill the slot). Required in deep-dive mode and for strong grades in exam mode.
 - **An honest turn.** If the limit only *motivates* the idea rather than forcing it, name the extra assumption that makes the idea follow, and state it in stage 5 (Assumptions). "So we must use X" is allowed only when nothing else would fix the limit.
 - **Each displayed equation answers a named question**: what is optimised, bounded, approximated, or traded off. Definitions and intermediate derivation steps stay when the argument needs them; an equation that does neither is cut.
-- **Check each guarantee, not only the numbers**: its assumptions hold in the example, and a boundary or counterexample case shows what fails without them. A successful run is evidence for that run only; keep a local rate apart from a guarantee over a whole region.
+- **Check each guarantee, not only the numbers**: its assumptions hold in the example, and a boundary or counterexample case shows what fails without them. A successful run is evidence for that run only; keep a local rate apart from a guarantee over a whole region. Tie each assumption to the step that uses it and drop one that no step uses, rather than checking it. When the two compared cases need different assumptions, say so in the *does not carry over* row (§8).
 - **Label how settled a claim is** where it is not textbook-standard: established, the standard account but contested, or uncertain. Never smooth a contested point into a clean story.
 
 ## 10. Build in batches and verify before reporting
@@ -405,7 +437,7 @@ Then write Overview + the first 2–3 Parts, compile, and continue 3–4 Parts a
 1. The build finishes with zero errors. A missing label, a story flow without exactly seven texts, a story flow or concept map taller than a page, and a concept map wider than the paper, are errors (an older book's helpers may cut such content off silently, §11).
 2. Render each framework, story-flow, concept-graph, spine-diagram and figure page (`pdftoppm -r 70 -png -f P -l P`) and look at it: no missing rows or stages, nothing spilling into the margins, no figure shrunk too small to read, no overlapping boxes, no arrows crossing boxes, figure text readable, no "trace 0" legends, labels beside the lines they name. Render figure pages once more in grayscale (`pdftoppm -gray`): every series must still be told apart.
 3. Run the end-of-Part checklist in `references/teaching-philosophy.md`. For each cases-first Part, read the rendered pages in order: nothing before the "Compare before reading on" box gives the principle away, its table starts on a later page, and the hint and the check each have their own page.
-4. Report: the Part list with each Part's order, whether any pattern recurs, Parts marked unverified scope, facts about the reader's work you could not confirm, and the version and sources used in deep-dive mode.
+4. Report: the Part list with each Part's style, any Foundation section left without a figure for a shape, quantity, process or structure (with the reason), whether any pattern recurs, Parts marked unverified scope, facts about the reader's work you could not confirm, and the version and sources used in deep-dive mode.
 5. Offer the study-time next steps (the book's job ends where practice begins):
    - **Exercises** → `concept-exercise-generator`, one set per Part, passing this format as the brief: four tiers (1 define and identify; 2 run the method on a small case; 3 explain why, when it fails, what to choose; 4 derive, prove, design); every exercise with a model answer, a "you've got it if" check, and the "common wrong turn" it is designed to catch; one tier-3 exercise asks the reader to state, in their own words, the principle the Part's two compared cases share; the last exercise of each Part is the story-flow drill (retell the seven stages from memory).
    - **Done-check per Part** → `naive-student`: the reader teaches the Part's story flow from memory to an honest novice.
@@ -414,7 +446,7 @@ Then write Overview + the first 2–3 Parts, compile, and continue 3–4 Parts a
 
 ## 11. Adding a Part later
 
-Keep the book's existing `lib/` (§5). Write `parts/NN-slug.typ`, add its `#include` in order, rebuild. Choose the new Part's order by §2; leave existing Parts as they are unless the user asks. Add it to the learning map and its table if the Overview has them; do not restructure an older Overview unasked. If it reuses a pattern, add the "Seen before" box and update the book's patterns table (or an older book's connection map); do not create a table in a book that has neither unless the user wants one. If the book predates labels (hand-typed `§N.M`), ask before converting it; otherwise follow its numbering and check the references after it. In a labelled book, every reference renumbers itself. Renaming later part files to keep "file number = Part number" is cosmetic; do it only if the user wants it.
+Keep the book's existing `lib/` (§5). Write `parts/NN-slug.typ`, add its `#include` in order, rebuild. Choose the new Part's style by §2; do not restyle existing Parts unless the user asks. Add it to the learning map and its table if the Overview has them; do not restructure an older Overview unasked. If it reuses a pattern, add the "Seen before" box and update the book's patterns table (or an older book's connection map); do not create a table in a book that has neither unless the user wants one. If the book predates labels (hand-typed `§N.M`), ask before converting it; otherwise follow its numbering and check the references after it. In a labelled book, every reference renumbers itself. Renaming later part files to keep "file number = Part number" is cosmetic; do it only if the user wants it.
 
 **Overflow protection for an older book (offer it, add it only if the user agrees).** Helpers copied from an earlier version cut off a block that is taller than a page and still build. This rule in `main.typ`, above the first `#include`, makes the build fail instead and leaves `lib/` untouched:
 

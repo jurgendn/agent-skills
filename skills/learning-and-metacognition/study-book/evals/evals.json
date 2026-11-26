@@ -4,7 +4,7 @@
     {
       "id": 1,
       "prompt": "Here is my transcript (BSc Applied Mathematics, Hanoi). I have the APS interview in three weeks. Make me a revision book of my courses so I can explain them to the panel.",
-      "expected_output": "Exam mode. One intake batch, then a Part plan table (subjects grouping courses, weak grades marked, each Part's order and recurring pattern, thesis Part, then Gaps and Strategy) awaiting confirmation. Weak subjects are cases-first, familiar ones map-first; the recurring patterns table sits in Strategy. Parts built only from course names are flagged as unverified scope; APS format and language are looked up live or marked link needed, never asserted."
+      "expected_output": "Exam mode. One intake batch, then a Part plan table (subjects grouping courses, weak grades marked, each Part's style (Foundation cases-first, Depth map-first) and recurring pattern, thesis Part, then Gaps and Strategy) awaiting confirmation. Weak subjects are cases-first, familiar ones map-first; the recurring patterns table sits in Strategy. Parts built only from course names are flagged as unverified scope; APS format and language are looked up live or marked link needed, never asserted."
     },
     {
       "id": 2,
@@ -29,12 +29,17 @@
     {
       "id": 6,
       "prompt": "I'm new to derivatives. I know functions, rates and limits. Write me a study book Part on the derivative.",
-      "expected_output": "Topic mode, cases-first. In the printed order: title, a Before-you-start line, the question, two close worked cases, Compare before reading on, alignment table, then the principle. Nothing before the compare box (headings, Overview, captions) states the principle; the map appears at the end under Putting it together; the transfer question names no concept; the alignment table starts on a page after the compare box; the hint and a You-have-it-if check each have their own page; no recurring pattern is invented for a single Part."
+      "expected_output": "Topic mode, cases-first. In the printed order: title, a Before-you-start line, the question, two close worked cases, Compare before reading on, alignment table, then the principle. Nothing before the compare box (headings, Overview, captions) states the principle; the map appears at the end under Putting it together; the transfer question names no concept; the alignment table starts on a page after the compare box; the hint and a You-have-it-if check each have their own page; no recurring pattern is invented for a single Part. Where the reader can already predict a result, a Predict-before-reading-on box names the decision before the answer, the answer says what a plausible wrong guess should send them back to, no generic think-first prompt appears, and no closing question repeats a worked example."
     },
     {
       "id": 7,
       "prompt": "Revision book for my oral exam: Linear Algebra (grade A, I know it well) and Measure Theory (grade C, shaky). Lecture notes attached.",
       "expected_output": "Exam mode. The plan marks Linear Algebra map-first and Measure Theory cases-first. A pattern is listed only if it appears in both with nameable correspondences; if so the reusing Part has a Seen-before box after its principle and Strategy holds the patterns table."
+    },
+    {
+      "id": 8,
+      "prompt": "Study book on optimisation from the attached notes. Make it Depth by default; I know convex analysis well, but stochastic methods are new to me.",
+      "expected_output": "Topic mode. The plan table shows a style per Part: Depth everywhere by the stated default, except the stochastic-methods Parts, which their signal makes Foundation. Foundation Parts are cases-first with figures for shape, quantity, process and structure sections and no filler; Depth Parts are map-first with proofs, why each assumption is needed, and counterexamples; every content Part ends with a transfer question with no figure that gives away the method (none, or one in a deliberately different form)."
     }
   ]
 }

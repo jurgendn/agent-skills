@@ -74,16 +74,23 @@ used by some skills is an operational heuristic, not a universal optimal interva
 
 **A study book is built to be practised, not reread.** `study-book` gives every
 idea a story, statement, small checked example and connection, with a seven-stage
-story flow whose turn is the limit that forces the next idea. Familiar material is
-laid out map-first; new or weak material is laid out cases-first, with the map as
-a closing summary, because a map read before the comparison answers it. The
-layout is a *house style*, not an evidence claim: no study is cited for either
-order or the seven stages. The book tells its reader this too: its opening states
+story flow whose turn is the limit that forces the next idea. Each Part has one
+style. Depth (familiar material) is laid out map-first; Foundation (new or weak
+material) is laid out cases-first, with the map as a closing summary, because a
+map read before the comparison answers it. Style also sets how readily figures are
+drawn and how deep sections go, so one book can serve a reader who is new to some
+Parts and solid in others without a second switch. The layout and the two styles
+are a *house style*, not an evidence claim: no study is cited for either order or
+the seven stages, and expertise reversal (Kalyuga et al. 2003, abstract only
+read) motivates the split without testing it. The book tells its reader this too: its opening states
 the principles, labels the design choices as such, and lists outcomes the reader
 can check alone, promising no exam or admission result. The one evidence-backed commitment it rests on
 is the retrieval point above [12]: each Part is designed to be covered and
 retold, and is "done" when the reader can rebuild it without help, not when it
-has been read. Exercises are deliberately not part of the book; they are handed
+has been read. Where the reader can already predict, choose or
+reject something, the book asks them to commit before it answers, and a figure
+they must judge does not carry the verdict in its caption; this is also a house
+style. Exercises are deliberately not part of the book; they are handed
 to `concept-exercise-generator`, so the book never doubles as its own test.
 
 **A central idea is carried by two compared cases, not one.** The study book
