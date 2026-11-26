@@ -90,7 +90,9 @@ retold, and is "done" when the reader can rebuild it without help, not when it
 has been read. Where the reader can already predict, choose or
 reject something, the book asks them to commit before it answers, and a figure
 they must judge does not carry the verdict in its caption; this is also a house
-style. Exercises are deliberately not part of the book; they are handed
+style. A summary or answer claims no more than the
+worked material it restates, in every Part. Exercises are deliberately not part
+of the book; they are handed
 to `concept-exercise-generator`, so the book never doubles as its own test.
 
 **A central idea is carried by two compared cases, not one.** The study book
