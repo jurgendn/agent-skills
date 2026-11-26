@@ -108,7 +108,11 @@ remains house style. A connection between Parts follows the same logic: it names
 correspondences and what does not carry over, because an analogy that matches
 only surface features does not transfer. Recurring patterns are pointed out only
 after the new principle and collected at the end of the book, so they do not give
-a comparison away; this too is house style. They stay a table in the book rather
+a comparison away; this too is house style. So is the loop the book shows its
+reader (compare, name what is shared, say when it holds, try it somewhere new,
+revise on failure): the cited studies do not establish each step. A missed
+transfer question therefore asks which correspondence or condition was
+overlooked. They stay a table in the book rather
 than a separate registry file with a validator, until real books show names
 drifting.
 

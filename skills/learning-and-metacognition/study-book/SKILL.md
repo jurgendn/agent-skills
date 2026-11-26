@@ -282,11 +282,13 @@ Use HTML for labels (`<sub>`, `<i>`, `<br>`), not Unicode subscripts, which the 
   did (Gick & Holyoak, 1983), and comparing two examples helped more than studying them separately
   (Gentner, Loewenstein & Thompson, 2003). Neither used mathematics or study books, and many people
   still did not succeed, so a missed transfer question shows what to revisit.
+- *An idea is built in a loop.* Compare cases, name what they share, say when it holds, try it
+  somewhere new, and revise it if it fails.
 - *Memory is the test.* Rereading feels like knowing; retelling without the page shows whether you do.
 - *Gaps are marked.* "Unverified scope" means no supplied source backs that content: check it.
 
-Everything else here (reason first, page order, boxes, the seven-stage story flow) is a design choice,
-not a research finding.
+Everything else here (reason first, the loop, page order, boxes, the seven-stage story flow) is a design
+choice, not a research finding.
 
 == Learning map <sec:map>
 #concept-map([order of the Parts], kicker: "Learning map",
@@ -326,7 +328,7 @@ Every content Part is built from these blocks:
 - **Central idea**, by comparison: the first `== Section <sec:slug>` (below).
 - **Further sections**: 4–9 `== Section <sec:slug>`, each `#idea`, then definitions / theorems / interfaces, then one `#ex` with small numbers. Central concepts open their section with their own `#story-flow`.
 - **Questions**: `#ask` for the whole Part. Its **last question is a transfer question**: a fresh case that looks different from everything in the Part (§2), worded without naming the Part, its idea or its terms.
-- **Hint and check**: last in the Part, each on its own page: `#pagebreak()`, `_Hint (read after trying): ..._`, then `#pagebreak()`, `_You have it if: ..._` giving the answer and what a correct solution must say.
+- **Hint and check**: last in the Part, each on its own page: `#pagebreak()`, `_Hint (read after trying): ..._`, then `#pagebreak()`, `_You have it if: ..._` giving the answer and what a correct solution must say, followed by `_If you missed this, which correspondence or condition did you overlook?_` The Part must therefore state the conditions under which its principle holds.
 
 The order depends on whether the reader has met the material (§2):
 
