@@ -8,6 +8,8 @@ Use in each figure script (figures/NN-slug.py, one script per Part):
 
 Then in the Part: #fig(image("/figures/02-svd-singular-values.svg"), [caption])
 """
+import math
+from numbers import Real
 from pathlib import Path
 
 import plotly.graph_objects as go
@@ -57,21 +59,35 @@ def save(fig, name, width=None, height=None):
 
 def label_ends(fig, at=None):
     """Label each named line trace in ink next to its last point (or the point nearest x = at),
-    and hide the legend. Use when 2–3 lines are apart at that x (SKILL.md §7, labelling)."""
-    import math
+    and hide the legend. Use when 2–3 lines are apart at that x (SKILL.md §7, labelling).
 
-    def axis(ref, kind):  # "x2" -> layout.xaxis2
-        return fig.layout[kind + "axis" + ref[1:]]
+    Missing, non-finite and (on a log axis) non-positive points are skipped. If a named line has no
+    usable point, nothing is labelled and the legend stays."""
+    def is_log(ref, kind):  # "x2" -> layout.xaxis2
+        return fig.layout[kind + "axis" + ref[1:]].type == "log"
 
+    def usable(v, log):
+        if v is None or (isinstance(v, Real) and not math.isfinite(v)):
+            return False
+        return not log or v > 0
+
+    labels = []
     for tr in fig.data:
-        if tr.name and tr.x is not None and len(tr.x):
-            i = len(tr.x) - 1 if at is None else min(range(len(tr.x)), key=lambda j: abs(tr.x[j] - at))
-            x, y = tr.x[i], tr.y[i]  # annotations on a log axis take log10 positions
-            if axis(tr.xaxis or "x", "x").type == "log": x = math.log10(x)
-            if axis(tr.yaxis or "y", "y").type == "log": y = math.log10(y)
-            fig.add_annotation(x=x, y=y, text=tr.name, showarrow=False, xanchor="left",
-                               xshift=6, font=dict(color=INK, size=14),
-                               xref=tr.xaxis or "x", yref=tr.yaxis or "y")
+        if not (tr.name and tr.x is not None and tr.y is not None and len(tr.x)):
+            continue
+        xref, yref = tr.xaxis or "x", tr.yaxis or "y"
+        logx, logy = is_log(xref, "x"), is_log(yref, "y")
+        points = [(x, y) for x, y in zip(tr.x, tr.y) if usable(x, logx) and usable(y, logy)]
+        if not points:
+            fig.update_layout(showlegend=True)
+            return fig
+        x, y = points[-1] if at is None else min(points, key=lambda p: abs(p[0] - at))
+        # annotations on a log axis take log10 positions
+        labels.append(dict(x=math.log10(x) if logx else x, y=math.log10(y) if logy else y,
+                           text=tr.name, xref=xref, yref=yref))
+    for label in labels:
+        fig.add_annotation(**label, showarrow=False, xanchor="left", xshift=6,
+                           font=dict(color=INK, size=14))
     fig.update_layout(showlegend=False, margin=dict(r=40))
     return fig
 
@@ -88,6 +104,17 @@ def diagram(nodes, edges, pad=(1.6, 0.5), width=640):
     Height follows the layout; save(fig, name) picks the size up.
     """
     import re
+
+    if not nodes:
+        raise ValueError("diagram: no nodes")
+    for k, (x, y, _) in nodes.items():
+        if not (math.isfinite(x) and math.isfinite(y)):
+            raise ValueError(f"diagram: node {k!r} has a non-finite coordinate")
+    for a, b, *_ in edges:
+        if a not in nodes or b not in nodes:
+            raise ValueError(f"diagram: edge {a!r} -> {b!r} names an unknown node")
+        if tuple(nodes[a][:2]) == tuple(nodes[b][:2]):
+            raise ValueError(f"diagram: edge {a!r} -> {b!r} starts and ends at one point")
 
     def text_px(label, char=7.2, line=20.0):  # rough extent of a 16 px serif label
         lines = re.sub(r"<(?!br)[^>]+>", "", label).split("<br>")
@@ -145,3 +172,29 @@ def diagram(nodes, edges, pad=(1.6, 0.5), width=640):
                       yaxis=dict(visible=False, range=yr, scaleanchor="x"),
                       showlegend=False, margin=dict(l=10, r=10, t=10, b=10), width=width, height=height)
     return fig
+
+
+if __name__ == "__main__":  # self-check: python3 book_style.py
+    def line(y, at=None):
+        f = go.Figure(go.Scatter(x=[0, 1, 2], y=y, name="a"))
+        f.update_yaxes(type="log")
+        return label_ends(f, at)
+
+    for y in ([1, 0.1, 0], [1, 0.1, None], [1, 0.1, float("nan")]):  # last usable point wins
+        a = line(y).layout.annotations[0]
+        assert (a.x, a.y) == (1, -1), (y, a.x, a.y)
+    assert line([None, 0.1, 1], at=0).layout.annotations[0].x == 1  # nearest usable point
+    none_usable = line([0, -1, None])
+    assert none_usable.layout.showlegend is True and not none_usable.layout.annotations
+
+    n = {"a": (0, 0, "a"), "b": (4, 0, "b"), "c": (4, 0, "c")}
+    assert diagram(n, [("a", "b", "ok")]).layout.height > 0
+    for nodes, edges in (({}, []), ({"a": (float("nan"), 0, "a")}, []), (n, [("a", "z", "")]),
+                         (n, [("a", "a", "")]), (n, [("b", "c", "")])):
+        try:
+            diagram(nodes, edges)
+        except ValueError as e:
+            assert str(e).startswith("diagram:"), e
+        else:
+            raise AssertionError(f"accepted {edges or nodes}")
+    print("book_style ok")
