@@ -54,14 +54,14 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
 - [ ] For each guarantee, were its assumptions checked and a failing case tried?
 - [ ] For each load-bearing formula, can you point to the exact step where each stated assumption is used, and name the assumption behind each step that needs one?
 - [ ] In a Foundation Part, does nothing before the comparison give the principle away?
-- [ ] If the Part reuses a pattern, is there a "Seen before" box after the principle and a row in the patterns table?
+- [ ] If the Part reuses a pattern, is there a "Seen before" box in the section that reuses it, after that section's own idea, and a row in the patterns table?
 - [ ] Where the Part has a spine diagram (a deep-dive component may not), does it place every content section (not the summary) on a node or arrow, name the guarantee on each arrow, and show where the core move fails?
 - [ ] Is the central idea taught by two worked cases (alike in a cases-first Part), the order's prompt box *before* the alignment table (cases-first: "Compare before reading on", then a page break; map-first: "Check the principle against two cases"), a "does not carry over" row, then the principle and spine diagram?
 - [ ] If the two cases can be drawn, do they share one figure (same axes, same role colours), and does the spine caption name the arrows both follow?
 - [ ] Where does the reader have enough to make a prediction, choose a method or reject an assumption before the book reveals the answer? Is there a "Predict before reading on" box there that names the decision (and a caption that does not answer it), and does the answer say what a plausible wrong one should send them back to?
 - [ ] Does evidence that overturns a plausible verdict come after its prediction box?
 - [ ] Does every summary, hint and answer (support Parts too) keep the conditions of what it restates and claim nothing stronger?
-- [ ] Does every `#ask` question ask for something no worked example or problem has already answered?
+- [ ] Does every `#ask` question ask for something no worked example, problem or section text has already answered? Solving it from its wording alone, does the hint and check accept every correct answer?
 - [ ] Is the last `#ask` question a transfer case that looks different and names neither the Part nor its idea, with the hint (marked to read after trying) and a "You have it if" check each on its own page, the check ending by asking which correspondence or condition a miss overlooked?
 - [ ] Does at least one link point to another Part, the reader's own work, or their prior knowledge, naming what corresponds to what and what does not carry over?
 - [ ] Could the reader say the core idea in about 60 seconds without notes, then predict a fresh case, separate it from its nearest alternative, and say where it stops applying?
