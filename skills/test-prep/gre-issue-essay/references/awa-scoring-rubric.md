@@ -1,5 +1,7 @@
 # GRE Analytical Writing — Issue task score levels (0–6)
 
+> **License:** this file is not covered by the repository's MIT License. It summarises material owned by ETS, whose rights are unaffected.
+
 Compact paraphrase of the ETS scoring guide for "Analyze an Issue," for anchoring score estimates. For the authoritative wording, consult the official ETS scoring guide and published scored sample essays: https://www.ets.org/gre (Analytical Writing section). Final scores are the average of a human rater and ETS's automated scorer, reported in half-point increments.
 
 | Score | Position & insight | Development | Organization | Language |

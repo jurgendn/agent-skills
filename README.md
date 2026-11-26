@@ -203,3 +203,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 This repository prioritizes skills that support research, paper writing, PhD applications, language learning, reproducibility, and research implementation. Generic or low-priority skills should be removed rather than archived when they dilute that purpose.
 
 Keep skills narrow and activation-oriented. When two skills overlap, their frontmatter descriptions should explain which one should trigger.
+
+## License
+
+Released under the [MIT License](LICENSE). Some material is not covered by it, including the IELTS band descriptor files and the GRE scoring rubric; see [NOTICE](NOTICE).
