@@ -1,0 +1,157 @@
+{
+  "skill_name": "code-design-judgment",
+  "evals": [
+    {
+      "id": 1,
+      "name": "head-node-special-case",
+      "prompt": "This delete function for my singly linked list works but feels hacky. Can you make it better?\n\nvoid remove(List *l, Node *t) {\n  Node *prev = NULL, *cur = l->head;\n  while (cur != t) { prev = cur; cur = cur->next; }\n  if (prev == NULL) l->head = t->next;\n  else prev->next = t->next;\n}",
+      "expected_output": "States the data model and invariants (target exists, list well-formed), identifies the head-node branch as an artifact of the representation, proposes the pointer-to-link version that removes it, and states what it still does not handle (missing target, freeing, concurrency).",
+      "files": [],
+      "assertions": [
+        "States the precondition that the target is in the list, or flags its absence",
+        "Identifies the prev == NULL branch as a representation artifact, not a real semantic difference",
+        "Proposes iterating over the incoming link (Node **) so head and later nodes are handled uniformly",
+        "Names what the new version still does not cover",
+        "Separates what was checked by reading from what was run"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "flags-in-sync",
+      "prompt": "My Order class has is_paid, is_shipped, is_cancelled and refunded_at. Now I need to add 'partially refunded'. Should I add another boolean is_partially_refunded?",
+      "expected_output": "Points out that the booleans encode one lifecycle with invalid combinations, proposes a single status/state model with explicit transitions plus refund records, and asks before changing a stored schema.",
+      "files": [],
+      "assertions": [
+        "Names invalid combinations the current flags allow (e.g. cancelled and shipped)",
+        "Does not add another stored boolean; records the refund as data or a state from which 'partially refunded' follows (a single combined enum is not required)",
+        "Notes the schema/migration cost and asks before widening the task",
+        "Names existing behavior that must keep working"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "real-semantic-difference-trap",
+      "prompt": "We have two functions, charge_card(amount) and refund_card(amount). They look almost identical: both call the payment gateway, log, and update the ledger. Should I merge them into one transact(amount, kind)?",
+      "expected_output": "Checks whether the meanings differ (idempotency, ledger sign, failure handling, audit/legal rules) before merging; recommends sharing only the genuinely common mechanics if the semantics differ, rather than collapsing them.",
+      "files": [],
+      "assertions": [
+        "Asks or checks what differs in meaning, not only in code shape",
+        "Does not recommend merging purely because the code looks similar",
+        "If anything is shared, it is the common mechanics, with the distinct operations kept"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "benchmark-claim-mismatch",
+      "prompt": "Our read path gets slower as we add threads. A teammate points to a hash map library whose README shows 3x faster single-threaded inserts and wants to switch to it. Good idea?",
+      "expected_output": "Says the single-threaded insert benchmark does not speak to multithreaded read scaling, asks for or proposes identifying the mechanism first, and suggests measuring the real workload across thread counts.",
+      "files": [],
+      "assertions": [
+        "Asks for or proposes identifying the mechanism before changing code",
+        "Names contention on shared mutable state as a plausible mechanism for slowing with more threads",
+        "Says the README benchmark (single-threaded, inserts) does not show how multithreaded reads will behave"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "feature-adds-a-flag",
+      "prompt": "Add a cancel() method to this class. A cancelled job must never run again.\n\nclass Job:\n    def __init__(self, fn):\n        self.fn = fn\n        self.is_running = False\n        self.is_done = False\n        self.has_error = False\n\n    def run(self):\n        if self.is_running or self.is_done:\n            return\n        self.is_running = True\n        try:\n            self.fn()\n            self.is_done = True\n        except Exception:\n            self.has_error = True\n        self.is_running = False\n\n    def retry(self):\n        if self.has_error:\n            self.has_error = False\n            self.run()",
+      "expected_output": "A working cancel that blocks run and retry, handles cancel during a running job, and either replaces the flags with one state or points out the invalid combinations, without silently breaking callers of the existing attributes.",
+      "files": [],
+      "assertions": [
+        "The delivered code prevents a cancelled job from running again through both run() and retry()",
+        "Handles or explicitly raises what happens when cancel() is called while the job is running",
+        "Either replaces the booleans with a single state, or explicitly points out that adding another flag allows contradictory combinations",
+        "If existing attributes are removed or changed, keeps them readable or warns that callers may depend on them; if they are untouched, this passes"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "feature-with-duplicated-state",
+      "prompt": "Add a change_isbn(old, new) method.\n\nclass Library:\n    def __init__(self):\n        self.books = []\n        self.by_isbn = {}\n\n    def add(self, book):\n        self.books.append(book)\n        self.by_isbn[book.isbn] = book\n\n    def find(self, isbn):\n        return self.by_isbn.get(isbn)\n\n    def isbns(self):\n        return [b.isbn for b in self.books]",
+      "expected_output": "Updates the key and the book consistently, handles missing old and colliding new, and notes that books and by_isbn store the same fact (add() with a duplicate ISBN already desynchronizes them).",
+      "files": [],
+      "assertions": [
+        "The new method keeps by_isbn's keys and the book's isbn attribute consistent",
+        "Handles both a missing old ISBN and a new ISBN that already belongs to another book",
+        "Points out that books and by_isbn duplicate the same information, or that add() with a duplicate ISBN can already leave them inconsistent",
+        "Does not silently replace the data structures beyond the request; any larger change is offered or asked about, or keeps the public behavior and says so"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "small-fix-control",
+      "prompt": "This should give a 10% discount on orders over 100, but an order of 150 comes out as 15. Fix it.\n\ndef total(subtotal):\n    if subtotal > 100:\n        return subtotal * 0.1\n    return subtotal",
+      "expected_output": "A one-line fix (subtotal * 0.9) with a very short explanation.",
+      "files": [],
+      "assertions": [
+        "Fixes the bug by returning 90% of the subtotal for orders over 100",
+        "Does not add new classes, configuration, strategy objects or other structure",
+        "The whole response is short: no multi-section design report, data model write-up or unrelated recommendations (a brief note on money rounding or the boundary is fine)"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "premature-plugin-system",
+      "prompt": "We have export_csv(rows, path) and export_json(rows, path), called from one place with an if/else on a format string. Build a plugin system so we can add exporters.",
+      "expected_output": "Gives the smallest thing that works (e.g. a dict from format to function), and asks about or declines discovery, base classes and entry points without a current need.",
+      "files": [],
+      "assertions": [
+        "Provides a working way to add exporters",
+        "Keeps it to a small mechanism such as a mapping from format name to function, without mandatory dynamic discovery, entry points or class hierarchies",
+        "Asks what concrete need exists, or states what would justify a heavier plugin system later",
+        "Handles or mentions the unknown-format case"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "lifetime-not-locking",
+      "prompt": "This crashes now and then under load. I think we need more locking in evict(). Fix it.\n\nEntry *cache_get(Cache *c, int key) {\n    pthread_mutex_lock(&c->mu);\n    Entry *e = table_lookup(c->table, key);\n    pthread_mutex_unlock(&c->mu);\n    return e;   /* caller reads e->data */\n}\n\nvoid cache_evict(Cache *c, int key) {\n    pthread_mutex_lock(&c->mu);\n    Entry *e = table_remove(c->table, key);\n    pthread_mutex_unlock(&c->mu);\n    free(e);\n}",
+      "expected_output": "Explains the use-after-free is a lifetime problem that more locking in evict cannot fix; uses reference counting (or copying out) with release by the caller.",
+      "files": [],
+      "assertions": [
+        "States that the crash is a lifetime problem: the entry can be freed while a caller still uses the returned pointer",
+        "States that adding more locking inside cache_evict will not fix it",
+        "Gives a fix that ties the entry's lifetime to its users (reference count, copy out, or holding protection across the whole use)",
+        "Says that callers of cache_get must change or names the contract they must now follow"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "ring-buffer-redundant-flag",
+      "prompt": "Add pop_back() to this. Also, is_full sometimes seems to be wrong.\n\nclass Ring:\n    def __init__(self, n):\n        self.buf = [None]*n\n        self.head = 0\n        self.tail = 0\n        self.is_full = False\n\n    def push_back(self, x):\n        self.buf[self.tail] = x\n        self.tail = (self.tail + 1) % len(self.buf)\n        if self.is_full:\n            self.head = self.tail\n        self.is_full = self.tail == self.head\n\n    def pop_front(self):\n        if self.head == self.tail and not self.is_full:\n            raise IndexError\n        x = self.buf[self.head]\n        self.head = (self.head + 1) % len(self.buf)\n        return x",
+      "expected_output": "Finds that pop_front never clears is_full; implements pop_back correctly; replaces head/tail/is_full with head and size (or clearly maintains the invariant).",
+      "files": [],
+      "assertions": [
+        "Identifies that pop_front does not clear is_full",
+        "pop_back is correct for empty, full and wrapped-around buffers",
+        "Removes the redundant state (for example head plus size), or states the invariant between head, tail and is_full that every method must keep",
+        "Keeps existing push_back overwrite behavior, or says explicitly if it changes"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "special-case-with-meaning",
+      "prompt": "parse_scores() returns None for an empty file but a list otherwise, so every caller needs an if. Change it to return [] for empty files.\n\ndef parse_scores(path):\n    text = open(path).read()\n    if not text:\n        return None\n    return [int(l) for l in text.split() if l != 'N/A']",
+      "expected_output": "Checks whether None and [] mean different things (empty file vs file with only N/A) before changing, and flags that callers testing 'is None' would change behavior.",
+      "files": [],
+      "assertions": [
+        "Points out that [] can already be returned (e.g. only N/A or whitespace), so None and [] may mean different things",
+        "Says callers that check for None would change behavior, or asks to check them",
+        "Provides the requested change or clearly asks before making it"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "scattered-none-checks",
+      "prompt": "Add an avatar_url(user) helper. Guests (user is None) get '/img/guest.png'.\n\ndef display_name(user):\n    if user is None:\n        return 'Guest'\n    return user.name\n\ndef can_post(user):\n    if user is None:\n        return False\n    return user.verified\n\ndef locale(user):\n    if user is None:\n        return 'en'\n    return user.locale",
+      "expected_output": "Adds the helper and notes the repeated guest special case, offering a single Guest object, without silently changing callers.",
+      "files": [],
+      "assertions": [
+        "Provides a correct avatar_url helper including the guest case",
+        "Notes that the guest check is repeated and that a single guest object (or one place resolving None) would remove it",
+        "Does not silently refactor the existing functions; any refactor is offered or asked about, or explicitly shown as optional"
+      ]
+    }
+  ]
+}

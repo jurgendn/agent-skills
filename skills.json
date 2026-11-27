@@ -14,6 +14,12 @@
       "description": "Design prompts, system prompts, and agent scaffolding for Claude-backed features; ground volatile model-specific behavior in the live Anthropic docs."
     },
     {
+      "name": "code-design-judgment",
+      "path": "skills/coding-support/code-design-judgment",
+      "category": "coding-support",
+      "description": "Judge and improve code design: look at the data model and invariants first, surface representation-made special cases, keep cases whose meaning differs, and name the mechanism before any performance change."
+    },
+    {
       "name": "industry-problem-framing",
       "path": "skills/industrial-rnd/industry-problem-framing",
       "category": "industrial-rnd",
