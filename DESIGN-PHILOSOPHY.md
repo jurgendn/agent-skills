@@ -90,7 +90,10 @@ retold, and is "done" when the reader can rebuild it without help, not when it
 has been read. Where the reader can already predict, choose or
 reject something, the book asks them to commit before it answers, and a figure
 they must judge does not carry the verdict in its caption; this is also a house
-style. A summary or answer claims no more than the
+style. Earlier summaries still state their conditions in full, even when a later
+question can then be answered by applying them, on the judgement that a blurred
+summary costs the reader more than an easier question. A summary or answer claims
+no more than the
 worked material it restates, in every Part. Exercises are deliberately not part
 of the book; they are handed
 to `concept-exercise-generator`, so the book never doubles as its own test.

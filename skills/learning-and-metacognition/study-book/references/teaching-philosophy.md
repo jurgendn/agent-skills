@@ -59,7 +59,7 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
 - [ ] Is the central idea taught by two worked cases (alike in a cases-first Part), the order's prompt box *before* the alignment table (cases-first: "Compare before reading on", then a page break; map-first: "Check the principle against two cases"), a "does not carry over" row, then the principle and spine diagram?
 - [ ] If the two cases can be drawn, do they share one figure (same axes, same role colours), and does the spine caption name the arrows both follow?
 - [ ] Where does the reader have enough to make a prediction, choose a method or reject an assumption before the book reveals the answer? Is there a "Predict before reading on" box there that names the decision (and a caption that does not answer it), and does the answer say what a plausible wrong one should send them back to?
-- [ ] Does evidence that overturns a plausible verdict come after its prediction box?
+- [ ] Does evidence that overturns a plausible verdict come after its prediction box, while earlier pages keep their full conditions instead of being blurred to protect it?
 - [ ] Does every summary, hint and answer (support Parts too) keep the conditions of what it restates and claim nothing stronger?
 - [ ] Does every `#ask` question ask for something no worked example, problem or section text has already answered? Solving it from its wording alone, does the hint and check accept every correct answer?
 - [ ] Is the last `#ask` question a transfer case that looks different and names neither the Part nor its idea, with the hint (marked to read after trying) and a "You have it if" check each on its own page, the check ending by asking which correspondence or condition a miss overlooked?
