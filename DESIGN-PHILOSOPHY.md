@@ -439,8 +439,9 @@ tools disabled) did not support the starting claim that a default agent patches
 instead of redesigning: without the skill, the model already made the main
 representation move on most prompts. The skill's gains were small and
 concentrated in a few behaviors, and cost longer answers. The current wording
-combines two measured versions and has not been measured itself. Remove any step
-that changes nothing.
+combines two earlier versions. A smaller run on four selected evals found it
+ahead of no skill on Sonnet and not clearly ahead on Haiku, which is too little
+data to generalize. Remove any step that changes nothing.
 
 **Split skills when the process diverges; mode-switch when only parameters
 differ.** Several skills serve two audiences or artifact variants from one

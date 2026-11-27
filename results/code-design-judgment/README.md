@@ -1,6 +1,6 @@
 # code-design-judgment evals, 2026-11-27
 
-Setup: `claude -p --safe-mode --tools ""`, Sonnet 5.5 answering and grading (grader blind to arm), SKILL.md body appended to the system prompt, 12 evals x 5 runs per arm. v1 is `SKILL-v1.md`; v2 is the measured revision, which is not saved separately. The skill now in `skills/coding-support/code-design-judgment/` is v3 (see the end of this file).
+Setup: `claude -p --safe-mode --tools ""`, Sonnet 5.5 answering and grading (grader blind to arm), SKILL.md body appended to the system prompt, 12 evals x 5 runs per arm. v1 was removed after v3 was measured (`git show db1501c:results/code-design-judgment/SKILL-v1.md`); v2 is the measured revision, which is not saved separately. The skill now in `skills/coding-support/code-design-judgment/` is v3 (see the end of this file).
 
 | Iteration 2, non-format assertions | v1 | v2 | no skill |
 |---|---|---|---|
@@ -25,4 +25,29 @@ Caveats:
 
 ## v3 (current)
 
-v2 plus two rules: ask before a public interface, stored format, or schema change on design questions; for a bug caused by redundant state, fix private state and ask first if callers can see it. **Not evaluated.**
+v2 plus two rules: ask before a public interface, stored format, or schema change on design questions; for a bug caused by redundant state, fix private state and ask first if callers can see it.
+
+Measured 2026-11-27 on evals 2, 5, 10 and 12, 3 runs each, same setup as above with one model answering and grading (blind to arm) per run.
+
+| Passed assertions, broken answers counted as fail | v3 | v1 | no skill |
+|---|---|---|---|
+| Sonnet 5.5 | 37/45 | 27/45 | 29/45 |
+| Sonnet 5.5, valid answers only | 37/45 | 27/29 | 29/45 |
+| Sonnet 5.5 broken answers | 0/12 | 4/12 | 0/12 |
+| Sonnet 5.5 mean output tokens | 1185 | 1779 | 753 |
+| Haiku 5.5 | 31/45 | 33/45 | 28/45 |
+| Haiku 5.5 broken answers | 0/12 | 0/12 | 1/12 |
+| Haiku 5.5 mean output tokens | 1251 | 1581 | 1219 |
+
+| Behavior (passes/valid runs) | Sonnet v3 | Sonnet v1 | Sonnet none | Haiku v3 | Haiku v1 | Haiku none |
+|---|---|---|---|---|---|---|
+| Eval 2: names what must keep working | 3/3 | 3/3 | 1/3 | 0/3 | 0/3 | 0/3 |
+| Eval 2: asks before the schema change | 2/3 | 2/3 | 0/3 | 1/3 | 1/3 | 1/3 |
+| Eval 2: names invalid flag combinations | 0/3 | 2/3 | 1/3 | 1/3 | 2/3 | 2/3 |
+| Eval 5: replaces the flags or points out the problem | 2/3 | 0/0 | 0/3 | 1/3 | 0/3 | 0/3 |
+| Eval 10: removes or explains the redundant state | 0/3 | 2/2 | 0/3 | 1/3 | 3/3 | 0/3 |
+| Eval 12: notes the repeated guest check | 3/3 | 3/3 | 0/3 | 0/3 | 0/3 | 0/2 |
+
+- On Sonnet, v3 beat no skill and had no broken answers. On Haiku, the three totals were too close to separate.
+- These four evals were picked because versions differed on them, and v3's rules were written with some of them in view.
+- Three runs per cell is small, and the grades were not checked by hand.
