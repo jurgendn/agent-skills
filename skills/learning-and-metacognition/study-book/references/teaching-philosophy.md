@@ -15,7 +15,7 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
    - *Statement*: the exact definition, theorem, or interface (rigour second).
    - *Example*: small numbers, doable by hand, checked.
    - *Connection*: the same idea in another Part, in the reader's own work, or in something the reader already knows.
-   In that order they make a good spoken answer, and familiar material is laid out that way (map first). New or weak material meets each Part's central idea through examples first: the question, two cases the reader compares, then the statement, with the Part's map as a summary at the end. A map read before the comparison answers it.
+   In that order they make a good spoken answer, and a Depth Part (familiar material) is laid out that way (map first). A Foundation Part (new or weak material) meets each Part's central idea through examples first: the question, two cases the reader compares, then the statement, with the Part's map as a summary at the end. A map read before the comparison answers it.
 
 3. **One idea per Part, one turn per story.** Each Part has a single principle everything grows from ("find the basis where the map is simple", "study the rules once and apply them to every object", "let every token decide what to read"). Each story has one *turn*: the limit, and the idea it forces. If the reader can name the turn, the rest can be derived.
 
@@ -25,11 +25,11 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
 
 6. **Show the decision, not only the knowledge.** For each Part, say *which question to ask* and *which tool it selects* (framework tables). Knowing a method is less useful than knowing when to use it and when it fails.
 
-7. **Retrieval over rereading.** Notes are built to be practised: cover the right-hand column and retell the seven stages; redraw the concept graph from memory; say the core idea in 60 seconds; explain one example aloud. A Part is done when the reader can do this *without help*, not when the pages have been read.
+7. **Retrieval over rereading.** Notes are built to be practised: cover the right-hand column and retell the seven stages; redraw the concept graph from memory; say the core idea in 60 seconds; explain one example aloud. A Part is done when the reader can do this *without help*, not when the pages have been read. Inside a Part, where the reader can already predict, choose or reject something, the book asks them to commit before it answers; that placement is a design choice, not a research finding.
 
 8. **Honesty about gaps.** Never present a thin understanding as a strong one. In exam mode, weak grades get more worked examples and likely questions, and missing topics are listed as gaps with why the programme expects them and how to say truthfully where the reader met them: one honest sentence of context, then demonstrate the knowledge now. In every mode, content not backed by a source is marked as such.
 
-9. **Depth where it will be probed.** In exam mode, strong grades are asked for depth (proof ideas, edge cases, failure modes) and weak grades for fluency (basics done correctly and fast). In learning modes, depth goes to the load-bearing ideas the reader will build on, fluency to the rest. Spend the page budget accordingly.
+9. **Depth where it will be probed.** In exam mode, strong grades are asked for depth (proof ideas, edge cases, failure modes: by default a Depth Part) and weak grades for fluency (basics done correctly and fast: by default a Foundation Part). In learning modes, depth goes to the load-bearing ideas the reader will build on, fluency to the rest. Spend the page budget accordingly; this weighting never changes a Part's style. The two styles are a design choice and untested: Kalyuga et al. (2003, abstract only read) report that instruction which helps novices can lose its value, or hurt, for more experienced learners.
 
 10. **Every claim checked.** Recompute each worked example. Take facts about the reader's own work only from their documents, and facts about a framework or model only from its paper, official docs, or source at a named version. A wrong example in a study note is worse than none, because the reader will trust it.
 
@@ -47,15 +47,21 @@ The reader must be able to **explain and rebuild**, not recite. A second questio
 ## Checklist before a Part is finished
 
 - [ ] Does each topic open with *why it exists*, before any definition?
+- [ ] Does the Part follow its style (figures and section content, SKILL.md §2 and §7)?
 - [ ] Is the turn (limit → idea) stated in one sentence for each story, with the extra assumption named if the limit only motivates the idea?
 - [ ] Does each central idea say where it breaks, and any trade-off it really carries?
 - [ ] Is there a worked example with small numbers, and was it recomputed?
 - [ ] For each guarantee, were its assumptions checked and a failing case tried?
-- [ ] In a new or weak Part, does nothing before the comparison give the principle away?
-- [ ] If the Part reuses a pattern, is there a "Seen before" box after the principle and a row in the patterns table?
+- [ ] For each load-bearing formula, can you point to the exact step where each stated assumption is used, and name the assumption behind each step that needs one?
+- [ ] In a Foundation Part, does nothing before the comparison give the principle away?
+- [ ] If the Part reuses a pattern, is there a "Seen before" box in the section that reuses it, after that section's own idea, and a row in the patterns table?
 - [ ] Where the Part has a spine diagram (a deep-dive component may not), does it place every content section (not the summary) on a node or arrow, name the guarantee on each arrow, and show where the core move fails?
 - [ ] Is the central idea taught by two worked cases (alike in a cases-first Part), the order's prompt box *before* the alignment table (cases-first: "Compare before reading on", then a page break; map-first: "Check the principle against two cases"), a "does not carry over" row, then the principle and spine diagram?
 - [ ] If the two cases can be drawn, do they share one figure (same axes, same role colours), and does the spine caption name the arrows both follow?
+- [ ] Where does the reader have enough to make a prediction, choose a method or reject an assumption before the book reveals the answer? Is there a "Predict before reading on" box there that names the decision (and a caption that does not answer it), and does the answer say what a plausible wrong one should send them back to?
+- [ ] Does evidence that overturns a plausible verdict come after its prediction box, while earlier pages keep their full conditions instead of being blurred to protect it?
+- [ ] Does every summary, hint and answer (support Parts too) keep the conditions of what it restates and claim nothing stronger?
+- [ ] Does every `#ask` question ask for something no worked example, problem or section text has already answered? Solving it from its wording alone, does the hint and check accept every correct answer?
 - [ ] Is the last `#ask` question a transfer case that looks different and names neither the Part nor its idea, with the hint (marked to read after trying) and a "You have it if" check each on its own page, the check ending by asking which correspondence or condition a miss overlooked?
 - [ ] Does at least one link point to another Part, the reader's own work, or their prior knowledge, naming what corresponds to what and what does not carry over?
 - [ ] Could the reader say the core idea in about 60 seconds without notes, then predict a fresh case, separate it from its nearest alternative, and say where it stops applying?

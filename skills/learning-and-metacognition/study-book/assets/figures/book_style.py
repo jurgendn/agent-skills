@@ -8,7 +8,9 @@ Use in each figure script (figures/NN-slug.py, one script per Part):
 
 Then in the Part: #fig(image("/figures/02-svd-singular-values.svg"), [caption])
 """
+import html
 import math
+import re
 from numbers import Real
 from pathlib import Path
 
@@ -53,8 +55,24 @@ def save(fig, name, width=None, height=None):
 
     Default 640 x 380, or the size diagram() set on the figure.
     """
-    fig.write_image(OUT / f"{name}.svg", width=width or fig.layout.width or 640,
+    path = OUT / f"{name}.svg"
+    fig.write_image(path, width=width or fig.layout.width or 640,
                     height=height or fig.layout.height or 380)
+    path.write_text(_unligate(path.read_text(encoding="utf-8")), encoding="utf-8")
+
+
+def _unligate(svg):
+    """Typst joins "f" with a following sub/superscript into one ligature ("fi") and drops its offset.
+
+    Plotly's zero-width space at that boundary does not stop it; a zero-width non-joiner does.
+    """
+    return re.sub("f(?=\u200b?<)", "f\u200c", svg)
+
+
+def _text_lines(label):
+    """The lines a label shows: Plotly's tags removed, entities decoded, a bare "<" kept."""
+    return [html.unescape(re.sub(r"</?(?:a|b|i|u|s|em|sub|sup|span)(?:\s[^<>]*)?>", "", line))
+            for line in re.split(r"<br\s*/?>", label)]
 
 
 def label_ends(fig, at=None):
@@ -103,8 +121,6 @@ def diagram(nodes, edges, pad=(1.6, 0.5), width=640):
     pad: (x, y) margin in data units around the boxes, room for side labels; widen if one is cut.
     Height follows the layout; save(fig, name) picks the size up.
     """
-    import re
-
     if not nodes:
         raise ValueError("diagram: no nodes")
     for k, (x, y, _) in nodes.items():
@@ -117,7 +133,7 @@ def diagram(nodes, edges, pad=(1.6, 0.5), width=640):
             raise ValueError(f"diagram: edge {a!r} -> {b!r} starts and ends at one point")
 
     def text_px(label, char=7.2, line=20.0):  # rough extent of a 16 px serif label
-        lines = re.sub(r"<(?!br)[^>]+>", "", label).split("<br>")
+        lines = _text_lines(label)
         return max(len(t) for t in lines) * char, len(lines) * line
 
     size = {k: (0.5, 0.3) for k in nodes}
@@ -186,6 +202,12 @@ if __name__ == "__main__":  # self-check: python3 book_style.py
     assert line([None, 0.1, 1], at=0).layout.annotations[0].x == 1  # nearest usable point
     none_usable = line([0, -1, None])
     assert none_usable.layout.showlegend is True and not none_usable.layout.annotations
+
+    assert _text_lines("rate L < 1<br>then x > 0") == ["rate L < 1", "then x > 0"]  # bare "<"
+    assert _text_lines("g<p* <i>always</i><br/>x<sub>t</sub> &lt; 1") == ["g<p* always", "xt < 1"]
+    for tail in ('<tspan dy="0.3em">i</tspan>', '\u200b<tspan dy="0.3em">i</tspan>', "</tspan>"):
+        assert _unligate("f" + tail) == "f\u200c" + tail, tail
+    assert _unligate("fit <tspan>i</tspan>") == "fit <tspan>i</tspan>"
 
     n = {"a": (0, 0, "a"), "b": (4, 0, "b"), "c": (4, 0, "c")}
     assert diagram(n, [("a", "b", "ok")]).layout.height > 0
