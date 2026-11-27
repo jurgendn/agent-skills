@@ -1,6 +1,6 @@
 # code-design-judgment evals, 2026-11-27
 
-Setup: `claude -p --safe-mode --tools ""`, Sonnet 5.5 answering and grading (grader blind to arm), SKILL.md body appended to the system prompt, 12 evals x 5 runs per arm. v1 is `SKILL-v1.md`; v2 is the revised skill in `skills/coding-support/code-design-judgment/`.
+Setup: `claude -p --safe-mode --tools ""`, Sonnet 5.5 answering and grading (grader blind to arm), SKILL.md body appended to the system prompt, 12 evals x 5 runs per arm. v1 is `SKILL-v1.md`; v2 is the measured revision, which is not saved separately. The skill now in `skills/coding-support/code-design-judgment/` is v3 (see the end of this file).
 
 | Iteration 2, non-format assertions | v1 | v2 | no skill |
 |---|---|---|---|
