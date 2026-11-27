@@ -193,6 +193,7 @@ Every skill lives at `skills/<category>/<skill>/`, which the CLI discovers by de
 ### Coding support
 
 - `coding-support/prompting-claude-models` — prompt/system-prompt/agent design for Claude-backed features; grounds volatile model-specific behavior in the live Anthropic docs.
+- `coding-support/code-design-judgment` — judge and improve code design: look at the data model and invariants first, surface special cases the representation creates, keep cases whose meaning differs, assume a change adds a bug, and name the mechanism before any performance change.
 
 ### Project setup (entrypoint)
 

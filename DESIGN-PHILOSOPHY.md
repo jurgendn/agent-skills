@@ -409,6 +409,27 @@ Like the writing-advice literature, proposal-writing guidance is expert
 testimony and committee craft rather than experimental evidence, and carries
 the same epistemic discipline.
 
+**Code design starts from the representation, and the source is practitioner
+testimony.** `code-design-judgment` is distilled from Linus Torvalds's public
+writing. The sources it rests on are the 2006 git-list email ("Good
+programmers worry about data structures and their relationships"), the 2015
+Linux Foundation interview, and the regression rule in the kernel's "Getting
+the code right" chapter. The kernel coding-style and management-style
+documents are also sources, but they are collectively maintained, so they are
+not attributed to him personally. The 2016 TED linked-list example could not
+be verified because its transcript was not retrievable, so the skill presents
+that example as its own. The performance rule draws on his October 2026
+page-refcount thread, which carries its own warning that its synthetic
+benchmark exaggerates the gain. The step order and the output rules are this
+repo's interpretation, and the sources are expert testimony, not experimental
+evidence. A small forced-on eval (2026-11-27, same model answering and grading,
+tools disabled) did not support the starting claim that a default agent patches
+instead of redesigning: without the skill, the model already made the main
+representation move on most prompts. The skill's gains were small and
+concentrated in a few behaviors, and cost longer answers. The current wording
+combines two measured versions and has not been measured itself. Remove any step
+that changes nothing.
+
 **Split skills when the process diverges; mode-switch when only parameters
 differ.** Several skills serve two audiences or artifact variants from one
 skill body: `deck-beamer-proposal-report` covers proposal defenses and progress
